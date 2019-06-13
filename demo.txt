@@ -1,0 +1,6298 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<meta name="google-site-verification" content="ibq4VTobRPwy3EDQaoR04zftZqgAjSlsncF6m_ngtPY" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">			
+		<title>
+			Soyn | Shop for Home Decoration Items and Souvenirs in Viet Nam
+			
+			
+						
+		</title>		
+		<!-- ================= Page description ================== -->
+		<meta name="description" content="Soyn mang đến những sản phẩm trang trí không gian sống mới mẻ, hiện đại và đậm chất thẩm mỹ.">
+		<!-- ================= Meta ================== -->
+		<meta name="keywords" content="Tranh treo tường đẹp, tranh in nghệ thuật, soyn canvas, thảm phòng khách, tranh in hiện đại, tranh canvas, tranh phòng khách, tranh trang trí"/>		
+		<link rel="canonical" href="https://soyncanvas.vn"/>
+		<meta name='revisit-after' content='1 days' />
+		<meta name="robots" content="noodp,index,follow" />
+		<!-- ================= Favicon ================== -->
+		
+		<link rel="icon" href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/favicon.png?1560159527528" type="image/x-icon" />
+		
+		<!-- ================= Google Fonts ================== -->
+		
+		
+		
+		
+		
+		<link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css" />
+		
+		
+		
+		
+		
+		
+		<link href="//fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet" type="text/css" />
+		
+			
+		<!-- Facebook Open Graph meta tags -->
+		
+
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Soyn | Shop for Home Decoration Items and Souvenirs in Viet Nam">
+	<meta property="og:image" content="http://bizweb.dktcdn.net/100/296/956/themes/640676/assets/logo.png?1560159527528">
+	<meta property="og:image:secure_url" content="https://bizweb.dktcdn.net/100/296/956/themes/640676/assets/logo.png?1560159527528">
+
+<meta property="og:description" content="Soyn mang đến những sản phẩm trang trí không gian sống mới mẻ, hiện đại và đậm chất thẩm mỹ.">
+<meta property="og:url" content="https://soyncanvas.vn">
+<meta property="og:site_name" content="Soyn">		
+		<!-- Plugin CSS -->			
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/owl.carousel.min.css?1560159527528" rel="stylesheet" type="text/css" />
+		<!-- Build Main CSS -->								
+		<link href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/base.scss.css?1560159527528" rel="stylesheet" type="text/css" />		
+		<link href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/style.scss.css?1560159527528" rel="stylesheet" type="text/css" />		
+		<link href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/update.scss.css?1560159527528" rel="stylesheet" type="text/css" />		
+		<link href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/module.scss.css?1560159527528" rel="stylesheet" type="text/css" />
+		<link href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/responsive.scss.css?1560159527528" rel="stylesheet" type="text/css" />
+
+		<!-- Header JS -->	
+		<script src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/jquery-2.2.3.min.js?1560159527528" type="text/javascript"></script> 
+
+		<!-- Bizweb javascript customer -->
+				
+
+		
+
+		<!-- Bizweb conter for header -->
+		<script>
+var Bizweb = Bizweb || {};
+Bizweb.store = 'soyncanvas1.bizwebvietnam.net';
+Bizweb.id='296956';
+Bizweb.theme = {"id":640676,"role":"main","name":"Dekor"};
+Bizweb.template = 'index';
+</script>
+
+<script>
+(function() {
+function asyncLoad() {
+var urls = ["//static.zotabox.com/3/d/3d6df7ac416e9977272f084ede434e0b/widgets.js?store=soyncanvas1.bizwebvietnam.net","https://facebookinbox.sapoapps.vn/Script/index?store=soyncanvas1.bizwebvietnam.net","//static.zotabox.com/3/d/3d6df7ac416e9977272f084ede434e0b/widgets.js?store=soyncanvas1.bizwebvietnam.net","https://blogstatistics.sapoapps.vn/scripts/ab_blogstatistics_scripttag.js?store=soyncanvas1.bizwebvietnam.net","https://productviewedhistory.sapoapps.vn/ProductViewed/ProductRecentScriptTags?store=soyncanvas1.bizwebvietnam.net","//static.zotabox.com/3/d/3d6df7ac416e9977272f084ede434e0b/widgets.js?store=soyncanvas1.bizwebvietnam.net","//promotionpopup.sapoapps.vn/genscript/script.js?store=soyncanvas1.bizwebvietnam.net","https://promotionbar.sapoapps.vn/Scripts/promotionbar.min.js?store=soyncanvas1.bizwebvietnam.net","https://googleshopping.sapoapps.vn/conversion-tracker/global-tag/1181.js?store=soyncanvas1.bizwebvietnam.net","https://googleshopping.sapoapps.vn/conversion-tracker/event-tag/1181.js?store=soyncanvas1.bizwebvietnam.net"];
+for (var i = 0; i < urls.length; i++) {
+var s = document.createElement('script');
+s.type = 'text/javascript';
+s.async = true;
+s.src = urls[i];
+s.src = urls[i];
+var x = document.getElementsByTagName('script')[0];
+x.parentNode.insertBefore(s, x);
+}
+}
+window.attachEvent ? window.attachEvent('onload', asyncLoad) : window.addEventListener('load', asyncLoad, false);
+})();
+</script>
+
+<script type='text/javascript'>
+(function() {
+var log = document.createElement('script'); log.type = 'text/javascript'; log.async = true;
+log.src = '//stats.bizweb.vn/delivery/296956.js?lang=vi';
+var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(log, s);
+})();
+</script>
+
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115327100-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-115327100-1');
+</script>
+
+<!--Facebook Pixel Code-->
+<script>
+!function(f, b, e, v, n, t, s){
+if (f.fbq) return; n = f.fbq = function(){
+n.callMethod?
+n.callMethod.apply(n, arguments):n.queue.push(arguments)}; if (!f._fbq) f._fbq = n;
+n.push = n; n.loaded = !0; n.version = '2.0'; n.queue =[]; t = b.createElement(e); t.async = !0;
+t.src = v; s = b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t, s)}
+(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1587223608071733'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height = '1' width = '1' style = 'display:none'
+src = 'https://www.facebook.com/tr?id=1587223608071733&ev=PageView&noscript=1'
+/></noscript>
+<!--DO NOT MODIFY-->
+<!--End Facebook Pixel Code-->
+
+		
+
+	<script>var ProductReviewsAppUtil=ProductReviewsAppUtil || {};</script>
+<link href="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/appbulk-blog-statistics.css?1560159527528" rel="stylesheet" type="text/css" />
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NLNTN6K');</script>
+<!-- End Google Tag Manager -->
+		
+		
+		
+	</head>
+	<body class="index-page">		
+		<!-- Main content -->
+		<header class="tz-header tz-header2 ">
+	<div class="overlay"></div>
+	<div class="container" id="open_shopping_cart">
+		<h3 class="tz-logo pull-left">
+			<a class="logo" href="//soyncanvas.vn">
+
+				<img alt="Soyn" src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/logo.png?1560159527528" />
+
+			</a>
+		</h3>
+		<button data-target=".nav-collapse" class="btn-navbar tz_icon_menu pull-right" type="button">
+			<i class="fa fa-bars"></i>
+		</button>
+		<button class="pull-right tz-search"> <i class="fa fa-search"></i>
+		</button>
+		
+		<div class="top-cart-contain  cart_st">
+			<div class="mini-cart text-xs-center">
+				<div class="heading-cart">
+					<a class="cart-icon" href="/cart">
+						<i class="fa fa-st fa-shopping-cart"></i>
+						<span class="cartCount count_item_pr" id="cart-total"></span>
+					</a>
+				</div>	
+				<div class="top-cart-content">					
+					<ul id="cart-sidebar" class="mini-products-list count_li">
+						<li class="list-item">
+							<ul></ul>
+						</li>
+						<li class="action">
+							<ul>
+								<li class="li-fix-1">
+									<div class="top-subtotal">
+										Tổng tiền thanh toán: 
+										<span class="price"></span>
+									</div>
+								</li>
+								<li class="li-fix-2" style="">
+									<div class="actions">
+										<a href="/cart" class="btn btn-primary">
+											<span>Giỏ hàng</span>
+										</a>
+										<a href="/checkout" class="btn btn-checkout btn-gray">
+											<span>Thanh toán</span>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div class="st_user">
+			<a class="pull-right" href="/account/login"> <i class="fa fa-st fa-key"></i></a>
+			<ul class="ul_user">
+				<li><a href="/account/login" id="customer_login_link">Đăng nhập</a></li>
+				<li><a href="/account/register" id="customer_register_link">Đăng ký</a></li>
+			</ul>
+		</div>
+		
+		<nav class="pull-right">
+			<ul class="nav-collapse">
+				
+				
+				<li>
+					<a href="/">Trang chủ</a>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/gioi-thieu">Giới thiệu</a>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/collections/all">Sản phẩm <i style="font-size: 9px; line-height: 18px;" class="fa fa-chevron-right"></i></a>
+					
+					<div class="nav-child dropdown-menu mega-dropdown-menu">
+						<div class="mega-dropdown-inner">
+							<div class="row">
+								<div data-width="12" class="col-md-12 mega-col-nav">
+									<div class="mega-inner">
+										<ul class="mega-nav level1">
+											
+											
+											<li>
+												<a href="/san-pham-moi">Sản phẩm mới</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/khuyen-mai">Khuyến mãi</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/tranh-treo-tuong">Tranh Canvas <i style="font-size: 9px;line-height: 18px;float: right;line-height: 40px;padding: 0;margin-right: -10px;" class="fa fa-chevron-right"></i></a>
+												
+												<ul class="mega-nav level1">
+													
+													<li>
+														<a href="/mix-and-match">Mix and Match</a>
+													</li>
+													
+													<li>
+														<a href="/landscape-nature-city">Landscape, Nature, City</a>
+													</li>
+													
+													<li>
+														<a href="/flower-tree-tropical">Flower, Tree, Tropical</a>
+													</li>
+													
+													<li>
+														<a href="/fashion-life">Fashion, Life</a>
+													</li>
+													
+													<li>
+														<a href="/cooking-kitchen">Food, Drink, Cooking, Kitchen</a>
+													</li>
+													
+													<li>
+														<a href="/art-quote">Art quote</a>
+													</li>
+													
+													<li>
+														<a href="/animal">Animal</a>
+													</li>
+													
+													<li>
+														<a href="/abstract-geometric">Abstract, Geometric</a>
+													</li>
+													
+													<li>
+														<a href="/dom-illustration">Đốm Illustration</a>
+													</li>
+													
+													<li>
+														<a href="/le-rin">Lê Rin</a>
+													</li>
+													
+													<li>
+														<a href="/cao-minh-huy">Cao Minh Huy</a>
+													</li>
+													
+													<li>
+														<a href="/bst-sai-gon-xua">BST Sài Gòn</a>
+													</li>
+													
+												</ul>
+											</li>
+											
+											
+											
+											<li>
+												<a href="/poster">Poster - Vietnam Artist</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/postcard">Postcard</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/so-tay">Sổ tay</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/tham-trang-tri">Thảm trang trí</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/khan-tham-vintage">Khăn thảm Vintage</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/goi-trang-tri">Gối trang trí <i style="font-size: 9px;line-height: 18px;float: right;line-height: 40px;padding: 0;margin-right: -10px;" class="fa fa-chevron-right"></i></a>
+												
+												<ul class="mega-nav level1">
+													
+													<li>
+														<a href="/ruot-goi-pillow-core">Ruột gối - Pillow Core</a>
+													</li>
+													
+													<li>
+														<a href="/vo-goi-cushion-case">Vỏ gối vuông - Pillow Cover</a>
+													</li>
+													
+												</ul>
+											</li>
+											
+											
+											
+											<li>
+												<a href="/den-ban-trang-tri">Đèn bàn</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/san-pham-trang-tri">Vật dụng trang trí</a>
+												
+											</li>
+											
+											
+											
+											<li>
+												<a href="/dung-cu-nha-bep">Dụng cụ nhà bếp</a>
+												
+											</li>
+											
+											
+										</ul>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/apps/kiem-tra-don-hang">Kiểm tra đơn hàng</a>
+				</li>
+				
+				
+				
+				<li>
+					<a href="https://soyncanvas.vn/tin-tuc">Blog</a>
+				</li>
+				
+				
+				
+				<li>
+					<a href="/lien-he">Liên hệ</a>
+				</li>
+				
+				
+			</ul>
+		</nav>
+	</div><!--end class container-->
+	<div class="tz-form-search">
+		<div class="container">
+			<form action="/search" method="get" >
+				<input type="text" placeholder="Tìm kiếm..." name="query"  value=""  maxlength="70" id="tz-search-input" class="tz-search-input">
+				<input class="hidden" type="submit" value="">
+				<i class="fa fa-times tz-form-close"></i>
+			</form>
+		</div>
+	</div><!--end class tz-form-search-->
+	<!-- Facebook Pixel Code -->
+<script>
+  !function(f,b,e,v,n,t,s)
+  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+  n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];
+  s.parentNode.insertBefore(t,s)}(window, document,'script',
+  'https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', '2219856461673795');
+  fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=2219856461673795&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Facebook Pixel Code -->
+</header><!--end class tz-header-->
+		<div class="wrap">
+			<h1 class="hidden">Soyn</h1>
+
+
+
+
+<section class="awe-section-1">	
+	<div class="home-slider owl-carousel" data-autoplay="true" data-loop="true" data-nav="true"  data-md-items='1' data-sm-items='1' data-xs-items="1" data-margin='0'>
+	
+	
+	
+	
+	
+	
+	
+	<div class="item">
+		<a href="https://soyncanvas.vn/bst-sai-gon-xua" class="clearfix">
+			<img src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/slider_1.jpg?1560159527528" alt="New Collection">
+		</a>	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	<div class="item">
+		<a href="https://soyncanvas.vn/mix-and-match" class="clearfix">
+			<img src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/slider_2.jpg?1560159527528" alt="New Collection">
+		</a>	
+	</div>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</div><!-- /.products -->
+</section>
+
+
+
+
+
+
+
+<section class="awe-section-3">	
+	<section class="tz-introduce theme-white">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<!DOCTYPE html>
+<html>
+<body>
+    <img src="https://farm8.staticflickr.com/7846/46519729215_4b42678ec3_c.jpg">
+</body>
+</html>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+				<h2 class="tz-title-1">Cảm ơn bạn đã ghé thăm Soyn !</h2>
+				<div class="tz-introduce-content">
+					<p>
+						Soyn luôn ý thức được việc liên tục cập nhật xu hướng mới, cải tiến chất lượng sản phẩm, nâng cao dịch vụ chăm sóc khách hàng, giá thành cạnh tranh là những điều quan trọng và bắt buộc nhất.
+					</p>
+				</div>
+				<a  href="/gioi-thieu" class="tz-view-more">
+					<span>XEM CHI TIẾT</span>
+				</a>
+			</div>
+		</div><!--end class row-->
+	</div><!--end class container-->
+</section><!--end class tz-introduce-->
+</section>
+
+
+
+
+
+
+
+<section class="awe-section-5">	
+	<section class="tz-lastest-shop theme-white">
+	<h2 class="tz-title-3 margin-bottom-50">
+		Sản phẩm mới
+	</h2>
+	<div class="container">
+		
+		<div class="products hidden-lg hidden-md hidden-sm products-view-grid  owl-carousel owl-theme" data-autoheight="true"  data-md-items="5" data-sm-items="3" data-xs-items="2" data-margin="30" data-nav="true">
+			
+			         
+			
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 9 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-cam-hoa-thuy-tinh-home-m" title="Bình cắm hoa thủy tinh HOME (M)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/1356c3e38202605c3913.jpg?v=1553070983000" alt="Bình cắm hoa thủy tinh HOME (M)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14023257" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23672974" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-cam-hoa-thuy-tinh-home-m'" >
+						<a href="/binh-cam-hoa-thuy-tinh-home-m">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-cam-hoa-thuy-tinh-home-m" title="Bình cắm hoa thủy tinh HOME (M)">Bình cắm hoa thủy tinh...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14023257"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">250.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 6 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-cam-hoa-thuy-tinh-home-s" title="Bình cắm hoa thủy tinh HOME (S)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/tb10wpbhgdqk1rjszsyl6sxevxa-spec-jpg-800x800.jpg?v=1553070862563" alt="Bình cắm hoa thủy tinh HOME (S)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14023245" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23672953" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-cam-hoa-thuy-tinh-home-s'" >
+						<a href="/binh-cam-hoa-thuy-tinh-home-s">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-cam-hoa-thuy-tinh-home-s" title="Bình cắm hoa thủy tinh HOME (S)">Bình cắm hoa thủy tinh...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14023245"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">200.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 7 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do" title="Bình nước cách nhiệt loại 500ml nắp inox (Đỏ)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/acfb6d256fbc8ae2d3ad.jpg?v=1559662044000" alt="Bình nước cách nhiệt loại 500ml nắp inox (Đỏ)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14709869" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="25124361" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do'" >
+						<a href="/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do" title="Bình nước cách nhiệt loại 500ml nắp inox (Đỏ)">Bình nước cách nhiệt loại...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14709869"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">250.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 19 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-nuoc-cach-nhiet-inox-nap-go-650ml" title="Bình nước inox nắp gỗ 650ml">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/8039b69bc40821567819.jpg?v=1559639290000" alt="Bình nước inox nắp gỗ 650ml">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14709785" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="25124084" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-nuoc-cach-nhiet-inox-nap-go-650ml'" >
+						<a href="/binh-nuoc-cach-nhiet-inox-nap-go-650ml">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-nuoc-cach-nhiet-inox-nap-go-650ml" title="Bình nước inox nắp gỗ 650ml">Bình nước inox nắp gỗ...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14709785"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">250.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 19 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/bo-moc-treo-04-chu-h-o-m-e" title="Bộ móc treo 04 chữ H.O.M.E">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/12a.jpg?v=1557048438000" alt="Bộ móc treo 04 chữ H.O.M.E">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14440530" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24581371" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-moc-treo-04-chu-h-o-m-e'" >
+						<a href="/bo-moc-treo-04-chu-h-o-m-e">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-moc-treo-04-chu-h-o-m-e" title="Bộ móc treo 04 chữ H.O.M.E">Bộ móc treo 04 chữ...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14440530"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">330.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 20 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc" title="Bộ muỗng, nĩa, đũa gỗ nâu nhạt (có kèm hộp gỗ hình bầu dục)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/49a.jpg?v=1559662587000" alt="Bộ muỗng, nĩa, đũa gỗ nâu nhạt (có kèm hộp gỗ hình bầu dục)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14711807" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="25130755" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc'" >
+						<a href="/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc" title="Bộ muỗng, nĩa, đũa gỗ nâu nhạt (có kèm hộp gỗ hình bầu dục)">Bộ muỗng, nĩa, đũa gỗ...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14711807"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">220.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se242.jpg?v=1558972276197" alt="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634013" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966693" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-cau-be-tren-thuyen-la-vang-se242'" >
+						<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">Bộ tranh Cậu bé trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634013"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se245.jpg?v=1558972278317" alt="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634015" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966695" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245'" >
+						<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">Bộ tranh Con nai, lá...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634015"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se244.jpg?v=1558972277513" alt="Bộ tranh Cô gái bong bóng SE244">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634014" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966694" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-bong-bong-se244'" >
+						<a href="/bo-tranh-co-gai-bong-bong-se244">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">Bộ tranh Cô gái bong...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634014"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se250.jpg?v=1558972283160" alt="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634020" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966700" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250'" >
+						<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">Bộ tranh Cô gái mặt...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634020"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se249.jpg?v=1558972282227" alt="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634019" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966699" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249'" >
+						<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">Bộ tranh Cô gái trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634019"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-flower-pastel-se211" title="Bộ tranh Flower, Pastel SE211">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se211.jpg?v=1553681544097" alt="Bộ tranh Flower, Pastel SE211">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14091189" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23827742" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-flower-pastel-se211'" >
+						<a href="/bo-tranh-flower-pastel-se211">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-flower-pastel-se211" title="Bộ tranh Flower, Pastel SE211">Bộ tranh Flower, Pastel SE211</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14091189"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se246.jpg?v=1558972279433" alt="Bộ tranh Landscape, Horse, Winter SE246">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634016" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966696" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-landscape-horse-winter-se246'" >
+						<a href="/bo-tranh-landscape-horse-winter-se246">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">Bộ tranh Landscape, Horse, Winter...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634016"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se251.jpg?v=1558972284297" alt="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634021" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966702" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251'" >
+						<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">Bộ tranh Life is like...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634021"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se247.jpg?v=1558972280257" alt="Bộ tranh Ocean, Snow, Landscape SE247">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634017" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966697" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-ocean-snow-landscape-se247'" >
+						<a href="/bo-tranh-ocean-snow-landscape-se247">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">Bộ tranh Ocean, Snow, Landscape...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634017"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+										
+		</div><!-- /.products -->
+
+		<div class="products hidden-xs products-view-grid z2">
+			<div class="row">
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 9 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-cam-hoa-thuy-tinh-home-m" title="Bình cắm hoa thủy tinh HOME (M)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/1356c3e38202605c3913.jpg?v=1553070983000" alt="Bình cắm hoa thủy tinh HOME (M)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14023257" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23672974" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-cam-hoa-thuy-tinh-home-m'" >
+						<a href="/binh-cam-hoa-thuy-tinh-home-m">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-cam-hoa-thuy-tinh-home-m" title="Bình cắm hoa thủy tinh HOME (M)">Bình cắm hoa thủy tinh...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14023257"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">250.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 6 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-cam-hoa-thuy-tinh-home-s" title="Bình cắm hoa thủy tinh HOME (S)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/tb10wpbhgdqk1rjszsyl6sxevxa-spec-jpg-800x800.jpg?v=1553070862563" alt="Bình cắm hoa thủy tinh HOME (S)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14023245" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23672953" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-cam-hoa-thuy-tinh-home-s'" >
+						<a href="/binh-cam-hoa-thuy-tinh-home-s">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-cam-hoa-thuy-tinh-home-s" title="Bình cắm hoa thủy tinh HOME (S)">Bình cắm hoa thủy tinh...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14023245"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">200.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 7 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do" title="Bình nước cách nhiệt loại 500ml nắp inox (Đỏ)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/acfb6d256fbc8ae2d3ad.jpg?v=1559662044000" alt="Bình nước cách nhiệt loại 500ml nắp inox (Đỏ)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14709869" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="25124361" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do'" >
+						<a href="/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-nuoc-cach-nhiet-loai-500ml-nap-inox-do" title="Bình nước cách nhiệt loại 500ml nắp inox (Đỏ)">Bình nước cách nhiệt loại...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14709869"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">250.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 19 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/binh-nuoc-cach-nhiet-inox-nap-go-650ml" title="Bình nước inox nắp gỗ 650ml">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/8039b69bc40821567819.jpg?v=1559639290000" alt="Bình nước inox nắp gỗ 650ml">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14709785" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="25124084" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/binh-nuoc-cach-nhiet-inox-nap-go-650ml'" >
+						<a href="/binh-nuoc-cach-nhiet-inox-nap-go-650ml">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/binh-nuoc-cach-nhiet-inox-nap-go-650ml" title="Bình nước inox nắp gỗ 650ml">Bình nước inox nắp gỗ...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14709785"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">250.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 19 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/bo-moc-treo-04-chu-h-o-m-e" title="Bộ móc treo 04 chữ H.O.M.E">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/12a.jpg?v=1557048438000" alt="Bộ móc treo 04 chữ H.O.M.E">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14440530" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24581371" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-moc-treo-04-chu-h-o-m-e'" >
+						<a href="/bo-moc-treo-04-chu-h-o-m-e">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-moc-treo-04-chu-h-o-m-e" title="Bộ móc treo 04 chữ H.O.M.E">Bộ móc treo 04 chữ...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14440530"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">330.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn 20 sản phẩm</span>							
+		
+		
+		
+
+
+		<a href="/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc" title="Bộ muỗng, nĩa, đũa gỗ nâu nhạt (có kèm hộp gỗ hình bầu dục)">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/49a.jpg?v=1559662587000" alt="Bộ muỗng, nĩa, đũa gỗ nâu nhạt (có kèm hộp gỗ hình bầu dục)">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14711807" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="25130755" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc'" >
+						<a href="/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-muong-nia-dua-go-nau-nhat-co-kem-hop-go-hinh-bau-duc" title="Bộ muỗng, nĩa, đũa gỗ nâu nhạt (có kèm hộp gỗ hình bầu dục)">Bộ muỗng, nĩa, đũa gỗ...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14711807"></div>
+
+		
+		
+		<div class="price-box clearfix">
+
+			<div class="special-price inline-block">
+				<span class="price product-price">220.000₫</span>
+			</div>											
+		</div>
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se242.jpg?v=1558972276197" alt="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634013" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966693" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-cau-be-tren-thuyen-la-vang-se242'" >
+						<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">Bộ tranh Cậu bé trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634013"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se245.jpg?v=1558972278317" alt="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634015" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966695" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245'" >
+						<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">Bộ tranh Con nai, lá...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634015"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se244.jpg?v=1558972277513" alt="Bộ tranh Cô gái bong bóng SE244">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634014" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966694" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-bong-bong-se244'" >
+						<a href="/bo-tranh-co-gai-bong-bong-se244">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">Bộ tranh Cô gái bong...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634014"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se250.jpg?v=1558972283160" alt="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634020" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966700" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250'" >
+						<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">Bộ tranh Cô gái mặt...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634020"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se249.jpg?v=1558972282227" alt="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634019" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966699" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249'" >
+						<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">Bộ tranh Cô gái trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634019"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-flower-pastel-se211" title="Bộ tranh Flower, Pastel SE211">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se211.jpg?v=1553681544097" alt="Bộ tranh Flower, Pastel SE211">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14091189" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23827742" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-flower-pastel-se211'" >
+						<a href="/bo-tranh-flower-pastel-se211">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-flower-pastel-se211" title="Bộ tranh Flower, Pastel SE211">Bộ tranh Flower, Pastel SE211</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14091189"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se246.jpg?v=1558972279433" alt="Bộ tranh Landscape, Horse, Winter SE246">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634016" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966696" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-landscape-horse-winter-se246'" >
+						<a href="/bo-tranh-landscape-horse-winter-se246">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">Bộ tranh Landscape, Horse, Winter...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634016"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se251.jpg?v=1558972284297" alt="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634021" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966702" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251'" >
+						<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">Bộ tranh Life is like...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634021"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se247.jpg?v=1558972280257" alt="Bộ tranh Ocean, Snow, Landscape SE247">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634017" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966697" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-ocean-snow-landscape-se247'" >
+						<a href="/bo-tranh-ocean-snow-landscape-se247">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">Bộ tranh Ocean, Snow, Landscape...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634017"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+					
+			</div>
+		</div>
+		
+		<a href="/san-pham-moi" class="tz-view-more2 tz-view-style2">
+			<span>XEM THÊM</span>
+		</a>
+	</div><!--end class container-->
+</section>
+</section>
+
+
+
+
+<section class="awe-section-6">	
+	<section class="tz-lastest-shop theme-white">
+	<h2 class="tz-title-3 margin-bottom-50">
+		Sản phẩm giảm giá
+	</h2>
+	<div class="container">
+		
+		<div class="products hidden-lg hidden-md hidden-sm products-view-grid  owl-carousel owl-theme" data-autoheight="true"  data-md-items="5" data-sm-items="3" data-xs-items="2" data-margin="30" data-nav="true">
+			
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-giac-mo-cua-meo-se243" title="Bộ tranh Giấc mơ của Mèo SE243">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se243.jpg?v=1558972623680" alt="Bộ tranh Giấc mơ của Mèo SE243">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634063" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966777" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-giac-mo-cua-meo-se243'" >
+						<a href="/bo-tranh-giac-mo-cua-meo-se243">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-giac-mo-cua-meo-se243" title="Bộ tranh Giấc mơ của Mèo SE243">Bộ tranh Giấc mơ của...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634063"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-hoa-tinh-vat-se241" title="Bộ tranh Hoa Tĩnh Vật SE241">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se241.jpg?v=1558972543720" alt="Bộ tranh Hoa Tĩnh Vật SE241">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634058" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966757" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-hoa-tinh-vat-se241'" >
+						<a href="/bo-tranh-hoa-tinh-vat-se241">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-hoa-tinh-vat-se241" title="Bộ tranh Hoa Tĩnh Vật SE241">Bộ tranh Hoa Tĩnh Vật...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634058"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se251.jpg?v=1558972284297" alt="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634021" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966702" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251'" >
+						<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">Bộ tranh Life is like...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634021"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se250.jpg?v=1558972283160" alt="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634020" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966700" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250'" >
+						<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">Bộ tranh Cô gái mặt...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634020"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se249.jpg?v=1558972282227" alt="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634019" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966699" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249'" >
+						<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">Bộ tranh Cô gái trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634019"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-ocean-wave-blue-landscape-se248" title="Bộ tranh Ocean, Wave, Blue, Landscape SE248">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se248.jpg?v=1558972281307" alt="Bộ tranh Ocean, Wave, Blue, Landscape SE248">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634018" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966698" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-ocean-wave-blue-landscape-se248'" >
+						<a href="/bo-tranh-ocean-wave-blue-landscape-se248">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-ocean-wave-blue-landscape-se248" title="Bộ tranh Ocean, Wave, Blue, Landscape SE248">Bộ tranh Ocean, Wave, Blue,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634018"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se247.jpg?v=1558972280257" alt="Bộ tranh Ocean, Snow, Landscape SE247">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634017" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966697" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-ocean-snow-landscape-se247'" >
+						<a href="/bo-tranh-ocean-snow-landscape-se247">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">Bộ tranh Ocean, Snow, Landscape...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634017"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se246.jpg?v=1558972279433" alt="Bộ tranh Landscape, Horse, Winter SE246">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634016" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966696" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-landscape-horse-winter-se246'" >
+						<a href="/bo-tranh-landscape-horse-winter-se246">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">Bộ tranh Landscape, Horse, Winter...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634016"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se245.jpg?v=1558972278317" alt="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634015" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966695" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245'" >
+						<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">Bộ tranh Con nai, lá...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634015"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se244.jpg?v=1558972277513" alt="Bộ tranh Cô gái bong bóng SE244">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634014" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966694" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-bong-bong-se244'" >
+						<a href="/bo-tranh-co-gai-bong-bong-se244">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">Bộ tranh Cô gái bong...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634014"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se242.jpg?v=1558972276197" alt="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634013" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966693" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-cau-be-tren-thuyen-la-vang-se242'" >
+						<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">Bộ tranh Cậu bé trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634013"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-home-building-flower-life-quote-se240" title="Bộ tranh Home, Building, Flower, Life quote SE240">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se240.jpg?v=1558942045427" alt="Bộ tranh Home, Building, Flower, Life quote SE240">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14629022" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24955409" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-home-building-flower-life-quote-se240'" >
+						<a href="/bo-tranh-home-building-flower-life-quote-se240">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-home-building-flower-life-quote-se240" title="Bộ tranh Home, Building, Flower, Life quote SE240">Bộ tranh Home, Building, Flower,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14629022"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-yellow-minimalist-modern-ampersand-se223" title="Bộ tranh Yellow, Minimalist, Modern, Ampersand SE223">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se223.jpg?v=1553755460347" alt="Bộ tranh Yellow, Minimalist, Modern, Ampersand SE223">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14097785" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23847937" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-yellow-minimalist-modern-ampersand-se223'" >
+						<a href="/bo-tranh-yellow-minimalist-modern-ampersand-se223">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-yellow-minimalist-modern-ampersand-se223" title="Bộ tranh Yellow, Minimalist, Modern, Ampersand SE223">Bộ tranh Yellow, Minimalist, Modern,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14097785"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-geometric-abstract-mountain-yellow-se222" title="Bộ tranh Geometric, Abstract, Mountain, Yellow SE222">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se222.jpg?v=1553755303587" alt="Bộ tranh Geometric, Abstract, Mountain, Yellow SE222">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14097772" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23847704" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-geometric-abstract-mountain-yellow-se222'" >
+						<a href="/bo-tranh-geometric-abstract-mountain-yellow-se222">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-geometric-abstract-mountain-yellow-se222" title="Bộ tranh Geometric, Abstract, Mountain, Yellow SE222">Bộ tranh Geometric, Abstract, Mountain,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14097772"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+			         
+			
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-geometric-abstract-yellow-se221" title="Bộ tranh Geometric, Abstract, Yellow SE221">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se221.jpg?v=1553755137423" alt="Bộ tranh Geometric, Abstract, Yellow SE221">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14097742" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23847432" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-geometric-abstract-yellow-se221'" >
+						<a href="/bo-tranh-geometric-abstract-yellow-se221">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-geometric-abstract-yellow-se221" title="Bộ tranh Geometric, Abstract, Yellow SE221">Bộ tranh Geometric, Abstract, Yellow...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14097742"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>																
+										
+		</div><!-- /.products -->
+
+		<div class="products hidden-xs products-view-grid z2">
+			<div class="row">
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-giac-mo-cua-meo-se243" title="Bộ tranh Giấc mơ của Mèo SE243">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se243.jpg?v=1558972623680" alt="Bộ tranh Giấc mơ của Mèo SE243">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634063" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966777" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-giac-mo-cua-meo-se243'" >
+						<a href="/bo-tranh-giac-mo-cua-meo-se243">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-giac-mo-cua-meo-se243" title="Bộ tranh Giấc mơ của Mèo SE243">Bộ tranh Giấc mơ của...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634063"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-hoa-tinh-vat-se241" title="Bộ tranh Hoa Tĩnh Vật SE241">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se241.jpg?v=1558972543720" alt="Bộ tranh Hoa Tĩnh Vật SE241">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634058" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966757" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-hoa-tinh-vat-se241'" >
+						<a href="/bo-tranh-hoa-tinh-vat-se241">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-hoa-tinh-vat-se241" title="Bộ tranh Hoa Tĩnh Vật SE241">Bộ tranh Hoa Tĩnh Vật...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634058"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se251.jpg?v=1558972284297" alt="Bộ tranh Life is like a camera, màu hồng, pastel SE251">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634021" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966702" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251'" >
+						<a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-life-is-like-a-camera-mau-hong-pastel-se251" title="Bộ tranh Life is like a camera, màu hồng, pastel SE251">Bộ tranh Life is like...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634021"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se250.jpg?v=1558972283160" alt="Bộ tranh Cô gái mặt trăng và cá heo SE250">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634020" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966700" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250'" >
+						<a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-bo-gai-mat-trang-va-ca-heo-se250" title="Bộ tranh Cô gái mặt trăng và cá heo SE250">Bộ tranh Cô gái mặt...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634020"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se249.jpg?v=1558972282227" alt="Bộ tranh Cô gái trên thuyền và cá heo SE249">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634019" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966699" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249'" >
+						<a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-tren-thuyen-va-ca-heo-se249" title="Bộ tranh Cô gái trên thuyền và cá heo SE249">Bộ tranh Cô gái trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634019"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-ocean-wave-blue-landscape-se248" title="Bộ tranh Ocean, Wave, Blue, Landscape SE248">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se248.jpg?v=1558972281307" alt="Bộ tranh Ocean, Wave, Blue, Landscape SE248">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634018" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966698" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-ocean-wave-blue-landscape-se248'" >
+						<a href="/bo-tranh-ocean-wave-blue-landscape-se248">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-ocean-wave-blue-landscape-se248" title="Bộ tranh Ocean, Wave, Blue, Landscape SE248">Bộ tranh Ocean, Wave, Blue,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634018"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se247.jpg?v=1558972280257" alt="Bộ tranh Ocean, Snow, Landscape SE247">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634017" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966697" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-ocean-snow-landscape-se247'" >
+						<a href="/bo-tranh-ocean-snow-landscape-se247">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-ocean-snow-landscape-se247" title="Bộ tranh Ocean, Snow, Landscape SE247">Bộ tranh Ocean, Snow, Landscape...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634017"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se246.jpg?v=1558972279433" alt="Bộ tranh Landscape, Horse, Winter SE246">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634016" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966696" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-landscape-horse-winter-se246'" >
+						<a href="/bo-tranh-landscape-horse-winter-se246">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-landscape-horse-winter-se246" title="Bộ tranh Landscape, Horse, Winter SE246">Bộ tranh Landscape, Horse, Winter...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634016"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se245.jpg?v=1558972278317" alt="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634015" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966695" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245'" >
+						<a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-con-nai-la-ray-xe-thien-nhien-se245" title="Bộ tranh Con nai, lá ráy xẻ, thiên nhiên SE245">Bộ tranh Con nai, lá...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634015"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se244.jpg?v=1558972277513" alt="Bộ tranh Cô gái bong bóng SE244">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634014" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966694" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-co-gai-bong-bong-se244'" >
+						<a href="/bo-tranh-co-gai-bong-bong-se244">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-co-gai-bong-bong-se244" title="Bộ tranh Cô gái bong bóng SE244">Bộ tranh Cô gái bong...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634014"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se242.jpg?v=1558972276197" alt="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14634013" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24966693" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-cau-be-tren-thuyen-la-vang-se242'" >
+						<a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-cau-be-tren-thuyen-la-vang-se242" title="Bộ tranh Cậu bé trên thuyền, lá vàng SE242">Bộ tranh Cậu bé trên...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14634013"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-home-building-flower-life-quote-se240" title="Bộ tranh Home, Building, Flower, Life quote SE240">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se240.jpg?v=1558942045427" alt="Bộ tranh Home, Building, Flower, Life quote SE240">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14629022" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="24955409" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-home-building-flower-life-quote-se240'" >
+						<a href="/bo-tranh-home-building-flower-life-quote-se240">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-home-building-flower-life-quote-se240" title="Bộ tranh Home, Building, Flower, Life quote SE240">Bộ tranh Home, Building, Flower,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14629022"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-yellow-minimalist-modern-ampersand-se223" title="Bộ tranh Yellow, Minimalist, Modern, Ampersand SE223">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se223.jpg?v=1553755460347" alt="Bộ tranh Yellow, Minimalist, Modern, Ampersand SE223">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14097785" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23847937" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-yellow-minimalist-modern-ampersand-se223'" >
+						<a href="/bo-tranh-yellow-minimalist-modern-ampersand-se223">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-yellow-minimalist-modern-ampersand-se223" title="Bộ tranh Yellow, Minimalist, Modern, Ampersand SE223">Bộ tranh Yellow, Minimalist, Modern,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14097785"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-geometric-abstract-mountain-yellow-se222" title="Bộ tranh Geometric, Abstract, Mountain, Yellow SE222">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se222.jpg?v=1553755303587" alt="Bộ tranh Geometric, Abstract, Mountain, Yellow SE222">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14097772" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23847704" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-geometric-abstract-mountain-yellow-se222'" >
+						<a href="/bo-tranh-geometric-abstract-mountain-yellow-se222">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-geometric-abstract-mountain-yellow-se222" title="Bộ tranh Geometric, Abstract, Mountain, Yellow SE222">Bộ tranh Geometric, Abstract, Mountain,...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14097772"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">714.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					840.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+				         
+				<div class="col-lg-2 col-md-2 col-sm-4">
+					
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+		   
+		   
+		   
+		   
+		   
+
+
+
+
+<div class="product-box a-center">															
+	<div class="product-thumbnail">
+		
+		<div class="sale-flash">- 
+15% 
+</div>
+		
+
+		 
+		
+		
+		<span class="hidden inventory_quantity">Còn hàng</span>
+		
+		
+		
+
+
+		<a href="/bo-tranh-geometric-abstract-yellow-se221" title="Bộ tranh Geometric, Abstract, Yellow SE221">
+			<img src="//bizweb.dktcdn.net/thumb/large/100/296/956/products/se221.jpg?v=1553755137423" alt="Bộ tranh Geometric, Abstract, Yellow SE221">
+		</a>	
+		<div class="product-action clearfix">
+			<form action="/cart/add" method="post" class="variants form-nut-grid" data-id="product-actions-14097742" enctype="multipart/form-data">
+				<div>					
+					
+					<input type="hidden" name="variantId" value="23847432" />
+					<button data-toggle="tooltip" class="btn-buy btn-cart btn btn-primary left-to add_to_cart " title="Cho vào giỏ hàng"><span><!--<i class="fa fa-cart-plus" aria-hidden="true"></i>-->
+						<i class="fa fa-shopping-cart"></i></span>
+					</button>
+					
+					<span data-toggle="tooltip" class="btn btn-primary btn-view left-to" title="Chi tiết" onclick="window.location.href='/bo-tranh-geometric-abstract-yellow-se221'" >
+						<a href="/bo-tranh-geometric-abstract-yellow-se221">
+							<i class="fa fa-eye"></i>
+						</a>
+					</span>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="product-info">
+		<h3 class="product-name"><a href="/bo-tranh-geometric-abstract-yellow-se221" title="Bộ tranh Geometric, Abstract, Yellow SE221">Bộ tranh Geometric, Abstract, Yellow...</a></h3>
+		<div class="bizweb-product-reviews-badge" data-id="14097742"></div>
+
+		
+		
+		<div class="price-box clearfix">			
+			<div class="special-price inline-block">
+				<span class="price product-price">476.000₫</span>
+			</div>
+			
+			<div class="old-price inline-block">															 
+				<span class="price product-price-old">
+					560.000₫			
+				</span>
+			</div>
+						
+		</div>		
+		
+		
+	</div>
+
+
+</div>
+				</div>																
+					
+			</div>
+		</div>
+		
+		<a href="/khuyen-mai" class="tz-view-more2 tz-view-style2">
+			<span>XEM THÊM</span>
+		</a>
+	</div><!--end class container-->
+</section>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+<div class="pr-module-box" style="display: none">
+	<div class="pr-module-title">
+	</div>
+	<div class="pr-slide-wrap">
+	<ul class="pr-list-product-slide">
+	</ul>
+	</div>
+	<div class="pr-slide">
+	</div>
+</div>
+<script>
+window.productRecentVariantId = [];window.productRecentId = "";
+</script>
+<link href="https://productviewedhistory.bizwebapps.vn//Content/styles/css/ProductRecentStyle.css" rel="stylesheet" />
+		</div>
+		<div id="fb-root"></div>
+<script>
+	(function(d, s, id) {
+		var js, fjs = d.getElementsByTagName(s)[0];
+		if (d.getElementById(id)) return;
+		js = d.createElement(s); js.id = id;
+		js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=1557648114483134";
+		fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+</script>
+<footer>
+	<div class="tz-footer-content">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-item">
+					<h3 class="module-title">
+						<span>
+							CÔNG TY TNHH SOYN
+						</span>
+					</h3>
+					<div class="textwidget">
+						Giấy phép đăng ký kinh doanh số 0315015539 do Sở Kế hoạch & Đầu tư Tp. Hồ Chí Minh cấp ngày 26/04/2018
+
+					</div>
+					
+
+
+					<h3 class="module-title">
+						<span>
+							Nhận tin từ chúng tôi
+						</span>
+					</h3>
+					<form accept-charset="UTF-8" action="/contact" id="contact" method="post">
+<input name="FormType" type="hidden" value="contact" />
+<input name="utf8" type="hidden" value="true" /><input type="hidden" id="Token-b3891a7105064fbdb29620db46cf4d1c" name="Token" /><script src="https://www.google.com/recaptcha/api.js?render=6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK"></script>
+<script>
+grecaptcha.ready(function() {
+grecaptcha.execute("6Ldtu4IUAAAAAMQzG1gCw3wFlx_GytlZyLrXcsuK", {action: "/contact"})
+.then(function(token) {
+document.getElementById("Token-b3891a7105064fbdb29620db46cf4d1c").value = token
+});
+});
+</script>
+					
+					
+					<input id="name" name="contact[Name]" type="text" value="Guest" class="form-control hidden" style="display:none">
+					<!--<input type="text" class="form-control hidden" name="contact[phone]" value="NaN"  placeholder="Phone number">--> 
+					<textarea id="message" name="contact[Body]" style="display:none" class="form-control hidden" rows="1">Ðang ký email liên h?</textarea>
+					<div class="input-group" id="mail-box" style="width:100%">
+
+						<input onfocus="this.placeholder = ''" onblur="this.placeholder = 'Email nhận tin'" id="email" class="input_newsletter input-text required-entry validate-email" name="contact[Email]" type="email" value="" class="input_newsletter" placeholder="Email nhận tin" style="border-radius: 5px;box-shadow: none;border: solid 1px #c7c7c7;padding: 5px;font-size: 12px;width: 100%">
+
+						<button type="submit" class="subcribe" style="background: #f16b6f;color: #fff;border: solid 1px #f16b6f;border-radius: 5px;margin: 10px 0;font-size: 15px;padding: 2px 10px;"><span>Ðăng ký</span></button>
+
+					</div>
+					</form>
+				</div>
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-item">
+					<h3 class="module-title">
+						<span>
+							ĐỊA CHỈ LIÊN HỆ
+						</span>
+					</h3>
+					<div class="tzwidget-contact">
+						<address>
+							
+							
+							
+							Văn phòng: 42/8 Hoàng Hoa Thám, Phường 7, Quận Bình Thạnh, Tp. HCM.            
+
+Cửa hàng: 104/2 Mai Thị Lựu, P. Đa Kao, Quận 1, TP Hồ Chí Minh, Việt Nam
+								
+						</address>
+						<a href="tel:0899456699" class="mt_phone">0899456699</a>
+						<a href="mailto:soyncanvas@gmail.com" target="_top">soyncanvas@gmail.com</a>
+
+
+						<div class="tzwidget-social">
+							<ul class="inline-list social-icons">
+	
+	
+	<li>
+		<a class="icon-fallback-text" href="https://www.facebook.com/soyncanvas">
+			<i class="fa fa-facebook" aria-hidden="true"></i>
+			
+		</a>
+	</li>
+	
+	
+	
+	
+	<li>
+		<a class="icon-fallback-text" href="#" rel="publisher">
+			<i class="fa fa-google-plus" aria-hidden="true"></i>
+			
+		</a>
+	</li>
+	
+	
+	<li>
+		<a class="icon-fallback-text" href="https://www.instagram.com/soyncanvas/">
+			<i class="fa fa-instagram" aria-hidden="true"></i>
+			
+		</a>
+	</li>
+	
+	
+	
+	
+	
+	
+</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-item">
+					<h3 class="module-title">
+						<span>
+							THÔNG TIN
+						</span>
+					</h3>
+					<ul class="tz-recent-post">
+						
+						<li>
+
+							<a href="/huong-dan">Hướng dẫn mua hàng</a>
+
+						</li>
+						
+						<li>
+
+							<a href="/chinh-sach-chung">Chính sách chung</a>
+
+						</li>
+						
+						<li>
+
+							<a href="/chinh-sach">Chính sách bảo mật</a>
+
+						</li>
+						
+					</ul>
+
+					<div class="cvt_bct" style="overflow:hidden;clear:both;text-align:left">
+						<a href="http://online.gov.vn/HomePage/CustomWebsiteDisplay.aspx?DocId=51561" target="_blank"><img style="width:100%;max-width:140px;" src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/bo_cong_thuong.png?1560159527528"></a>
+					</div>
+					
+					
+				</div>
+
+				<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 footer-item">
+					<h3 class="module-title">
+						<span>
+							FACEBOOK
+						</span>
+					</h3>
+					<div class="fb-page" data-href="https://www.facebook.com/soyncanvas" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true" data-show-posts="false"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/soyncanvas"><a href="https://www.facebook.com/facebook">Facebook</a></blockquote></div></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tz-copyright theme-white"><p>© Bản quyền thuộc về Công ty TNHH SOYN <span class="fix-xs-footer"></span>  <a href="" target="_blank" rel="nofollow" title=""></a></p>
+	</div>
+</footer><!--end class tz-footer-->
+
+
+		<!-- Bizweb javascript -->
+		<script src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/option-selectors.js?1560159527528" type="text/javascript"></script>
+		<script src="//bizweb.dktcdn.net/assets/themes_support/api.jquery.js?4" type="text/javascript"></script> 
+
+		<!-- Filter -->		
+		
+		<!-- Plugin JS -->
+		<script src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/owl.carousel.min.js?1560159527528" type="text/javascript"></script>			
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+		<!-- Add to cart -->	
+		<div class="ajax-load"> 
+	<span class="loading-icon">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+			<rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+				<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+			<rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+				<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+			<rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+				<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+		</svg>
+	</span>
+</div>
+
+<div class="loading awe-popup">
+	<div class="overlay"></div>
+	<div class="loader" title="2">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			 width="24px" height="30px" viewBox="0 0 24 30" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+			<rect x="0" y="10" width="4" height="10" fill="#333" opacity="0.2">
+				<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+			<rect x="8" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+				<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.15s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+			<rect x="16" y="10" width="4" height="10" fill="#333"  opacity="0.2">
+				<animate attributeName="opacity" attributeType="XML" values="0.2; 1; .2" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="height" attributeType="XML" values="10; 20; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+				<animate attributeName="y" attributeType="XML" values="10; 5; 10" begin="0.3s" dur="0.6s" repeatCount="indefinite" />
+			</rect>
+		</svg>
+	</div>
+
+</div>
+
+<div class="addcart-popup product-popup awe-popup">
+	<div class="overlay no-background"></div>
+	<div class="content">
+		<div class="row row-noGutter">
+			<div class="col-xl-6 col-xs-12">
+				<div class="btn btn-full btn-primary a-left popup-title"><i class="fa fa-check"></i>Thêm vào giỏ hàng thành công
+				</div>
+				<a href="javascript:void(0)" class="close-window close-popup"><i class="fa fa-close"></i></a>
+				<div class="info clearfix">
+					<div class="product-image margin-top-5">
+						<img alt="popup" src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/logo.png?1560159527528" style="max-width:150px; height:auto"/>
+					</div>
+					<div class="product-info">
+						<p class="product-name"></p>
+						<p class="quantity color-main"><span>Số lượng: </span></p>
+						<p class="total-money color-main"><span>Tổng tiền: </span></p>
+
+					</div>
+					<div class="actions">    
+						<button class="btn  btn-primary  margin-top-5 btn-continue">Tiếp tục mua hàng</button>        
+						<button class="btn btn-gray margin-top-5" onclick="window.location='/cart'">Kiểm tra giỏ hàng</button>
+					</div> 
+				</div>
+
+			</div>			
+		</div>
+
+	</div>    
+</div>
+<div class="error-popup awe-popup">
+	<div class="overlay no-background"></div>
+	<div class="popup-inner content">
+		<div class="error-message"></div>
+	</div>
+</div>
+		<script>
+
+	Bizweb.updateCartFromForm = function(cart, cart_summary_id, cart_count_id) {
+		if ((typeof cart_summary_id) === 'string') {
+			var cart_summary = jQuery(cart_summary_id);
+			if (cart_summary.length) {
+				// Start from scratch.
+				cart_summary.empty();
+				// Pull it all out.        
+				jQuery.each(cart, function(key, value) {
+					if (key === 'items') {
+
+						var table = jQuery(cart_summary_id);           
+						if (value.length) {   
+							jQuery('<ul class="list-item-cart"></ul>').appendTo(table);
+							jQuery.each(value, function(i, item) {	
+								var buttonQty = "";
+								if(item.quantity == '1'){
+									buttonQty = 'disabled';
+								}else{
+									buttonQty = '';
+								}
+								var link_img0 = Bizweb.resizeImage(item.image, 'compact');
+								if(link_img0=="null" || link_img0 =='' || link_img0 ==null){
+									link_img0 = 'https://bizweb.dktcdn.net/thumb/large/assets/themes_support/noimage.gif';
+								}
+								jQuery('<li class="item productid-' + item.variant_id +'"><div class="border_list"><a class="product-image" href="' + item.url + '" title="' + item.name + '">'
+									   + '<img alt="'+  item.name  + '" src="' + link_img0 +  '"width="'+ '100' +'"\></a>'
+									   + '<div class="detail-item"><div class="product-details">'
+									   + '<p class="product-name"> <a href="' + item.url + '" title="' + item.name + '">' + item.name + '</a></p></div>'
+									   + '<div class="product-details-bottom"><span class="price">' + Bizweb.formatMoney(item.price, "{{amount_no_decimals_with_comma_separator}}₫") + '</span><a href="javascript:;" data-id="'+ item.variant_id +'" title="Xóa" class="remove-item-cart fa fa-trash-o">&nbsp;</a>'
+									   + '<div class="quantity-select qty_drop_cart"><input class="variantID" type="hidden" name="variantId" value="'+ item.variant_id +'"><input type="text" maxlength="12" min="0" class="input-text number-sidebar qty'+ item.variant_id +'" id="qty'+ item.variant_id +'" name="Lines" id="updates_'+ item.variant_id +'" size="4" value="'+ item.quantity +'"><button onClick="var result = document.getElementById(\'qty'+ item.variant_id +'\'); var qty'+ item.variant_id +' = result.value; if( !isNaN( qty'+ item.variant_id +' )) result.value++;return false;" class="btn_increase increase items-count btn-plus" type="button"><i class="fa fa-caret-up"></i></button><button onClick="var result = document.getElementById(\'qty'+ item.variant_id +'\'); var qty'+ item.variant_id +' = result.value; if( !isNaN( qty'+ item.variant_id +' ) &amp;&amp; qty'+ item.variant_id +' &gt; 1 ) result.value--;return false;" class="btn_reduced reduced items-count btn-minus" ' + buttonQty + ' type="button"><i class="fa fa-caret-down"></i></button></div></div></div></li>').appendTo(table.children('.list-item-cart'));
+							}); 
+							jQuery('<div class="pd"><div class="top-subtotal">Tổng cộng: <span class="price">' + Bizweb.formatMoney(cart.total_price, "{{amount_no_decimals_with_comma_separator}}₫") + '</span></div></div>').appendTo(table);
+							jQuery('<div class="pd right_ct"><a href="/cart" class="btn btn-cart btn-outline"><span>Vào giỏ hàng</span></a><a href="/checkout" class="btn btn-checkout btn-outline"><span>Thanh toán</span></a></div>').appendTo(table);
+						}
+						else {
+							jQuery('<div class="no-item"><p>Không có sản phẩm nào trong giỏ hàng.</p></div>').appendTo(table);
+
+						}
+					}
+				});
+			}
+		}
+		updateCartDesc(cart);
+		var numInput = document.querySelector('#cart-sidebar input.input-text');
+		if (numInput != null){
+			// Listen for input event on numInput.
+			numInput.addEventListener('input', function(){
+				// Let's match only digits.
+				var num = this.value.match(/^\d+$/);
+				if (num == 0) {
+					// If we have no match, value will be empty.
+					this.value = 1;
+				}
+				if (num === null) {
+					// If we have no match, value will be empty.
+					this.value = "";
+				}
+			}, false)
+		}
+	}
+
+	Bizweb.updateCartPageForm = function(cart, cart_summary_id, cart_count_id) {
+		if ((typeof cart_summary_id) === 'string') {
+			var cart_summary = jQuery(cart_summary_id);
+			if (cart_summary.length) {
+				// Start from scratch.
+				cart_summary.empty();
+				// Pull it all out.        
+				jQuery.each(cart, function(key, value) {
+					if (key === 'items') {
+						var table = jQuery(cart_summary_id);           
+						if (value.length) {  
+
+							var pageCart = '<div class="cart page_cart hidden-xs-down">'
+							+ '<form action="/cart" method="post" novalidate><div class="bg-scroll"><div class="cart-thead">'
+							+ '<div style="width: 17%">Ảnh sản phẩm</div><div style="width: 33%"><span class="nobr">Tên sản phẩm</span></div><div style="width: 15%" class="a-center"><span class="nobr">Đơn giá</span></div><div style="width: 14%" class="a-center">Số lượng</div><div style="width: 15%" class="a-center">Thành tiền</div><div style="width: 6%">Xoá</div></div>'
+							+ '<div class="cart-tbody"></div></div></form></div>'; 
+							var pageCartCheckout = '<div class="cart-collaterals cart_submit row"><div class="totals col-sm-7 col-md-5 col-xs-12 col-md-offset-7 col-sm-offset-5"><div class="totals"><div class="inner">'
+							+ '<table class="table shopping-cart-table-total" id="shopping-cart-totals-table"><colgroup><col><col></colgroup>'
+							+ '<tfoot>'
+							+'<tr><td colspan="1" class="a-left"><strong><h5>Thanh toán</h5></strong></td><td class="a-right"></td></tr>'
+							+'<tr><td colspan="1" class="a-left"><strong>Phí vận chuyển</strong></td><td class="a-right"><strong><span class=" price">Tính lúc thanh toán</span></strong></td></tr>'
+							+'<tr><td colspan="1" class="a-left"><strong>Tổng tiền</strong></td><td class="a-right"><strong><span class="totals_price price">' + Bizweb.formatMoney(cart.total_price, "{{amount_no_decimals_with_comma_separator}}₫") + '</span></strong></td></tr>'
+							+'</tfoot></table>'
+							+ '<ul class="checkout clearfix"><li><button class="button btn-proceed-checkout" title="Tiến hành đặt hàng" type="button" onclick="window.location.href=\'/checkout\'"><span>Tiến hành đặt hàng</span></button></li>'
+							+ '</ul></div></div></div></div>';
+							jQuery(pageCart).appendTo(table);
+							jQuery.each(value, function(i, item) {
+								var buttonQty = "";
+								if(item.quantity == '1'){
+									buttonQty = 'disabled';
+								}else{
+									buttonQty = '';
+								}
+								var link_img1 = Bizweb.resizeImage(item.image, 'compact');
+								if(link_img1=="null" || link_img1 =='' || link_img1 ==null){
+									link_img1 = 'https://bizweb.dktcdn.net/thumb/large/assets/themes_support/noimage.gif';
+								}
+								var pageCartItem = '<div class="item-cart productid-' + item.variant_id +'"><div style="width: 17%" class="image"><a class="product-image" title="' + item.name + '" href="' + item.url + '"><img width="75" height="auto" alt="' + item.name + '" src="' + link_img1 +  '"></a></div>'
+								+ '<div style="width: 33%" class="a-center fix-flex"><h2 class="product-name"> <a href="' + item.url + '">' + item.title + '</a> </h2><span class="variant-title">' + item.variant_title + '</span></div><div style="width: 15%" class="a-center"><span class="item-price"> <span class="price">' + Bizweb.formatMoney(item.price, "{{amount_no_decimals_with_comma_separator}}₫") + '</span></span></div>'
+								+ '<div style="width: 14%" class="a-center"><div class="input_qty_pr"><input class="variantID" type="hidden" name="variantId" value="'+ item.variant_id +'"><button onClick="var result = document.getElementById(\'qtyItem'+ item.variant_id +'\'); var qtyItem'+ item.variant_id +' = result.value; if( !isNaN( qtyItem'+ item.variant_id +' ) &amp;&amp; qtyItem'+ item.variant_id +' &gt; 1 ) result.value--;return false;" ' + buttonQty + ' class="reduced_pop items-count btn-minus" type="button">–</button><input type="text" maxlength="12" min="0" class="input-text number-sidebar input_pop input_pop qtyItem'+ item.variant_id +'" id="qtyItem'+ item.variant_id +'" name="Lines" id="updates_'+ item.variant_id +'" size="4" value="'+ item.quantity +'"><button onClick="var result = document.getElementById(\'qtyItem'+ item.variant_id +'\'); var qtyItem'+ item.variant_id +' = result.value; if( !isNaN( qtyItem'+ item.variant_id +' )) result.value++;return false;" class="increase_pop items-count btn-plus" type="button">+</button></div></div>'
+								+ '<div style="width: 15%" class="a-center"><span class="cart-price"> <span class="price">'+ Bizweb.formatMoney(item.price * item.quantity, "{{amount_no_decimals_with_comma_separator}}₫") +'</span> </span></div>'
+								+ '<div style="width: 6%"><a class="button remove-item remove-item-cart" title="Xóa" href="javascript:;" data-id="'+ item.variant_id +'"><span><span>Xóa</span></span></a></div></div>';
+								jQuery(pageCartItem).appendTo(table.find('.cart-tbody'));
+								if(item.variant_title == 'Default Title'){
+									$('.variant-title').hide();
+								}
+							}); 
+							jQuery(pageCartCheckout).appendTo(table.children('.cart'));
+						}else {
+							jQuery('<p class="hidden-xs-down">Không có sản phẩm nào trong giỏ hàng. Quay lại <a href="/" style="color:;">cửa hàng</a> để tiếp tục mua sắm.</p>').appendTo(table);
+							jQuery('.cart_desktop_page').css('min-height', 'auto');
+						}
+					}
+				});
+			}
+		}
+		updateCartDesc(cart);
+		jQuery('#wait').hide();
+	}
+	Bizweb.updateCartPopupForm = function(cart, cart_summary_id, cart_count_id) {
+
+		
+	}
+	Bizweb.updateCartPageFormMobile = function(cart, cart_summary_id, cart_count_id) {
+		if ((typeof cart_summary_id) === 'string') {
+			var cart_summary = jQuery(cart_summary_id);
+			if (cart_summary.length) {
+				// Start from scratch.
+				cart_summary.empty();
+				// Pull it all out.        
+				jQuery.each(cart, function(key, value) {
+					if (key === 'items') {
+
+						var table = jQuery(cart_summary_id);           
+						if (value.length) {   
+							jQuery('<div class="cart_page_mobile content-product-list"></div>').appendTo(table);
+							jQuery.each(value, function(i, item) {
+								if( item.image != null){
+								var src = Bizweb.resizeImage(item.image, 'small');
+								}else{
+								var src = "https://bizweb.dktcdn.net/thumb/large/assets/themes_support/noimage.gif";
+								}
+								jQuery('<div class="item-product item productid-' + item.variant_id +' "><div class="item-product-cart-mobile"><a href="' + item.url + '">	<a class="product-images1" href=""  title="' + item.name + '"><img width="80" height="150" alt="" src="' + src +  '" alt="' + item.name + '"></a></a></div>'
+									   + '<div class="title-product-cart-mobile"><h3><a href="' + item.url + '" title="' + item.name + '">' + item.name + '</a></h3><p>Giá: <span>' + Bizweb.formatMoney(item.price, "{{amount_no_decimals_with_comma_separator}}₫") + '</span></p></div>'
+									   + '<div class="select-item-qty-mobile"><div class="txt_center">'
+									   + '<input class="variantID" type="hidden" name="variantId" value="'+ item.variant_id +'"><button onClick="var result = document.getElementById(\'qtyMobile'+ item.variant_id +'\'); var qtyMobile'+ item.variant_id +' = result.value; if( !isNaN( qtyMobile'+ item.variant_id +' ) &amp;&amp; qtyMobile'+ item.variant_id +' &gt; 0 ) result.value--;return false;" class="reduced items-count btn-minus" type="button">–</button><input type="text" maxlength="12" min="0" class="input-text number-sidebar qtyMobile'+ item.variant_id +'" id="qtyMobile'+ item.variant_id +'" name="Lines" id="updates_'+ item.variant_id +'" size="4" value="'+ item.quantity +'"><button onClick="var result = document.getElementById(\'qtyMobile'+ item.variant_id +'\'); var qtyMobile'+ item.variant_id +' = result.value; if( !isNaN( qtyMobile'+ item.variant_id +' )) result.value++;return false;" class="increase items-count btn-plus" type="button">+</button></div>'
+									   + '<a class="button remove-item remove-item-cart" href="javascript:;" data-id="'+ item.variant_id +'">Xoá</a></div>').appendTo(table.children('.content-product-list'));
+
+								});
+							
+							jQuery('<div class="header-cart-price" style=""><div class="title-cart "><h3 class="text-xs-left">Tổng tiền</h3><a class="text-xs-right totals_price_mobile">' + Bizweb.formatMoney(cart.total_price, "{{amount_no_decimals_with_comma_separator}}₫") + '</a></div>'
+								  	+ '<div class="checkout"><button class="btn-proceed-checkout-mobile" title="Tiến hành thanh toán" type="button" onclick="window.location.href=\'/checkout\'">'
+								  	+ '<span>Tiến hành thanh toán</span></button></div></div>').appendTo(table);
+						}
+						
+					}
+				});
+			}
+		}
+		updateCartDesc(cart);
+	}
+
+
+	function updateCartDesc(data){
+		var $cartPrice = Bizweb.formatMoney(data.total_price, "{{amount_no_decimals_with_comma_separator}}₫"),
+			$cartMobile = $('#header .cart-mobile .quantity-product'),
+			$cartDesktop = $('.count_item_pr'),
+			$cartDesktopList = $('.cart-counter-list'),
+			$cartPopup = $('.cart-popup-count');
+
+		switch(data.item_count){
+			case 0:
+				$cartMobile.text('0');
+				$cartDesktop.text('0');
+				$cartDesktopList.text('0');
+				$cartPopup.text('0');
+
+				break;
+			case 1:
+				$cartMobile.text('1');
+				$cartDesktop.text('1');
+				$cartDesktopList.text('1');
+				$cartPopup.text('1');
+
+				break;
+			default:
+				$cartMobile.text(data.item_count);
+				$cartDesktop.text(data.item_count);
+				$cartDesktopList.text(data.item_count);
+				$cartPopup.text(data.item_count);
+
+				break;
+		}
+		$('.top-cart-content .top-subtotal .price, aside.sidebar .block-cart .subtotal .price, .popup-total .total-price').html($cartPrice);
+		$('.popup-total .total-price').html($cartPrice);
+		$('.shopping-cart-table-total .totals_price').html($cartPrice);
+		$('.header-cart-price .totals_price_mobile').html($cartPrice);
+		$('.cartCount').html(data.item_count);
+	}
+
+	Bizweb.onCartUpdate = function(cart) {
+		Bizweb.updateCartFromForm(cart, '.mini-products-list');
+		Bizweb.updateCartPopupForm(cart, '#popup-cart-desktop .tbody-popup');
+		
+		 };
+		 Bizweb.onCartUpdateClick = function(cart, variantId) {
+			 jQuery.each(cart, function(key, value) {
+				 if (key === 'items') {    
+					 jQuery.each(value, function(i, item) {	
+						 if(item.variant_id == variantId){
+							 $('.productid-'+variantId).find('.cart-price span.price').html(Bizweb.formatMoney(item.price * item.quantity, "{{amount_no_decimals_with_comma_separator}}₫"));
+							 $('.productid-'+variantId).find('.items-count').prop("disabled", false);
+							 $('.productid-'+variantId).find('.number-sidebar').prop("disabled", false);
+							 $('.productid-'+variantId +' .number-sidebar').val(item.quantity);
+							 if(item.quantity == '1'){
+								 $('.productid-'+variantId).find('.items-count.btn-minus').prop("disabled", true);
+							 }
+						 }
+					 }); 
+				 }
+			 });
+			 updateCartDesc(cart);
+		 }
+		 Bizweb.onCartRemoveClick = function(cart, variantId) {
+			 jQuery.each(cart, function(key, value) {
+				 if (key === 'items') {    
+					 jQuery.each(value, function(i, item) {	
+						 if(item.variant_id == variantId){
+							 $('.productid-'+variantId).remove();
+						 }
+					 }); 
+				 }
+			 });
+			 updateCartDesc(cart);
+		 }
+		 $(window).ready(function(){
+			 $.ajax({
+				 type: 'GET',
+				 url: '/cart.js',
+				 async: false,
+				 cache: false,
+				 dataType: 'json',
+				 success: function (cart){
+					 Bizweb.updateCartFromForm(cart, '.mini-products-list');
+					 Bizweb.updateCartPopupForm(cart, '#popup-cart-desktop .tbody-popup'); 
+					 
+					  }
+					 });
+				 });
+
+</script>		
+		<div id="popup-cart" class="modal fade margin-top-50" role="dialog">
+	<div id="popup-cart-desktop" class="clearfix">
+		<div class="content">
+			<a href="javascript:void(0)" class="close-window">x</a>
+			<div class="clearfix">
+				<div class="product-image f-left padding-right-20">
+					<img alt="img" src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/logo.png?1560159527528" style="max-width:100px; height:auto">
+				</div>
+				<div class="f-left" style="width: 320px;">
+					<div class="product-info f-left">
+						<p class="product-name">
+
+							<a href="#" title=""></a> 
+						</p>
+						<p class="success-message btn-cart">Sản phẩm đã thêm vào giỏ hàng !</p>
+						
+
+					</div>
+					<div class="actions clearfix margin-top-10" style=" clear: left; ">
+						<button class="btn continue-shopping  btn-primary margin-right-10" onclick="$('#popup-cart').modal('hide');">Tiếp tục mua sắm</button>
+						<button class="btn btn-cart  btn-primary " onclick="window.location='/cart'">Xem giỏ hàng</button>
+						
+					</div>  
+				</div>
+			</div>
+
+		</div>
+		<a title="Close" class="quickview-close close-window" href="javascript:;" onclick="$('#popup-cart').modal('hide');"><i class="fa  fa-times-circle"></i></a>
+	</div>
+
+</div>
+<div id="myModal" class="modal fade" role="dialog">
+</div>
+		<script src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/cs.script.js?1560159527528" type="text/javascript"></script>
+
+
+
+		<!-- Main JS -->	
+		<script src="//bizweb.dktcdn.net/100/296/956/themes/640676/assets/main.js?1560159527528" type="text/javascript"></script>				
+
+
+		<!-- Product detail JS,CSS -->
+				
+	<div id="facebook-inbox">
+	<button class="facebook-inbox-tab" style="display: block; ">
+		<span class="facebook-inbox-tab-icon">
+			<img src="https://facebookinbox.bizwebapps.vn/Content/Images/fb-icon-1.png" alt="Facebook Chat" />
+		</span>
+		<span class="facebook-inbox-tab-title">chat với chúng tôi</span>
+	</button>
+
+	<div id="facebook-inbox-frame">
+		<div id="fb-root">&nbsp;</div>
+		<div class="fb-page" data-adapt-container-width="true" data-hide-cover="false" data-href="" data-show-facepile="true" data-small-header="true" data-width="250" data-height="350" data-tabs="messages">
+			<div class="fb-xfbml-parse-ignore">
+				<blockquote cite=""><a href="">Chat với chúng tôi</a></blockquote>
+			</div>
+		</div>
+	</div>
+</div>
+
+<style>
+	#facebook-inbox {
+		position: fixed;
+		bottom: 0px;
+		z-index: 110000;
+		text-align: center;
+		display: none;
+	}
+
+	.facebook-inbox-tab-icon {
+		float: left;
+	}
+
+	.facebook-inbox-tab-title {
+		float: left;
+		margin-left: 10px;
+		line-height: 25px;
+	}
+
+	#facebook-inbox-frame {
+		display: none;
+		width: 100%;
+		min-height: 200px;
+		overflow: hidden;
+		position: relative;
+		background-color: #f5f5f5;
+	}
+
+	#fb-root {
+		height: 0px;
+	}
+
+	.facebook-inbox-tab {
+		top: 0px;
+		bottom: 0px;
+		margin: -40px 0px 0px 0px;
+		position: relative;
+		height: 40px;
+		width: 250px;
+		border: 1px solid;
+		border-radius: 0px 0px 0px 0px;
+		text-align: center;
+		background-color: #19a3dd;
+		color: #ffffff;
+	}
+</style>
+<script>
+(function (d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) return;
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v2.5";
+				fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	window.facebookParse = function facebookParse(){
+		FB.XFBML.parse();
+	}
+</script> 
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NLNTN6K"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+	
+	
+	<script type="text/javascript">
+	window.appbulkloyalty = window.appbulkloyalty || {};
+	window.appbulkloyalty.shop = 'soyncanvas1.bizwebvietnam.net';
+	</script>
+
+	<div class="appbulk-loyalty-widget"
+		data-shop="soyncanvas1.bizwebvietnam.net"></div>
+<input type="hidden" name="_promotionbar_params" value="soyncanvas1.bizwebvietnam.net" /><input type="hidden" name="_promotionbar_storename" value="Soyn" /></body>
+</html>
