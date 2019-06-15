@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://canvas.com/vyvtt"
+           xmlns="http://canvas.com/vyvtt"
+           elementFormDefault="qualified">
+    
+    <xs:element name="painting" type="Painting"/>
+    
+    <xs:complexType name="Painting">
+        <xs:sequence>
+            <xs:element name="categories" type="Categories" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Categories">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="description" type="xs:string" minOccurs="0"/>
+            <xs:element name="canvas" type="Canvas" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Canvas">
+        <xs:sequence>
+            <xs:element name="name" type="xs:string"/>
+            <xs:element name="url" type="xs:string"/>
+            <xs:element name="image" type="xs:string"/>
+            <xs:element name="designer" type="xs:string" minOccurs="0"/>
+            <xs:element name="detail" type="Detail" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:sequence>
+    </xs:complexType>
+    
+    <xs:complexType name="Detail">
+        <xs:sequence>
+            <xs:element name="width" type="xs:positiveInteger" minOccurs="0"/>
+            <xs:element name="length" type="xs:positiveInteger" minOccurs="0"/>
+            <xs:element name="unit" type="xs:string" minOccurs="0"/>
+            <xs:element name="price" type="xs:positiveInteger"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
