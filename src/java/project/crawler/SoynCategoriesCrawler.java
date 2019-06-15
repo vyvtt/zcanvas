@@ -11,7 +11,6 @@ import java.util.Map;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLStreamException;
-import javax.xml.stream.XMLStreamReader;
 import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.StartElement;
@@ -37,10 +36,8 @@ public class SoynCategoriesCrawler extends BaseCrawler {
     public Map<String, String> getCategories()
             throws XMLStreamException, UnsupportedEncodingException {
         
-        String htmlContent = XMLUtilities.parseHTML(Constant.HOST_SOYN, beginSign, endSign, "soyn_categories.txt");
-        htmlContent = StringUtilities.fixString(htmlContent);
-        
-        htmlContent = htmlContent.trim();
+        String htmlContent = XMLUtilities.parseHTML(Constant.HOST_SOYN, beginSign, endSign);
+        htmlContent = StringUtilities.refineHtml(htmlContent);
         Map<String, String> categories = new HashMap<>();
         
         // Kết hợp cursor và iterator để duyệt
@@ -87,11 +84,9 @@ public class SoynCategoriesCrawler extends BaseCrawler {
                 }
             } // end if start
         } // end while reader
+        
+        reader.close();
 
         return categories;
-    }
-    
-    private XMLEvent getXMLEvent(XMLStreamReader reader) throws XMLStreamException {
-        return allocator.allocate(reader);
     }
 }
