@@ -33,10 +33,10 @@ public class SoynCategoriesCrawler extends BaseCrawler {
     public SoynCategoriesCrawler() {
     }
 
-    public Map<String, String> getCategories()
+    public Map<String, String> crawlCategories()
             throws XMLStreamException, UnsupportedEncodingException {
-        
-        String htmlContent = XMLUtilities.parseHTML(Constant.HOST_SOYN, beginSign, endSign);
+
+        String htmlContent = XMLUtilities.parseHTML(StringUtilities.HOST_SOYN, beginSign, endSign);
         htmlContent = StringUtilities.refineHtml(htmlContent);
         Map<String, String> categories = new HashMap<>();
         
@@ -77,7 +77,7 @@ public class SoynCategoriesCrawler extends BaseCrawler {
 
                 if ("a".equals(tagName)) {
                     Attribute attHref = element.getAttributeByName(new QName("href"));
-                    String linkCategory = Constant.HOST_SOYN + attHref.getValue();
+                    String linkCategory = StringUtilities.HOST_SOYN + attHref.getValue();
                     event = reader.nextEvent();
                     Characters c = event.asCharacters();
                     categories.put(linkCategory, c.getData());

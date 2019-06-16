@@ -5,8 +5,8 @@
  */
 package project.crawler;
 
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
+import project.utils.Constant;
+import project.utils.StringUtilities;
 
 /**
  *
@@ -16,25 +16,10 @@ public class Demo {
 
     public static void main(String[] args) {
         
-//        String s = "30x45cm - 210.000₫";
-//        
-//        String size = s.substring(0, s.indexOf("-")).trim();
-//        String unit = size.substring(size.length() - 2, size.length());
-//        String length = size.substring(size.indexOf("x") + 1, size.length() - 2);
-//        String width = size.substring(0, size.indexOf("x"));
-//        
-//        System.out.println(size);
-//        System.out.println(unit);
-//        System.out.println(length);
-//        System.out.println(width);
-//        
-//        String price = s.substring(s.indexOf("-") + 2, s.length() - 1);
-//        
-//        System.out.println(price);
-        
+        SoynMainCrawler.crawl();
 
-        Thread thread = new Thread(new SoynThread());
-        thread.start();
+//        Thread thread = new Thread(new SoynThread());
+//        thread.start();
 
 //        String uri = "https://www.sephora.com/shop/facial-treatments";
 //        String uri = "https://www.paulaschoice.com/ingredient-dictionary";

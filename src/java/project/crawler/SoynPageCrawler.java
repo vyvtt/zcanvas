@@ -36,15 +36,14 @@ import static project.utils.XMLUtilities.getBufferReaderFromURI;
  *
  * @author thuyv
  */
-public class SoynCrawler {
+public class SoynPageCrawler {
 
     private String url;
     private String categoryName;
     private int pageCount;
     private String htmlContent;
-    private int totalCanvas = 0;
 
-    public SoynCrawler(String url, String categoryName) {
+    public SoynPageCrawler(String url, String categoryName) {
         this.url = url;
         this.categoryName = categoryName;
 
@@ -52,7 +51,7 @@ public class SoynCrawler {
         htmlContent = "";
     }
 
-    public Categories crawl()
+    public Categories crawlEachPage()
             throws UnsupportedEncodingException, XMLStreamException, XMLStreamException {
         if (categoryName == null) {
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, new Exception("NULL categoryName"));
@@ -80,11 +79,11 @@ public class SoynCrawler {
             listCanvas.addAll(crawlListCanvasEachPage(htmlContent));
         } // end for page
 
-        listCanvas.forEach((canvas) -> {
-            System.out.println(canvas.getName() + " - " + canvas.getUrl());
-        });
+//        listCanvas.forEach((canvas) -> {
+//            System.out.println(canvas.getName() + " - " + canvas.getUrl());
+//        });
         
-        System.out.println("--- Done getEachPage - Begin get datail of " + listCanvas.size());
+        System.out.println("--- Done getEachPage - Begin get detail of " + listCanvas.size());
 
         // Read each product page to get detail
         for (int i = 0; i < listCanvas.size(); i++) {
@@ -93,7 +92,7 @@ public class SoynCrawler {
             String price = "";
 
             url = currentCanvas.getUrl();
-            System.out.println(i + " - " + url);
+            System.out.println((i+1) + " - " + url);
 
             htmlContent = "";
             String beginSign = "class=\"price-box\"";
@@ -239,7 +238,7 @@ public class SoynCrawler {
                 if ("a".equals(tagName) && isInside) {
                     Attribute att = element.getAttributeByName(new QName("href"));
                     if (att != null) {
-                        canvas.setUrl(Constant.HOST_SOYN + att.getValue());
+                        canvas.setUrl(StringUtilities.HOST_SOYN + att.getValue());
                     }
                     att = element.getAttributeByName(new QName("title"));
                     if (att != null) {
@@ -290,7 +289,7 @@ public class SoynCrawler {
                 } // end while
             }
         } catch (IOException e) {
-            Logger.getLogger(SoynCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            Logger.getLogger(SoynPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
     }
 

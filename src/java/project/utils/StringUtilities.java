@@ -5,15 +5,26 @@
  */
 package project.utils;
 
+import java.io.IOException;
+import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 import project.xmlchecker.XmlSyntaxChecker;
 /**
  *
  * @author thuyv
  */
-public class StringUtilities {
+public class StringUtilities implements Serializable{
     
     public static String refineHtml(String src) {
         src = removeMiscellaneousTags(src);
@@ -46,6 +57,32 @@ public class StringUtilities {
             return BigInteger.ZERO;
         }
     }
+    
+    public static String HOST_SOYN = "";
+    public static String HOST_MOPI = "";
+    
+    public static String getHostFromConfigFile(String filePath) {
+        try {
+            
+        // parse file to DOM
+        DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder builder = builderFactory.newDocumentBuilder();
+        Document document = builder.parse(filePath);
+        // get XPath
+        XPathFactory xPathFactory = XPathFactory.newInstance();
+        XPath xPath = xPathFactory.newXPath();
+        // get config
+        String expression = "/host";
+        String host = (String)xPath.evaluate(expression, document, XPathConstants.STRING);
+        return host.trim();
+        
+        } catch (IOException | ParserConfigurationException | XPathExpressionException | SAXException e) {
+            Logger.getLogger(StringUtilities.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        }
+        return null;
+    }
+    
+    
     
 //    public static boolean isAlphaCharacter(char x) {
 //        return (x >= 'a' && x <= 'z');
