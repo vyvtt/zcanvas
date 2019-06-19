@@ -5,6 +5,7 @@
  */
 package project.crawler;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,20 +16,17 @@ import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
-import javax.xml.stream.util.XMLEventAllocator;
-import project.utils.Constant;
-import project.utils.StringUtilities;
-import project.utils.XMLUtilities;
+import project.utils.StringHelper;
+import project.utils.XMLHelper;
 
 /**
  *
  * @author thuyv
  */
-public class SoynCategoriesCrawler extends BaseCrawler {
+public class SoynCategoriesCrawler implements Serializable{
 
     private String beginSign = "href=\"/tranh-treo-tuong\"";
     private String endSign = "</ul>";
-    private XMLEventAllocator allocator;
 
     public SoynCategoriesCrawler() {
     }
@@ -36,37 +34,11 @@ public class SoynCategoriesCrawler extends BaseCrawler {
     public Map<String, String> crawlCategories()
             throws XMLStreamException, UnsupportedEncodingException {
 
-        String htmlContent = XMLUtilities.parseHTML(StringUtilities.HOST_SOYN, beginSign, endSign);
-        htmlContent = StringUtilities.refineHtml(htmlContent);
+        String htmlContent = XMLHelper.parseHTML(StringHelper.HOST_SOYN, beginSign, endSign);
+        htmlContent = StringHelper.refineHtml(htmlContent);
         Map<String, String> categories = new HashMap<>();
         
-        // Kết hợp cursor và iterator để duyệt
-//        XMLInputFactory factory = XMLInputFactory.newFactory();
-//        factory.setEventAllocator(new XMLEventAllocatorImpl());
-//        allocator = factory.getEventAllocator();
-//        byte[] byteArray = htmlContent.getBytes("UTF-8");
-//        InputStream is = new ByteArrayInputStream(byteArray);
-//        XMLStreamReader reader = factory.createXMLStreamReader(is);
-//        int eventType = reader.getEventType();
-//        
-//        while (reader.hasNext()) {
-//            eventType = reader.next();
-//            if (eventType == XMLStreamConstants.START_ELEMENT) {
-//                StartElement element = getXMLEvent(reader).asStartElement();
-//                
-//                String tagName = element.getName().getLocalPart();
-//
-//                if ("a".equals(tagName)) {
-//                    Attribute attHref = element.getAttributeByName(new QName("href"));
-//                    String linkCategory = Constant.HOST_SOYN + attHref.getValue();
-//                    eventType = reader.next();
-//                    Characters c = getXMLEvent(reader).asCharacters();
-//                    categories.put(linkCategory, c.getData());
-//                }
-//            }
-//        }
-        
-        XMLEventReader reader = XMLUtilities.getXMLEventReaderFromString(htmlContent);
+        XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
 
         while (reader.hasNext()) {
             XMLEvent event = reader.nextEvent();
@@ -77,7 +49,7 @@ public class SoynCategoriesCrawler extends BaseCrawler {
 
                 if ("a".equals(tagName)) {
                     Attribute attHref = element.getAttributeByName(new QName("href"));
-                    String linkCategory = StringUtilities.HOST_SOYN + attHref.getValue();
+                    String linkCategory = StringHelper.HOST_SOYN + attHref.getValue();
                     event = reader.nextEvent();
                     Characters c = event.asCharacters();
                     categories.put(linkCategory, c.getData());

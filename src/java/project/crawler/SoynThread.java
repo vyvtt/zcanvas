@@ -14,7 +14,7 @@ import java.util.logging.Logger;
 import javax.xml.stream.XMLStreamException;
 import project.jaxb.Categories;
 import project.jaxb.Painting;
-import project.utils.XMLUtilities;
+import project.utils.XMLHelper;
 
 /**
  *
@@ -50,7 +50,7 @@ public class SoynThread extends BaseThread implements Runnable {
                     Categories crawlCategory = crawler.crawlEachPage();
                     c.add(crawlCategory);
                     p.setCategories(c);
-                    XMLUtilities.saveToXML("test" + test + ".xml", p);
+                    XMLHelper.saveToXML("test" + test + ".xml", p);
                     test++;
                     // done test --------------
                     
@@ -68,8 +68,8 @@ public class SoynThread extends BaseThread implements Runnable {
                 System.out.println("Total " + total + " canvas in " + listCategoriesCrawl.size());
                 // done test --------------
 
-                XMLUtilities.saveToXML("test.xml", painting);
-                XMLUtilities.validateXMLBeforeSaveToDatabase("test.xml", painting);
+                XMLHelper.saveToXML("test.xml", painting);
+                XMLHelper.validateXMLBeforeSaveToDatabase("test.xml", painting);
 
                 return;
             }

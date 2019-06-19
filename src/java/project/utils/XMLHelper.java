@@ -42,11 +42,12 @@ import project.jaxb.Painting;
  *
  * @author thuyv
  */
-public class XMLUtilities implements Serializable {
+public class XMLHelper implements Serializable {
 
     public static BufferedReader getBufferReaderFromURI(String uri)
             throws MalformedURLException, IOException {
         URL url = new URL(uri);
+        System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
         URLConnection con = url.openConnection();
         con.setRequestProperty("User-Agent", Constant.USER_AGENT);
         con.connect();
@@ -71,7 +72,7 @@ public class XMLUtilities implements Serializable {
             marshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, Boolean.FALSE);
             marshaller.marshal(painting, new File(filePath));
         } catch (JAXBException e) {
-            Logger.getLogger(XMLUtilities.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
     }
 
@@ -88,7 +89,7 @@ public class XMLUtilities implements Serializable {
 
             System.out.println("Done validate -> save to DB here");
         } catch (IOException | JAXBException | SAXException e) {
-            Logger.getLogger(XMLUtilities.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
     }
 
@@ -102,6 +103,9 @@ public class XMLUtilities implements Serializable {
 
             String line = null;
             while ((line = reader.readLine()) != null) {
+                
+//                System.out.println(line);
+                
                 if (line.contains(beginSign)) {
                     if (count == 0) {
                         isInside = true;
@@ -112,6 +116,13 @@ public class XMLUtilities implements Serializable {
                     isInside = false;
                 }
                 if (isInside) {
+//                    System.out.println("----");
+//                    System.out.println(line);
+                    line = line.replaceAll("\\$", "");
+                    line = line.replace("value=\"\">", ">");
+                    line = line.replace("selected='selected'", "");
+//                    System.out.println(line);
+                    
                     StringBuffer result = new StringBuffer();
                     Matcher m = Pattern
                             .compile("(\\s+[\\w:.-]+=\")([^\"]*(?:\"(?!\\s+[\\w:.-]+=\"|\\s*(?:/?|\\?)>)[^\"]*)*)\"")

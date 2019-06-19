@@ -5,6 +5,7 @@
  */
 package project.crawler;
 
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,19 +16,20 @@ import javax.xml.stream.XMLStreamException;
 import project.jaxb.Categories;
 import project.jaxb.Painting;
 import project.utils.Constant;
-import project.utils.StringUtilities;
-import project.utils.XMLUtilities;
+import project.utils.CrawlHelper;
+import project.utils.StringHelper;
+import project.utils.XMLHelper;
 
 /**
  *
  * @author thuyv
  */
-public class SoynMainCrawler {
+public class SoynMainCrawler implements Serializable {
 
     public static void crawl() {
         try {
             // Get host from config file
-            StringUtilities.HOST_SOYN = StringUtilities.getHostFromConfigFile(Constant.XML_CONFIG_SOYN);
+            StringHelper.HOST_SOYN = StringHelper.getHostFromConfigFile(Constant.XML_CONFIG_SOYN);
             // Crawl list categories
             SoynCategoriesCrawler categoriesCrawler = new SoynCategoriesCrawler();
             Map<String, String> categories = categoriesCrawler.crawlCategories();
@@ -46,14 +48,20 @@ public class SoynMainCrawler {
                 System.out.println(category.getKey() + " - " + category.getValue());
                 SoynPageCrawler crawler = new SoynPageCrawler(category.getKey(), category.getValue());
 
+//                String beginSign = "class=\"pagination clearfix \"";
+//                String endSign = "</ul>";
+//                int pageCount = CrawlHelper.getPageCount(category.getKey(), beginSign, endSign, "page-link");
+//                System.out.println("test page: " + category.getValue() + " - " + category.getKey() + " - " + pageCount);
+
                 // test -------------------
                 Painting p = new Painting();
                 List<Categories> c = new ArrayList<>();
                 Categories crawlCategory = crawler.crawlEachPage();
                 c.add(crawlCategory);
                 p.setCategories(c);
-                XMLUtilities.saveToXML("test" + test + ".xml", p);
-                XMLUtilities.validateXMLBeforeSaveToDatabase("test" + test + ".xml", painting);
+                XMLHelper.saveToXML("test_soyn_" + test + ".xml", p);
+                XMLHelper.validateXMLBeforeSaveToDatabase("test_soyn_" + test + ".xml", painting);
+                System.out.println("////////////////////////////");
                 test++;
                 // done test --------------
 
@@ -71,8 +79,9 @@ public class SoynMainCrawler {
             System.out.println("Total " + total + " canvas in " + listCategoriesCrawl.size());
             // done test --------------
 
-            XMLUtilities.saveToXML(Constant.OUTPUT_XML_SOYN, painting);
-            XMLUtilities.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_SOYN, painting);
+            XMLHelper.saveToXML(Constant.OUTPUT_XML_SOYN, painting);
+            XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_SOYN, painting);
+
         } catch (UnsupportedEncodingException | XMLStreamException e) {
             Logger.getLogger(SoynMainCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }

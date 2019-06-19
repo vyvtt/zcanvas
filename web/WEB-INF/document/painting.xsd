@@ -39,10 +39,10 @@ and open the template in the editor.
     
     <xs:complexType name="Detail">
         <xs:sequence>
-            <xs:element name="width" type="xs:positiveInteger" minOccurs="0"/>
-            <xs:element name="length" type="xs:positiveInteger" minOccurs="0"/>
+            <xs:element name="width" type="xs:nonNegativeInteger" minOccurs="0"/>
+            <xs:element name="length" type="xs:nonNegativeInteger" minOccurs="0"/>
             <xs:element name="unit" type="xs:string" minOccurs="0"/>
-            <xs:element name="price" type="xs:positiveInteger"/>
+            <xs:element name="price" type="xs:nonNegativeInteger"/>
         </xs:sequence>
     </xs:complexType>
 </xs:schema>

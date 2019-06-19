@@ -15,6 +15,7 @@ public class Constant {
     public static final String SCHEMA_PAINTING = "web/WEB-INF/document/painting.xsd";
     
     public static final String OUTPUT_XML_SOYN = "web/WEB-INF/document/output_soyn.xml";
+    public static final String OUTPUT_XML_MOPI = "web/WEB-INF/document/output_mopi.xml";
     
     public static final String XML_CONFIG_SOYN = "web/WEB-INF/document/soyn.xml";
     public static final String XML_CONFIG_MOPI = "web/WEB-INF/document/mopi.xml";

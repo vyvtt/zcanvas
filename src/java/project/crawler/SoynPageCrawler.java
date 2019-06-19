@@ -6,11 +6,9 @@
 package project.crawler;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.io.IOException;
+import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -26,17 +24,16 @@ import javax.xml.stream.events.XMLEvent;
 import project.jaxb.Canvas;
 import project.jaxb.Categories;
 import project.jaxb.Detail;
-import project.jaxb.Painting;
-import project.utils.Constant;
-import project.utils.StringUtilities;
-import project.utils.XMLUtilities;
-import static project.utils.XMLUtilities.getBufferReaderFromURI;
+import project.utils.CrawlHelper;
+import project.utils.StringHelper;
+import project.utils.XMLHelper;
+import static project.utils.XMLHelper.getBufferReaderFromURI;
 
 /**
  *
  * @author thuyv
  */
-public class SoynPageCrawler {
+public class SoynPageCrawler implements Serializable {
 
     private String url;
     private String categoryName;
@@ -58,33 +55,37 @@ public class SoynPageCrawler {
             return null;
         }
 
-        // get total page count of this category
-        getPageCount(url);
+        // ---------------------------------
+        // Get total pages of this category 
+        String beginSign = "class=\"pagination clearfix \"";
+        String endSign = "</ul>";
+        String keyOfLineContainPageCount = "page-link";
+        pageCount = CrawlHelper.getPageCount(url, beginSign, endSign, keyOfLineContainPageCount);
 
-        System.out.println("In SoynCrawler " + categoryName + " - " + url + " - " + pageCount);
+        System.out.println("In SoynPageCrawler " + categoryName + " - " + url + " - " + pageCount);
 
+        // ---------------------------------
+        // Crawl products of each page
         Categories category = new Categories();
         category.setName(categoryName);
         List<Canvas> listCanvas = new ArrayList<>();
-
+        
         for (int i = 0; i < pageCount; i++) {
+            
             String pageUrl = url + "?page=" + (i + 1);
-            String beginSign = "class=\"products-view products-view-grid\"";
-            String endSign = "class=\"sidebar left left-content col-lg-3 col-lg-pull-9\"";
-            
+            beginSign = "class=\"products-view products-view-grid\"";
+            endSign = "class=\"sidebar left left-content col-lg-3 col-lg-pull-9\"";
+
             htmlContent = "";
-            htmlContent = XMLUtilities.parseHTML(pageUrl, beginSign, endSign);
-            htmlContent = StringUtilities.refineHtml(htmlContent);
-            
+            htmlContent = XMLHelper.parseHTML(pageUrl, beginSign, endSign);
+            htmlContent = StringHelper.refineHtml(htmlContent);
+
             listCanvas.addAll(crawlListCanvasEachPage(htmlContent));
         } // end for page
 
-//        listCanvas.forEach((canvas) -> {
-//            System.out.println(canvas.getName() + " - " + canvas.getUrl());
-//        });
-        
         System.out.println("--- Done getEachPage - Begin get detail of " + listCanvas.size());
 
+        // ---------------------------------
         // Read each product page to get detail
         for (int i = 0; i < listCanvas.size(); i++) {
             List<Detail> listDetail = new ArrayList<>();
@@ -92,15 +93,15 @@ public class SoynPageCrawler {
             String price = "";
 
             url = currentCanvas.getUrl();
-            System.out.println((i+1) + " - " + url);
+            System.out.println((i + 1) + " - " + url);
 
             htmlContent = "";
-            String beginSign = "class=\"price-box\"";
-            String endSign = "class=\"form-group form-groupx form-detail-action \"";
+            beginSign = "class=\"price-box\"";
+            endSign = "class=\"form-group form-groupx form-detail-action \"";
 
-            htmlContent = XMLUtilities.parseHTML(url, beginSign, endSign);
-            htmlContent = StringUtilities.refineHtml(htmlContent);
-            XMLEventReader reader = XMLUtilities.getXMLEventReaderFromString(htmlContent);
+            htmlContent = XMLHelper.parseHTML(url, beginSign, endSign);
+            htmlContent = StringHelper.refineHtml(htmlContent);
+            XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
 
             boolean isInsideOption = false;
             boolean isCollection = false;
@@ -127,9 +128,9 @@ public class SoynPageCrawler {
                                     price = characters.getData().trim();
                                     price = price.substring(0, price.length() - 1);
                                     price = price.replace(".", "").replace(",", "");
-                                    
+
                                     if (isCollection) { // "Bộ tranh" => chỉ lấy price => break
-                                        listDetail.add(new Detail(StringUtilities.convertStringToBigInteger(price)));
+                                        listDetail.add(new Detail(StringHelper.convertStringToBigInteger(price)));
                                         break;
                                     }
                                 }
@@ -164,7 +165,7 @@ public class SoynPageCrawler {
                     }
                 }
             } // end while reader
-            
+
             // update canvas field
             currentCanvas.setDetail(listDetail);
             String designer = getDesignerFromName(currentCanvas.getName());
@@ -174,7 +175,7 @@ public class SoynPageCrawler {
         } // end for each canvas
 
         category.setCanvas(listCanvas);
-        
+
         return category;
 
 //        ArrayList<Categories> listCategorieses = new ArrayList();
@@ -190,7 +191,7 @@ public class SoynPageCrawler {
 //        System.out.println("Category: " + categoryName + " has " + listCanvas.size() + " canvas");
 //        System.out.println("--------------------------------------------------");
     }
-    
+
     private String getDesignerFromName(String name) {
         if (name.contains("-")) {
             return name.substring(name.lastIndexOf("-") + 1).trim();
@@ -200,7 +201,7 @@ public class SoynPageCrawler {
         return "";
     }
 
-    private List<Canvas> crawlListCanvasEachPage(String htmlContent) 
+    private List<Canvas> crawlListCanvasEachPage(String htmlContent)
             throws UnsupportedEncodingException, XMLStreamException {
 //            try {
 //                BufferedWriter writer = new BufferedWriter(new FileWriter("forDebug.txt"));
@@ -210,7 +211,7 @@ public class SoynPageCrawler {
 //                e.printStackTrace();
 //            }
 
-        XMLEventReader reader = XMLUtilities.getXMLEventReaderFromString(htmlContent);
+        XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
         boolean isInside = false;
         List<Canvas> listCanvas = new ArrayList<>();
         Canvas canvas = null;
@@ -227,9 +228,11 @@ public class SoynPageCrawler {
                     Attribute attribute = element.getAttributeByName(new QName("class"));
                     if (attribute != null) {
                         if (attribute.getValue().equals("product-thumbnail")) {
+                            // bắt đầu 1 product
                             isInside = true;
                             canvas = new Canvas();
                         } else if (attribute.getValue().equals("text-xs-center")) {
+                            // kết thúc hết tất cả các product trong page này => thoát
                             break;
                         }
                     }
@@ -238,7 +241,7 @@ public class SoynPageCrawler {
                 if ("a".equals(tagName) && isInside) {
                     Attribute att = element.getAttributeByName(new QName("href"));
                     if (att != null) {
-                        canvas.setUrl(StringUtilities.HOST_SOYN + att.getValue());
+                        canvas.setUrl(StringHelper.HOST_SOYN + att.getValue());
                     }
                     att = element.getAttributeByName(new QName("title"));
                     if (att != null) {
@@ -251,7 +254,7 @@ public class SoynPageCrawler {
                     if (att != null) {
                         canvas.setImage("https:" + att.getValue());
                     }
-                    isInside = false;
+                    isInside = false; // sau khi lấy img thì kết thúc product này, chuyển sang product mới
                     listCanvas.add(canvas);
                 }
             } // end if start
@@ -260,56 +263,56 @@ public class SoynPageCrawler {
         return listCanvas;
     }
 
-    private void getPageCount(String url) {
-        try {
-            String beginSign = "class=\"pagination clearfix \"";
-            String endSign = "</ul>";
+//    private void getPageCount(String url) {
+//        try {
+//            String beginSign = "class=\"pagination clearfix \"";
+//            String endSign = "</ul>";
+//
+//            boolean isInside = false;
+//            int count = 0;
+//
+//            try (BufferedReader reader = getBufferReaderFromURI(url)) {
+//                String line = null;
+//                while ((line = reader.readLine()) != null) {
+//                    updatePageCount(line);
+//                    if (line.contains(beginSign)) {
+//                        if (count == 0) {
+//                            isInside = true;
+//                        }
+//                        count++;
+//                    }
+//                    if (line.contains(endSign)) {
+//                        if (isInside) {
+//                            break;
+//                        }
+//                    }
+//                    if (isInside) {
+//                        updatePageCount(line);
+//                    }
+//                } // end while
+//            }
+//        } catch (IOException e) {
+//            Logger.getLogger(SoynPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+//        }
+//    }
 
-            boolean isInside = false;
-            int count = 0;
-
-            try (BufferedReader reader = getBufferReaderFromURI(url)) {
-                String line = null;
-                while ((line = reader.readLine()) != null) {
-                    updatePageCount(line);
-                    if (line.contains(beginSign)) {
-                        if (count == 0) {
-                            isInside = true;
-                        }
-                        count++;
-                    }
-                    if (line.contains(endSign)) {
-                        if (isInside) {
-                            break;
-                        }
-                    }
-                    if (isInside) {
-                        updatePageCount(line);
-                    }
-                } // end while
-            }
-        } catch (IOException e) {
-            Logger.getLogger(SoynPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-        }
-    }
-
-    private void updatePageCount(String line) {
-        String key = "page-link";
-
-        if (line.contains(key)) {
-            line = line.substring(line.indexOf(key));
-
-            int begin = line.indexOf(">") + 1;
-            String countPage = line.substring(begin);
-            int end = countPage.indexOf("<");
-            countPage = countPage.substring(0, end);
-
-            if (!countPage.equals("...")) {
-                int currentCount = Integer.parseInt(countPage);
-                this.pageCount = Math.max(currentCount, pageCount);
-            }
-        }
-    }
+//    private void updatePageCount(String line) {
+//        String key = "page-link";
+//
+//        if (line.contains(key)) {
+//            line = line.substring(line.indexOf(key));
+//
+//            int begin = line.indexOf(">") + 1;
+//            String countPage = line.substring(begin);
+//            int end = countPage.indexOf("<");
+//            countPage = countPage.substring(0, end);
+//
+//            if (!countPage.equals("...")) {
+//                int currentCount = Integer.parseInt(countPage);
+//                this.pageCount = Math.max(currentCount, pageCount);
+//            }
+//        }
+//    }
 
     private Detail extractDetailFromString(String s) {
         String size = s.substring(0, s.indexOf("-")).trim();
@@ -319,10 +322,10 @@ public class SoynPageCrawler {
         String price = s.substring(s.indexOf("-") + 2, s.length() - 1);
         price = price.replace(".", "").replace(",", "");
         return new Detail(
-                StringUtilities.convertStringToBigInteger(width), 
-                StringUtilities.convertStringToBigInteger(length), 
-                unit, 
-                StringUtilities.convertStringToBigInteger(price)
+                StringHelper.convertStringToBigInteger(width),
+                StringHelper.convertStringToBigInteger(length),
+                unit,
+                StringHelper.convertStringToBigInteger(price)
         );
     }
 

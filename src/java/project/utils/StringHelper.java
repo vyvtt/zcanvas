@@ -20,70 +20,85 @@ import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 import project.xmlchecker.XmlSyntaxChecker;
+
 /**
  *
  * @author thuyv
  */
-public class StringUtilities implements Serializable{
-    
+public class StringHelper implements Serializable {
+
     public static String refineHtml(String src) {
         src = removeMiscellaneousTags(src);
-        
+
         XmlSyntaxChecker checker = new XmlSyntaxChecker();
         src = checker.checkSyntax(src);
         return src;
     }
-    
-    public static String removeMiscellaneousTags(String src){
+
+    public static String removeMiscellaneousTags(String src) {
         String result = src;
-        
+
         String expression = "<script.*?</script>";
         result = result.replaceAll(expression, "");
-        
+
         expression = "<!--.*?-->";
         result = result.replaceAll(expression, "");
-        
-        expression  = "&nbsp;?";
+
+        expression = "&nbsp;?";
         result = result.replaceAll(expression, "");
-        
+
         return result;
     }
-    
+
     public static BigInteger convertStringToBigInteger(String s) {
         try {
+            if (s == null) {
+                Logger.getLogger(StringHelper.class.getName()).log(Level.SEVERE, "null string to convert to BigInteger => set to BigInteger.ZERO");
+                return BigInteger.ZERO;
+            }
             return new BigInteger(s);
         } catch (NumberFormatException e) {
-            Logger.getLogger(StringUtilities.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            Logger.getLogger(StringHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
             return BigInteger.ZERO;
         }
     }
-    
+
     public static String HOST_SOYN = "";
     public static String HOST_MOPI = "";
-    
+
     public static String getHostFromConfigFile(String filePath) {
         try {
-            
-        // parse file to DOM
-        DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = builderFactory.newDocumentBuilder();
-        Document document = builder.parse(filePath);
-        // get XPath
-        XPathFactory xPathFactory = XPathFactory.newInstance();
-        XPath xPath = xPathFactory.newXPath();
-        // get config
-        String expression = "/host";
-        String host = (String)xPath.evaluate(expression, document, XPathConstants.STRING);
-        return host.trim();
-        
+
+            // parse file to DOM
+            DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = builderFactory.newDocumentBuilder();
+            Document document = builder.parse(filePath);
+            // get XPath
+            XPathFactory xPathFactory = XPathFactory.newInstance();
+            XPath xPath = xPathFactory.newXPath();
+            // get config
+            String expression = "/host";
+            String host = (String) xPath.evaluate(expression, document, XPathConstants.STRING);
+            return host.trim();
+
         } catch (IOException | ParserConfigurationException | XPathExpressionException | SAXException e) {
-            Logger.getLogger(StringUtilities.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            Logger.getLogger(StringHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
         return null;
     }
-    
-    
-    
+
+    // kiểm tra trùng url => nếu đã có url trong db => sp đã tồn tại => return id
+    public static int hashString(String content) {
+        int mod = 1000000007;
+        int base = 30757; // random prime number
+
+        int hashValue = 0;
+        for (int i = 0; i < content.length(); i++) {
+            hashValue = (int) (((long) hashValue + base + (long) content.charAt(i)) % mod);
+        }
+        return hashValue;
+    }
+
 //    public static boolean isAlphaCharacter(char x) {
 //        return (x >= 'a' && x <= 'z');
 //    }
