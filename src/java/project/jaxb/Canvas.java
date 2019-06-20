@@ -8,6 +8,7 @@
 
 package project.jaxb;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,14 +41,14 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Canvas", propOrder = {
-    "name",
-    "url",
-    "image",
-    "designer",
-    "detail"
-})
-public class Canvas {
+//@XmlType(name = "Canvas", propOrder = {
+//    "name",
+//    "url",
+//    "image",
+//    "designer",
+//    "detail"
+//})
+public class Canvas implements Serializable{
 
     @XmlElement(required = true)
     protected String name;
@@ -57,6 +58,16 @@ public class Canvas {
     protected String image;
     protected String designer;
     protected List<Detail> detail;
+    
+    private String colorPalatte;
+
+    public String getColorPalatte() {
+        return colorPalatte;
+    }
+
+    public void setColorPalatte(String colorPalatte) {
+        this.colorPalatte = colorPalatte;
+    }
 
     /**
      * Gets the value of the name property.

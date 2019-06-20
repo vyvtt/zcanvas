@@ -19,6 +19,8 @@ import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 
 /**
@@ -222,10 +224,12 @@ public class ImageHelper {
 
     private static List<int[]> getPixelFromImage(String url) throws IOException {
 
-        // -------------
         BufferedImage image = ImageIO.read(new URL(url));
-
-        int height = image.getHeight();
+        
+        if (image == null) {
+            System.out.println("Null Image - Can not get BufferedImage");
+            return new ArrayList<>();
+        }
         int width = image.getWidth();
 
         List<int[]> list = new ArrayList<>();
@@ -260,15 +264,7 @@ public class ImageHelper {
                 backgroundG = rgbArr[1];
                 backgroundB = rgbArr[2];
                 isFristPixel = false;
-//                System.out.println("backfround: " + getColorString(firstRGBArr));
             }
-            // Filter out grays                
-//            if (!isGray(rgbArr)) {
-////                if (!isBackground(firstRGBArr, rgbArr)) {
-////                    list.add(rgbArr);
-////                }
-//                list.add(rgbArr);
-//            }
 
             if (!isBackground(rgbArr, backgroundR, backgroundG, backgroundB)) {
                 list.add(rgbArr);
@@ -294,30 +290,38 @@ public class ImageHelper {
         return redBucket + ":" + greenBucket + ":" + blueBucket;
     }
 
-    public static void binPixels(String url) throws IOException {
+    public static String getColorPaletteFromImage(String url) {
 
         Map<String, List<int[]>> bucketMap = new HashMap();
-        List<int[]> pixels = getPixelFromImage(url);
+        List<int[]> pixels = null;
+        List<int[]> pixelsInBucket = null;
+        int[] pixel = new int[3];
+        String pixelKey = null;
+
+        try {
+            pixels = getPixelFromImage(url);
+        } catch (IOException e) {
+            Logger.getLogger(ImageHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            return "";
+        }
 
         // Nhảy 30 pixel 1 lần
-        List<int[]> listPixelsInBucket = null;
         for (int i = 0; i < pixels.size() - 31; i = i + 30) {
-            int[] rbgArr = pixels.get(i);
-            String key = getKeyForPixel(rbgArr);
+            pixel = pixels.get(i);
+            pixelKey = getKeyForPixel(pixel);
 
-            listPixelsInBucket = bucketMap.get(key);
-            if (listPixelsInBucket == null) {
-                listPixelsInBucket = new ArrayList<>();
+            pixelsInBucket = bucketMap.get(pixelKey);
+            if (pixelsInBucket == null) {
+                pixelsInBucket = new ArrayList<>();
             }
-            listPixelsInBucket.add(rbgArr);
-            bucketMap.put(key, listPixelsInBucket);
+            pixelsInBucket.add(pixel);
+            bucketMap.put(pixelKey, pixelsInBucket);
         }
 
-        System.out.println(pixels.size());
-        for (Map.Entry<String, List<int[]>> entry : bucketMap.entrySet()) {
-            System.out.println(entry.getKey() + " = " + entry.getValue().size());
-        }
-
+//        System.out.println(pixels.size());
+//        for (Map.Entry<String, List<int[]>> entry : bucketMap.entrySet()) {
+//            System.out.println(entry.getKey() + " = " + entry.getValue().size());
+//        }
         // sort bucket by size of list pixels
         List<Map.Entry> listBucket = new ArrayList<>(bucketMap.entrySet());
         Collections.sort(listBucket, (Object o1, Object o2) -> {
@@ -326,20 +330,29 @@ public class ImageHelper {
             return ((Comparable) size1).compareTo(size2);
         });
 
-        List<int[]> averageColorList = new ArrayList<>();
-
+//        List<int[]> averageColorList = new ArrayList<>();
         // lấy 5 bucket có số lượng pixel cao nhất -> tính màu trung bình của bucket đó
         int countPalleteColor = 6;
+        Map.Entry<String, List<int[]>> bucket = null;
+        int[] averageColor = new int[3];
+
         if (listBucket.size() < 6) {
             countPalleteColor = listBucket.size();
         }
+
+        StringBuilder paletteString = new StringBuilder();
         for (int i = 1; i < countPalleteColor; i++) {
-            Map.Entry<String, List<int[]>> bucket = listBucket.get(listBucket.size() - i);
-            int[] averageColor = calculateAverageColor(bucket.getValue());
-            System.out.println("Average: " + averageColor[0] + "-" + averageColor[1] + "-" + averageColor[2]);
-            System.out.println(getColorString(averageColor));
-            averageColorList.add(averageColor);
+            bucket = listBucket.get(listBucket.size() - i);
+            averageColor = calculateAverageColor(bucket.getValue());
+
+            paletteString.append(getColorString(averageColor));
+            paletteString.append(";");
+
+//            System.out.println("Average: " + averageColor[0] + "-" + averageColor[1] + "-" + averageColor[2]);
+//            System.out.println(getColorString(averageColor));
+//            averageColorList.add(averageColor);
         }
+        return paletteString.toString();
     }
 
     private static String getColorString(int[] rgb) {

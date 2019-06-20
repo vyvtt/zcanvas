@@ -26,6 +26,13 @@ import project.xmlchecker.XmlSyntaxChecker;
  * @author thuyv
  */
 public class StringHelper implements Serializable {
+    
+    public static String unescapedSpecialCharacters(String input) {
+        if (input != null) {
+            return input.replace("&amp;", "&").replace("&quot;", "\"");
+        }
+        return null;
+    }
 
     public static String refineHtml(String src) {
         src = removeMiscellaneousTags(src);

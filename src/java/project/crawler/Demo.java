@@ -122,7 +122,7 @@ public class Demo {
 //        System.out.println(currentCanvas.getDesigner());
 //        System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
 //        MopiMainCrawler.crawl();
-//        SoynMainCrawler.crawl();
+        SoynMainCrawler.crawl();
 // nền trắng, chủ đạo tím
 //        String url = "https://bizweb.dktcdn.net/thumb/1024x1024/100/296/956/products/se244.jpg?v=1558972277513";
 // nền xanh
@@ -144,15 +144,15 @@ public class Demo {
         
         
         // Get host from config file
-            StringHelper.HOST_MOPI = StringHelper.getHostFromConfigFile(Constant.XML_CONFIG_MOPI);
-            
-            // Crawl list categories
-            MopiCategoriesCrawler categoriesCrawler = new MopiCategoriesCrawler();
-            Map<String, String> categories = categoriesCrawler.crawlCategories();
-            
-            for (Map.Entry<String, String> entry : categories.entrySet()) {
-                System.out.println(entry.getValue().toLowerCase());
-        }
+//            StringHelper.HOST_MOPI = StringHelper.getHostFromConfigFile(Constant.XML_CONFIG_MOPI);
+//            
+//            // Crawl list categories
+//            MopiCategoriesCrawler categoriesCrawler = new MopiCategoriesCrawler();
+//            Map<String, String> categories = categoriesCrawler.crawlCategories();
+//            
+//            for (Map.Entry<String, String> entry : categories.entrySet()) {
+//                System.out.println(entry.getValue().toLowerCase());
+//        }
         
         
 

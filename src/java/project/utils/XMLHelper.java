@@ -16,6 +16,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
+import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
@@ -48,7 +49,7 @@ public class XMLHelper implements Serializable {
             throws MalformedURLException, IOException {
         URL url = new URL(uri);
         System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
-        URLConnection con = url.openConnection();
+        HttpURLConnection con = (HttpURLConnection)url.openConnection();
         con.setRequestProperty("User-Agent", Constant.USER_AGENT);
         con.connect();
         InputStream is = con.getInputStream();
