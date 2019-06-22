@@ -7,15 +7,21 @@ package project.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import static project.utils.Constant.*;
 
 /**
  *
  * @author thuyv
  */
+@MultipartConfig
 public class ProcessServlet extends HttpServlet {
 
     /**
@@ -30,17 +36,32 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
-            out.println("<!DOCTYPE html>");
-            out.println("<html>");
-            out.println("<head>");
-            out.println("<title>Servlet ProcessServlet</title>");            
-            out.println("</head>");
-            out.println("<body>");
-            out.println("<h1>Servlet ProcessServlet at " + request.getContextPath() + "</h1>");
-            out.println("</body>");
-            out.println("</html>");
+        PrintWriter out = response.getWriter();
+
+        String url = JSP_HOME;
+        String btn = request.getParameter("btAction");
+
+        System.out.println("btn: " + btn);
+
+        try {
+            if (btn == null) {
+                // do nothing
+            } else if (btn.equals("upload")) {
+                url = SERVLET_UPLOAD;
+            } else if (btn.equals("crawl")) {
+                url = SERVLET_CRAWL;
+            }
+
+        } catch (Exception e) {
+            Logger.getLogger(ProcessServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+
+            System.out.println(url);
+
+            RequestDispatcher rd = request.getRequestDispatcher(url);
+            rd.forward(request, response);
+
+            out.close();
         }
     }
 

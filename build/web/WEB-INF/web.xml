@@ -8,6 +8,10 @@
         <servlet-name>CrawlServlet</servlet-name>
         <servlet-class>project.servlet.CrawlServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>project.servlet.HomeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcessServlet</servlet-name>
         <url-pattern>/ProcessServlet</url-pattern>
@@ -15,6 +19,10 @@
     <servlet-mapping>
         <servlet-name>CrawlServlet</servlet-name>
         <url-pattern>/CrawlServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/HomeServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
@@ -28,6 +36,6 @@
         <res-sharing-scope>Shareable</res-sharing-scope>
     </resource-ref>
     <welcome-file-list>
-        <welcome-file>CrawlServlet</welcome-file>
+        <welcome-file>ProcessServlet</welcome-file>
     </welcome-file-list>
 </web-app>

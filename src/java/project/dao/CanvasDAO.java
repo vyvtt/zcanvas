@@ -8,7 +8,13 @@ package project.dao;
 import java.io.Serializable;
 import java.sql.CallableStatement;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.naming.NamingException;
 import project.jaxb.Canvas;
 import project.utils.DBUtils;
@@ -18,8 +24,8 @@ import project.utils.StringHelper;
  *
  * @author thuyv
  */
-public class CanvasDAO implements Serializable{
-    
+public class CanvasDAO implements Serializable {
+
     private boolean isExisted;
 
     public CanvasDAO() {
@@ -27,16 +33,16 @@ public class CanvasDAO implements Serializable{
     }
 
     public int insert(Canvas canvas) throws SQLException, NamingException {
-        
+
         this.isExisted = false;
-        
+
         Connection con = null;
         CallableStatement statement = null;
         try {
             con = DBUtils.getConnection();
             String sql = "{call InsertCanvas(?,?,?,?,?,?,?,?)}";
             statement = con.prepareCall(sql);
-            
+
 //            @name NVARCHAR(250),
 //            @url VARCHAR(250),
 //            @hashURL INT,
@@ -44,7 +50,6 @@ public class CanvasDAO implements Serializable{
 //            @designer NVARCHAR(250),
 //            @color VARCHAR(250),
 //            @id INT OUTPUT
-            
             statement.setNString(1, StringHelper.unescapedSpecialCharacters(canvas.getName()));
             statement.setString(2, canvas.getUrl());
             statement.setInt(3, StringHelper.hashString(canvas.getUrl()));
@@ -55,12 +60,12 @@ public class CanvasDAO implements Serializable{
             statement.registerOutParameter(7, java.sql.Types.INTEGER);
             statement.registerOutParameter(8, java.sql.Types.BIT);
             statement.execute();
-            
+
             if (statement.getBoolean("isExisted")) {
                 this.isExisted = true;
             }
             return statement.getInt("Id"); // store procedure OUTPUT value registe above
-            
+
         } finally {
             if (statement != null) {
                 statement.close();
@@ -69,7 +74,7 @@ public class CanvasDAO implements Serializable{
                 con.close();
             }
         }
-        
+
 //        Connection con = null;
 //        PreparedStatement stm = null;
 //
@@ -100,9 +105,8 @@ public class CanvasDAO implements Serializable{
 //                con.close();
 //            }
 //        }
-
     }
-    
+
     public void insertCanvasCategory(int categoryId, int canvasId) throws SQLException, NamingException {
         Connection con = null;
         CallableStatement statement = null;
@@ -113,8 +117,8 @@ public class CanvasDAO implements Serializable{
 
             statement.setInt(1, categoryId);
             statement.setInt(2, canvasId);
-            
-            statement.execute();            
+
+            statement.execute();
         } finally {
             if (statement != null) {
                 statement.close();
@@ -132,6 +136,50 @@ public class CanvasDAO implements Serializable{
     public void setIsExisted(boolean isExisted) {
         this.isExisted = isExisted;
     }
-    
-    
+
+    public List<Canvas> getAllCanvasByCategory(int categoryId) {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+
+        try {
+            con = DBUtils.getConnection();
+            String sql = "Select * from Canvas where Canvas.id in "
+                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId = ?)";
+            stm = con.prepareStatement(sql);
+            stm.setInt(1, categoryId);
+
+            rs = stm.executeQuery();
+
+            List<Canvas> result = new ArrayList<>();
+            while (rs.next()) {
+                Canvas canvas = new Canvas();
+                canvas.setName(rs.getNString("name"));
+                canvas.setUrl(rs.getString("url"));
+                canvas.setImage(rs.getString("image"));
+                canvas.setColorPalatte(rs.getString("color"));
+                result.add(canvas);
+            }
+            System.out.println("total: " + result.size());
+            return result;
+        } catch (SQLException | NamingException e) {
+            Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException sQLException) {
+                Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, sQLException.getMessage(), sQLException);
+            }
+        }
+        return null;
+    }
+
 }

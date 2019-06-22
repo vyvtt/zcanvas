@@ -62,7 +62,7 @@ public class CategoriesHelper {
             return "Trừu tượng, nghệ thuật, hội họa";
         } else if (name.contains("spa") || name.contains("cửa hàng")) {
             return "Tranh treo cửa hàng";
-        } else if (name.contains("văn phòng")) {
+        } else if (name.contains("mopi office")) {
             return "Tranh treo văn phòng";
         } else if (name.contains("cao minh huy") || name.contains("mix and match") || name.contains("lê rin") || name.contains("đốm illustration")) {
             return "BTS " + rawName;

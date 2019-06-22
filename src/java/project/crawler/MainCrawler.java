@@ -5,9 +5,14 @@
  */
 package project.crawler;
 
+import java.awt.image.BufferedImage;
 import java.io.IOException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.imageio.ImageIO;
 import javax.naming.NamingException;
 import project.dao.CanvasDAO;
 import project.dao.CategoryDAO;
@@ -24,7 +29,7 @@ import project.utils.ImageHelper;
 public class MainCrawler {
     
     public static void crawl() {
-//        SoynMainCrawler.crawl();
+        SoynMainCrawler.crawl();
         MopiMainCrawler.crawl();
     }
     
@@ -45,7 +50,14 @@ public class MainCrawler {
 
                 System.out.println(canvas.getName());
 
-                canvas.setColorPalatte(ImageHelper.getColorPaletteFromImage(canvas.getImage()));
+                try {
+                    BufferedImage image = ImageIO.read(new URL(canvas.getImage()));
+                    canvas.setColorPalatte(ImageHelper.getColorPaletteFromImage(image));
+                } catch (IOException e) {
+                    Logger.getLogger(MainCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+                    canvas.setColorPalatte("");
+                }
+                
                 int canvasId = canvasDAO.insert(canvas);
 
                 if (canvasDAO.isIsExisted()) {

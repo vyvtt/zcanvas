@@ -191,8 +191,8 @@ public class MopiPageCrawler implements Serializable {
                 currentCanvas.setDetail(null);
             } else {
                 try {
-                    System.out.println(sizeAndPrice);
-                    System.out.println(sizeAndString);
+//                    System.out.println(sizeAndPrice);
+//                    System.out.println(sizeAndString);
                     for (Map.Entry<String, String> entry : sizeAndString.entrySet()) {
                         // {4560=45x60cm, 6090=60x90cm, 3040=30x40cm}
                         Detail detail = extractDetailFromString(entry.getValue());
@@ -283,8 +283,7 @@ public class MopiPageCrawler implements Serializable {
         boolean hasImg = false;
         boolean hasLink = false;
         Canvas canvas = null;
-
-//        System.out.println("in crawlListCanvasEachPage");
+        
         while (reader.hasNext()) {
 
             XMLEvent event = reader.nextEvent();

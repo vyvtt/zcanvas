@@ -5,13 +5,18 @@
  */
 package project.crawler;
 
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URL;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import javax.imageio.ImageIO;
 import javax.xml.namespace.QName;
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLStreamException;
@@ -32,8 +37,50 @@ import project.utils.XMLHelper;
  */
 public class Demo {
 
-    public static void main(String[] args) throws UnsupportedEncodingException, XMLStreamException {
+    public static void main(String[] args) throws UnsupportedEncodingException, XMLStreamException, IOException {
 
+        String url = "https://paint.com.ph/wp-content/uploads/2018/08/House-Painting.jpg";
+        BufferedImage image = ImageIO.read(new URL(url));
+        String palette = ImageHelper.getColorPaletteFromImage(image);
+//        System.out.println(ImageHelper.getColorPaletteFromImage(image));
+//        ImageHelper.getColorPaletteFromImageNew(image);
+
+        String urlYellow = "https://cdn1.mopi.vn/wp-content/uploads/2018/05/OF-289.jpg";
+        image = ImageIO.read(new URL(urlYellow));
+        String paletteYellow = ImageHelper.getColorPaletteFromImage(image);
+
+        String urlGreen = "https://mopi.vn/wp-content/uploads/2019/05/OF-1.jpg";
+        urlGreen = "https://cdn1.mopi.vn/wp-content/uploads/2018/05/OF-296.jpg";
+        image = ImageIO.read(new URL(urlGreen));
+        String paletteGreen = ImageHelper.getColorPaletteFromImage(image);
+
+        List<String> p = Arrays.asList(palette.split("\\s*;\\s*"));
+        List<String> pYellow = Arrays.asList(paletteYellow.split("\\s*;\\s*"));
+        List<String> pGreen = Arrays.asList(paletteGreen.split("\\s*;\\s*"));
+
+        ImageHelper.comparePalette(p, pYellow);
+        ImageHelper.comparePalette(p, pGreen);
+
+//        String url = "https://mopi.vn/bo-suu-tap/am-thuc/page/2/";
+//        String htmlContent = "";
+//        String beginSign = " class=\"products\"";
+//        String endSign = "after-loop-wrapper";
+//
+//        htmlContent = XMLHelper.parseHTML(url, beginSign, endSign);
+//
+//        System.out.println(htmlContent);
+//
+//        htmlContent = StringHelper.refineHtml(htmlContent);
+//
+//        System.out.println("///////////////////");
+//        System.out.println(htmlContent);
+//        String content = "<div class=\"product-wrapper\"><div class=\"thumbnail-wrapper lazy-loading\"><a href=\"https://mopi.vn/shop/am-thuc/its-always-coffee-time-cf-005/\"><figure class=\"has-back-image \"><img alt=\"\" class=\"attachment-shop_catalog wp-post-image ts-lazy-load\" data-src=\"https://cdn1.mopi.vn/wp-content/uploads/2019/03/CF-005-230x264.jpg\" height=\"264\" src=\"https://cdn1.mopi.vn/wp-content/themes/boxshop/images/prod_loading.gif\" width=\"230\"/><img alt=\"\" class=\"product-image-back ts-lazy-load\" data-src=\"https://cdn1.mopi.vn/wp-content/uploads/2019/03/CF-005-1-230x264.jpg\" height=\"264\" src=\"https://cdn1.mopi.vn/wp-content/themes/boxshop/images/prod_loading.gif\" width=\"230\"/></figure></a><div class=\"product-label\"/><div class=\"product-group-button two-button\"><div class=\"loop-add-to-cart\"><a aria-label=\"Lựa chọn cho &amp;ldquo;It&amp;#039;s Always Coffee Time | CF-005&amp;rdquo;\" class=\"button product_type_variable add_to_cart_button\" data-product_id=\"16941\" data-product_sku=\"CF-005\" data-quantity=\"1\" href=\"https://mopi.vn/shop/am-thuc/its-always-coffee-time-cf-005/\" rel=\"nofollow\"><span class=\"ts-tooltip button-tooltip\">Lựa chọn các tùy chọn</span></a></div><div class=\"button-in quickshop\"><a class=\"quickshop\" href=\"https://mopi.vn/wp-admin/admin-ajax.php?ajax=true&amp;#038;action=boxshop_load_quickshop_content&amp;#038;product_id=16941\"><i class=\"pe-7s-search\"/><span class=\"ts-tooltip button-tooltip\">Quick view</span></a></div></div></div><div class=\"meta-wrapper\"><h class=\"heading-title product-name\"><a href=\"https://mopi.vn/shop/am-thuc/its-always-coffee-time-cf-005/\">It&amp;#8217;s Always Coffee Time | CF-005</a></h><span class=\"price\"><span class=\"woocommerce-Price-amount amount\">190.000<span class=\"woocommerce-Price-currencySymbol\">VNĐ</span></span>&amp;ndash;<span class=\"woocommerce-Price-amount amount\">290.000<span class=\"woocommerce-Price-currencySymbol\">VNĐ</span></span><small class=\"woocommerce-price-suffix\">(chưa VAT)</small></span><div class=\"short-description list\" style=\"display: none\">Trang trí quán cafe với tranh treo tường luôn là lựa chọn hàng đầu, tranh treo tường dành cho quán cafe thường mang những cá tính riêng.</div><div class=\"loop-add-to-cart\"><a aria-label=\"Lựa chọn cho &amp;ldquo;It&amp;#039;s Always Coffee Time | CF-005&amp;rdquo;\" class=\"button product_type_variable add_to_cart_button\" data-product_id=\"16941\" data-product_sku=\"CF-005\" data-quantity=\"1\" href=\"https://mopi.vn/shop/am-thuc/its-always-coffee-time-cf-005/\" rel=\"nofollow\"><span class=\"ts-tooltip button-tooltip\">Lựa chọn các tùy chọn</span></a></div></div></div>";
+//        
+//        List<Canvas> list = MopiPageCrawler.crawlListCanvasEachPage(content);
+//        
+//        for (Canvas canvas : list) {
+//            System.out.println(StringHelper.unescapedSpecialCharacters(canvas.getName()));
+//        }
 //        List<Detail> listDetail = new ArrayList<>();
 //            Canvas currentCanvas = new Canvas();
 //        Map<String, String> sizeAndPrice = new HashMap<>();
@@ -122,7 +169,7 @@ public class Demo {
 //        System.out.println(currentCanvas.getDesigner());
 //        System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
 //        MopiMainCrawler.crawl();
-        SoynMainCrawler.crawl();
+//        SoynMainCrawler.crawl();
 // nền trắng, chủ đạo tím
 //        String url = "https://bizweb.dktcdn.net/thumb/1024x1024/100/296/956/products/se244.jpg?v=1558972277513";
 // nền xanh
@@ -140,9 +187,6 @@ public class Demo {
 //        } catch (Exception e) {
 //            e.printStackTrace();
 //        }
-        
-        
-        
         // Get host from config file
 //            StringHelper.HOST_MOPI = StringHelper.getHostFromConfigFile(Constant.XML_CONFIG_MOPI);
 //            
@@ -153,9 +197,6 @@ public class Demo {
 //            for (Map.Entry<String, String> entry : categories.entrySet()) {
 //                System.out.println(entry.getValue().toLowerCase());
 //        }
-        
-        
-
 //        String beginSign = "class=\"variations_form cart\"";
 //        String endSign = "class=\"woocommerce-tabs wc-tabs-wrapper\"";
 //        String htmlContent = "";

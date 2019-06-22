@@ -20,9 +20,16 @@ public class Constant {
     
     public static String OUTPUT_XML_SOYN = "/WEB-INF/document/output_soyn.xml";
     public static String OUTPUT_XML_MOPI = "/WEB-INF/document/output_mopi.xml";
-    
     public static String XML_CONFIG_SOYN = "/WEB-INF/document/soyn.xml";
     public static String XML_CONFIG_MOPI = "/WEB-INF/document/mopi.xml";
+    
+    public static final String SERVLET_CRAWL = "CrawlServlet";
+    public static final String SERVLET_UPLOAD = "HomeServlet";
+    public static final String SERVLET_PROCESS = "ProcessServlet";
+    
+    public static final String JSP_HOME = "home.jsp";
+    
+    
     
     public static void updateRealPath(String realPath) {
         

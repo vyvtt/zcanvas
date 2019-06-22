@@ -29,7 +29,16 @@ public class StringHelper implements Serializable {
     
     public static String unescapedSpecialCharacters(String input) {
         if (input != null) {
-            return input.replace("&amp;", "&").replace("&quot;", "\"");
+            return input
+                    .replace("&amp;", "&")
+                    .replace("&quot;", "\"")
+                    .replace("&#8220;", "\"")
+                    .replace("&#8221;", "\"")
+                    .replace("&#8217;", "'")
+                    .replace("&#8211;", "-")
+                    .replace("&#8216;", "'")
+                    .replace("&#8230;", "...")
+                    .replace("&#038;", "&");
         }
         return null;
     }

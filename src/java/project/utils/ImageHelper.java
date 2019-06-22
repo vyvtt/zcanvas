@@ -222,12 +222,10 @@ public class ImageHelper {
         return resized;
     }
 
-    private static List<int[]> getPixelFromImage(String url) throws IOException {
+    private static List<int[]> getPixelFromImage(BufferedImage image) {
 
-        BufferedImage image = ImageIO.read(new URL(url));
-        
         if (image == null) {
-            System.out.println("Null Image - Can not get BufferedImage");
+            System.out.println("Null BufferedImage");
             return new ArrayList<>();
         }
         int width = image.getWidth();
@@ -290,7 +288,7 @@ public class ImageHelper {
         return redBucket + ":" + greenBucket + ":" + blueBucket;
     }
 
-    public static String getColorPaletteFromImage(String url) {
+    public static String getColorPaletteFromImage(BufferedImage image) {
 
         Map<String, List<int[]>> bucketMap = new HashMap();
         List<int[]> pixels = null;
@@ -298,12 +296,7 @@ public class ImageHelper {
         int[] pixel = new int[3];
         String pixelKey = null;
 
-        try {
-            pixels = getPixelFromImage(url);
-        } catch (IOException e) {
-            Logger.getLogger(ImageHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-            return "";
-        }
+        pixels = getPixelFromImage(image);
 
         // Nhảy 30 pixel 1 lần
         for (int i = 0; i < pixels.size() - 31; i = i + 30) {
@@ -345,7 +338,13 @@ public class ImageHelper {
             bucket = listBucket.get(listBucket.size() - i);
             averageColor = calculateAverageColor(bucket.getValue());
 
-            paletteString.append(getColorString(averageColor));
+//            Red = (Red << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
+//            Green = (Green << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
+//            Blue = Blue & 0x000000FF; //Mask out anything not blue.
+            int color = 0xFF000000 | (averageColor[0] << 16) & 0x00FF0000 | (averageColor[1] << 8) & 0x0000FF00 | averageColor[2] & 0x000000FF; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
+
+//            paletteString.append(getColorString(averageColor));
+            paletteString.append(String.valueOf(color));
             paletteString.append(";");
 
 //            System.out.println("Average: " + averageColor[0] + "-" + averageColor[1] + "-" + averageColor[2]);
@@ -354,6 +353,73 @@ public class ImageHelper {
         }
         return paletteString.toString();
     }
+
+    
+
+//    public static String getColorPaletteFromImageNew(BufferedImage image) {
+//
+//        Map<String, List<int[]>> bucketMap = new HashMap();
+//        List<int[]> pixels = null;
+//        List<int[]> pixelsInBucket = null;
+//        int[] pixel = new int[3];
+//        String pixelKey = null;
+//
+//        pixels = getPixelFromImage(image);
+//
+//        // Nhảy 30 pixel 1 lần
+//        for (int i = 0; i < pixels.size() - 31; i = i + 30) {
+//            pixel = pixels.get(i);
+//            pixelKey = getKeyForPixel(pixel);
+//
+//            pixelsInBucket = bucketMap.get(pixelKey);
+//            if (pixelsInBucket == null) {
+//                pixelsInBucket = new ArrayList<>();
+//            }
+//            pixelsInBucket.add(pixel);
+//            bucketMap.put(pixelKey, pixelsInBucket);
+//        }
+//
+////        System.out.println(pixels.size());
+////        for (Map.Entry<String, List<int[]>> entry : bucketMap.entrySet()) {
+////            System.out.println(entry.getKey() + " = " + entry.getValue().size());
+////        }
+//        // sort bucket by size of list pixels
+//        List<Map.Entry> listBucket = new ArrayList<>(bucketMap.entrySet());
+//        Collections.sort(listBucket, (Object o1, Object o2) -> {
+//            int size1 = ((List<int[]>) (((Map.Entry) o1).getValue())).size();
+//            int size2 = ((List<int[]>) (((Map.Entry) o2).getValue())).size();
+//            return ((Comparable) size1).compareTo(size2);
+//        });
+//
+//        List<int[]> averageColorList = new ArrayList<>();
+//        // lấy 5 bucket có số lượng pixel cao nhất -> tính màu trung bình của bucket đó
+//        int countPalleteColor = 6;
+//        Map.Entry<String, List<int[]>> bucket = null;
+//        int[] averageColor = new int[3];
+//
+//        if (listBucket.size() < 6) {
+//            countPalleteColor = listBucket.size();
+//        }
+//
+//        StringBuilder paletteString = new StringBuilder();
+//        for (int i = 1; i < countPalleteColor; i++) {
+//            bucket = listBucket.get(listBucket.size() - i);
+//            averageColor = calculateAverageColor(bucket.getValue());
+//
+//            averageColorList.add(averageColor);
+//        }
+//
+//        for (int i = 0; i < averageColorList.size() - 1; i++) {
+//            for (int j = i + 1; j < averageColorList.size(); j++) {
+//                System.out.println("compare " + i + ":" + j);
+//                double diff = getColorDifference(averageColorList.get(i), averageColorList.get(j));
+//                System.out.println(getColorString(averageColorList.get(i)));
+//                System.out.println(getColorString(averageColorList.get(j)));
+//                System.out.println("Diff: " + diff);
+//            }
+//        }
+//        return paletteString.toString();
+//    }
 
     private static String getColorString(int[] rgb) {
         return String.format("#%02x%02x%02x", rgb[0], rgb[1], rgb[2]);
@@ -374,4 +440,133 @@ public class ImageHelper {
         return new int[]{totalRed / size, totalGreen / size, totalBlue / size};
     }
 
+    public static int[] rgb2lab(int R, int G, int B) {
+        //http://www.brucelindbloom.com
+
+        float r, g, b, X, Y, Z, fx, fy, fz, xr, yr, zr;
+        float Ls, as, bs;
+        float eps = 216.f / 24389.f;
+        float k = 24389.f / 27.f;
+
+        float Xr = 0.964221f;  // reference white D50
+        float Yr = 1.0f;
+        float Zr = 0.825211f;
+
+        // RGB to XYZ
+        r = R / 255.f; //R 0..1
+        g = G / 255.f; //G 0..1
+        b = B / 255.f; //B 0..1
+
+        // assuming sRGB (D65)
+        if (r <= 0.04045) {
+            r = r / 12;
+        } else {
+            r = (float) Math.pow((r + 0.055) / 1.055, 2.4);
+        }
+
+        if (g <= 0.04045) {
+            g = g / 12;
+        } else {
+            g = (float) Math.pow((g + 0.055) / 1.055, 2.4);
+        }
+
+        if (b <= 0.04045) {
+            b = b / 12;
+        } else {
+            b = (float) Math.pow((b + 0.055) / 1.055, 2.4);
+        }
+
+        X = 0.436052025f * r + 0.385081593f * g + 0.143087414f * b;
+        Y = 0.222491598f * r + 0.71688606f * g + 0.060621486f * b;
+        Z = 0.013929122f * r + 0.097097002f * g + 0.71418547f * b;
+
+        // XYZ to Lab
+        xr = X / Xr;
+        yr = Y / Yr;
+        zr = Z / Zr;
+
+        if (xr > eps) {
+            fx = (float) Math.pow(xr, 1 / 3.);
+        } else {
+            fx = (float) ((k * xr + 16.) / 116.);
+        }
+
+        if (yr > eps) {
+            fy = (float) Math.pow(yr, 1 / 3.);
+        } else {
+            fy = (float) ((k * yr + 16.) / 116.);
+        }
+
+        if (zr > eps) {
+            fz = (float) Math.pow(zr, 1 / 3.);
+        } else {
+            fz = (float) ((k * zr + 16.) / 116);
+        }
+
+        Ls = (116 * fy) - 16;
+        as = 500 * (fx - fy);
+        bs = 200 * (fy - fz);
+
+        int[] lab = new int[3];
+        lab[0] = (int) (2.55 * Ls + .5);
+        lab[1] = (int) (as + .5);
+        lab[2] = (int) (bs + .5);
+        return lab;
+    }
+
+    /**
+     * Computes the difference between two RGB colors by converting them to the
+     * L*a*b scale and comparing them using the CIE76 algorithm {
+     * http://en.wikipedia.org/wiki/Color_difference#CIE76}
+     */
+    public static double getColorDifference(int a, int b) {
+        int r1, g1, b1, r2, g2, b2;
+
+        Color color1 = new Color(a);
+        Color color2 = new Color(b);
+
+        r1 = color1.getRed();
+        g1 = color1.getGreen();
+        b1 = color1.getBlue();
+        r2 = color2.getRed();
+        g2 = color2.getGreen();
+        b2 = color2.getBlue();
+
+//        int[] lab1 = rgb2lab(rgb1[0], rgb1[1], rgb1[2]);
+//        int[] lab2 = rgb2lab(rgb2[0], rgb2[1], rgb2[2]);
+        int[] lab1 = rgb2lab(r1, g1, b1);
+        int[] lab2 = rgb2lab(r2, g2, b2);
+        return Math.sqrt(Math.pow(lab2[0] - lab1[0], 2) + Math.pow(lab2[1] - lab1[1], 2) + Math.pow(lab2[2] - lab1[2], 2));
+    }
+
+    public static boolean comparePalette(List<String> palette1, List<String> palette2) {
+//        System.out.println(palette1);
+//        System.out.println(palette2);
+        
+        int count = 0;
+        
+        for (int i = 0; i < palette1.size(); i++) {
+            for (int j = 0; j < palette2.size(); j++) {
+                double diff = getColorDifference(Integer.parseInt(palette1.get(i)), Integer.parseInt(palette2.get(j)));
+//                System.out.println(i + ":" + j + " - " + diff);
+                if (diff <= 20) {
+//                    System.out.println("match!");
+                    j = palette2.size();
+                    count++;
+                    if (count == 3) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+        
+//        for (String color1 : palette1) {
+//            for (String color2 : palette2) {
+//                double diff = getColorDifference(Integer.parseInt(color1), Integer.parseInt(color2));
+//                System.out.println(test + " - " + diff);
+//                test++;
+//            }
+//        }
+    }
 }

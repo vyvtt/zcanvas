@@ -62,6 +62,9 @@ public class XMLHelper implements Serializable {
         byte[] byteArray = document.getBytes("UTF-8");
         InputStream is = new ByteArrayInputStream(byteArray);
         XMLInputFactory factory = XMLInputFactory.newFactory();
+        // Khi event là Chracters có chứa "&" -> decode thành 1 String duy nhất
+        // http://rama-palaniappan.blogspot.com/2011/05/be-careful-using-stax-parser.html
+        factory.setProperty(XMLInputFactory.IS_COALESCING, true); 
         return factory.createXMLEventReader(is);
     }
 
