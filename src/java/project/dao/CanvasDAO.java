@@ -144,10 +144,11 @@ public class CanvasDAO implements Serializable {
 
         try {
             con = DBUtils.getConnection();
-            String sql = "Select * from Canvas where Canvas.id in "
-                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId = ?)";
+//            String sql = "Select * from Canvas where Canvas.id in "
+//                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId = ?)";
+            String sql = "Select * from Canvas";
             stm = con.prepareStatement(sql);
-            stm.setInt(1, categoryId);
+//            stm.setInt(1, categoryId);
 
             rs = stm.executeQuery();
 

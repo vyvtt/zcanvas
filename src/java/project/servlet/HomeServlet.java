@@ -16,6 +16,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Base64;
+import java.util.Collections;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -67,7 +68,7 @@ public class HomeServlet extends HttpServlet {
             System.out.println(colorPalette);
 
             CanvasDAO dao = new CanvasDAO();
-            List<Canvas> listCanvas = dao.getAllCanvasByCategory(15);
+            List<Canvas> listCanvas = dao.getAllCanvasByCategory(13);
 
             List<Canvas> result = new ArrayList<>();
 
@@ -76,20 +77,44 @@ public class HomeServlet extends HttpServlet {
 //                String currentPaletteString = ImageHelper.getColorPaletteFromImage(image);
                 List<String> currentPalette = Arrays.asList(canvas.getColorPalatte().split("\\s*;\\s*"));
 
-                if (ImageHelper.comparePalette(inputPalatte, currentPalette)) {
+                double deltaE = ImageHelper.comparePalette(inputPalatte, currentPalette);
+                if (deltaE != -1) {
+                    canvas.setDeltaE(deltaE);
                     result.add(canvas);
                 }
+//                if (ImageHelper.comparePalette(inputPalatte, currentPalette)) {
+//                    result.add(canvas);
+//                }
             }
 
             System.out.println("total canvas " + listCanvas.size());
             System.out.println("total result " + result.size());
 
-            for (Canvas canvas : result) {
-                System.out.println(canvas.getName());
-                System.out.println(canvas.getImage());
-                System.out.println("---");
+//            for (Canvas canvas : result) {
+//                System.out.println(canvas.getName());
+//                System.out.println(canvas.getImage());
+//                System.out.println("---");
+//            }
+            System.out.println("before sort --------");
+            for (Canvas canvas1 : result) {
+                System.out.println(canvas1.getDeltaE());
             }
 
+            Collections.sort(result, (c1, c2) -> {
+                return ((Comparable) c1.getDeltaE()).compareTo(c2.getDeltaE()); //To change body of generated lambdas, choose Tools | Templates.
+            });
+
+            System.out.println("after sort --------");
+            for (Canvas canvas1 : result) {
+                System.out.println(canvas1.getDeltaE());
+            }
+
+            List<String> colorHex = new ArrayList<>();
+            for (String colorInt : inputPalatte) {
+                colorHex.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
+            }
+
+            request.setAttribute("COLOR", colorHex);
             request.setAttribute("CANVAS", result);
 //            response.setContentType("image/png");
 //            ImageIO.write(image, "png", response.getOutputStream());
@@ -102,8 +127,8 @@ public class HomeServlet extends HttpServlet {
             if (Constant.REAL_PATH.isEmpty()) {
                 Constant.updateRealPath(realPath);
             }
-            ImageIO.write(image, "png", new File(Constant.REAL_PATH + "/WEB-INF/image/tmpImage.png"));
-            byte[] imageBytes = Files.readAllBytes(Paths.get(Constant.REAL_PATH + "/WEB-INF/image/tmpImage.png"));
+            ImageIO.write(image, "png", new File(Constant.REAL_PATH + "/image/tmpImage.png"));
+            byte[] imageBytes = Files.readAllBytes(Paths.get(Constant.REAL_PATH + "/image/tmpImage.png"));
             Base64.Encoder encoder = Base64.getEncoder();
             String encoding = "data:image/png;base64," + encoder.encodeToString(imageBytes);
             request.setAttribute("IMAGE", encoding);

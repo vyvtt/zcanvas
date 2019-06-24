@@ -4,8 +4,11 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/HomeServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/ImageHelper.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/jaxb/Canvas.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/dao/CanvasDAO.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/css/home.css</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/home.jsp</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/ProcessServlet.java</file>
         </group>
     </open-files>
 </project-private>

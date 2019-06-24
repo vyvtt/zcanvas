@@ -60,6 +60,15 @@ public class Canvas implements Serializable{
     protected List<Detail> detail;
     
     private String colorPalatte;
+    private double deltaE;
+
+    public double getDeltaE() {
+        return deltaE;
+    }
+
+    public void setDeltaE(double deltaE) {
+        this.deltaE = deltaE;
+    }
 
     public String getColorPalatte() {
         return colorPalatte;

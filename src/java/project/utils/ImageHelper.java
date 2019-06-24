@@ -139,6 +139,28 @@ public class ImageHelper {
         return "#";
     }
 
+    public static boolean isGray(int[] rgbArr) {
+        int rgDiff = rgbArr[0] - rgbArr[1];
+        int rbDiff = rgbArr[0] - rgbArr[2];
+        // Filter out black, white and grays...... (tolerance within 10 pixels)
+        int tolerance = 10;
+        if (rgDiff > tolerance || rgDiff < -tolerance) {
+            if (rbDiff > tolerance || rbDiff < -tolerance) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    private static BufferedImage resize(final URL url, final Dimension size) throws IOException {
+        final BufferedImage image = ImageIO.read(url);
+        final BufferedImage resized = new BufferedImage(size.width, size.height, BufferedImage.TYPE_4BYTE_ABGR);
+        final Graphics2D g = resized.createGraphics();
+        g.drawImage(image, 0, 0, size.width, size.height, null);
+        g.dispose();
+        return resized;
+    }
+
     private static float[] RGBToHSB(int rgb) {
         // hsb
         float hsb[] = new float[3];
@@ -198,28 +220,6 @@ public class ImageHelper {
         return (checkRGBArray[0] > (baseR - tolerance) && checkRGBArray[0] < (baseR + tolerance))
                 && (checkRGBArray[1] > (baseG - tolerance) && checkRGBArray[1] < (baseG + tolerance))
                 && (checkRGBArray[2] > (baseB - tolerance) && checkRGBArray[2] < (baseB + tolerance));
-    }
-
-    public static boolean isGray(int[] rgbArr) {
-        int rgDiff = rgbArr[0] - rgbArr[1];
-        int rbDiff = rgbArr[0] - rgbArr[2];
-        // Filter out black, white and grays...... (tolerance within 10 pixels)
-        int tolerance = 10;
-        if (rgDiff > tolerance || rgDiff < -tolerance) {
-            if (rbDiff > tolerance || rbDiff < -tolerance) {
-                return false;
-            }
-        }
-        return true;
-    }
-
-    private static BufferedImage resize(final URL url, final Dimension size) throws IOException {
-        final BufferedImage image = ImageIO.read(url);
-        final BufferedImage resized = new BufferedImage(size.width, size.height, BufferedImage.TYPE_4BYTE_ABGR);
-        final Graphics2D g = resized.createGraphics();
-        g.drawImage(image, 0, 0, size.width, size.height, null);
-        g.dispose();
-        return resized;
     }
 
     private static List<int[]> getPixelFromImage(BufferedImage image) {
@@ -354,8 +354,6 @@ public class ImageHelper {
         return paletteString.toString();
     }
 
-    
-
 //    public static String getColorPaletteFromImageNew(BufferedImage image) {
 //
 //        Map<String, List<int[]>> bucketMap = new HashMap();
@@ -420,9 +418,12 @@ public class ImageHelper {
 //        }
 //        return paletteString.toString();
 //    }
-
     private static String getColorString(int[] rgb) {
         return String.format("#%02x%02x%02x", rgb[0], rgb[1], rgb[2]);
+    }
+
+    public static String convertColorInt2Hex(int color) {
+        return String.format("#%06X", (0xFFFFFF & color));
     }
 
     private static int[] calculateAverageColor(List<int[]> pixels) {
@@ -531,42 +532,30 @@ public class ImageHelper {
         r2 = color2.getRed();
         g2 = color2.getGreen();
         b2 = color2.getBlue();
-
-//        int[] lab1 = rgb2lab(rgb1[0], rgb1[1], rgb1[2]);
-//        int[] lab2 = rgb2lab(rgb2[0], rgb2[1], rgb2[2]);
+        
         int[] lab1 = rgb2lab(r1, g1, b1);
         int[] lab2 = rgb2lab(r2, g2, b2);
         return Math.sqrt(Math.pow(lab2[0] - lab1[0], 2) + Math.pow(lab2[1] - lab1[1], 2) + Math.pow(lab2[2] - lab1[2], 2));
     }
 
-    public static boolean comparePalette(List<String> palette1, List<String> palette2) {
-//        System.out.println(palette1);
-//        System.out.println(palette2);
-        
+    public static double comparePalette(List<String> palette1, List<String> palette2) {
+
         int count = 0;
-        
+        double totalDeltaE = 0;
+
         for (int i = 0; i < palette1.size(); i++) {
             for (int j = 0; j < palette2.size(); j++) {
                 double diff = getColorDifference(Integer.parseInt(palette1.get(i)), Integer.parseInt(palette2.get(j)));
-//                System.out.println(i + ":" + j + " - " + diff);
+                totalDeltaE += diff;
                 if (diff <= 20) {
-//                    System.out.println("match!");
                     j = palette2.size();
                     count++;
-                    if (count == 3) {
-                        return true;
-                    }
                 }
             }
         }
-        return false;
-        
-//        for (String color1 : palette1) {
-//            for (String color2 : palette2) {
-//                double diff = getColorDifference(Integer.parseInt(color1), Integer.parseInt(color2));
-//                System.out.println(test + " - " + diff);
-//                test++;
-//            }
-//        }
+        if (count >= 3) {
+            return totalDeltaE;
+        }
+        return -1;
     }
 }
