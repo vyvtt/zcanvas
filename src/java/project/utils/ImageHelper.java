@@ -298,7 +298,7 @@ public class ImageHelper {
 
         pixels = getPixelFromImage(image);
 
-        // Nhảy 30 pixel 1 lần
+        // Skip 30 pixel 1 lần
         for (int i = 0; i < pixels.size() - 31; i = i + 30) {
             pixel = pixels.get(i);
             pixelKey = getKeyForPixel(pixel);
@@ -311,10 +311,6 @@ public class ImageHelper {
             bucketMap.put(pixelKey, pixelsInBucket);
         }
 
-//        System.out.println(pixels.size());
-//        for (Map.Entry<String, List<int[]>> entry : bucketMap.entrySet()) {
-//            System.out.println(entry.getKey() + " = " + entry.getValue().size());
-//        }
         // sort bucket by size of list pixels
         List<Map.Entry> listBucket = new ArrayList<>(bucketMap.entrySet());
         Collections.sort(listBucket, (Object o1, Object o2) -> {
@@ -323,7 +319,6 @@ public class ImageHelper {
             return ((Comparable) size1).compareTo(size2);
         });
 
-//        List<int[]> averageColorList = new ArrayList<>();
         // lấy 5 bucket có số lượng pixel cao nhất -> tính màu trung bình của bucket đó
         int countPalleteColor = 6;
         Map.Entry<String, List<int[]>> bucket = null;
@@ -347,77 +342,10 @@ public class ImageHelper {
             paletteString.append(String.valueOf(color));
             paletteString.append(";");
 
-//            System.out.println("Average: " + averageColor[0] + "-" + averageColor[1] + "-" + averageColor[2]);
-//            System.out.println(getColorString(averageColor));
-//            averageColorList.add(averageColor);
         }
         return paletteString.toString();
     }
 
-//    public static String getColorPaletteFromImageNew(BufferedImage image) {
-//
-//        Map<String, List<int[]>> bucketMap = new HashMap();
-//        List<int[]> pixels = null;
-//        List<int[]> pixelsInBucket = null;
-//        int[] pixel = new int[3];
-//        String pixelKey = null;
-//
-//        pixels = getPixelFromImage(image);
-//
-//        // Nhảy 30 pixel 1 lần
-//        for (int i = 0; i < pixels.size() - 31; i = i + 30) {
-//            pixel = pixels.get(i);
-//            pixelKey = getKeyForPixel(pixel);
-//
-//            pixelsInBucket = bucketMap.get(pixelKey);
-//            if (pixelsInBucket == null) {
-//                pixelsInBucket = new ArrayList<>();
-//            }
-//            pixelsInBucket.add(pixel);
-//            bucketMap.put(pixelKey, pixelsInBucket);
-//        }
-//
-////        System.out.println(pixels.size());
-////        for (Map.Entry<String, List<int[]>> entry : bucketMap.entrySet()) {
-////            System.out.println(entry.getKey() + " = " + entry.getValue().size());
-////        }
-//        // sort bucket by size of list pixels
-//        List<Map.Entry> listBucket = new ArrayList<>(bucketMap.entrySet());
-//        Collections.sort(listBucket, (Object o1, Object o2) -> {
-//            int size1 = ((List<int[]>) (((Map.Entry) o1).getValue())).size();
-//            int size2 = ((List<int[]>) (((Map.Entry) o2).getValue())).size();
-//            return ((Comparable) size1).compareTo(size2);
-//        });
-//
-//        List<int[]> averageColorList = new ArrayList<>();
-//        // lấy 5 bucket có số lượng pixel cao nhất -> tính màu trung bình của bucket đó
-//        int countPalleteColor = 6;
-//        Map.Entry<String, List<int[]>> bucket = null;
-//        int[] averageColor = new int[3];
-//
-//        if (listBucket.size() < 6) {
-//            countPalleteColor = listBucket.size();
-//        }
-//
-//        StringBuilder paletteString = new StringBuilder();
-//        for (int i = 1; i < countPalleteColor; i++) {
-//            bucket = listBucket.get(listBucket.size() - i);
-//            averageColor = calculateAverageColor(bucket.getValue());
-//
-//            averageColorList.add(averageColor);
-//        }
-//
-//        for (int i = 0; i < averageColorList.size() - 1; i++) {
-//            for (int j = i + 1; j < averageColorList.size(); j++) {
-//                System.out.println("compare " + i + ":" + j);
-//                double diff = getColorDifference(averageColorList.get(i), averageColorList.get(j));
-//                System.out.println(getColorString(averageColorList.get(i)));
-//                System.out.println(getColorString(averageColorList.get(j)));
-//                System.out.println("Diff: " + diff);
-//            }
-//        }
-//        return paletteString.toString();
-//    }
     private static String getColorString(int[] rgb) {
         return String.format("#%02x%02x%02x", rgb[0], rgb[1], rgb[2]);
     }
@@ -553,7 +481,7 @@ public class ImageHelper {
                 }
             }
         }
-        if (count >= 3) {
+        if (count >= 3 ) {
             return totalDeltaE;
         }
         return -1;

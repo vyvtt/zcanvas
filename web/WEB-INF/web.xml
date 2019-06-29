@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app version="3.1" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd">
+    <listener>
+        <description>ServletContextListener</description>
+        <listener-class>project.listener.MyContextServletListener</listener-class>
+    </listener>
     <servlet>
         <servlet-name>ProcessServlet</servlet-name>
         <servlet-class>project.servlet.ProcessServlet</servlet-class>
@@ -12,6 +16,22 @@
         <servlet-name>HomeServlet</servlet-name>
         <servlet-class>project.servlet.HomeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>GetCanvasMatchingImageServlet</servlet-name>
+        <servlet-class>project.servlet.GetCanvasMatchingImageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>AddLocationServlet</servlet-name>
+        <servlet-class>project.servlet.AddLocationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>GetLocationServlet</servlet-name>
+        <servlet-class>project.servlet.GetLocationServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>UpdateLocationServlet</servlet-name>
+        <servlet-class>project.servlet.UpdateLocationServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcessServlet</servlet-name>
         <url-pattern>/ProcessServlet</url-pattern>
@@ -23,6 +43,22 @@
     <servlet-mapping>
         <servlet-name>HomeServlet</servlet-name>
         <url-pattern>/HomeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetCanvasMatchingImageServlet</servlet-name>
+        <url-pattern>/GetCanvasMatchingImageServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>AddLocationServlet</servlet-name>
+        <url-pattern>/AddLocationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GetLocationServlet</servlet-name>
+        <url-pattern>/GetLocationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateLocationServlet</servlet-name>
+        <url-pattern>/UpdateLocationServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

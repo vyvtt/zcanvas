@@ -24,8 +24,11 @@ public class Constant {
     public static String XML_CONFIG_MOPI = "/WEB-INF/document/mopi.xml";
     
     public static final String SERVLET_CRAWL = "CrawlServlet";
-    public static final String SERVLET_UPLOAD = "HomeServlet";
+    public static final String SERVLET_HOME = "HomeServlet";
     public static final String SERVLET_PROCESS = "ProcessServlet";
+    public static final String SERVLET_GET_CANVAS_MATCHING_IMG = "GetCanvasMatchingImageServlet";
+    public static final String SERVLET_GET_LOCATION_CATEGORY = "GetLocationServlet";
+    public static final String SERVLET_UPDATE_LOCATION = "UpdateLocationServlet";
     
     public static final String JSP_HOME = "home.jsp";
     

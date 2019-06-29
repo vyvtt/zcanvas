@@ -38,17 +38,35 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Categories", propOrder = {
-    "name",
-    "description",
-    "canvas"
-})
+//@XmlType(name = "Categories", propOrder = {
+//    "name",
+//    "description",
+//    "canvas"
+//})
 public class Categories {
 
     @XmlElement(required = true)
     protected String name;
     protected String description;
     protected List<Canvas> canvas;
+    
+    private int id;
+
+    public Categories() {
+    }
+
+    public Categories(int id, String name) {
+        this.name = name;
+        this.id = id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     /**
      * Gets the value of the name property.

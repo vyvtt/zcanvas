@@ -1,0 +1,138 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 26, 2019, 9:12:22 PM
+    Author     : thuyv
+*/
+
+body {
+    margin: 0;
+    background-color: #e6e6e6;
+    font-size: 15px;
+}
+
+.div-content {
+    margin-top: 20px;
+    margin-left: 150px;
+    margin-right: 150px;
+}
+
+.logo{
+    vertical-align:middle; 
+    text-align:center;
+    background-color: #393e46;
+}
+
+.logo > img {
+    width: auto;
+    height: 100px;
+}
+
+.div-location {
+    background-color: #393e46;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+.div-location > h3 {
+    color: white;
+}
+
+/* HIDE checkbox */
+input[type=checkbox] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.label-checkbox {
+    border: 0.5px solid #b1b1b1;
+    /*padding: 5px;*/
+    display: inline-block; 
+    width: 23%;
+    height: auto;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.label-checkbox > div {
+    padding: 10px
+}
+
+.label-checkbox:hover {
+    background: #cccccc;
+    cursor:pointer;
+}
+
+input[type=checkbox] {
+    margin-right: 20px;
+}
+
+input[type=checkbox]:checked + div {
+    background-color: #cccccc;
+    /*font-weight: bold;*/
+}
+
+/* HIDE submit */
+input[type="submit"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.label-submit {
+    border: 0.5px solid #b1b1b1;
+    display: inline-block; 
+    width: 23%;
+    height: auto;
+    background-color: #393e46;
+}
+
+.label-submit > div {
+    padding: 10px;
+    color: white;
+    vertical-align: middle; 
+    text-align: center;
+/*    width: 20%;
+    background-color: #393e46;*/
+}
+
+.label-submit:hover {
+    background-color: #393e46;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+/*begin --------------*/
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  margin-bottom: 5px;
+  font-size: 17px;
+  font-family: serif;
+}
+
+.active, .collapsible:hover {
+  background-color: #393e46;
+}
+
+.content {
+  padding: 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+  margin-bottom: 18px;
+}

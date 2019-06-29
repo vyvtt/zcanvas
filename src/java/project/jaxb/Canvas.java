@@ -61,6 +61,15 @@ public class Canvas implements Serializable{
     
     private String colorPalatte;
     private double deltaE;
+    private List<String> listColor;
+
+    public List<String> getListColor() {
+        return listColor;
+    }
+
+    public void setListColor(List<String> listColor) {
+        this.listColor = listColor;
+    }
 
     public double getDeltaE() {
         return deltaE;

@@ -11,6 +11,8 @@ and open the template in the editor.
 body {
     margin: 0;
     background-color: #e6e6e6;
+    font-size: 15px;
+    font-family: monospace;
 }
 
 .content {
@@ -51,27 +53,8 @@ input[type="submit"] {
     color: white;
 }
 
-/*.input-file {
-    width: 0.1px;
-    height: 0.1px;
-    opacity: 0;
-    overflow: hidden;
-    position: absolute;
-    z-index: -1;
-}
-
-.input-file + label {
-    color: white;
-    background-color: black;
-    display: inline-block;
-}
-
-.input-file:focus + label,
-.input-file + label:hover {
-    background-color: red;
-}*/
-
 .preview {
+    /*display: none;*/
     display: inline-block;
     width: auto;
     height: 400px;
@@ -86,11 +69,96 @@ input[type="submit"] {
     width: 80px;
 }
 
+.span-palette-small {
+    display: inline-block;
+}
+
+.span-palette-small > div {
+    height: 40px;
+    width: 40px;
+}
+
 .span-result {
-    border: 1px solid #ccc;
+    border: 2px solid #ccc;
     display: inline-block;
     width: 30%;
     height: auto;
+    min-height: 270px;
     vertical-align: middle; 
     text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.span-result > img {
+    width: auto;
+    height: 200px;
+}
+
+/* HIDE RADIO */
+input[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* IMAGE STYLES */
+input[type=radio] + img {
+    cursor: pointer;
+}
+
+/*input [type=radio]:hover + img {
+    cursor: pointer;
+    background-color: #e6e6e6;
+}*/
+
+/* CHECKED STYLES */
+/*.div-location > label > input[type=radio]:checked + img {
+    background: #393e46;
+    background-color: #393e46;
+}*/
+
+.div-location > input[type=radio]:checked + label > img,
+.div-location > input[type=radio]:checked + label > p {
+    background: #393e46;
+    background-color: #393e46;
+    color: white;
+}
+
+.div-location {
+    width: 150px; 
+    height: auto; 
+    text-align: center; 
+    display: inline-block
+}
+
+.div-location:hover {
+    background-color: #cccccc; 
+}
+
+/*.div-location + input[type=radio]:checked {
+    background: aquamarine; 
+    outline: 2px solid #f00;
+}*/
+
+.div-location > label > img {
+    width: 100px;
+    height: 100px;
+    padding: 25px;
+    margin: 0px;
+}
+
+.div-location > label {
+    padding: 0px;
+    margin: 0px;
+}
+
+.div-location > label > p {
+    margin: 0px;
+    padding-top: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    width: 130px;
+    height: 35px;
 }

@@ -24,10 +24,32 @@
         <div class="content">
             <div align="center">
                 <form method="POST" action="ProcessServlet" enctype="multipart/form-data">
-                    Chọn hình ảnh không gian của bạn 
+
+                    <h3>Chọn loại tranh</h3>
+                    <div>
+                        <c:set var="lastLocation" value="${requestScope.LOCATIONVALUE}"/>
+
+                        <c:forEach var="location" items="${sessionScope.LOCATION}">
+                            <div class="div-location">
+                                <c:set var="curLocation" value="${location.id}"/>
+                                <input type="radio" id="r${location.id}" name="rbLocation" value="${location.id}" 
+                                       ${curLocation == lastLocation ? 'checked' : ''} 
+                                       />
+                                <label for="r${location.id}">
+                                    <p>${location.name}</p>
+                                    <img src="${location.image}">
+                                </label>
+                            </div>
+                        </c:forEach>
+                    </div>
+
+                    <br>
+
+                    <h3>Chọn hình ảnh không gian của bạn </h3>
+                    <br>
                     <input id="file" type="file" name="file" accept="image/*" onchange="loadFile(event)"/>
                     <label for="file" class="input-file-label">Choose an image</label>
-                    <input id="btn-submit" type="submit" value="upload" name="btAction"/>
+                    <input id="btn-submit" type="submit" value="match" name="btAction"/>
                     <label for="btn-submit" class="input-file-label">Start</label>
                 </form>
 
@@ -41,30 +63,33 @@
                     </c:forEach>
                 </span>
 
+                <br><br><br>
+
+                <c:set var="total" value="${requestScope.TOTAL}"/>
+                <c:if test="${not empty total}">
+                    <div>Tìm thấy <b>${total}</b> sản phẩm phù hợp</div>
+                </c:if>
+
             </div>
 
 
-            <!--        <form action="ProcessServlet">
-                        <input type="submit" value="crawl" name="btAction"/>
-                    </form>-->
 
             </br>
 
             <c:forEach var="canvas" items="${requestScope.CANVAS}">
                 <span class="span-result">
                     <img src="${canvas.image}" height="200px" width="auto"/>
+                    <span class="span-palette-small">
+                        <c:forEach var="a" items="${canvas.listColor}">
+                            <div style="background-color:${a};"></div>
+                        </c:forEach>
+                    </span>
                     <p>${canvas.name}</p>
                 </span>
             </c:forEach>
+
         </div>
     </body>
-</html>
 
-<script>
-    var loadFile = function (event) {
-        var preview = document.getElementById('preview');
-        preview.src = URL.createObjectURL(event.target.files[0]);
-        var palette = document.getElementById('palette');
-        palette.style.display = 'none';
-    };
-</script>
+    <script type="text/javascript" src="js/home.js"></script>
+</html>

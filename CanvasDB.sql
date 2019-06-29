@@ -32,3 +32,14 @@ CREATE TABLE CategoryCanvas(
 	PRIMARY KEY (CanvasId, CategoryId)
 );
 
+CREATE TABLE Location (
+	id int IDENTITY(1,1) PRIMARY KEY,
+	name NVARCHAR(250),
+	image VARCHAR(250)
+);
+
+CREATE TABLE LocationCategory(
+	LocationId int FOREIGN KEY REFERENCES Location(id),
+	CategoryId int FOREIGN KEY REFERENCES Category(id),
+	PRIMARY KEY (LocationId, CategoryId)
+);

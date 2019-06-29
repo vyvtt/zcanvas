@@ -38,25 +38,31 @@ public class ProcessServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String url = JSP_HOME;
+        String url = SERVLET_HOME;
+//        String url = SERVLET_GET_LOCATION_CATEGORY;
         String btn = request.getParameter("btAction");
 
-        System.out.println("btn: " + btn);
+//        if (Constant.REAL_PATH.isEmpty()) {
+//            String realPath = request.getServletContext().getRealPath("/");
+//            Constant.updateRealPath(realPath);
+//        }
 
         try {
             if (btn == null) {
                 // do nothing
-            } else if (btn.equals("upload")) {
-                url = SERVLET_UPLOAD;
+            } else if (btn.equals("match")) {
+                url = SERVLET_GET_CANVAS_MATCHING_IMG;
             } else if (btn.equals("crawl")) {
                 url = SERVLET_CRAWL;
+            } else if (btn.equals("updateLocation")) {
+                url = SERVLET_UPDATE_LOCATION;
+            } else if (btn.equals("admin")) {
+                url = SERVLET_GET_LOCATION_CATEGORY;
             }
 
         } catch (Exception e) {
             Logger.getLogger(ProcessServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
-
-            System.out.println(url);
 
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);

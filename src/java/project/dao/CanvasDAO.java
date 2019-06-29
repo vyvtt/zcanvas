@@ -13,10 +13,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.StringJoiner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.NamingException;
 import project.jaxb.Canvas;
+import project.jaxb.Categories;
 import project.utils.DBUtils;
 import project.utils.StringHelper;
 
@@ -144,12 +146,67 @@ public class CanvasDAO implements Serializable {
 
         try {
             con = DBUtils.getConnection();
-//            String sql = "Select * from Canvas where Canvas.id in "
-//                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId = ?)";
-            String sql = "Select * from Canvas";
+            String sql = "Select * from Canvas where Canvas.id in "
+                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId = ?)";
+//            String sql = "Select * from Canvas";
             stm = con.prepareStatement(sql);
-//            stm.setInt(1, categoryId);
+            stm.setInt(1, categoryId);
 
+            rs = stm.executeQuery();
+
+            List<Canvas> result = new ArrayList<>();
+            while (rs.next()) {
+                Canvas canvas = new Canvas();
+                canvas.setName(rs.getNString("name"));
+                canvas.setUrl(rs.getString("url"));
+                canvas.setImage(rs.getString("image"));
+                canvas.setColorPalatte(rs.getString("color"));
+                result.add(canvas);
+            }
+            System.out.println("total: " + result.size());
+            return result;
+        } catch (SQLException | NamingException e) {
+            Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException sQLException) {
+                Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, sQLException.getMessage(), sQLException);
+            }
+        }
+        return null;
+    }
+    
+    public List<Canvas> getAllCanvasByCategory(List<Categories> listCategory) {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+
+        try {
+            con = DBUtils.getConnection();
+            String sql = "Select * from Canvas where Canvas.id in "
+                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId in ";
+
+            StringBuilder content = new StringBuilder();
+            listCategory.forEach((category) -> {
+                content.append(category.getId()).append(",");
+            });
+            
+            String contentString = content.toString();
+            contentString = contentString.substring(0, contentString.length() - 1);
+            sql = sql + "(" + contentString + "))";
+            
+            System.out.println(sql);
+            
+            stm = con.prepareStatement(sql);
             rs = stm.executeQuery();
 
             List<Canvas> result = new ArrayList<>();

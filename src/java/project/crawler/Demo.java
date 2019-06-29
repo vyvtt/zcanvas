@@ -38,28 +38,31 @@ import project.utils.XMLHelper;
 public class Demo {
 
     public static void main(String[] args) throws UnsupportedEncodingException, XMLStreamException, IOException {
+        
+        String contentString = "abc";
+        System.out.println(contentString.substring(0, contentString.length() - 1));
 
-        String url = "https://paint.com.ph/wp-content/uploads/2018/08/House-Painting.jpg";
-        BufferedImage image = ImageIO.read(new URL(url));
-        String palette = ImageHelper.getColorPaletteFromImage(image);
-//        System.out.println(ImageHelper.getColorPaletteFromImage(image));
-//        ImageHelper.getColorPaletteFromImageNew(image);
-
-        String urlYellow = "https://cdn1.mopi.vn/wp-content/uploads/2018/05/OF-289.jpg";
-        image = ImageIO.read(new URL(urlYellow));
-        String paletteYellow = ImageHelper.getColorPaletteFromImage(image);
-
-        String urlGreen = "https://mopi.vn/wp-content/uploads/2019/05/OF-1.jpg";
-        urlGreen = "https://cdn1.mopi.vn/wp-content/uploads/2018/05/OF-296.jpg";
-        image = ImageIO.read(new URL(urlGreen));
-        String paletteGreen = ImageHelper.getColorPaletteFromImage(image);
-
-        List<String> p = Arrays.asList(palette.split("\\s*;\\s*"));
-        List<String> pYellow = Arrays.asList(paletteYellow.split("\\s*;\\s*"));
-        List<String> pGreen = Arrays.asList(paletteGreen.split("\\s*;\\s*"));
-
-        ImageHelper.comparePalette(p, pYellow);
-        ImageHelper.comparePalette(p, pGreen);
+//        String url = "https://paint.com.ph/wp-content/uploads/2018/08/House-Painting.jpg";
+//        BufferedImage image = ImageIO.read(new URL(url));
+//        String palette = ImageHelper.getColorPaletteFromImage(image);
+////        System.out.println(ImageHelper.getColorPaletteFromImage(image));
+////        ImageHelper.getColorPaletteFromImageNew(image);
+//
+//        String urlYellow = "https://cdn1.mopi.vn/wp-content/uploads/2018/05/OF-289.jpg";
+//        image = ImageIO.read(new URL(urlYellow));
+//        String paletteYellow = ImageHelper.getColorPaletteFromImage(image);
+//
+//        String urlGreen = "https://mopi.vn/wp-content/uploads/2019/05/OF-1.jpg";
+//        urlGreen = "https://cdn1.mopi.vn/wp-content/uploads/2018/05/OF-296.jpg";
+//        image = ImageIO.read(new URL(urlGreen));
+//        String paletteGreen = ImageHelper.getColorPaletteFromImage(image);
+//
+//        List<String> p = Arrays.asList(palette.split("\\s*;\\s*"));
+//        List<String> pYellow = Arrays.asList(paletteYellow.split("\\s*;\\s*"));
+//        List<String> pGreen = Arrays.asList(paletteGreen.split("\\s*;\\s*"));
+//
+//        ImageHelper.comparePalette(p, pYellow);
+//        ImageHelper.comparePalette(p, pGreen);
 
 //        String url = "https://mopi.vn/bo-suu-tap/am-thuc/page/2/";
 //        String htmlContent = "";

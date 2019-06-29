@@ -10,9 +10,9 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
-import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Base64;
@@ -21,15 +21,18 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
+import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.servlet.http.Part;
 import project.dao.CanvasDAO;
 import project.jaxb.Canvas;
+import project.jaxb.Location;
 import project.utils.Constant;
 import project.utils.ImageHelper;
 
@@ -53,98 +56,23 @@ public class HomeServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
 
-        PrintWriter out = response.getWriter();
-        String url = Constant.JSP_HOME;
-
-        System.out.println("in HomeServlet");
-
-        try {
-            Part filePart = request.getPart("file");
-            InputStream is = filePart.getInputStream();
-            BufferedImage image = ImageIO.read(is);
-
-            String colorPalette = ImageHelper.getColorPaletteFromImage(image);
-            List<String> inputPalatte = Arrays.asList(colorPalette.split("\\s*;\\s*"));
-            System.out.println(colorPalette);
-
-            CanvasDAO dao = new CanvasDAO();
-            List<Canvas> listCanvas = dao.getAllCanvasByCategory(13);
-
-            List<Canvas> result = new ArrayList<>();
-
-            for (Canvas canvas : listCanvas) {
-//                image = ImageIO.read(new URL(url1));
-//                String currentPaletteString = ImageHelper.getColorPaletteFromImage(image);
-                List<String> currentPalette = Arrays.asList(canvas.getColorPalatte().split("\\s*;\\s*"));
-
-                double deltaE = ImageHelper.comparePalette(inputPalatte, currentPalette);
-                if (deltaE != -1) {
-                    canvas.setDeltaE(deltaE);
-                    result.add(canvas);
-                }
-//                if (ImageHelper.comparePalette(inputPalatte, currentPalette)) {
-//                    result.add(canvas);
-//                }
-            }
-
-            System.out.println("total canvas " + listCanvas.size());
-            System.out.println("total result " + result.size());
-
-//            for (Canvas canvas : result) {
-//                System.out.println(canvas.getName());
-//                System.out.println(canvas.getImage());
-//                System.out.println("---");
-//            }
-            System.out.println("before sort --------");
-            for (Canvas canvas1 : result) {
-                System.out.println(canvas1.getDeltaE());
-            }
-
-            Collections.sort(result, (c1, c2) -> {
-                return ((Comparable) c1.getDeltaE()).compareTo(c2.getDeltaE()); //To change body of generated lambdas, choose Tools | Templates.
-            });
-
-            System.out.println("after sort --------");
-            for (Canvas canvas1 : result) {
-                System.out.println(canvas1.getDeltaE());
-            }
-
-            List<String> colorHex = new ArrayList<>();
-            for (String colorInt : inputPalatte) {
-                colorHex.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
-            }
-
-            request.setAttribute("COLOR", colorHex);
-            request.setAttribute("CANVAS", result);
-//            response.setContentType("image/png");
-//            ImageIO.write(image, "png", response.getOutputStream());
-
-//            Base64.Encoder encoder = Base64.getEncoder();
-//            ImageIO.write(image, "png", new File("tmp.png"));
-//            String base64Str = "data:image/png;base64," + encoder.encode(Files.readAllBytes(Paths.get("tmp.png")));
-//            request.setAttribute("IMAGE", base64Str);
-            String realPath = request.getServletContext().getRealPath("/");
-            if (Constant.REAL_PATH.isEmpty()) {
-                Constant.updateRealPath(realPath);
-            }
-            ImageIO.write(image, "png", new File(Constant.REAL_PATH + "/image/tmpImage.png"));
-            byte[] imageBytes = Files.readAllBytes(Paths.get(Constant.REAL_PATH + "/image/tmpImage.png"));
-            Base64.Encoder encoder = Base64.getEncoder();
-            String encoding = "data:image/png;base64," + encoder.encodeToString(imageBytes);
-            request.setAttribute("IMAGE", encoding);
-
-//            CanvasDAO canvasDAO = new CanvasDAO();
-//            List<Canvas> result = canvasDAO.getAllCanvasByCategory(15);
-//            
-//            for (Canvas canvas : result) {
-//                ImageHelper.comparePalette(colorPalette, canvas.getColorPalatte());
-//            }
-        } catch (IOException | ServletException e) {
-            Logger.getLogger(HomeServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-        } finally {
-            RequestDispatcher rd = request.getRequestDispatcher(url);
-            rd.forward(request, response);
-            out.close();
+        try (PrintWriter out = response.getWriter()) {
+            
+            Location l1 = new Location(1, "Tranh treo cửa hàng", "image/shop.svg", null);
+            Location l2 = new Location(2, "Tranh treo văn phòng", "image/office.svg", null);
+            Location l3 = new Location(3, "Tranh trang trí nhà cửa", "image/house.svg", null);
+            List<Location> list = new ArrayList<>();
+            list.add(l1);
+            list.add(l2);
+            list.add(l3);
+            
+            HttpSession session = request.getSession();
+            session.setAttribute("LOCATION", list);
+            
+//            request.setAttribute("LOCATION", list);
+            
+            RequestDispatcher rs = request.getRequestDispatcher(Constant.JSP_HOME);
+            rs.forward(request, response);
         }
     }
 
