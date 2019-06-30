@@ -1,20 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet extension-element-prefixes="exsl" version="1.0" xmlns="http://canvas.com/vyvtt" xmlns:exsl="http://exslt.org/common" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+<xsl:stylesheet 
+                version="1.0" 
+                xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
     <xsl:output method="html"/>
     
     <xsl:param name="categoriesFile"/>
+    <xsl:param name="a"/>
+    
+    
     
     <xsl:template match="/">
+        
+        
         
         <link rel="stylesheet" href="../css/admin.css"/>
         <script type="text/javascript" src="../js/admin.js"></script>
         
-        <xsl:variable name="categoriesXML" select="document($categoriesFile)"/>
+        param : <xsl:value-of select="$categoriesFile"/>
         
-        <!--<xsl:variable name="categoriesXML" select="document(WEB-INF/document/categories.xml)"/>-->
-        <!--KO ĐƯỢC DÙNG !!!-->
+        <xsl:variable name="categoriesXML" select="document($categoriesFile)/*"/>
         
-        <xsl:for-each select="locations/location">           
+        variable: <xsl:value-of select="$categoriesXML"/>
+        
+        copy: <xsl:copy-of select="document('file:///d:/categories.xml')/*"/>
+        
+        <xsl:for-each select="locations/location">
             
             <xsl:variable name="aaa" select="categories"/>
             
@@ -24,29 +34,12 @@
             <div class="content">
                 <form action="ProcessServlet" method="POST">
                 
-                    <input type="hidden" name="txtLocationId">
+                    <input type="hidden" name="locationId">
                         <xsl:attribute name="value">
                             <xsl:value-of select="id"/>
                         </xsl:attribute>
                     </input>
-                    
-                    <input type="hidden" name="txtOldLocationName">
-                        <xsl:attribute name="value">
-                            <xsl:value-of select="name"/>
-                        </xsl:attribute>
-                    </input>
-                    
-                    <h3>Phân loại </h3> 
-                    <input type="text" name="txtLocationName">
-                        <xsl:attribute name="value">
-                            <xsl:value-of select="name"/>
-                        </xsl:attribute>
-                    </input>
-                    
-                    <br/>
-                    <br/>
 
-                    <h3>Category </h3>
                     <xsl:for-each select="$categoriesXML/categories/category">
                         <xsl:variable name="currentId" select="id"/>
 

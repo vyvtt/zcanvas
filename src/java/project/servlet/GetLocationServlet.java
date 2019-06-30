@@ -5,14 +5,19 @@
  */
 package project.servlet;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import project.dao.CategoryDAO;
 import project.dao.LocationDAO;
+import project.utils.Constant;
 
 /**
  *
@@ -35,24 +40,22 @@ public class GetLocationServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         try {
-
-            System.out.println("in GetLocationServlet");
+            
             LocationDAO locationDAO = new LocationDAO();
             String xmlLocation = locationDAO.getAllLocationCategories();
 
 //            CategoryDAO categoryDAO = new CategoryDAO();
 //            String xmlCategory = categoryDAO.getAllCategoriesAsXML();
 
-            System.out.println(xmlLocation);
-//            System.out.println(xmlCategory);
-
             request.setAttribute("XML_LOCATION", xmlLocation);
 //            request.setAttribute("XML_CATEGORY", xmlCategory);
-
+//
 //            try (OutputStreamWriter writer
-//                    = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/WEB-INF/document/categories.xml"), StandardCharsets.UTF_8)) {
+//                    = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/document/categories.xml"), StandardCharsets.UTF_8)) {
 //                // do stuff
 //                writer.write(xmlCategory);
+//                System.out.println("write done!!!!");
+//                System.out.println(Constant.REAL_PATH + "/document/categories.xml");
 //            }
 
 //            StringBuilder contentBuilder = new StringBuilder();

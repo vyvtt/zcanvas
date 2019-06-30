@@ -14,6 +14,7 @@ import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
+import javax.xml.bind.annotation.XmlTransient;
 import javax.xml.bind.annotation.XmlType;
 
 
@@ -41,7 +42,8 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-//@XmlType(name = "Canvas", propOrder = {
+@XmlType(name = "Canvas")
+//, propOrder = {
 //    "name",
 //    "url",
 //    "image",
@@ -59,16 +61,28 @@ public class Canvas implements Serializable{
     protected String designer;
     protected List<Detail> detail;
     
+    @XmlTransient
     private String colorPalatte;
+    @XmlTransient
     private double deltaE;
-    private List<String> listColor;
+    private List<String> canvasColors;
+    private List<Integer> canvasCategories;
+    
 
-    public List<String> getListColor() {
-        return listColor;
+    public List<Integer> getCanvasCategories() {
+        return canvasCategories;
     }
 
-    public void setListColor(List<String> listColor) {
-        this.listColor = listColor;
+    public void setCanvasCategories(List<Integer> canvasCategories) {
+        this.canvasCategories = canvasCategories;
+    }
+
+    public List<String> getCanvasColors() {
+        return canvasColors;
+    }
+
+    public void setCanvasColors(List<String> canvasColors) {
+        this.canvasColors = canvasColors;
     }
 
     public double getDeltaE() {

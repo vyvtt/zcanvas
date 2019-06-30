@@ -12,7 +12,9 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.StringJoiner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -184,7 +186,7 @@ public class CanvasDAO implements Serializable {
         }
         return null;
     }
-    
+
     public List<Canvas> getAllCanvasByCategory(List<Categories> listCategory) {
         Connection con = null;
         PreparedStatement stm = null;
@@ -192,34 +194,73 @@ public class CanvasDAO implements Serializable {
 
         try {
             con = DBUtils.getConnection();
-            String sql = "Select * from Canvas where Canvas.id in "
-                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId in ";
 
-            StringBuilder content = new StringBuilder();
-            listCategory.forEach((category) -> {
-                content.append(category.getId()).append(",");
-            });
-            
-            String contentString = content.toString();
-            contentString = contentString.substring(0, contentString.length() - 1);
-            sql = sql + "(" + contentString + "))";
-            
-            System.out.println(sql);
-            
-            stm = con.prepareStatement(sql);
-            rs = stm.executeQuery();
+            String s = "Select * from Canvas where Canvas.id in \n"
+                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId = ?)";
 
             List<Canvas> result = new ArrayList<>();
-            while (rs.next()) {
-                Canvas canvas = new Canvas();
-                canvas.setName(rs.getNString("name"));
-                canvas.setUrl(rs.getString("url"));
-                canvas.setImage(rs.getString("image"));
-                canvas.setColorPalatte(rs.getString("color"));
-                result.add(canvas);
+            List<Integer> canvasIds = new ArrayList<>();
+
+            Map<Integer, Canvas> map = new HashMap<>();
+
+            for (Categories category : listCategory) {
+
+                System.out.println("Category: " + category.getId() + " - " + category.getName());
+
+                stm = con.prepareStatement(s);
+                stm.setInt(1, category.getId());
+                rs = stm.executeQuery();
+
+                while (rs.next()) {
+
+                    if (map.containsKey(rs.getInt("id"))) {
+                        System.out.println("Contain in map already! ---> update list int categories id");
+                        map.get(rs.getInt("id")).getCanvasCategories().add(category.getId());
+                    } else {
+                        Canvas canvas = new Canvas();
+                        canvas.setName(rs.getNString("name").replace("'", "\\'"));
+                        canvas.setUrl(rs.getString("url"));
+                        canvas.setImage(rs.getString("image"));
+                        canvas.setColorPalatte(rs.getString("color"));
+//                        canvas.setCategoryId(category.getId());
+                        List<Integer> tmp = new ArrayList<>();
+                        tmp.add(category.getId());
+                        canvas.setCanvasCategories(tmp);
+                        map.put(rs.getInt("id"), canvas);
+//                        result.add(canvas);
+                    }
+
+                }
             }
-            System.out.println("total: " + result.size());
-            return result;
+
+//            String sql = "Select * from Canvas where Canvas.id in "
+//                    + "(select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId in ";
+//
+//            StringBuilder content = new StringBuilder();
+//            listCategory.forEach((category) -> {
+//                content.append(category.getId()).append(",");
+//            });
+//
+//            String contentString = content.toString();
+//            contentString = contentString.substring(0, contentString.length() - 1);
+//            sql = sql + "(" + contentString + "))";
+//
+//            System.out.println(sql);
+//
+//            stm = con.prepareStatement(sql);
+//            rs = stm.executeQuery();
+//
+//            List<Canvas> result = new ArrayList<>();
+//            while (rs.next()) {
+//                Canvas canvas = new Canvas();
+//                canvas.setName(rs.getNString("name"));
+//                canvas.setUrl(rs.getString("url"));
+//                canvas.setImage(rs.getString("image"));
+//                canvas.setColorPalatte(rs.getString("color"));
+//                result.add(canvas);
+//            }
+            System.out.println("total map: " + map.size());
+            return new ArrayList<Canvas>(map.values());
         } catch (SQLException | NamingException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {

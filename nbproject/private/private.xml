@@ -3,11 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/css/admin.css</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/css/home.css</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/WEB-INF/document/admin.xsl</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/UpdateLocationServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/listener/MyContextServletListener.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/jaxb/Location.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/document/admin-test.xsl</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/GetLocationServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/home.js</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/home.jsp</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/GetCanvasMatchingImageServlet.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/admin.js</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/WEB-INF/document/admin.xsl</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/admin.jsp</file>
         </group>
     </open-files>

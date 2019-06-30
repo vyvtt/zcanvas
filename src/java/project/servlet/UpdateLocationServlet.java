@@ -35,19 +35,30 @@ public class UpdateLocationServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
         try (PrintWriter out = response.getWriter()) {
             
+            String locationName = request.getParameter("txtLocationName");
+            String oldLocationName = request.getParameter("txtOldLocationName");
             String categories[] = request.getParameterValues("category");
-            int locationId = Integer.parseInt(request.getParameter("locationId"));
+            int locationId = Integer.parseInt(request.getParameter("txtLocationId"));
             
+            // parse các id của categories mới
             List<Integer> categoryIds = new ArrayList<>();
-            
             for (int i = 0; i < categories.length; i++) {
                 categoryIds.add(Integer.parseInt(categories[i]));
             }
             
+            // update categories của location
             LocationDAO locationDAO = new LocationDAO();
             locationDAO.updateLocationCategory(locationId, categoryIds);
+            
+            // update tên location nếu thay đổi
+            System.out.println(oldLocationName);
+            System.out.println(locationName);
+            if (!locationName.equals(oldLocationName)) {
+                locationDAO.updateLocationName(locationId, locationName);
+            }
             
             String xmlLocation = locationDAO.getAllLocationCategories();
             request.setAttribute("XML_LOCATION", xmlLocation);

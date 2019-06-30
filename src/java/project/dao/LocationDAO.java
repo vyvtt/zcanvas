@@ -16,7 +16,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.NamingException;
 import project.jaxb.Categories;
-import project.jaxb.Location;
 import project.utils.DBUtils;
 
 /**
@@ -144,6 +143,40 @@ public class LocationDAO implements Serializable {
             }
             stm.executeBatch();
             con.commit();
+            
+        } catch (NamingException | SQLException e) {
+            Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException sQLException) {
+                Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, sQLException.getMessage(), sQLException);
+            }
+        }
+    }
+    
+    public void updateLocationName(int locationId, String locationName) {
+        Connection con = null;
+        PreparedStatement stm = null;
+        
+        try {
+            con = DBUtils.getConnection();
+
+            String sql = " UPDATE Location SET name = ? WHERE id = ?;";
+            stm = con.prepareStatement(sql);
+            stm.setNString(1, locationName);
+            stm.setInt(2, locationId);
+
+            int result = stm.executeUpdate();
+            if (result > 0) {
+                System.out.println("update done");
+            }
+            
             
         } catch (NamingException | SQLException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);

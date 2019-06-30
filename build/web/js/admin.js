@@ -1,12 +1,6 @@
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 window.onload = function () {
-    console.log('onload window');
-    
+    console.log('collapse');
     var coll = document.getElementsByClassName("collapsible");
     var i;
 
@@ -23,51 +17,112 @@ window.onload = function () {
     }
 };
 
-function loadXMLDoc(filename)
-{
-    if (window.ActiveXObject)
-    {
-        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
-    } else
-    {
-        xhttp = new XMLHttpRequest();
-    }
-    xhttp.open("GET", filename, false);
+//function loadXMLDoc(filename)
+//{
+//    if (window.ActiveXObject)
+//    {
+//        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
+//    } else
+//    {
+//        xhttp = new XMLHttpRequest();
+//    }
+//    xhttp.open("GET", filename, false);
+//    try {
+//        xhttp.responseType = "msxml-document";
+//    } catch (err) {
+//        console.log(err);
+//    } // Helping IE11
+//    xhttp.send("");
+//    return xhttp.responseXML;
+//}
+
+function getXMLHttpObject() {
+    var xmlHttp = null;
     try {
-        xhttp.responseType = "msxml-document";
-    } catch (err) {
-        console.log(err);
-    } // Helping IE11
-    xhttp.send("");
-    return xhttp.responseXML;
+        xmlHttp = new XMLHttpRequest();
+    } catch (e) {
+        try {
+            new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+            new ActiveXObject("Microsoft.XMLHTTP");
+        }
+    }
+    return xmlHttp;
 }
 
+function loadXML(filePath) {
+    xmlHttp = getXMLHttpObject();
+    if (xmlHttp == null) {
+        alert('Browser not supprt AJAX');
+        return;
+    }
+    xmlHttp.open("GET", filePath, false);
+    xmlHttp.send(null);
+    return xmlHttp.responseXML;
+}
 
-function displayResult(xmlString, xslString) {
-    alert('in');
+function displayResult(realPath, xmlString, xmlCategories) {
+    console.log('real path ' + realPath);
 
-    console.log('xmlString: ' + xmlString);
-    console.log('xslString: ' + xslString);
+    var xslUrl = realPath + "/document/admin-test.xsl";
+//    var xmlUrl = realPath + "/admin.xsl";
 
-    xsl = loadXMLDoc("../document/admin.xsl");
+    console.log('xsl path: ' + xslUrl);
 
-    console.log('load file: ' + xsl);
-
+    var xslDoc = loadXML(xslUrl);
+    console.log('load file: ' + xslDoc);
+    
+    console.log('xml string: ' + xmlString);
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(xmlString, "application/xml");
-    var xslDoc = parser.parseFromString(xslString, "application/xml");
-
-    console.log(xmlDoc);
-    console.log(xslDoc);
-
+    
     if (document.implementation && document.implementation.createDocument)
     {
-        console.log('in Chrome');
+        console.log('in XSLTProcessor');
         xsltProcessor = new XSLTProcessor();
         xsltProcessor.importStylesheet(xslDoc);
         xsltProcessor.setParameter(null, "categoriesFile", "WEB-INF/document/categories.xml");
+        xsltProcessor.setParameter(null, "a", xmlCategories);
         resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
         console.log(resultDocument);
         document.getElementById("example").appendChild(resultDocument);
     }
+}
+
+function test(realPath) {
+    alert('in test');
+    console.log(realPath);
+
+    var xslUrl = realPath + "/admin.xsl";
+    var xmlUrl = realPath + "/admin.xsl";
+
+    console.log(xslUrl);
+
+    //    alert('in');
+//
+//    console.log('xmlString: ' + xmlString);
+//    console.log('xslString: ' + xslString);
+//
+//    xsl = loadXMLDoc("../document/admin.xsl");
+//
+//    console.log('load file: ' + xsl);
+//
+//    var parser = new DOMParser();
+//    var xmlDoc = parser.parseFromString(xmlString, "application/xml");
+//    var xslDoc = parser.parseFromString(xslString, "application/xml");
+//
+//    console.log(xmlDoc);
+//    console.log(xslDoc);
+//
+//    if (document.implementation && document.implementation.createDocument)
+//    {
+//        console.log('in Chrome');
+//        xsltProcessor = new XSLTProcessor();
+//        xsltProcessor.importStylesheet(xslDoc);
+//        xsltProcessor.setParameter(null, "categoriesFile", "WEB-INF/document/categories.xml");
+//        resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+//        console.log(resultDocument);
+//        document.getElementById("example").appendChild(resultDocument);
+//    }
+
 }

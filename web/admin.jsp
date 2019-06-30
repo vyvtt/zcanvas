@@ -26,16 +26,14 @@
         <br>
 
         <div class="div-content">
-            <!--<div align="center">-->
-                <c:set var="xmlLocation" value="${requestScope.XML_LOCATION}"/>
+            <c:set var="xmlLocation" value="${requestScope.XML_LOCATION}"/>
 
-                <c:if test="${not empty xmlLocation}">
-                    <c:import var="xsl" url="WEB-INF/document/admin.xsl" charEncoding="UTF-8"/>
-                    <x:transform doc="${xmlLocation}" xslt="${xsl}">
-                        <x:param name="categoriesFile" value="WEB-INF/document/categories.xml"/>
-                    </x:transform>
-                </c:if>
-            <!--</div>-->
+            <c:if test="${not empty xmlLocation}">
+                <c:import var="xsl" url="WEB-INF/document/admin.xsl" charEncoding="UTF-8"/>
+                <x:transform doc="${xmlLocation}" xslt="${xsl}">
+                    <x:param name="categoriesFile" value="WEB-INF/document/categories.xml"/>
+                </x:transform>
+            </c:if>
         </div>
     </body>
 

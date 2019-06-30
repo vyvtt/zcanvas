@@ -8,6 +8,7 @@
 
 package project.jaxb;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -40,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
     "categories"
 })
 @XmlRootElement(name = "painting")
-public class Painting {
+public class Painting implements Serializable{
 
     protected List<Categories> categories;
 

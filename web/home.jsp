@@ -11,6 +11,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/home.css"/>
+        <script type="text/javascript" src="js/home.js"></script>
         <title>Home</title>
     </head>
     <body>
@@ -47,7 +48,7 @@
 
                     <h3>Chọn hình ảnh không gian của bạn </h3>
                     <br>
-                    <input id="file" type="file" name="file" accept="image/*" onchange="loadFile(event)"/>
+                    <input id="file" type="file" name="file" accept="image/*" onchange="loadPreviewImg(event)"/>
                     <label for="file" class="input-file-label">Choose an image</label>
                     <input id="btn-submit" type="submit" value="match" name="btAction"/>
                     <label for="btn-submit" class="input-file-label">Start</label>
@@ -70,25 +71,39 @@
                     <div>Tìm thấy <b>${total}</b> sản phẩm phù hợp</div>
                 </c:if>
 
+                <br/>
+                <br/>
+
+                <div class="div-category">
+                    <input type="radio" id="c0" name="rbCategory" value="0" checked="checked"/>
+                    <label for="c0" onclick="renderCanvasNew('0');">
+                        <p>Tất cả</p>
+                    </label>
+                </div>
+                <c:forEach var="category" items="${requestScope.TEST_CATEGORIES}">
+                    <div class="div-category">
+                        <input type="radio" id="c${category.id}" name="rbCategory" value="${category.id}"/>
+                        <label for="c${category.id}"
+                               onclick="renderCanvasNew('${category.id}');">
+                            <p>${category.name}</p>
+                        </label>
+                    </div>
+                </c:forEach>
+
             </div>
+            <br/>
+            <br/>
 
+            <div id="example" />
 
-
-            </br>
-
-            <c:forEach var="canvas" items="${requestScope.CANVAS}">
-                <span class="span-result">
-                    <img src="${canvas.image}" height="200px" width="auto"/>
-                    <span class="span-palette-small">
-                        <c:forEach var="a" items="${canvas.listColor}">
-                            <div style="background-color:${a};"></div>
-                        </c:forEach>
-                    </span>
-                    <p>${canvas.name}</p>
-                </span>
-            </c:forEach>
-
+            <c:set var="a" value="${requestScope.TEST_XML}"/>
+            <c:if test="${not empty a}">
+                <script>initDocument('${a}', '${pageContext.servletContext.contextPath}');</script>
+                <script>renderCanvasNew('0');</script>
+            </c:if>
         </div>
+
+
     </body>
 
     <script type="text/javascript" src="js/home.js"></script>

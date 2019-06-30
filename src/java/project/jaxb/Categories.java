@@ -8,6 +8,7 @@
 
 package project.jaxb;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
@@ -38,12 +39,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-//@XmlType(name = "Categories", propOrder = {
+@XmlType(name = "Categories")
+//, propOrder = {
 //    "name",
 //    "description",
 //    "canvas"
 //})
-public class Categories {
+public class Categories implements Serializable{
 
     @XmlElement(required = true)
     protected String name;

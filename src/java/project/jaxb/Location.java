@@ -5,6 +5,7 @@
  */
 package project.jaxb;
 
+import java.io.Serializable;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -23,7 +24,7 @@ import javax.xml.bind.annotation.XmlType;
     "category"
 })
 @XmlRootElement
-public class Location {
+public class Location implements Serializable{
     
     protected int id;
     protected String name;

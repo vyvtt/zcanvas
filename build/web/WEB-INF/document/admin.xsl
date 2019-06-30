@@ -14,32 +14,39 @@
         <!--<xsl:variable name="categoriesXML" select="document(WEB-INF/document/categories.xml)"/>-->
         <!--KO ĐƯỢC DÙNG !!!-->
         
-        <xsl:for-each select="locations/location">
-            
-<!--            <button class="collapsible">Open Section 3</button>
-            <div class="content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            </div>
-            
-            <div class="div-location">
-                <h3>Location: 
-                    <xsl:value-of select="name"/>
-                </h3>
-            </div>-->
-            
+        <xsl:for-each select="locations/location">           
             
             <xsl:variable name="aaa" select="categories"/>
             
-            <button class="collapsible"><xsl:value-of select="name"/></button>
+            <button class="collapsible">
+                <xsl:value-of select="name"/>
+            </button>
             <div class="content">
                 <form action="ProcessServlet" method="POST">
                 
-                    <input type="hidden" name="locationId">
+                    <input type="hidden" name="txtLocationId">
                         <xsl:attribute name="value">
                             <xsl:value-of select="id"/>
                         </xsl:attribute>
                     </input>
+                    
+                    <input type="hidden" name="txtOldLocationName">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="name"/>
+                        </xsl:attribute>
+                    </input>
+                    
+                    <h3>Phân loại </h3> 
+                    <input type="text" name="txtLocationName">
+                        <xsl:attribute name="value">
+                            <xsl:value-of select="name"/>
+                        </xsl:attribute>
+                    </input>
+                    
+                    <br/>
+                    <br/>
 
+                    <h3>Category </h3>
                     <xsl:for-each select="$categoriesXML/categories/category">
                         <xsl:variable name="currentId" select="id"/>
 
@@ -63,10 +70,7 @@
                     </xsl:for-each>
                     
                     <br/>
-                
-                    <!--                <button type="submit" name="btAction" value="updateLocation">
-                        Save &#8594;
-                    </button>-->
+
                     <label class="label-submit">
                         <input type="submit" value="updateLocation" name="btAction"/>
                         <div>Save</div>

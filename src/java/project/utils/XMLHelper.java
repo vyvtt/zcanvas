@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Serializable;
+import java.io.StringWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
@@ -180,5 +181,14 @@ public class XMLHelper implements Serializable {
             e.printStackTrace();
         }
         return htmlContent;
+    }
+    
+    public static <T> String parseToXMLString(T obj) throws JAXBException{
+        JAXBContext jc = JAXBContext.newInstance(obj.getClass());
+        Marshaller mar = jc.createMarshaller();
+        StringWriter sw  = new StringWriter();
+        mar.marshal(obj, sw);
+        
+        return sw.toString();
     }
 }

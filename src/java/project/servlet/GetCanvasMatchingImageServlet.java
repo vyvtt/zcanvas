@@ -16,8 +16,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Base64;
 import java.util.Collections;
+import java.util.HashMap;
 import java.util.List;
-import java.util.Locale;
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -30,9 +31,11 @@ import javax.servlet.http.Part;
 import project.dao.CanvasDAO;
 import project.dao.LocationDAO;
 import project.jaxb.Canvas;
+import project.jaxb.Canvases;
 import project.jaxb.Categories;
 import project.utils.Constant;
 import project.utils.ImageHelper;
+import project.utils.XMLHelper;
 
 /**
  *
@@ -65,23 +68,24 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
 
             String colorPalette = ImageHelper.getColorPaletteFromImage(image);
             List<String> inputPalatte = Arrays.asList(colorPalette.split("\\s*;\\s*"));
-            
+
             System.out.println(colorPalette);
 
             CanvasDAO canvasDAO = new CanvasDAO();
             LocationDAO locationDAO = new LocationDAO();
-            
+
             List<Categories> listCategory = locationDAO.getCategoriesByLocation(locationId);
 
             List<Canvas> listCanvasInLocation = canvasDAO.getAllCanvasByCategory(listCategory);
             List<Canvas> result = new ArrayList<>();
             
+//            Map<Integer, String> mapCategories = new HashMap<>();
 
             for (Canvas canvas : listCanvasInLocation) {
                 List<String> currentPalette = Arrays.asList(canvas.getColorPalatte().split("\\s*;\\s*"));
 
                 double deltaE = ImageHelper.comparePalette(inputPalatte, currentPalette);
-                
+
                 if (deltaE != -1) {
                     canvas.setDeltaE(deltaE);
                     List<String> currentCanvasColor = new ArrayList<>();
@@ -89,7 +93,7 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
                     for (String colorInt : currentPalette) {
                         currentCanvasColor.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
                     }
-                    canvas.setListColor(currentCanvasColor);
+                    canvas.setCanvasColors(currentCanvasColor);
                     result.add(canvas);
                 }
             }
@@ -101,6 +105,7 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             for (Canvas curCanvas : result) {
                 System.out.println(curCanvas.getDeltaE());
             }
+            System.out.println("result: " + result.size());
 
             List<String> colorHex = new ArrayList<>();
             for (String colorInt : inputPalatte) {
@@ -117,6 +122,17 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             request.setAttribute("CANVAS", result);
             request.setAttribute("LOCATIONVALUE", locationId);
             request.setAttribute("TOTAL", result.size());
+
+            try {
+                Canvases canvases = new Canvases();
+                canvases.setCanvases(result);
+                String s = XMLHelper.parseToXMLString(canvases);
+                System.out.println(s);
+                request.setAttribute("TEST_XML", s);
+                request.setAttribute("TEST_CATEGORIES", listCategory);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
 
         } catch (IOException | ServletException e) {
             Logger.getLogger(GetCanvasMatchingImageServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);

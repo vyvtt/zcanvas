@@ -8,6 +8,7 @@
 
 package project.jaxb;
 
+import java.io.Serializable;
 import java.math.BigInteger;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -45,7 +46,7 @@ import javax.xml.bind.annotation.XmlType;
     "unit",
     "price"
 })
-public class Detail {
+public class Detail implements Serializable{
 
 //    @XmlElement(required = true)
     @XmlSchemaType(name = "positiveInteger")
