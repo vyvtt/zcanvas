@@ -22,9 +22,6 @@ public class Canvases {
     @XmlElement(name = "canvas")
     private List<Canvas> canvases = null;
 
-    public List<Canvas> getEmployees() {
-        return canvases;
-    }
 
     public List<Canvas> getCanvases() {
         return canvases;

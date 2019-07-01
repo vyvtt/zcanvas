@@ -33,6 +33,7 @@ import project.dao.LocationDAO;
 import project.jaxb.Canvas;
 import project.jaxb.Canvases;
 import project.jaxb.Categories;
+import project.jaxb.Info;
 import project.utils.Constant;
 import project.utils.ImageHelper;
 import project.utils.XMLHelper;
@@ -59,6 +60,8 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         String url = Constant.JSP_HOME;
 
+        System.out.println("we are in ! GetCanvasMatchingImageServlet");
+
         try {
             int locationId = Integer.parseInt(request.getParameter("rbLocation"));
 
@@ -78,9 +81,8 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
 
             List<Canvas> listCanvasInLocation = canvasDAO.getAllCanvasByCategory(listCategory);
             List<Canvas> result = new ArrayList<>();
-            
-//            Map<Integer, String> mapCategories = new HashMap<>();
 
+//            Map<Integer, String> mapCategories = new HashMap<>();
             for (Canvas canvas : listCanvasInLocation) {
                 List<String> currentPalette = Arrays.asList(canvas.getColorPalatte().split("\\s*;\\s*"));
 
@@ -103,7 +105,7 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             });
 
             for (Canvas curCanvas : result) {
-                System.out.println(curCanvas.getDeltaE());
+                System.out.println(curCanvas.getName());
             }
             System.out.println("result: " + result.size());
 
@@ -112,24 +114,43 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
                 colorHex.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
             }
 
-            ImageIO.write(image, "png", new File(Constant.REAL_PATH + "/image/tmpImage.png"));
-            byte[] imageBytes = Files.readAllBytes(Paths.get(Constant.REAL_PATH + "/image/tmpImage.png"));
-            Base64.Encoder encoder = Base64.getEncoder();
-            String encoding = "data:image/png;base64," + encoder.encodeToString(imageBytes);
+//            ImageIO.write(image, "png", new File(Constant.REAL_PATH + "/image/tmpImage.png"));
+//            byte[] imageBytes = Files.readAllBytes(Paths.get(Constant.REAL_PATH + "/image/tmpImage.png"));
+//            Base64.Encoder encoder = Base64.getEncoder();
+//            String encoding = "data:image/png;base64," + encoder.encodeToString(imageBytes);
 
-            request.setAttribute("IMAGE", encoding);
-            request.setAttribute("COLOR", colorHex);
-            request.setAttribute("CANVAS", result);
-            request.setAttribute("LOCATIONVALUE", locationId);
-            request.setAttribute("TOTAL", result.size());
+//            request.setAttribute("IMAGE", encoding);
+//            request.setAttribute("COLOR", colorHex);
+//            request.setAttribute("CANVAS", result);
+//            request.setAttribute("LOCATIONVALUE", locationId);
+//            request.setAttribute("TOTAL", result.size());
 
             try {
                 Canvases canvases = new Canvases();
                 canvases.setCanvases(result);
                 String s = XMLHelper.parseToXMLString(canvases);
                 System.out.println(s);
-                request.setAttribute("TEST_XML", s);
-                request.setAttribute("TEST_CATEGORIES", listCategory);
+//                request.setAttribute("TEST_XML", s);
+//                request.setAttribute("TEST_CATEGORIES", listCategory);
+
+//                s = s.replace("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>", "");
+//                
+//                StringBuilder stringBuilder = new StringBuilder();
+//                stringBuilder.append("<info>");
+//                
+//                System.out.println(XMLHelper.parseToXMLString(listCategory));
+                Info info = new Info();
+                info.setTotal(result.size());
+                info.setCategories(listCategory);
+                info.setInputColors(colorHex);
+                info.setCanvases(canvases);
+                
+                String infoStr = XMLHelper.parseToXMLString(info);
+                System.out.println(XMLHelper.parseToXMLString(info));
+
+                response.setContentType("text/xml; charset=UTF-8");
+                response.getWriter().write(infoStr);
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -137,9 +158,9 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
         } catch (IOException | ServletException e) {
             Logger.getLogger(GetCanvasMatchingImageServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
-            RequestDispatcher rd = request.getRequestDispatcher(url);
-            rd.forward(request, response);
-            out.close();
+//            RequestDispatcher rd = request.getRequestDispatcher(url);
+//            rd.forward(request, response);
+//            out.close();
         }
     }
 

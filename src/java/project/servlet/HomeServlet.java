@@ -5,23 +5,10 @@
  */
 package project.servlet;
 
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.PrintWriter;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.sql.SQLException;
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Base64;
-import java.util.Collections;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
-import javax.naming.NamingException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
@@ -29,12 +16,9 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.servlet.http.Part;
-import project.dao.CanvasDAO;
-import project.jaxb.Canvas;
+import project.dao.LocationDAO;
 import project.jaxb.Location;
 import project.utils.Constant;
-import project.utils.ImageHelper;
 
 /**
  *
@@ -55,25 +39,30 @@ public class HomeServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        LocationDAO locationDAO = new LocationDAO();
+        String locationXML = locationDAO.getAllLocationXML();
+        System.out.println("location xml: " + locationXML);
 
-        try (PrintWriter out = response.getWriter()) {
-            
-            Location l1 = new Location(1, "Tranh treo cửa hàng", "image/shop.svg", null);
-            Location l2 = new Location(2, "Tranh treo văn phòng", "image/office.svg", null);
-            Location l3 = new Location(3, "Tranh trang trí nhà cửa", "image/house.svg", null);
-            List<Location> list = new ArrayList<>();
-            list.add(l1);
-            list.add(l2);
-            list.add(l3);
-            
-            HttpSession session = request.getSession();
-            session.setAttribute("LOCATION", list);
-            
-//            request.setAttribute("LOCATION", list);
-            
-            RequestDispatcher rs = request.getRequestDispatcher(Constant.JSP_HOME);
-            rs.forward(request, response);
-        }
+        response.setContentType("text/xml; charset=UTF-8");
+        response.getWriter().write(locationXML);
+
+//        try (PrintWriter out = response.getWriter()) {
+//
+//            Location l1 = new Location(1, "Tranh treo cửa hàng", "image/shop.svg", null);
+//            Location l2 = new Location(2, "Tranh treo văn phòng", "image/office.svg", null);
+//            Location l3 = new Location(3, "Tranh trang trí nhà cửa", "image/house.svg", null);
+//            List<Location> list = new ArrayList<>();
+//            list.add(l1);
+//            list.add(l2);
+//            list.add(l3);
+//            
+//            HttpSession session = request.getSession();
+//            session.setAttribute("LOCATION", list);
+//            
+//            RequestDispatcher rs = request.getRequestDispatcher(Constant.JSP_HOME);
+//            rs.forward(request, response);
+//        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

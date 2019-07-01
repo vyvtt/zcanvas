@@ -35,9 +35,6 @@ function loadXML(filePath) {
     return xmlHttp.responseXML;
 }
 
-//var xmlDoc = null;
-//var xslDoc = null;
-
 function initDocument(canvasXML, realPath) {
     console.log('init doc');
     
@@ -68,19 +65,18 @@ function renderCanvas(canvasXML, categoryId, realPath) {
         console.log('in XSLTProcessor');
         xsltProcessor = new XSLTProcessor();
         xsltProcessor.importStylesheet(xslDoc);
-//        xsltProcessor.setParameter("http://canvas.com/vyvtt", "categoryId", categoryId);
         xsltProcessor.setParameter(null, "categoryId", categoryId);
         resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
 
         console.log(resultDocument);
 
-//        var myNode = document.getElementById("example");
-//        while (myNode.firstChild) {
-//            myNode.removeChild(myNode.firstChild);
-//        }
-        document.getElementById("example").innerHTML = '';
-        document.getElementById("example").appendChild(resultDocument);
-//        myNode.appendChild(resultDocument);
+        var myNode = document.getElementById("example");
+        while (myNode.firstChild) {
+            myNode.removeChild(myNode.firstChild);
+        }
+//        document.getElementById("example").innerHTML = '';
+//        document.getElementById("example").appendChild(resultDocument);
+        myNode.appendChild(resultDocument);
     }
 }
 

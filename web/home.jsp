@@ -24,8 +24,8 @@
 
         <div class="content">
             <div align="center">
+                
                 <form method="POST" action="ProcessServlet" enctype="multipart/form-data">
-
                     <h3>Chọn loại tranh</h3>
                     <div>
                         <c:set var="lastLocation" value="${requestScope.LOCATIONVALUE}"/>
@@ -94,7 +94,7 @@
             <br/>
             <br/>
 
-            <div id="example" />
+            <div id="result" />
 
             <c:set var="a" value="${requestScope.TEST_XML}"/>
             <c:if test="${not empty a}">

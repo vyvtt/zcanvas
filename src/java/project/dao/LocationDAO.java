@@ -16,6 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.NamingException;
 import project.jaxb.Categories;
+import project.jaxb.Location;
 import project.utils.DBUtils;
 
 /**
@@ -54,6 +55,53 @@ public class LocationDAO implements Serializable {
             }
 
             return result;
+
+        } catch (SQLException | NamingException e) {
+            Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException sQLException) {
+                Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, sQLException.getMessage(), sQLException);
+            }
+        }
+        return null;
+    }
+    
+    public String getAllLocationXML() {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+
+        try {
+            con = DBUtils.getConnection();
+            String sql = "SELECT * FROM Location FOR XML PATH('location'), ROOT('locations')";
+            stm = con.prepareStatement(sql);
+
+            rs = stm.executeQuery();
+            
+            String result = "";
+            if (rs.next()) {
+                result = rs.getString(1);
+            }
+            return result;
+
+//            List<Location> result = new ArrayList<>();
+//            while (rs.next()) {
+//                result.add(new Location(
+//                        rs.getInt("id"), 
+//                        rs.getNString("name"), 
+//                        rs.getString("image")));
+//            }
+//            return result;
 
         } catch (SQLException | NamingException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);

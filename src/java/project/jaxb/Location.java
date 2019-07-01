@@ -18,11 +18,11 @@ import javax.xml.bind.annotation.XmlType;
  */
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Location", propOrder = {
-    "name",
-    "image",
-    "category"
-})
+//@XmlType(name = "Location", propOrder = {
+//    "name",
+//    "image",
+//    "category"
+//})
 @XmlRootElement
 public class Location implements Serializable{
     
@@ -32,6 +32,12 @@ public class Location implements Serializable{
     protected List<Categories> category;
 
     public Location() {
+    }
+
+    public Location(int id, String name, String image) {
+        this.id = id;
+        this.name = name;
+        this.image = image;
     }
 
     public Location(int id, String name, String image, List<Categories> category) {

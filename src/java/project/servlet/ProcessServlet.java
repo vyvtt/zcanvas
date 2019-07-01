@@ -39,8 +39,12 @@ public class ProcessServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String url = SERVLET_HOME;
+        url = "home-test.jsp";
 //        String url = SERVLET_GET_LOCATION_CATEGORY;
         String btn = request.getParameter("btAction");
+        
+        System.out.println("------------");
+        System.out.println("btn: " + btn);
 
 //        if (Constant.REAL_PATH.isEmpty()) {
 //            String realPath = request.getServletContext().getRealPath("/");
@@ -51,6 +55,7 @@ public class ProcessServlet extends HttpServlet {
             if (btn == null) {
                 // do nothing
             } else if (btn.equals("match")) {
+                System.out.println("matchhhhhhhhhhh");
                 url = SERVLET_GET_CANVAS_MATCHING_IMG;
             } else if (btn.equals("crawl")) {
                 url = SERVLET_CRAWL;
@@ -58,12 +63,15 @@ public class ProcessServlet extends HttpServlet {
                 url = SERVLET_UPDATE_LOCATION;
             } else if (btn.equals("admin")) {
                 url = SERVLET_GET_LOCATION_CATEGORY;
+            } else if (btn.equals("initLocation")) {
+                url = "HomeServlet";
             }
 
         } catch (Exception e) {
             Logger.getLogger(ProcessServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
 
+            System.out.println("URL: " + url);
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
 
