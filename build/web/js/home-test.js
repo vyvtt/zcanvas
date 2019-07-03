@@ -3,6 +3,7 @@
     var homeModel = {
         listInputColors: [],
         listCategories: [],
+        totalResult: null,
 
         xmlLocation: null,
         xmlCanvas: null,
@@ -10,6 +11,7 @@
         xslLocation: null,
         xslHome: null
     };
+    
     var homeView = {
         init: function () {
             octopus.getLocations();
@@ -18,10 +20,19 @@
             form.addEventListener('submit', function (evt) {
                 evt.preventDefault();
 
-                var spanLoading = document.getElementById("span-loading");
-                form.style.display = "none";
-                spanLoading.style.display = "block";
+                // validate
+                var validate = validateForm();
+                if (validate == false) {
+                    return;
+                }
 
+                // loading
+                var divForm = document.getElementById("div-form");
+                var divLoad = document.getElementById("div-loading");
+                divForm.style.display = 'none';
+                divLoad.style.display = "block";
+
+                // submit form
                 var data = new FormData(form);
                 octopus.submitForm(data);
 
@@ -75,7 +86,7 @@
             cLabel.setAttribute("for", "c0");
 
             var cP = document.createElement("p");
-            cP.innerHTML = "Tất cả";
+            cP.innerHTML = "Tất cả (" + octopus.getTotalResult() + ")";
 
             cLabel.addEventListener('click', function () {
                 homeView.renderCanvasResult('0');
@@ -88,10 +99,16 @@
 
             var listCategory = octopus.getListCategories();
             var inputList = Array.prototype.slice.call(listCategory);
-            
+
             inputList.forEach(function (category) {
                 var name = category.getElementsByTagName("name")[0].textContent;
                 var id = category.getElementsByTagName("id")[0].textContent;
+                var count = category.getElementsByTagName("count")[0].textContent;
+                
+                if (count == 0) {
+                    // skip this category
+                    return;
+                }
 
                 var cDiv = document.createElement("div");
                 cDiv.setAttribute("class", "div-category");
@@ -105,7 +122,7 @@
                 cLabel.setAttribute("for", "c" + id);
 
                 var cP = document.createElement("p");
-                cP.innerHTML = name;
+                cP.innerHTML = name + ' (' + count + ')';
 
                 cLabel.addEventListener('click', function () {
                     homeView.renderCanvasResult(id);
@@ -115,37 +132,8 @@
                 cDiv.appendChild(cRadio);
                 cDiv.appendChild(cLabel);
                 divCategoryWrap.appendChild(cDiv);
-                
-            });
 
-//            for (var i = 0; i < listCategory.length; i++) {
-//                var name = listCategory[i].getElementsByTagName("name")[0].textContent;
-//                var id = listCategory[i].getElementsByTagName("id")[0].textContent;
-//
-//                var cDiv = document.createElement("div");
-//                cDiv.setAttribute("class", "div-category");
-//
-//                var cRadio = document.createElement("input");
-//                cRadio.setAttribute("type", "radio");
-//                cRadio.setAttribute("id", "c" + id);
-//                cRadio.setAttribute("name", "rbCategory");
-//
-//                var cLabel = document.createElement("label");
-//                cLabel.setAttribute("for", "c" + id);
-//
-//                var cP = document.createElement("p");
-//                cP.innerHTML = name;
-//
-//                cLabel.addEventListener('click', function () {
-//                    console.log(id);
-//                    homeView.renderCanvasResult(id);
-//                });
-//
-//                cLabel.appendChild(cP);
-//                cDiv.appendChild(cRadio);
-//                cDiv.appendChild(cLabel);
-//                divCategoryWrap.appendChild(cDiv);
-//            }
+            });
         },
         renderCanvasResult: function (categoryId) {
             if (document.implementation && document.implementation.createDocument)
@@ -158,10 +146,10 @@
                 document.getElementById("result").innerHTML = '';
                 document.getElementById("result").appendChild(resultDocument);
 
-                var form = document.getElementById('form');
-                var spanLoading = document.getElementById("span-loading");
-                form.style.display = "block";
-                spanLoading.style.display = "none";
+                var divForm = document.getElementById("div-form");
+                var divLoad = document.getElementById("div-loading");
+                divForm.style.display = 'block';
+                divLoad.style.display = "none";
             }
         }
     };
@@ -203,6 +191,8 @@
             sendMultiPartForm(url, data, function (response) {
                 var str = response.responseXML;
 
+                homeModel.totalResult = str.getElementsByTagName("total")[0].innerHTML;
+
                 homeModel.listInputColors = str.getElementsByTagName("inputColor");
                 homeView.renderPalatte();
 
@@ -230,6 +220,9 @@
         },
         getListCategories: function () {
             return homeModel.listCategories;
+        },
+        getTotalResult: function () {
+            return homeModel.totalResult;
         }
     };
 

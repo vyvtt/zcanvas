@@ -65,7 +65,7 @@ public class CategoriesHelper {
         } else if (name.contains("mopi office")) {
             return "Tranh treo văn phòng";
         } else if (name.contains("cao minh huy") || name.contains("mix and match") || name.contains("lê rin") || name.contains("đốm illustration")) {
-            return "BTS " + rawName;
+            return "BST " + rawName;
         } else if (name.contains("fashion, life")) {
             return "Cuộc sống";
         } else {

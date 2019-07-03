@@ -55,6 +55,7 @@ public class Categories implements Serializable{
     protected List<Canvas> canvas;
     
     private int id;
+    private int count;
 
     public Categories() {
     }
@@ -62,6 +63,14 @@ public class Categories implements Serializable{
     public Categories(int id, String name) {
         this.name = name;
         this.id = id;
+    }
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
     }
 
     public int getId() {

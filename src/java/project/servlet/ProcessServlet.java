@@ -42,20 +42,11 @@ public class ProcessServlet extends HttpServlet {
         url = "home-test.jsp";
 //        String url = SERVLET_GET_LOCATION_CATEGORY;
         String btn = request.getParameter("btAction");
-        
-        System.out.println("------------");
-        System.out.println("btn: " + btn);
-
-//        if (Constant.REAL_PATH.isEmpty()) {
-//            String realPath = request.getServletContext().getRealPath("/");
-//            Constant.updateRealPath(realPath);
-//        }
 
         try {
             if (btn == null) {
                 // do nothing
             } else if (btn.equals("match")) {
-                System.out.println("matchhhhhhhhhhh");
                 url = SERVLET_GET_CANVAS_MATCHING_IMG;
             } else if (btn.equals("crawl")) {
                 url = SERVLET_CRAWL;

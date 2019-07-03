@@ -20,46 +20,57 @@
             <img src="image/logo.png"/>
         </div>
 
-        <br>
-
         <div class="content">
-            <div align="center">
-                <span id="span-loading" style="display: none;">Loading . . .</span>
-                <form method="POST" action="ProcessServlet" enctype="multipart/form-data" id="form">
-                    <h3>Chọn loại tranh</h3>
-                    <div class="div-location-wrap" id="test"></div>
+            <div class="div-form">
+                
+                <div class="div-left" id="div-loading">
+                    <img src="image/loading.gif"/>
+                </div>
 
-                    <br>
+                <div class="div-left" id="div-form">
+                    <form method="POST" action="ProcessServlet" enctype="multipart/form-data" id="form" name="mForm">
 
-                    <h3>Chọn hình ảnh không gian của bạn </h3>
-                    <br>
-                    <input id="file" type="file" name="file" accept="image/*" onchange="loadPreviewImg(event)"/>
-                    <label for="file" class="input-file-label">Choose an image</label>
-                    <input id="btn-submit" type="submit"/>
-                    <label for="btn-submit" class="input-file-label">Start</label>
-                    <input type="hidden" value="match" name="btAction"/>
-                </form>
+                        <h3>Chọn loại tranh</h3>
+                        <span class="span-error" id="errLocation"></span>
+                        <div class="div-location-wrap" id="test"></div>
 
-                <br>
+                        <br>
 
-                <img id="preview" class="preview" src="${requestScope.IMAGE}"/>
+                        <h3>Chọn hình ảnh không gian của bạn </h3>
+                        
+                        <span class="span-error" id="errImage"></span>
+                        <input id="file" type="file" name="mFile" accept="image/*" onchange="loadPreviewImg(event)"/>
+                        <label for="file" class="input-file-label">Choose an image</label>
+                        <input id="btn-submit" type="submit"/>
+                        <br/><br/>
+                        <div>
+                            <label for="btn-submit" class="input-submit-label">Start</label>
+                        </div>
+                        
+                        <input type="hidden" value="match" name="btAction"/>
+
+                    </form>
+                </div>
+
+                <div class="div-right">
+                    <img id="preview" class="preview" src="image/placeholder.png"/>
 
 
-                <span class="span-palette" id="palette">
-                    <c:forEach var="color" items="${requestScope.COLOR}">
-                        <div style="background-color:${color};"></div>
-                    </c:forEach>
-                </span>
+                    <span class="span-palette" id="palette"></span>
+                </div>
 
-                <br/>
-                <br/>
-
-                <div id="div-category-wrap"></div>
+                <br style="clear: both;">
             </div>
 
+            <br>
+            <br/>
+            <br/>
+
+            <div id="div-category-wrap"></div>
+
             <div class="div-result-wrap">
-                <div id="result" />
-            </div>   
+                <div id="result"></div>
+            </div>
 
         </div>
 

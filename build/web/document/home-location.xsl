@@ -13,7 +13,7 @@
     <xsl:strip-space elements="/*"/>
 
     <xsl:template match="/">
-        <link rel="stylesheet" href="css/home.css"/>
+        <link rel="stylesheet" href="../css/home.css"/>
         
         <xsl:for-each select="locations/location">
             <div class="div-location">
@@ -29,14 +29,17 @@
                     <xsl:attribute name="for">
                         r<xsl:value-of select="id"/>
                     </xsl:attribute>
-                    <p>
-                        <xsl:value-of select="name"/>
-                    </p>
+                    
                     <img>
                         <xsl:attribute name="src">
                             <xsl:value-of select="image"/>
                         </xsl:attribute>
                     </img>
+                    <p>
+                        <xsl:value-of select="name"/>
+                    </p>
+                    
+                    
                 </label>
             </div>
         </xsl:for-each>

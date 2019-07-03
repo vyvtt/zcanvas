@@ -165,7 +165,6 @@ public class CanvasDAO implements Serializable {
                 canvas.setColorPalatte(rs.getString("color"));
                 result.add(canvas);
             }
-            System.out.println("total: " + result.size());
             return result;
         } catch (SQLException | NamingException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
@@ -205,8 +204,6 @@ public class CanvasDAO implements Serializable {
 
             for (Categories category : listCategory) {
 
-                System.out.println("Category: " + category.getId() + " - " + category.getName());
-
                 stm = con.prepareStatement(s);
                 stm.setInt(1, category.getId());
                 rs = stm.executeQuery();
@@ -214,7 +211,6 @@ public class CanvasDAO implements Serializable {
                 while (rs.next()) {
 
                     if (map.containsKey(rs.getInt("id"))) {
-                        System.out.println("Contain in map already! ---> update list int categories id");
                         map.get(rs.getInt("id")).getCanvasCategories().add(category.getId());
                     } else {
                         Canvas canvas = new Canvas();

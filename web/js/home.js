@@ -74,8 +74,6 @@ function renderCanvas(canvasXML, categoryId, realPath) {
         while (myNode.firstChild) {
             myNode.removeChild(myNode.firstChild);
         }
-//        document.getElementById("example").innerHTML = '';
-//        document.getElementById("example").appendChild(resultDocument);
         myNode.appendChild(resultDocument);
     }
 }
@@ -92,18 +90,11 @@ function renderCanvasNew(categoryId) {
         console.log('in XSLTProcessor');
         xsltProcessor = new XSLTProcessor();
         xsltProcessor.importStylesheet(xslDoc);
-//        xsltProcessor.setParameter("http://canvas.com/vyvtt", "categoryId", categoryId);
         xsltProcessor.setParameter(null, "categoryId", categoryId);
         resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
 
         console.log(resultDocument);
-
-//        var myNode = document.getElementById("example");
-//        while (myNode.firstChild) {
-//            myNode.removeChild(myNode.firstChild);
-//        }
         document.getElementById("example").innerHTML = '';
         document.getElementById("example").appendChild(resultDocument);
-//        myNode.appendChild(resultDocument);
     }
 }

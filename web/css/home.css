@@ -19,17 +19,19 @@ body {
     margin: 15px;
 }
 
+
+/*LOGO-------------------*/
 .logo{
-    vertical-align:middle; 
-    text-align:center;
+    vertical-align: middle; 
+    text-align: center;
     background-color: #393e46;
 }
-
 .logo > img {
     width: auto;
-    height: 100px;
+    height: 80px;
 }
 
+/*FORM INPUT--------------*/
 input[type="file"] {
     display: none;
 }
@@ -53,11 +55,30 @@ input[type="submit"] {
     color: white;
 }
 
+.input-submit-label {
+    background-color: #cccccc; ;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*margin: 0px 20px 0px 0px;*/
+}
+
+.input-submit-label:hover {
+    cursor: pointer;
+    font-weight: bold;
+    background-color: #393e46;
+    color: white;
+}
+
 .preview {
     /*display: none;*/
     display: inline-block;
     width: auto;
     height: 400px;
+    max-width: 830px;
+    object-fit: cover;
 }
 
 .span-palette {
@@ -82,6 +103,7 @@ input[type="submit"] {
     margin-left: 9%;
 }
 
+
 .span-result {
     border: 2px solid #ccc;
     display: inline-block;
@@ -98,6 +120,8 @@ input[type="submit"] {
 .span-result > img {
     width: auto;
     height: 200px;
+    max-width: 280px;
+    object-fit: cover;
 }
 
 /* HIDE RADIO */
@@ -113,17 +137,6 @@ input[type=radio] + img {
     cursor: pointer;
 }
 
-/*input [type=radio]:hover + img {
-    cursor: pointer;
-    background-color: #e6e6e6;
-}*/
-
-/* CHECKED STYLES */
-/*.div-location > label > input[type=radio]:checked + img {
-    background: #393e46;
-    background-color: #393e46;
-}*/
-
 .div-location > input[type=radio]:checked + label > img,
 .div-location > input[type=radio]:checked + label > p {
     background: #393e46;
@@ -131,27 +144,32 @@ input[type=radio] + img {
     color: white;
 }
 
+.div-location-wrap {
+    /*width: 160px;*/
+}
+
 .div-location {
-    width: 150px; 
+    width: 110px; /*150*/
     height: auto; 
     text-align: center; 
-    display: inline-block
+    display: inline-block;
 }
 
 .div-location:hover {
     background-color: #cccccc; 
 }
 
-/*.div-location + input[type=radio]:checked {
-    background: aquamarine; 
-    outline: 2px solid #f00;
-}*/
-
 .div-location > label > img {
-    width: 100px;
-    height: 100px;
-    padding: 25px;
+    width: 90px; /*100*/
+    height: 75px;
+    /*padding: 10px;*/
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    /*margin-top: 40px;*/
     margin: 0px;
+    float: left;
 }
 
 .div-location > label {
@@ -161,11 +179,43 @@ input[type=radio] + img {
 
 .div-location > label > p {
     margin: 0px;
-    padding-top: 15px;
+    padding-top: 5px;
     padding-right: 10px;
     padding-left: 10px;
-    width: 130px;
-    height: 35px;
+    padding-bottom: 5px;
+    width: 90px; /*130*/
+    height: 60px;
+    /*height: auto;*/
+    float: left;
+}
+
+/*left right*/
+.div-form {
+    /*white-space: nowrap;*/
+    /*background-color: yellowgreen;*/
+    /*position: absolute;*/
+}
+
+.div-left {
+    width: 26%;
+    height: auto;
+    float: left;
+    padding: 10px;
+    min-height: 405px;
+    border: 1px solid #393e46;
+    margin-right: 5px;
+    text-align: center;
+}
+
+.div-right {
+    width: 70%;
+    height: auto;
+    float: left;
+    text-align: center;
+    vertical-align: middle; 
+    border: 1px solid #393e46;
+    min-height: 405px;
+    padding: 10px;
 }
 
 /*label for categories ----*/
@@ -204,4 +254,27 @@ input[type=radio] + img {
 
 #div-category-wrap {
     margin: 10px 100px 10px 100px;
+}
+
+.span-error {
+    color: #d70101;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/*LOADING GIF ----------------*/
+#div-loading {
+    display: none;
+    position: relative;
+}
+
+#div-loading > img {
+    position: absolute;  
+    top: 0;  
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+    margin: auto;
+    width: 100px;
+    height: 100px;
 }
