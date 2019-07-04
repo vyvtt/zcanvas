@@ -16,6 +16,7 @@ import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
+import project.utils.Constant;
 import project.utils.StringHelper;
 import project.utils.XMLHelper;
 
@@ -34,7 +35,7 @@ public class SoynCategoriesCrawler implements Serializable{
     public Map<String, String> crawlCategories()
             throws XMLStreamException, UnsupportedEncodingException {
 
-        String htmlContent = XMLHelper.parseHTML(StringHelper.HOST_SOYN, beginSign, endSign);
+        String htmlContent = XMLHelper.parseHTML(Constant.HOST_SOYN, beginSign, endSign);
         htmlContent = StringHelper.refineHtml(htmlContent);
         Map<String, String> categories = new HashMap<>();
         
@@ -49,7 +50,7 @@ public class SoynCategoriesCrawler implements Serializable{
 
                 if ("a".equals(tagName)) {
                     Attribute attHref = element.getAttributeByName(new QName("href"));
-                    String linkCategory = StringHelper.HOST_SOYN + attHref.getValue();
+                    String linkCategory = Constant.HOST_SOYN + attHref.getValue();
                     event = reader.nextEvent();
                     Characters c = event.asCharacters();
                     categories.put(linkCategory, c.getData());

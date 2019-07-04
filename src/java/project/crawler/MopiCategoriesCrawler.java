@@ -12,6 +12,7 @@ import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.EndElement;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
+import project.utils.Constant;
 import project.utils.StringHelper;
 import project.utils.XMLHelper;
 
@@ -32,7 +33,7 @@ public class MopiCategoriesCrawler implements Serializable{
         String tmpUrl = "";
         Map<String, String> categories = new HashMap<>();
 
-        String htmlContent = XMLHelper.parseHTML(StringHelper.HOST_MOPI, beginSign, endSign);
+        String htmlContent = XMLHelper.parseHTML(Constant.HOST_MOPI, beginSign, endSign);
         htmlContent = StringHelper.refineHtml(htmlContent);
         
         XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);

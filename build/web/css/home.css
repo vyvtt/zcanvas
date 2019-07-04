@@ -8,11 +8,21 @@ and open the template in the editor.
     Author     : thuyv
 */
 
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/OpenSans-Regular.ttf');
+}
+
 body {
     margin: 0;
     background-color: #e6e6e6;
     font-size: 15px;
-    font-family: monospace;
+    font-family: 'OpenSans';
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
 }
 
 .content {

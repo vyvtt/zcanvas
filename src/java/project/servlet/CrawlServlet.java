@@ -38,11 +38,6 @@ public class CrawlServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         
         try {
-            String realPath = request.getServletContext().getRealPath("/");
-            if (Constant.REAL_PATH.isEmpty()) {
-                Constant.updateRealPath(realPath);
-            }
-            
             MainCrawler.crawl();
             
         } catch (Exception e) {

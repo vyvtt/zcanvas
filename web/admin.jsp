@@ -14,6 +14,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/admin.css"/>
         <script type="text/javascript" src="js/admin.js"></script>
+        <script type="text/javascript" src="js/utils.js"></script>
         <title>Admin</title>
     </head>
 
@@ -24,6 +25,8 @@
         </div>
 
         <br>
+        
+        
 
         <div class="div-content">
             <c:set var="xmlLocation" value="${requestScope.XML_LOCATION}"/>

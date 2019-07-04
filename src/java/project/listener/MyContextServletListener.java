@@ -15,6 +15,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import project.dao.CategoryDAO;
+import project.utils.ConfigHelper;
 import project.utils.Constant;
 
 /**
@@ -30,7 +31,7 @@ public class MyContextServletListener implements ServletContextListener {
         // init REAL_PATH
         ServletContext context = sce.getServletContext();
         String realPath = context.getRealPath("/");
-        Constant.updateRealPath(realPath);
+        ConfigHelper.configRealPath(realPath);
 
         // Prepare file categories.xml
         CategoryDAO categoryDAO = new CategoryDAO();
@@ -42,6 +43,10 @@ public class MyContextServletListener implements ServletContextListener {
         } catch (IOException e) {
             Logger.getLogger(MyContextServletListener.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
+        
+        // read config host
+        ConfigHelper.configHost();
+        ConfigHelper.configImage();
     }
 
     @Override

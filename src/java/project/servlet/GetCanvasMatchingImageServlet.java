@@ -58,7 +58,7 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             BufferedImage image = ImageIO.read(is);
 
             // init
-            String colorPalette = ImageHelper.getColorPaletteFromImage(image);
+            String colorPalette = ImageHelper.getColorPaletteFromImage(image, true);
             List<String> inputPalatte = Arrays.asList(colorPalette.split("\\s*;\\s*"));
             CanvasDAO canvasDAO = new CanvasDAO();
             LocationDAO locationDAO = new LocationDAO();

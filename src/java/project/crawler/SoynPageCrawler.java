@@ -24,6 +24,7 @@ import javax.xml.stream.events.XMLEvent;
 import project.jaxb.Canvas;
 import project.jaxb.Categories;
 import project.jaxb.Detail;
+import project.utils.Constant;
 import project.utils.CrawlHelper;
 import project.utils.StringHelper;
 import project.utils.XMLHelper;
@@ -241,7 +242,7 @@ public class SoynPageCrawler implements Serializable {
                 if ("a".equals(tagName) && isInside) {
                     Attribute att = element.getAttributeByName(new QName("href"));
                     if (att != null) {
-                        canvas.setUrl(StringHelper.HOST_SOYN + att.getValue());
+                        canvas.setUrl(Constant.HOST_SOYN + att.getValue());
                     }
                     att = element.getAttributeByName(new QName("title"));
                     if (att != null) {

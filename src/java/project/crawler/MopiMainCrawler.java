@@ -30,9 +30,6 @@ public class MopiMainCrawler implements Serializable{
     public static void crawl() {
         try {
             
-            // Get host from config file
-            StringHelper.HOST_MOPI = StringHelper.getHostFromConfigFile(Constant.XML_CONFIG_MOPI);
-            
             // Crawl list categories
             MopiCategoriesCrawler categoriesCrawler = new MopiCategoriesCrawler();
             Map<String, String> categories = categoriesCrawler.crawlCategories();

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <dimension-max>256</dimension-max>
+    <bucket-per-dimension>3</bucket-per-dimension>
+    <skip-pixel>30</skip-pixel>
+    <palette-size>5</palette-size>
+    <delta-E-tolerance>20</delta-E-tolerance>
+    <background-tolerance>50</background-tolerance>
+</config>

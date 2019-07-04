@@ -20,91 +20,59 @@
             <img src="image/logo.png"/>
         </div>
 
-        <br>
-
         <div class="content">
-            <div align="center">
-                
-                <form method="POST" action="ProcessServlet" enctype="multipart/form-data">
-                    <h3>Chọn loại tranh</h3>
-                    <div>
-                        <c:set var="lastLocation" value="${requestScope.LOCATIONVALUE}"/>
+            <div class="div-form">
 
-                        <c:forEach var="location" items="${sessionScope.LOCATION}">
-                            <div class="div-location">
-                                <c:set var="curLocation" value="${location.id}"/>
-                                <input type="radio" id="r${location.id}" name="rbLocation" value="${location.id}" 
-                                       ${curLocation == lastLocation ? 'checked' : ''} 
-                                       />
-                                <label for="r${location.id}">
-                                    <p>${location.name}</p>
-                                    <img src="${location.image}">
-                                </label>
-                            </div>
-                        </c:forEach>
-                    </div>
-
-                    <br>
-
-                    <h3>Chọn hình ảnh không gian của bạn </h3>
-                    <br>
-                    <input id="file" type="file" name="file" accept="image/*" onchange="loadPreviewImg(event)"/>
-                    <label for="file" class="input-file-label">Choose an image</label>
-                    <input id="btn-submit" type="submit" value="match" name="btAction"/>
-                    <label for="btn-submit" class="input-file-label">Start</label>
-                </form>
-
-                <br>
-
-                <img id="preview" class="preview" src="${requestScope.IMAGE}"/>
-
-                <span class="span-palette" id="palette">
-                    <c:forEach var="color" items="${requestScope.COLOR}">
-                        <div style="background-color:${color};"></div>
-                    </c:forEach>
-                </span>
-
-                <br><br><br>
-
-                <c:set var="total" value="${requestScope.TOTAL}"/>
-                <c:if test="${not empty total}">
-                    <div>Tìm thấy <b>${total}</b> sản phẩm phù hợp</div>
-                </c:if>
-
-                <br/>
-                <br/>
-
-                <div class="div-category">
-                    <input type="radio" id="c0" name="rbCategory" value="0" checked="checked"/>
-                    <label for="c0" onclick="renderCanvasNew('0');">
-                        <p>Tất cả</p>
-                    </label>
+                <div class="div-left" id="div-loading">
+                    <img src="image/loading.gif"/>
                 </div>
-                <c:forEach var="category" items="${requestScope.TEST_CATEGORIES}">
-                    <div class="div-category">
-                        <input type="radio" id="c${category.id}" name="rbCategory" value="${category.id}"/>
-                        <label for="c${category.id}"
-                               onclick="renderCanvasNew('${category.id}');">
-                            <p>${category.name}</p>
-                        </label>
-                    </div>
-                </c:forEach>
 
+                <div class="div-left" id="div-form">
+                    <form method="POST" action="ProcessServlet" enctype="multipart/form-data" id="form" name="mForm">
+
+                        <br>
+                        <h3>Chọn loại tranh</h3>
+                        <span class="span-error" id="errLocation"></span>
+                        <div class="div-location-wrap" id="test"></div>
+
+                        <br>
+
+                        <h3>Chọn hình ảnh không gian của bạn </h3>
+
+                        <span class="span-error" id="errImage"></span>
+                        <br/>
+                        <input id="file" type="file" name="mFile" accept="image/*" onchange="loadPreviewImg(event)"/>
+                        <label for="file" class="input-file-label">Choose an image</label>
+                        <input id="btn-submit" type="submit"/>
+                        <br/><br/>
+                        <div>
+                            <label for="btn-submit" class="input-submit-label">Start</label>
+                        </div>
+
+                        <input type="hidden" value="match" name="btAction"/>
+
+                    </form>
+                </div>
+
+                <div class="div-right">
+                    <img id="preview" class="preview" src="image/placeholder.png"/>
+                    <span class="span-palette" id="palette"></span>
+                </div>
+
+                <br style="clear: both;">
             </div>
-            <br/>
-            <br/>
 
-            <div id="result" />
+            <br/><br/><br/>
 
-            <c:set var="a" value="${requestScope.TEST_XML}"/>
-            <c:if test="${not empty a}">
-                <script>initDocument('${a}', '${pageContext.servletContext.contextPath}');</script>
-                <script>renderCanvasNew('0');</script>
-            </c:if>
+            <div id="div-category-wrap"></div>
+
+            <div class="div-result-wrap">
+                <div id="result"></div>
+            </div>
         </div>
-
 
     </body>
 
+    <script type="text/javascript" src="js/utils.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
 </html>

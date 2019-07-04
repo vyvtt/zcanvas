@@ -52,7 +52,7 @@ public class MainCrawler {
 
                 try {
                     BufferedImage image = ImageIO.read(new URL(canvas.getImage()));
-                    canvas.setColorPalatte(ImageHelper.getColorPaletteFromImage(image));
+                    canvas.setColorPalatte(ImageHelper.getColorPaletteFromImage(image, false));
                 } catch (IOException e) {
                     Logger.getLogger(MainCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
                     canvas.setColorPalatte("");

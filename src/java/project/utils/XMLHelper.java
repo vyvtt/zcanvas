@@ -109,8 +109,6 @@ public class XMLHelper implements Serializable {
             String line = null;
             while ((line = reader.readLine()) != null) {
                 
-//                System.out.println(line);
-                
                 if (line.contains(beginSign)) {
                     if (count == 0) {
                         isInside = true;
@@ -142,8 +140,7 @@ public class XMLHelper implements Serializable {
             }
             reader.close();
         } catch (IOException e) {
-            // TODO remove printStackTrace
-            e.printStackTrace();
+            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
         return htmlContent;
     }
@@ -177,8 +174,7 @@ public class XMLHelper implements Serializable {
                 reader.close();
             }
         } catch (IOException e) {
-            // TODO remove printStackTrace
-            e.printStackTrace();
+            Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
         return htmlContent;
     }

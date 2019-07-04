@@ -17,49 +17,54 @@ window.onload = function () {
     }
 };
 
-//function loadXMLDoc(filename)
-//{
-//    if (window.ActiveXObject)
-//    {
-//        xhttp = new ActiveXObject("Msxml2.XMLHTTP");
-//    } else
-//    {
-//        xhttp = new XMLHttpRequest();
-//    }
-//    xhttp.open("GET", filename, false);
+function tryAgain() {
+    var xslUrl = null;
+
+    xslUrl = "/ZCanvas/document/categories.xml";
+    var category = loadXML(xslUrl);
+    console.log('category load xml: ' + category);
+    console.log(category);
+    
+    xslUrl = "/ZCanvas/document/admin-test.xsl";
+    var xsl = loadXML(xslUrl);
+    
+    if (document.implementation && document.implementation.createDocument)
+    {
+        console.log('in XSLTProcessor');
+        xsltProcessor = new XSLTProcessor();
+        xsltProcessor.importStylesheet(xslDoc);
+        xsltProcessor.setParameter(null, "categoryInput", category);
+//        xsltProcessor.setParameter(null, "a", xmlCategories);
+        resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
+        console.log(resultDocument);
+        document.getElementById("example").appendChild(resultDocument);
+    }
+}
+
+//function getXMLHttpObject() {
+//    var xmlHttp = null;
 //    try {
-//        xhttp.responseType = "msxml-document";
-//    } catch (err) {
-//        console.log(err);
-//    } // Helping IE11
-//    xhttp.send("");
-//    return xhttp.responseXML;
+//        xmlHttp = new XMLHttpRequest();
+//    } catch (e) {
+//        try {
+//            new ActiveXObject("Msxml2.XMLHTTP");
+//        } catch (e) {
+//            new ActiveXObject("Microsoft.XMLHTTP");
+//        }
+//    }
+//    return xmlHttp;
 //}
 
-function getXMLHttpObject() {
-    var xmlHttp = null;
-    try {
-        xmlHttp = new XMLHttpRequest();
-    } catch (e) {
-        try {
-            new ActiveXObject("Msxml2.XMLHTTP");
-        } catch (e) {
-            new ActiveXObject("Microsoft.XMLHTTP");
-        }
-    }
-    return xmlHttp;
-}
-
-function loadXML(filePath) {
-    xmlHttp = getXMLHttpObject();
-    if (xmlHttp == null) {
-        alert('Browser not supprt AJAX');
-        return;
-    }
-    xmlHttp.open("GET", filePath, false);
-    xmlHttp.send(null);
-    return xmlHttp.responseXML;
-}
+//function loadXML(filePath) {
+//    xmlHttp = getXMLHttpObject();
+//    if (xmlHttp == null) {
+//        alert('Browser not supprt AJAX');
+//        return;
+//    }
+//    xmlHttp.open("GET", filePath, false);
+//    xmlHttp.send(null);
+//    return xmlHttp.responseXML;
+//}
 
 function displayResult(realPath, xmlString, xmlCategories) {
     console.log('real path ' + realPath);
@@ -71,11 +76,11 @@ function displayResult(realPath, xmlString, xmlCategories) {
 
     var xslDoc = loadXML(xslUrl);
     console.log('load file: ' + xslDoc);
-    
+
     console.log('xml string: ' + xmlString);
     var parser = new DOMParser();
     var xmlDoc = parser.parseFromString(xmlString, "application/xml");
-    
+
     if (document.implementation && document.implementation.createDocument)
     {
         console.log('in XSLTProcessor');

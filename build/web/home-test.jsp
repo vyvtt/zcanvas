@@ -22,7 +22,7 @@
 
         <div class="content">
             <div class="div-form">
-                
+
                 <div class="div-left" id="div-loading">
                     <img src="image/loading.gif"/>
                 </div>
@@ -37,7 +37,7 @@
                         <br>
 
                         <h3>Chọn hình ảnh không gian của bạn </h3>
-                        
+
                         <span class="span-error" id="errImage"></span>
                         <input id="file" type="file" name="mFile" accept="image/*" onchange="loadPreviewImg(event)"/>
                         <label for="file" class="input-file-label">Choose an image</label>
@@ -46,7 +46,7 @@
                         <div>
                             <label for="btn-submit" class="input-submit-label">Start</label>
                         </div>
-                        
+
                         <input type="hidden" value="match" name="btAction"/>
 
                     </form>
@@ -54,24 +54,19 @@
 
                 <div class="div-right">
                     <img id="preview" class="preview" src="image/placeholder.png"/>
-
-
                     <span class="span-palette" id="palette"></span>
                 </div>
 
                 <br style="clear: both;">
             </div>
 
-            <br>
-            <br/>
-            <br/>
+            <br/><br/><br/>
 
             <div id="div-category-wrap"></div>
 
             <div class="div-result-wrap">
                 <div id="result"></div>
             </div>
-
         </div>
 
     </body>

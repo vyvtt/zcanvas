@@ -30,8 +30,6 @@ public class SoynMainCrawler implements Serializable {
 
     public static void crawl() {
         try {
-            // Get host from config file
-            StringHelper.HOST_SOYN = StringHelper.getHostFromConfigFile(Constant.XML_CONFIG_SOYN);
             // Crawl list categories
             SoynCategoriesCrawler categoriesCrawler = new SoynCategoriesCrawler();
             Map<String, String> categories = categoriesCrawler.crawlCategories();

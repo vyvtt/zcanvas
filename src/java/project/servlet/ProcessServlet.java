@@ -38,9 +38,7 @@ public class ProcessServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-        String url = SERVLET_HOME;
-        url = "home-test.jsp";
-//        String url = SERVLET_GET_LOCATION_CATEGORY;
+        String url = JSP_HOME;
         String btn = request.getParameter("btAction");
 
         try {
@@ -55,7 +53,7 @@ public class ProcessServlet extends HttpServlet {
             } else if (btn.equals("admin")) {
                 url = SERVLET_GET_LOCATION_CATEGORY;
             } else if (btn.equals("initLocation")) {
-                url = "HomeServlet";
+                url = SERVLET_HOME;
             }
 
         } catch (Exception e) {

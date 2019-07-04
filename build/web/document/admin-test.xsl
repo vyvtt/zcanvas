@@ -11,18 +11,16 @@
     
     <xsl:template match="/">
         
-        
-        
         <link rel="stylesheet" href="../css/admin.css"/>
         <script type="text/javascript" src="../js/admin.js"></script>
         
-        param : <xsl:value-of select="$categoriesFile"/>
+<!--        param : <xsl:value-of select="$categoriesFile"/>
         
         <xsl:variable name="categoriesXML" select="document($categoriesFile)/*"/>
         
         variable: <xsl:value-of select="$categoriesXML"/>
         
-        copy: <xsl:copy-of select="document('file:///d:/categories.xml')/*"/>
+        copy: <xsl:copy-of select="document('file:///d:/categories.xml')/*"/>-->
         
         <xsl:for-each select="locations/location">
             

@@ -36,16 +36,16 @@ public class LocationDAO implements Serializable {
         try {
             con = DBUtils.getConnection();
             String sql = "SELECT Location.id, Location.name,\n"
-                    + "	(SELECT Category.id, Category.name\n"
-                    + "	FROM LocationCategory \n"
-                    + "	JOIN Category \n"
-                    + "	ON LocationCategory.CategoryId = Category.id \n"
-                    + "	WHERE LocationCategory.LocationId = Location.id\n"
-                    + "	FOR XML PATH('category'), ROOT('categories'), TYPE\n"
-                    + "	)\n"
-                    + "FROM Location\n"
-                    + "WHERE Location.id in (SELECT Location.id FROM Location)\n"
-                    + "FOR XML PATH('location'), TYPE, ROOT('locations')";
+                        + "	(SELECT Category.id, Category.name\n"
+                        + "	FROM LocationCategory \n"
+                        + "	JOIN Category \n"
+                        + "	ON LocationCategory.CategoryId = Category.id \n"
+                        + "	WHERE LocationCategory.LocationId = Location.id\n"
+                        + "	FOR XML PATH('category'), ROOT('categories'), TYPE\n"
+                        + "	)\n"
+                        + "FROM Location\n"
+                        + "WHERE Location.id in (SELECT Location.id FROM Location)\n"
+                        + "FOR XML PATH('location'), TYPE, ROOT('locations')";
             stm = con.prepareStatement(sql);
             rs = stm.executeQuery();
 
