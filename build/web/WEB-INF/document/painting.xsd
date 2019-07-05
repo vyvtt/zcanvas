@@ -24,6 +24,8 @@ and open the template in the editor.
             <xs:element name="name" type="xs:string"/>
             <xs:element name="description" type="xs:string" minOccurs="0"/>
             <xs:element name="canvas" type="Canvas" minOccurs="0" maxOccurs="unbounded"/>
+            <xs:element name="id" type="xs:nonNegativeInteger" minOccurs="0"/>
+            <xs:element name="count" type="xs:nonNegativeInteger" minOccurs="0"/>
         </xs:sequence>
     </xs:complexType>
     

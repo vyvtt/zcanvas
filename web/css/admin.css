@@ -16,7 +16,7 @@ and open the template in the editor.
 body {
     margin: 0;
     background-color: #e6e6e6;
-    font-size: 15px;
+    font-size: 14px;
     font-family: 'OpenSans';
 }
 
@@ -118,27 +118,78 @@ input[type="submit"] {
 
 /*begin --------------*/
 .collapsible {
-  background-color: #777;
-  color: white;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  margin-bottom: 5px;
-  font-size: 16px;
-  font-family: 'OpenSans';
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    margin-bottom: 5px;
+    font-size: 16px;
+    font-family: 'OpenSans';
 }
 
 .active, .collapsible:hover {
-  background-color: #393e46;
+    background-color: #393e46;
 }
 
 .content {
-  padding: 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-  margin-bottom: 18px;
+    padding: 18px;
+    display: none;
+    overflow: hidden;
+    background-color: #f1f1f1;
+    margin-bottom: 18px;
+}
+
+/*Label Crawl*/
+.label-crawl {
+    border: 0.5px solid #b1b1b1;
+    display: inline-block; 
+    width: 10%;
+    height: auto;
+    padding: 10px;
+    /*background-color: #393e46;*/
+    /*color: white;*/
+    text-align: center;
+}
+
+.label-crawl:hover {
+    background-color: #393e46;
+    color: white;
+    cursor: pointer;
+}
+
+/*NAV ---------------------*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li:hover {
+    background-color: #111;
+    cursor: pointer;
+}
+
+.nav-active {
+  background-color: #4CAF50;
+}
+
+/*ITEM*/
+.div-item {
+    background: #f1f1f1;
+    padding: 20px;
+    display: none;
 }

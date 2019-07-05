@@ -48,7 +48,7 @@ public class MainCrawler {
             List<Canvas> listCanvas = category.getCanvas();
             for (Canvas canvas : listCanvas) {
 
-                System.out.println(canvas.getName());
+                
 
                 try {
                     BufferedImage image = ImageIO.read(new URL(canvas.getImage()));
@@ -62,9 +62,10 @@ public class MainCrawler {
 
                 if (canvasDAO.isIsExisted()) {
                     // Skip insert Detail
-                    System.out.println("Skip existed canvas");
+                    System.out.println("DB ---> SKIP EXISTED: " + canvas.getName());
                 } else {
                     // Insert Detail
+                    System.out.println("DB : " + canvas.getName());
                     detailDAO.insert(canvas.getDetail(), canvasId);
                 }
 

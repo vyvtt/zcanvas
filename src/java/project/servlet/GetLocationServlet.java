@@ -5,14 +5,22 @@
  */
 package project.servlet;
 
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import project.dao.CategoryDAO;
 import project.dao.LocationDAO;
+import project.listener.MyContextServletListener;
+import project.utils.Constant;
 
 /**
  *
@@ -35,42 +43,29 @@ public class GetLocationServlet extends HttpServlet {
 
         PrintWriter out = response.getWriter();
         try {
+
+            // Prepare file categories.xml
+            CategoryDAO categoryDAO = new CategoryDAO();
+            String xmlCategory = categoryDAO.getAllCategoriesAsXML();
+
+            if (xmlCategory == null || xmlCategory.isEmpty()) {
+                xmlCategory = "<categories></categories>";
+            }
+
+            try (OutputStreamWriter writer
+                    = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/WEB-INF/document/categories.xml"), StandardCharsets.UTF_8)) {
+                writer.write(xmlCategory);
+            } catch (IOException e) {
+                Logger.getLogger(MyContextServletListener.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            }
+
+            
             
             LocationDAO locationDAO = new LocationDAO();
             String xmlLocation = locationDAO.getAllLocationCategories();
 
-//            CategoryDAO categoryDAO = new CategoryDAO();
-//            String xmlCategory = categoryDAO.getAllCategoriesAsXML();
-
             request.setAttribute("XML_LOCATION", xmlLocation);
-//            request.setAttribute("XML_CATEGORY", xmlCategory);
-//
-//            try (OutputStreamWriter writer
-//                    = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/document/categories.xml"), StandardCharsets.UTF_8)) {
-//                // do stuff
-//                writer.write(xmlCategory);
-//                System.out.println("write done!!!!");
-//                System.out.println(Constant.REAL_PATH + "/document/categories.xml");
-//            }
 
-//            StringBuilder contentBuilder = new StringBuilder();
-//            try (BufferedReader br = new BufferedReader(new FileReader(Constant.REAL_PATH + "/WEB-INF/document/admin.xsl"))) {
-//
-//                String sCurrentLine;
-//                while ((sCurrentLine = br.readLine()) != null) {
-//                    contentBuilder.append(sCurrentLine.trim());
-//                }
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-////            contentBuilder.toString();
-//            System.out.println("admin xsl: " + contentBuilder.toString());
-//
-//            request.setAttribute("XSL_ADMIN", contentBuilder.toString());
-//            BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(path), StandardCharsets.UTF_8));
-////            BufferedWriter writer = new BufferedWriter(new FileWriter(Constant.REAL_PATH + "/WEB-INF/document/test.xml"));
-//            writer.write(xmlCategory);
-//            writer.close();
             RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
             rd.forward(request, response);
 

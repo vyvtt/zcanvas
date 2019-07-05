@@ -33,16 +33,20 @@ public class MyContextServletListener implements ServletContextListener {
         String realPath = context.getRealPath("/");
         ConfigHelper.configRealPath(realPath);
 
-        // Prepare file categories.xml
-        CategoryDAO categoryDAO = new CategoryDAO();
-        String xmlCategory = categoryDAO.getAllCategoriesAsXML();
-        
-        try (OutputStreamWriter writer
-                = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/WEB-INF/document/categories.xml"), StandardCharsets.UTF_8)) {
-            writer.write(xmlCategory);
-        } catch (IOException e) {
-            Logger.getLogger(MyContextServletListener.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-        }
+//        // Prepare file categories.xml
+//        CategoryDAO categoryDAO = new CategoryDAO();
+//        String xmlCategory = categoryDAO.getAllCategoriesAsXML();
+//        
+//        if (xmlCategory == null || xmlCategory.isEmpty()) {
+//            xmlCategory = "<categories></categories>";
+//        }
+//        
+//        try (OutputStreamWriter writer
+//                = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/WEB-INF/document/categories.xml"), StandardCharsets.UTF_8)) {
+//            writer.write(xmlCategory);
+//        } catch (IOException e) {
+//            Logger.getLogger(MyContextServletListener.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+//        }
         
         // read config host
         ConfigHelper.configHost();

@@ -15,7 +15,10 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import project.jaxb.Painting;
+import project.utils.Constant;
 import static project.utils.Constant.*;
+import project.utils.XMLHelper;
 
 /**
  *
@@ -37,6 +40,9 @@ public class ProcessServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        
+//        Painting painting = new Painting();
+//        XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_SOYN, painting);
 
         String url = JSP_HOME;
         String btn = request.getParameter("btAction");

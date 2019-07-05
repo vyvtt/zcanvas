@@ -40,12 +40,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Categories")
-//, propOrder = {
-//    "name",
-//    "description",
-//    "canvas"
-//})
+@XmlType(name = "Categories", propOrder = {
+    "name",
+    "description",
+    "canvas",
+    "id",
+    "count"
+})
 @XmlRootElement
 public class Categories implements Serializable{
 

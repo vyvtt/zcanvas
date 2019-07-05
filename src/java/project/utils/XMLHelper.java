@@ -95,6 +95,7 @@ public class XMLHelper implements Serializable {
             System.out.println("Done validate -> save to DB here");
         } catch (IOException | JAXBException | SAXException e) {
             Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+            e.printStackTrace();
         }
     }
 

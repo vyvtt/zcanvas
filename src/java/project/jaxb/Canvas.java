@@ -42,14 +42,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "Canvas")
-//, propOrder = {
-//    "name",
-//    "url",
-//    "image",
-//    "designer",
-//    "detail"
-//})
+@XmlType(name = "Canvas", propOrder = {
+    "name",
+    "url",
+    "image",
+    "designer",
+    "detail",
+    "canvasColors",
+    "canvasCategories"
+})
 public class Canvas implements Serializable{
 
     @XmlElement(required = true)
@@ -58,6 +59,7 @@ public class Canvas implements Serializable{
     protected String url;
     @XmlElement(required = true)
     protected String image;
+    
     protected String designer;
     protected List<Detail> detail;
     

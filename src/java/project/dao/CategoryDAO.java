@@ -98,7 +98,7 @@ public class CategoryDAO implements Serializable{
 
         try {
             con = DBUtils.getConnection();
-            String sql = "SELECT id, name FROM Category FOR XML PATH('category'), ROOT('categories')";
+            String sql = "SELECT id, name FROM Category ORDER BY name ASC FOR XML PATH('category'), ROOT('categories')";
             stm = con.prepareStatement(sql);
 
             rs = stm.executeQuery();

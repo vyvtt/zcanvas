@@ -43,3 +43,20 @@ CREATE TABLE LocationCategory(
 	CategoryId int FOREIGN KEY REFERENCES Category(id),
 	PRIMARY KEY (LocationId, CategoryId)
 );
+
+SELECT [CanvasId]
+      ,[CategoryId]
+  FROM [CanvasDB].[dbo].[CategoryCanvas]
+
+  Select * from Canvas where Canvas.id in (select CanvasId from CategoryCanvas where CategoryCanvas.CategoryId = 15)
+
+DELETE FROM CategoryCanvas
+
+DELETE FROM Category
+DBCC CHECKIDENT ('Category', RESEED, 0);
+
+DELETE FROM Detail
+DBCC CHECKIDENT ('Detail', RESEED, 0);
+
+DELETE FROM Canvas
+DBCC CHECKIDENT ('Canvas', RESEED, 0);

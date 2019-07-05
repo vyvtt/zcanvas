@@ -25,18 +25,36 @@
         </div>
 
         <br>
-        
-        
+
+
 
         <div class="div-content">
-            <c:set var="xmlLocation" value="${requestScope.XML_LOCATION}"/>
 
-            <c:if test="${not empty xmlLocation}">
-                <c:import var="xsl" url="WEB-INF/document/admin.xsl" charEncoding="UTF-8"/>
-                <x:transform doc="${xmlLocation}" xslt="${xsl}">
-                    <x:param name="categoriesFile" value="WEB-INF/document/categories.xml"/>
-                </x:transform>
-            </c:if>
+            <ul>
+                <li id="li-crawl" class="nav-active" onclick="showCrawl()">Crawl Data</li>
+                <li id="li-add" onclick="showAdd()">Add New Category</li>
+                <li id="li-edit" onclick="showEdit()">Edit Category</li>
+            </ul>
+
+            <div id="item-crawl" class="div-item">
+                <label id="lbCrawl" class="label-crawl" onclick="crawData()">Crawl</label>
+                <img id="imgCrawl" src="image/loading.gif" width="70px" height="70px" style="display: none;"/>
+            </div>
+
+            <div id="item-edit" class="div-item">
+                <c:set var="xmlLocation" value="${requestScope.XML_LOCATION}"/>
+
+                <c:if test="${not empty xmlLocation}">
+                    <c:import var="xsl" url="document/admin.xsl" charEncoding="UTF-8"/>
+                    <x:transform doc="${xmlLocation}" xslt="${xsl}">
+                        <x:param name="categoriesFile" value="WEB-INF/document/categories.xml"/>
+                    </x:transform>
+                </c:if>
+            </div>
+
+            <div id="item-add" class="div-item">
+                add
+            </div>
         </div>
     </body>
 

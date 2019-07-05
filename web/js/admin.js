@@ -1,9 +1,26 @@
+var itemCrawl = null;
+var itemEdit = null;
+var itemAdd = null;
+var liCrawl = null;
+var liEdit = null;
+var liAdd = null;
 
 window.onload = function () {
-    console.log('collapse');
+    //init
+    itemCrawl = document.getElementById("item-crawl");
+    itemEdit = document.getElementById("item-edit");
+    itemAdd = document.getElementById("item-add");
+    liCrawl = document.getElementById("li-crawl");
+    liEdit = document.getElementById("li-edit");
+    liAdd = document.getElementById("li-add");
+    
+    itemCrawl.style.display = 'block';
+    itemEdit.style.display = 'none';
+    itemAdd.style.display = 'none';
+
+    // collapse
     var coll = document.getElementsByClassName("collapsible");
     var i;
-
     for (i = 0; i < coll.length; i++) {
         coll[i].addEventListener("click", function () {
             this.classList.toggle("active");
@@ -17,6 +34,52 @@ window.onload = function () {
     }
 };
 
+function crawData() {
+    console.log('crawl');
+
+    var lbCrawl = document.getElementById("lbCrawl");
+    var imgCrawl = document.getElementById("imgCrawl");
+    lbCrawl.style.display = 'none';
+    imgCrawl.style.display = 'block';
+
+    var url = "ProcessServlet";
+    var param = {
+        btAction: 'crawl'
+    };
+    sendGetRequest(url, param, function (response) {
+        // done
+        lbCrawl.style.display = 'block';
+        imgCrawl.style.display = 'none';
+    });
+};
+
+function showAdd() {
+    liAdd.className = "nav-active";
+    liCrawl.className = "";
+    liEdit.className = "";
+    itemCrawl.style.display = 'none';
+    itemEdit.style.display = 'none';
+    itemAdd.style.display = 'block';
+};
+
+function showEdit() {
+    liAdd.className = "";
+    liCrawl.className = "";
+    liEdit.className = "nav-active";
+    itemCrawl.style.display = 'none';
+    itemEdit.style.display = 'block';
+    itemAdd.style.display = 'none';
+};
+
+function showCrawl() {
+    liAdd.className = "";
+    liCrawl.className = "nav-active";
+    liEdit.className = "";
+    itemCrawl.style.display = 'block';
+    itemEdit.style.display = 'none';
+    itemAdd.style.display = 'none';
+};
+
 function tryAgain() {
     var xslUrl = null;
 
@@ -24,10 +87,10 @@ function tryAgain() {
     var category = loadXML(xslUrl);
     console.log('category load xml: ' + category);
     console.log(category);
-    
+
     xslUrl = "/ZCanvas/document/admin-test.xsl";
     var xsl = loadXML(xslUrl);
-    
+
     if (document.implementation && document.implementation.createDocument)
     {
         console.log('in XSLTProcessor');
