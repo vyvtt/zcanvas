@@ -11,6 +11,7 @@
         xslLocation: null,
         xslHome: null
     };
+    
     var homeView = {
         init: function () {
             octopus.getLocations();

@@ -6,14 +6,14 @@
     
     <xsl:template match="/">
         
+        <xsl:variable name="categoriesXML" select="document($categoriesFile)"/>
+        <!--<xsl:variable name="categoryDoc" select="document('WEB-INF/document/categories.xml')/*"/>-->
+        
+        <!--aaa <xsl:copy-of select="document('WEB-INF/document/categories.xml')/categories/category/id"/>-->
+        
         <link rel="stylesheet" href="../css/admin.css"/>
         <script type="text/javascript" src="../js/admin.js"></script>
-        
-        <xsl:variable name="categoriesXML" select="document($categoriesFile)"/>
-        
-        <!--<xsl:variable name="categoriesXML" select="document(WEB-INF/document/categories.xml)"/>-->
-        <!--KO ĐƯỢC DÙNG !!!-->
-        
+
         <xsl:for-each select="locations/location">           
             
             <xsl:variable name="aaa" select="categories"/>
@@ -48,6 +48,7 @@
 
                     <h3>Category </h3>
                     <xsl:for-each select="$categoriesXML/categories/category">
+                    <!--<xsl:for-each select="$categoryDoc//category">-->
                         <xsl:variable name="currentId" select="id"/>
 
                         <span>

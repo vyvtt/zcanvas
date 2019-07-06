@@ -62,7 +62,7 @@ input[type=checkbox] {
     border: 0.5px solid #b1b1b1;
     /*padding: 5px;*/
     display: inline-block; 
-    width: 23%;
+    width: 24%;
     height: auto;
     margin-right: 5px;
     margin-bottom: 5px;
@@ -87,6 +87,11 @@ input[type=checkbox]:checked + div {
     /*font-weight: bold;*/
 }
 
+input[type=text] {
+    width: 24%;
+    padding: 10px;
+}
+
 /* HIDE submit */
 input[type="submit"] {
     position: absolute;
@@ -98,7 +103,7 @@ input[type="submit"] {
 .label-submit {
     border: 0.5px solid #b1b1b1;
     display: inline-block; 
-    width: 23%;
+    width: 24%;
     height: auto;
     background-color: #393e46;
 }
@@ -121,26 +126,27 @@ input[type="submit"] {
     background-color: #777;
     color: white;
     cursor: pointer;
-    padding: 18px;
+    padding: 10px;
     width: 100%;
     border: none;
     text-align: left;
     outline: none;
     margin-bottom: 5px;
-    font-size: 16px;
+    font-size: 15px;
     font-family: 'OpenSans';
 }
 
 .active, .collapsible:hover {
-    background-color: #393e46;
+    background-color: #111;
 }
 
 .content {
-    padding: 18px;
+    padding: 10px;
     display: none;
     overflow: hidden;
-    background-color: #f1f1f1;
-    margin-bottom: 18px;
+    /*background-color: #f1f1f1;*/
+    margin-bottom: 10px;
+    border: 0.5px solid #b1b1b1;
 }
 
 /*Label Crawl*/
@@ -150,8 +156,6 @@ input[type="submit"] {
     width: 10%;
     height: auto;
     padding: 10px;
-    /*background-color: #393e46;*/
-    /*color: white;*/
     text-align: center;
 }
 
@@ -167,7 +171,7 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color: #393e46;
 }
 
 li {

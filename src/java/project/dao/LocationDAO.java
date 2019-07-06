@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -225,6 +226,84 @@ public class LocationDAO implements Serializable {
                 System.out.println("update done");
             }
             
+            
+        } catch (NamingException | SQLException e) {
+            Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException sQLException) {
+                Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, sQLException.getMessage(), sQLException);
+            }
+        }
+    }
+    
+    public int addNewLocation(String locationName, String locationImage) {
+        Connection con = null;
+        PreparedStatement stm = null;
+        ResultSet rs = null;
+        
+        try {
+            con = DBUtils.getConnection();
+
+            String sql = "INSERT INTO Location (name, image) VALUES (?,?);";
+            stm = con.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+            stm.setNString(1, locationName);
+            stm.setString(2, locationImage);
+
+            int result = stm.executeUpdate();
+            if (result > 0) {
+                System.out.println("add done");
+                rs = stm.getGeneratedKeys();
+                rs.next();
+                return rs.getInt(1);
+            }
+            
+            
+        } catch (NamingException | SQLException e) {
+            Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                if (rs != null) {
+                    rs.close();
+                }
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException sQLException) {
+                Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, sQLException.getMessage(), sQLException);
+            }
+        }
+        return -1;
+    }
+    
+    public void addLocationCategory(int locationId, List<Integer> categoryIds) {
+        Connection con = null;
+        PreparedStatement stm = null;
+
+        try {
+            con = DBUtils.getConnection();
+
+            String sql = "INSERT INTO LocationCategory(LocationId, CategoryId) VALUES (?,?)";
+
+            con.setAutoCommit(false);
+            stm = con.prepareStatement(sql);
+
+            for (Integer categoryId : categoryIds) {
+                stm.setInt(1, locationId);
+                stm.setInt(2, categoryId);
+                stm.addBatch();
+            }
+            stm.executeBatch();
+            con.commit();
             
         } catch (NamingException | SQLException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);

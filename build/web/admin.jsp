@@ -13,8 +13,6 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" href="css/admin.css"/>
-        <script type="text/javascript" src="js/admin.js"></script>
-        <script type="text/javascript" src="js/utils.js"></script>
         <title>Admin</title>
     </head>
 
@@ -26,18 +24,16 @@
 
         <br>
 
-
-
         <div class="div-content">
 
             <ul>
-                <li id="li-crawl" class="nav-active" onclick="showCrawl()">Crawl Data</li>
-                <li id="li-add" onclick="showAdd()">Add New Category</li>
-                <li id="li-edit" onclick="showEdit()">Edit Category</li>
+                <li id="li-edit">Edit Location</li>
+                <li id="li-add">Add New Location</li>
+                <li id="li-crawl">Crawl Data</li>
             </ul>
 
             <div id="item-crawl" class="div-item">
-                <label id="lbCrawl" class="label-crawl" onclick="crawData()">Crawl</label>
+                <label id="lbCrawl" class="label-crawl">Crawl</label>
                 <img id="imgCrawl" src="image/loading.gif" width="70px" height="70px" style="display: none;"/>
             </div>
 
@@ -45,7 +41,7 @@
                 <c:set var="xmlLocation" value="${requestScope.XML_LOCATION}"/>
 
                 <c:if test="${not empty xmlLocation}">
-                    <c:import var="xsl" url="document/admin.xsl" charEncoding="UTF-8"/>
+                    <c:import var="xsl" url="document/admin-edit-location.xsl" charEncoding="UTF-8"/>
                     <x:transform doc="${xmlLocation}" xslt="${xsl}">
                         <x:param name="categoriesFile" value="WEB-INF/document/categories.xml"/>
                     </x:transform>
@@ -53,10 +49,19 @@
             </div>
 
             <div id="item-add" class="div-item">
-                add
+                <img src="C:\Users\thuyv\Desktop\icon.png"/>
+                
+                <c:set var="xmlCategories" value="${requestScope.XML_CATEGORIES}"/>
+
+                <c:if test="${not empty xmlCategories}">
+                    <c:import var="xslAdd" url="document/admin-add-location.xsl" charEncoding="UTF-8"/>
+                    <x:transform doc="${xmlCategories}" xslt="${xslAdd}"/>
+                </c:if>
             </div>
         </div>
     </body>
 
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
 
 </html>

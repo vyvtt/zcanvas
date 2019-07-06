@@ -40,9 +40,6 @@ public class ProcessServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
-//        Painting painting = new Painting();
-//        XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_SOYN, painting);
 
         String url = JSP_HOME;
         String btn = request.getParameter("btAction");
@@ -60,6 +57,8 @@ public class ProcessServlet extends HttpServlet {
                 url = SERVLET_GET_LOCATION_CATEGORY;
             } else if (btn.equals("initLocation")) {
                 url = SERVLET_HOME;
+            } else if (btn.equals("addLocation")) {
+                url = SERVLET_ADD_LOCATION;
             }
 
         } catch (Exception e) {

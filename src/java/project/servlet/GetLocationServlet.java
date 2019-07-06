@@ -59,12 +59,17 @@ public class GetLocationServlet extends HttpServlet {
                 Logger.getLogger(MyContextServletListener.class.getName()).log(Level.SEVERE, e.getMessage(), e);
             }
 
-            
-            
             LocationDAO locationDAO = new LocationDAO();
             String xmlLocation = locationDAO.getAllLocationCategories();
 
             request.setAttribute("XML_LOCATION", xmlLocation);
+            
+            System.out.println(xmlLocation);
+            System.out.println(xmlCategory);
+            request.setAttribute("XML_CATEGORIES", xmlCategory);
+
+//            response.setContentType("text/xml; charset=UTF-8");
+//            response.getWriter().write(xmlLocation);
 
             RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
             rd.forward(request, response);

@@ -43,6 +43,7 @@ public class Constant {
     public static final String SERVLET_GET_CANVAS_MATCHING_IMG = "GetCanvasMatchingImageServlet";
     public static final String SERVLET_GET_LOCATION_CATEGORY = "GetLocationServlet";
     public static final String SERVLET_UPDATE_LOCATION = "UpdateLocationServlet";
+    public static final String SERVLET_ADD_LOCATION = "AddLocationServlet";
     // JSP
     public static final String JSP_HOME = "home.jsp";
     
