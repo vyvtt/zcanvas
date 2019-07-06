@@ -105,7 +105,8 @@ input[type="submit"] {
     display: inline-block; 
     width: 24%;
     height: auto;
-    background-color: #393e46;
+    background-color: #4CAF50;
+    margin-right: 3px;
 }
 
 .label-submit > div {
@@ -116,14 +117,13 @@ input[type="submit"] {
 }
 
 .label-submit:hover {
-    background-color: #393e46;
-    cursor:pointer;
-    font-weight: bold;
+    background-color: #009900;
+    cursor: pointer;
 }
 
 /*begin --------------*/
 .collapsible {
-    background-color: #777;
+    background-color: #cccccc;
     color: white;
     cursor: pointer;
     padding: 10px;
@@ -134,10 +134,12 @@ input[type="submit"] {
     margin-bottom: 5px;
     font-size: 15px;
     font-family: 'OpenSans';
+    color: black;
 }
 
 .active, .collapsible:hover {
     background-color: #111;
+    color: white;
 }
 
 .content {
@@ -196,4 +198,20 @@ li:hover {
     background: #f1f1f1;
     padding: 20px;
     display: none;
+}
+
+.label-delete {
+    border: 0.5px solid #b1b1b1;
+    display: inline-block; 
+    width: 24%;
+    height: auto;
+    background-color: #990000;
+    color: white;
+    text-align: center;
+    padding: 10px 0px 10px 0px;
+}
+
+.label-delete:hover {
+    background-color: #cc0000;
+    cursor:pointer;
 }

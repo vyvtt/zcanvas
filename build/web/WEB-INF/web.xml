@@ -40,6 +40,10 @@
         <servlet-name>UpdateLocationServlet</servlet-name>
         <servlet-class>project.servlet.UpdateLocationServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>DeleteLocationServlet</servlet-name>
+        <servlet-class>project.servlet.DeleteLocationServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcessServlet</servlet-name>
         <url-pattern>/ProcessServlet</url-pattern>
@@ -67,6 +71,10 @@
     <servlet-mapping>
         <servlet-name>UpdateLocationServlet</servlet-name>
         <url-pattern>/UpdateLocationServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>DeleteLocationServlet</servlet-name>
+        <url-pattern>/DeleteLocationServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

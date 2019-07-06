@@ -35,7 +35,8 @@
                         <span class="span-error" id="errLocation"></span>
                         <div class="div-location-wrap" id="test"></div>
 
-                        <br>
+                        <br style="clear: both;">
+                        <br/>
 
                         <h3>Chọn hình ảnh không gian của bạn </h3>
 

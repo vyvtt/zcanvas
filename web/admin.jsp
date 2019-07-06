@@ -49,7 +49,6 @@
             </div>
 
             <div id="item-add" class="div-item">
-                <img src="C:\Users\thuyv\Desktop\icon.png"/>
                 
                 <c:set var="xmlCategories" value="${requestScope.XML_CATEGORIES}"/>
 

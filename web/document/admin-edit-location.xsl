@@ -36,19 +36,20 @@
                         </xsl:attribute>
                     </input>
                     
-                    <h3>Phân loại </h3> 
+                        <h3>Phân loại </h3> 
                     <input type="text" name="txtLocationName">
                         <xsl:attribute name="value">
                             <xsl:value-of select="name"/>
                         </xsl:attribute>
                     </input>
                     
+                    
                     <br/>
                     <br/>
 
                     <h3>Category </h3>
                     <xsl:for-each select="$categoriesXML/categories/category">
-                    <!--<xsl:for-each select="$categoryDoc//category">-->
+                        <!--<xsl:for-each select="$categoryDoc//category">-->
                         <xsl:variable name="currentId" select="id"/>
 
                         <span>
@@ -75,6 +76,10 @@
                     <label class="label-submit">
                         <input type="submit" value="updateLocation" name="btAction"/>
                         <div>Save</div>
+                    </label>
+                    
+                    <label id="lbDelete" class="label-delete">Delete
+                        <input type="submit" value="deleteLocation" name="btAction"/>
                     </label>
                 </form>
             </div>

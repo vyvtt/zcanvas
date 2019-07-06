@@ -21,8 +21,13 @@ body {
 }
 
 h3 {
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+}
+
+form {
+    margin: 0px;
+    padding: 0px;
 }
 
 .content {
@@ -72,7 +77,6 @@ input[type="submit"] {
     display: block;
     padding-top: 10px;
     padding-bottom: 10px;
-    /*margin: 0px 20px 0px 0px;*/
 }
 
 .input-submit-label:hover {
@@ -83,7 +87,6 @@ input[type="submit"] {
 }
 
 .preview {
-    /*display: none;*/
     display: inline-block;
     width: auto;
     height: 400px;
@@ -163,6 +166,10 @@ input[type=radio] + img {
     height: auto; 
     text-align: center; 
     display: inline-block;
+    border: 1px solid #ccc;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    float: left;
 }
 
 .div-location:hover {
@@ -170,14 +177,9 @@ input[type=radio] + img {
 }
 
 .div-location > label > img {
-    width: 90px; /*100*/
-    height: 75px;
-    /*padding: 10px;*/
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    /*margin-top: 40px;*/
+    width: 60px; /*100*/
+    height: auto;
+    padding: 10px 25px 5px 25px;
     margin: 0px;
     float: left;
 }
@@ -190,12 +192,12 @@ input[type=radio] + img {
 .div-location > label > p {
     margin: 0px;
     padding-top: 5px;
-    padding-right: 10px;
-    padding-left: 10px;
+    padding-right: 5px;
+    padding-left: 5px;
     padding-bottom: 5px;
-    width: 90px; /*130*/
-    height: 60px;
-    /*height: auto;*/
+    width: 100px; /*130*/
+    height: auto;
+    min-height: 40px;
     float: left;
 }
 

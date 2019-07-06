@@ -44,6 +44,7 @@ public class Constant {
     public static final String SERVLET_GET_LOCATION_CATEGORY = "GetLocationServlet";
     public static final String SERVLET_UPDATE_LOCATION = "UpdateLocationServlet";
     public static final String SERVLET_ADD_LOCATION = "AddLocationServlet";
+    public static final String SERVLET_DELETE_LOCATION = "DeleteLocationServlet";
     // JSP
     public static final String JSP_HOME = "home.jsp";
     

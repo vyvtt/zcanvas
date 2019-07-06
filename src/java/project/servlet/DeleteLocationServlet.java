@@ -7,22 +7,19 @@ package project.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import static project.utils.Constant.*;
+import project.dao.LocationDAO;
+import project.utils.Constant;
 
 /**
  *
  * @author thuyv
  */
-@MultipartConfig
-public class ProcessServlet extends HttpServlet {
+public class DeleteLocationServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,39 +33,15 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-
-        String url = JSP_HOME;
-        String btn = request.getParameter("btAction");
-
-        try {
-            if (btn == null) {
-                // do nothing
-            } else if (btn.equals("match")) {
-                url = SERVLET_GET_CANVAS_MATCHING_IMG;
-            } else if (btn.equals("crawl")) {
-                url = SERVLET_CRAWL;
-            } else if (btn.equals("updateLocation")) {
-                url = SERVLET_UPDATE_LOCATION;
-            } else if (btn.equals("admin")) {
-                url = SERVLET_GET_LOCATION_CATEGORY;
-            } else if (btn.equals("initLocation")) {
-                url = SERVLET_HOME;
-            } else if (btn.equals("addLocation")) {
-                url = SERVLET_ADD_LOCATION;
-            } else if (btn.equals("deleteLocation")) {
-                url = SERVLET_DELETE_LOCATION;
-            }
-
-        } catch (Exception e) {
-            Logger.getLogger(ProcessServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-        } finally {
-
-            System.out.println("URL: " + url);
+        try (PrintWriter out = response.getWriter()) {
+            int locationId = Integer.parseInt(request.getParameter("txtLocationId"));
+            
+            LocationDAO locationDAO = new LocationDAO();
+            locationDAO.deleteLocation(locationId);
+            
+            String url = Constant.SERVLET_GET_LOCATION_CATEGORY;
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);
-
-            out.close();
         }
     }
 

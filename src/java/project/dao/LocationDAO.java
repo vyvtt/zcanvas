@@ -37,16 +37,16 @@ public class LocationDAO implements Serializable {
         try {
             con = DBUtils.getConnection();
             String sql = "SELECT Location.id, Location.name,\n"
-                        + "	(SELECT Category.id, Category.name\n"
-                        + "	FROM LocationCategory \n"
-                        + "	JOIN Category \n"
-                        + "	ON LocationCategory.CategoryId = Category.id \n"
-                        + "	WHERE LocationCategory.LocationId = Location.id\n"
-                        + "	FOR XML PATH('category'), ROOT('categories'), TYPE\n"
-                        + "	)\n"
-                        + "FROM Location\n"
-                        + "WHERE Location.id in (SELECT Location.id FROM Location)\n"
-                        + "FOR XML PATH('location'), TYPE, ROOT('locations')";
+                    + "	(SELECT Category.id, Category.name\n"
+                    + "	FROM LocationCategory \n"
+                    + "	JOIN Category \n"
+                    + "	ON LocationCategory.CategoryId = Category.id \n"
+                    + "	WHERE LocationCategory.LocationId = Location.id\n"
+                    + "	FOR XML PATH('category'), ROOT('categories'), TYPE\n"
+                    + "	)\n"
+                    + "FROM Location\n"
+                    + "WHERE Location.id in (SELECT Location.id FROM Location)\n"
+                    + "FOR XML PATH('location'), TYPE, ROOT('locations')";
             stm = con.prepareStatement(sql);
             rs = stm.executeQuery();
 
@@ -76,7 +76,7 @@ public class LocationDAO implements Serializable {
         }
         return null;
     }
-    
+
     public String getAllLocationXML() {
         Connection con = null;
         PreparedStatement stm = null;
@@ -88,7 +88,7 @@ public class LocationDAO implements Serializable {
             stm = con.prepareStatement(sql);
 
             rs = stm.executeQuery();
-            
+
             String result = "";
             if (rs.next()) {
                 result = rs.getString(1);
@@ -103,7 +103,6 @@ public class LocationDAO implements Serializable {
 //                        rs.getString("image")));
 //            }
 //            return result;
-
         } catch (SQLException | NamingException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
@@ -177,7 +176,7 @@ public class LocationDAO implements Serializable {
             stm.setInt(1, locationId);
 
             int result = stm.executeUpdate();
-            
+
             System.out.println("Delete " + result + " records");
 
             sql = "INSERT INTO LocationCategory(LocationId, CategoryId) VALUES (?,?)";
@@ -192,7 +191,7 @@ public class LocationDAO implements Serializable {
             }
             stm.executeBatch();
             con.commit();
-            
+
         } catch (NamingException | SQLException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
@@ -208,11 +207,11 @@ public class LocationDAO implements Serializable {
             }
         }
     }
-    
+
     public void updateLocationName(int locationId, String locationName) {
         Connection con = null;
         PreparedStatement stm = null;
-        
+
         try {
             con = DBUtils.getConnection();
 
@@ -225,8 +224,7 @@ public class LocationDAO implements Serializable {
             if (result > 0) {
                 System.out.println("update done");
             }
-            
-            
+
         } catch (NamingException | SQLException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
@@ -242,12 +240,12 @@ public class LocationDAO implements Serializable {
             }
         }
     }
-    
+
     public int addNewLocation(String locationName, String locationImage) {
         Connection con = null;
         PreparedStatement stm = null;
         ResultSet rs = null;
-        
+
         try {
             con = DBUtils.getConnection();
 
@@ -263,8 +261,7 @@ public class LocationDAO implements Serializable {
                 rs.next();
                 return rs.getInt(1);
             }
-            
-            
+
         } catch (NamingException | SQLException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
@@ -284,7 +281,7 @@ public class LocationDAO implements Serializable {
         }
         return -1;
     }
-    
+
     public void addLocationCategory(int locationId, List<Integer> categoryIds) {
         Connection con = null;
         PreparedStatement stm = null;
@@ -304,7 +301,41 @@ public class LocationDAO implements Serializable {
             }
             stm.executeBatch();
             con.commit();
-            
+
+        } catch (NamingException | SQLException e) {
+            Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        } finally {
+            try {
+                if (stm != null) {
+                    stm.close();
+                }
+                if (con != null) {
+                    con.close();
+                }
+            } catch (SQLException sQLException) {
+                Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, sQLException.getMessage(), sQLException);
+            }
+        }
+    }
+
+    public void deleteLocation(int locationId) {
+        Connection con = null;
+        PreparedStatement stm = null;
+
+        try {
+            con = DBUtils.getConnection();
+
+            String sql = "DELETE FROM LocationCategory WHERE LocationId = ?";
+            stm = con.prepareStatement(sql);
+            stm.setInt(1, locationId);
+
+            int result = stm.executeUpdate();
+
+            sql = "DELETE FROM Location WHERE id = ?";
+            stm = con.prepareStatement(sql);
+            stm.setInt(1, locationId);
+            result = stm.executeUpdate();
+
         } catch (NamingException | SQLException e) {
             Logger.getLogger(CanvasDAO.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {

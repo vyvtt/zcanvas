@@ -30,6 +30,7 @@
                         r<xsl:value-of select="id"/>
                     </xsl:attribute>
                     
+
                     <img>
                         <xsl:attribute name="src">
                             <xsl:value-of select="image"/>
