@@ -14,6 +14,8 @@
     <xsl:strip-space elements="/"/>
     
     <xsl:param name="categoryId" select="categoryId"/>
+    <xsl:param name="currentPage" select="currentPage"/>
+    <xsl:param name="pageSize" select="pageSize"/>
 
     <xsl:template match="/">
         
@@ -39,24 +41,29 @@
     </xsl:template>
     
     <xsl:template name="test">
-        <span class="span-result">
-            <img>
-                <xsl:attribute name="src">
-                    <xsl:value-of select="my:image"/>
-                </xsl:attribute>
-            </img>
-            <span class="span-palette-small">
-                <xsl:for-each select="my:canvasColors">
-                    <div>
-                        <xsl:attribute name="style">background-color:<xsl:value-of select="."/>;</xsl:attribute>
-                    </div>
-                </xsl:for-each>
+        
+        <xsl:if test="position() &gt;= ($currentPage * $pageSize) + 1">
+            <xsl:if test="position() &lt;= $pageSize + ($currentPage * $pageSize)">
+                <span class="span-result">
+                    <img>
+                        <xsl:attribute name="src">
+                            <xsl:value-of select="my:image"/>
+                        </xsl:attribute>
+                    </img>
+                    <span class="span-palette-small">
+                        <xsl:for-each select="my:canvasColors">
+                            <div>
+                                <xsl:attribute name="style">background-color:<xsl:value-of select="."/>;</xsl:attribute>
+                            </div>
+                        </xsl:for-each>
 
-            </span>
-            <p>
-                <xsl:value-of select="my:name"/>
-            </p>
-        </span>
+                    </span>
+                    <p>
+                        <xsl:value-of select="my:name"/>
+                    </p>
+                </span>
+            </xsl:if>
+        </xsl:if>
     </xsl:template>
 
 </xsl:stylesheet>

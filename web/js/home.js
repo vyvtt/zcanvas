@@ -9,9 +9,10 @@
         xmlCanvas: null,
 
         xslLocation: null,
-        xslHome: null
+        xslHome: null,
+
+        pageSize: 9
     };
-    
     var homeView = {
         init: function () {
             octopus.getLocations();
@@ -54,7 +55,6 @@
 
                 xsltProcessor = new XSLTProcessor();
                 xsltProcessor.importStylesheet(octopus.getXslLocation());
-//                xsltProcessor.setParameter(null, "categoryInput", category);
                 resultDocument = xsltProcessor.transformToFragment(octopus.getXmlLocation(), document);
                 console.log(resultDocument);
 
@@ -102,7 +102,8 @@
             cP.innerHTML = "Tất cả (" + octopus.getTotalResult() + ")";
 
             cLabel.addEventListener('click', function () {
-                homeView.renderCanvasResult('0');
+                homeView.renderPage('0', octopus.getTotalResult());
+                homeView.renderCanvasResult('0', 0);
             });
 
             cLabel.appendChild(cP);
@@ -138,7 +139,8 @@
                 cP.innerHTML = name + ' (' + count + ')';
 
                 cLabel.addEventListener('click', function () {
-                    homeView.renderCanvasResult(id);
+                    homeView.renderPage(id, count);
+                    homeView.renderCanvasResult(id, 0);
                 });
 
                 cLabel.appendChild(cP);
@@ -148,12 +150,56 @@
 
             });
         },
-        renderCanvasResult: function (categoryId) {
+        renderPage: function (categoryId, count) {
+            var pageCount = Math.ceil(count / octopus.getPageSize());
+
+            var pageDiv = document.getElementById("div-page");
+            while (pageDiv.firstChild) {
+                pageDiv.removeChild(pageDiv.firstChild);
+            }
+
+            for (var i = 0; i < pageCount; i++) {
+
+                (function (i) {
+
+                    var pDiv = document.createElement("div");
+                    pDiv.setAttribute("class", "div-category");
+
+                    var pRadio = document.createElement("input");
+                    pRadio.setAttribute("type", "radio");
+                    pRadio.setAttribute("id", "p" + i);
+                    pRadio.setAttribute("name", "rbPage");
+                    
+                    if (i == 0) {
+                        pRadio.setAttribute("checked", "checked");
+                    }
+
+                    var pLabel = document.createElement("label");
+                    pLabel.setAttribute("for", "p" + i);
+
+                    var pP = document.createElement("p");
+                    pP.innerHTML = "Page " + (i + 1);
+
+                    pLabel.addEventListener('click', function () {
+                        homeView.renderCanvasResult(categoryId, i);
+                    });
+
+                    pLabel.appendChild(pP);
+                    pDiv.appendChild(pRadio);
+                    pDiv.appendChild(pLabel);
+                    pageDiv.appendChild(pDiv);
+                }).call(this, i);
+            }
+        },
+        renderCanvasResult: function (categoryId, currentPage) {
+            console.log('render canvas');
             if (document.implementation && document.implementation.createDocument)
             {
                 xsltProcessor = new XSLTProcessor();
                 xsltProcessor.importStylesheet(octopus.getXslHome());
                 xsltProcessor.setParameter(null, "categoryId", categoryId + '');
+                xsltProcessor.setParameter(null, "currentPage", currentPage);
+                xsltProcessor.setParameter(null, "pageSize", octopus.getPageSize());
                 resultDocument = xsltProcessor.transformToFragment(octopus.getXmlCanvas(), document);
 
                 document.getElementById("result").innerHTML = '';
@@ -213,7 +259,8 @@
                 homeView.renderCategories();
 
                 homeModel.xmlCanvas = str.getElementsByTagName('canvases')[0];
-                homeView.renderCanvasResult(0);
+                homeView.renderPage(0, octopus.getTotalResult());
+                homeView.renderCanvasResult(0, 0);
             });
         },
         getXslLocation: function () {
@@ -236,6 +283,9 @@
         },
         getTotalResult: function () {
             return homeModel.totalResult;
+        },
+        getPageSize: function () {
+            return homeModel.pageSize;
         }
     };
 

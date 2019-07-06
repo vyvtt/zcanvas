@@ -63,9 +63,15 @@
                 <br style="clear: both;">
             </div>
 
-            <br/><br/><br/>
+            <br/>
 
-            <div id="div-category-wrap"></div>
+            <div style="text-align: center">
+                <div id="div-category-wrap"></div>
+                <br style="clear: both;">
+                <div id="div-page"></div>
+                <br style="clear: both;">
+            </div>
+
 
             <div class="div-result-wrap">
                 <div id="result"></div>

@@ -290,3 +290,22 @@ input[type=radio] + img {
     width: 100px;
     height: 100px;
 }
+
+/*PAGE ------------------------*/
+/*NAV ---------------------*/
+.label-page {
+    border: 1px solid #b1b1b1;
+    text-align: center;
+    margin-right: 3px;
+    float: left;
+    padding: 10px;
+}
+
+.label-page:hover {
+    background: #cccccc;
+}
+
+.page-active {
+    background: #393e46;
+    color: white;
+}
