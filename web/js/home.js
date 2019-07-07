@@ -17,6 +17,7 @@
         init: function () {
             octopus.getLocations();
 
+            // VALIDATE -----------
             var form = document.getElementById('form');
             form.addEventListener('submit', function (evt) {
                 evt.preventDefault();
@@ -36,8 +37,24 @@
                 // submit form
                 var data = new FormData(form);
                 octopus.submitForm(data);
-
             });
+            
+            // RADIO TYPE -----------
+            var spanTypeImage = document.getElementById("span-type-image");
+            var spanTypeColor = document.getElementById("span-type-color");
+            
+            var lbTypeImage = document.getElementById("lbTypeImage");
+            lbTypeImage.addEventListener('click', function () {
+                spanTypeImage.style.display = 'block';
+                spanTypeColor.style.display = 'none';
+            });
+            
+            var lbTypeColor = document.getElementById("lbTypeColor");
+            lbTypeColor.addEventListener('click', function () {
+                spanTypeImage.style.display = 'none';
+                spanTypeColor.style.display = 'block';
+            });
+            
         },
         renderLocation: function () {
             if (document.implementation && document.implementation.createDocument)

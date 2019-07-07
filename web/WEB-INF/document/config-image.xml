@@ -5,5 +5,6 @@
     <skip-pixel>30</skip-pixel>
     <palette-size>5</palette-size>
     <delta-E-tolerance>20</delta-E-tolerance>
+    <delta-E-tolerance-single>10</delta-E-tolerance-single>
     <background-tolerance>50</background-tolerance>
 </config>

@@ -53,7 +53,7 @@
                 </div>
 
                 <div class="div-right">
-                    <img id="preview" class="preview" src="image/placeholder.png"/>
+                    <img id="previewImage" class="preview" src="image/placeholder.png"/>
                     <span class="span-palette" id="palette"></span>
                 </div>
 

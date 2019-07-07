@@ -5,9 +5,11 @@
  */
 package project.servlet;
 
+import java.awt.Color;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -36,7 +38,7 @@ import project.utils.XMLHelper;
  *
  * @author thuyv
  */
-public class GetCanvasMatchingImageServlet extends HttpServlet {
+public class GetCanvasMatchingColorServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -53,14 +55,19 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
 
         try {
             int locationId = Integer.parseInt(request.getParameter("rbLocation"));
-            Part filePart = request.getPart("mFile");
-            InputStream is = filePart.getInputStream();
-            BufferedImage image = ImageIO.read(is);
+            String hexColor = request.getParameter("mColor");
+//            Part filePart = request.getPart("mFile");
+//            InputStream is = filePart.getInputStream();
+//            BufferedImage image = ImageIO.read(is);
+
+            
+            int color = ImageHelper.convertHex2Int(hexColor);
+            System.out.println("color int: " + color);
 
             // init
-            String colorPalette = ImageHelper.getColorPaletteFromImage(image, true);
-            List<String> inputPalatte = Arrays.asList(colorPalette.split("\\s*;\\s*"));
-            System.out.println("input palette: " + colorPalette);
+//            String colorPalette = ImageHelper.getColorPaletteFromImage(image, true);
+//            List<String> inputPalatte = Arrays.asList(colorPalette.split("\\s*;\\s*"));
+//            System.out.println("input palette: " + colorPalette);
             CanvasDAO canvasDAO = new CanvasDAO();
             LocationDAO locationDAO = new LocationDAO();
 
@@ -78,7 +85,7 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             for (Canvas canvas : listCanvasInLocation) {
                 List<String> currentPalette = Arrays.asList(canvas.getColorPalatte().split("\\s*;\\s*"));
 
-                double deltaE = ImageHelper.comparePalette2Palette(inputPalatte, currentPalette);
+                double deltaE = ImageHelper.compareColor2Palette(color, currentPalette);
 
                 if (deltaE != -1) {
                     canvas.setDeltaE(deltaE);
@@ -101,15 +108,20 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             Collections.sort(result, (c1, c2) -> {
                 return ((Comparable) c1.getDeltaE()).compareTo(c2.getDeltaE());
             });
+            
+            System.out.println("total by color: " + result.size());
+            for (Canvas canvas : result) {
+                System.out.println(canvas.getDeltaE());
+            }
 
             for (Categories category : listCategory) {
                 category.setCount(mapCategoryCount.get(category.getId()));
             }
 
             List<String> colorHex = new ArrayList<>();
-            for (String colorInt : inputPalatte) {
-                colorHex.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
-            }
+//            for (String colorInt : inputPalatte) {
+//                colorHex.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
+//            }
 
             Canvases canvases = new Canvases();
             canvases.setCanvases(result);
@@ -126,10 +138,11 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             response.setContentType("text/xml; charset=UTF-8");
             response.getWriter().write(infoStr);
 
-        } catch (IOException | ServletException | JAXBException e) {
+        } catch (IOException | JAXBException e) {
             Logger.getLogger(GetCanvasMatchingImageServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         } finally {
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

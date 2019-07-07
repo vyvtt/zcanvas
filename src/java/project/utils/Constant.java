@@ -34,6 +34,7 @@ public class Constant {
     public static int IMG_SKIP_PIXEL;
     public static int IMG_PALETTE_SIZE;
     public static int IMG_DELTA_E_TOLERANCE;
+    public static int IMG_DELTA_E_TOLERANCE_SINGLE;
     public static int IMG_BG_TOLERANCE;
     
     // Servlet
@@ -41,6 +42,7 @@ public class Constant {
     public static final String SERVLET_HOME = "HomeServlet";
     public static final String SERVLET_PROCESS = "ProcessServlet";
     public static final String SERVLET_GET_CANVAS_MATCHING_IMG = "GetCanvasMatchingImageServlet";
+    public static final String SERVLET_GET_CANVAS_MATCHING_COLOR = "GetCanvasMatchingColorServlet";
     public static final String SERVLET_GET_LOCATION_CATEGORY = "GetLocationServlet";
     public static final String SERVLET_UPDATE_LOCATION = "UpdateLocationServlet";
     public static final String SERVLET_ADD_LOCATION = "AddLocationServlet";

@@ -95,6 +95,9 @@ public class ConfigHelper {
             expression = "/config/delta-E-tolerance";
             IMG_DELTA_E_TOLERANCE = ((Number)xPath.evaluate(expression, document, XPathConstants.NUMBER)).intValue();
             
+            expression = "/config/delta-E-tolerance-single";
+            IMG_DELTA_E_TOLERANCE_SINGLE = ((Number)xPath.evaluate(expression, document, XPathConstants.NUMBER)).intValue();
+            
             expression = "/config/background-tolerance";
             IMG_BG_TOLERANCE = ((Number)xPath.evaluate(expression, document, XPathConstants.NUMBER)).intValue();
             

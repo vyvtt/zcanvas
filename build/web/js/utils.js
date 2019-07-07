@@ -98,18 +98,45 @@ function loadXML(filePath) {
 }
 
 function loadPreviewImg(event) {
-    var preview = document.getElementById('preview');
-    preview.style.display = 'inline-block';
-    preview.src = URL.createObjectURL(event.target.files[0]);
+    var previewImage = document.getElementById('previewImage');
+    previewImage.style.display = 'inline-block';
+    previewImage.src = URL.createObjectURL(event.target.files[0]);
+
     var palette = document.getElementById('palette');
     palette.style.display = 'none';
+
+    var previewColor = document.getElementById('previewColor');
+    previewColor.style.display = 'none';
+}
+
+function loadPreviewColor(element) {
+    element.className = "change";
+    
+    var previewColor = document.getElementById('previewColor');
+    previewColor.style.display = 'inline-block';
+    previewColor.style.background = element.value;
+    previewColor.style.backgroundColor = element.value;
+
+    var previewImage = document.getElementById('previewImage');
+    previewImage.style.display = 'none';
+
+    var palette = document.getElementById('palette');
+    palette.style.display = 'none';
+}
+
+function colorOnChange(element) {
+    element.className = "change";
 }
 
 function validateForm() {
     var mRadio = document.getElementsByName("rbLocation");
     var mFile = document.forms["mForm"]["mFile"].value;
+    var mColor = document.forms["mForm"]["mColor"];
     var errLocation = document.getElementById("errLocation");
     var errImage = document.getElementById("errImage");
+
+    console.log(mFile);
+    console.log(mColor);
 
     var validRadio = false;
     var validImg = false;
@@ -124,22 +151,33 @@ function validateForm() {
         i++;
     }
 
-    // check image
-    if (mFile.length > 0) {
-        var allowed_extensions = new Array("jpg", "png");
-        var file_extension = mFile.split('.').pop().toLowerCase();
+    if (document.getElementById('type1Image').checked) {
+        // validate img
+        if (mFile.length > 0) {
+            var allowed_extensions = new Array("jpg", "png");
+            var file_extension = mFile.split('.').pop().toLowerCase();
 
-        for (var i = 0; i < allowed_extensions.length; i++) {
-            if (allowed_extensions[i] == file_extension) {
-                validImg = true;
+            for (var i = 0; i < allowed_extensions.length; i++) {
+                if (allowed_extensions[i] == file_extension) {
+                    validImg = true;
+                }
             }
-        }
-        if (!validImg) {
-            errImage.innerHTML = 'Only image file (.jpg or .png) allowed!';
+            if (!validImg) {
+                errImage.innerHTML = 'Only image file (.jpg or .png) allowed!';
+            }
+        } else {
+            // empty img
+            errImage.innerHTML = 'Please choose an image!';
         }
     } else {
-        // empty img
-        errImage.innerHTML = 'Please choose an image!';
+        // validate color
+        var change = mColor.className;
+        console.log('class name: ' + change);
+        if (change == 'change') {
+            validImg = true;
+        } else {
+            errImage.innerHTML = 'Please choose a color!';
+        }
     }
 
     if (!validRadio) {
@@ -149,6 +187,6 @@ function validateForm() {
     if (validImg && validRadio) {
         return true;
     }
-    
+
     return false;
 }

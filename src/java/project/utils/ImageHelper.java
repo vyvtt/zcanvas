@@ -128,7 +128,6 @@ public class ImageHelper {
 ////        return "#" + Integer.toHexString(rgb[0]) + Integer.toHexString(rgb[1]) + Integer.toHexString(rgb[2]);
 //        return "#";
 //    }
-    
 //    public static boolean isGray(int[] rgbArr) {
 //        int rgDiff = rgbArr[0] - rgbArr[1];
 //        int rbDiff = rgbArr[0] - rgbArr[2];
@@ -141,7 +140,6 @@ public class ImageHelper {
 //        }
 //        return true;
 //    }
-
 //    private static BufferedImage resize(final URL url, final Dimension size) throws IOException {
 //        final BufferedImage image = ImageIO.read(url);
 //        final BufferedImage resized = new BufferedImage(size.width, size.height, BufferedImage.TYPE_4BYTE_ABGR);
@@ -272,7 +270,6 @@ public class ImageHelper {
 //    private final static int DIMENTION_MAX = 256;
 //    private final static int BUCKET_PER_DIMENSION = 3;
 //    private final static int BUCKET_SIZE = DIMENTION_MAX / BUCKET_PER_DIMENSION;
-
     private static String getKeyForPixel(int[] rbg) {
         int redBucket = (int) Math.floor(rbg[0] / Constant.IMG_BUCKET_SIZE);
         int greenBucket = (int) Math.floor(rbg[1] / Constant.IMG_BUCKET_SIZE);
@@ -337,6 +334,14 @@ public class ImageHelper {
 
         }
         return paletteString.toString();
+    }
+
+    public static int convertHex2Int(String hex) {
+        Color color = Color.decode(hex);
+        int red = (color.getRed() << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
+        int green = (color.getGreen() << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
+        int blue = color.getBlue() & 0x000000FF; //Mask out anything not blue.
+        return 0xFF000000 | red | green | blue;
     }
 
     private static String getColorString(int[] rgb) {
@@ -460,12 +465,12 @@ public class ImageHelper {
     }
 
     // inputPalatte, currentPalette
-    public static double comparePalette(List<String> palette1, List<String> palette2) {
+    public static double comparePalette2Palette(List<String> palette1, List<String> palette2) {
 
         if (palette2.size() <= 2) {
             return -1;
         }
-        
+
         int count = 0;
         double totalDeltaE = 0;
 
@@ -479,17 +484,38 @@ public class ImageHelper {
                 }
             }
         }
-        
-//        int matchingCount = 4;
-//        if (palette2.size() <= 4) {
-//            matchingCount = 3;
-//        }
-//        if (count >= matchingCount) {
-//            return totalDeltaE;
-//        }
-        
+
+        // lấy delta E của những palette có (tổng màu -1) màu giống palette input
         if (count >= palette2.size() - 1) {
             return totalDeltaE;
+        }
+        return -1;
+    }
+
+    public static double compareColor2Palette(int color, List<String> palette2) {
+
+        if (palette2.size() <= 2) {
+            return -1;
+        }
+
+        double smallestDeltaE = 0;
+
+        for (int j = 0; j < palette2.size(); j++) {
+            double diff = getColorDifference(color, Integer.parseInt(palette2.get(j)));
+
+            if (j == 0) {
+                smallestDeltaE = diff;
+            }
+
+            if (diff < smallestDeltaE) {
+                smallestDeltaE = diff;
+            }
+        }
+        
+        System.out.println(smallestDeltaE);
+        // lấy delta E nhỏ nhất của palette và nhỏ hơn config 
+        if (smallestDeltaE <= Constant.IMG_DELTA_E_TOLERANCE_SINGLE) {
+            return smallestDeltaE;
         }
         return -1;
     }

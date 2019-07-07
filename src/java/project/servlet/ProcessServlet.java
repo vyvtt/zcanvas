@@ -45,7 +45,13 @@ public class ProcessServlet extends HttpServlet {
             if (btn == null) {
                 // do nothing
             } else if (btn.equals("match")) {
-                url = SERVLET_GET_CANVAS_MATCHING_IMG;
+                String type = request.getParameter("rbType");
+                
+                if (type.equals("typeImage")) {
+                    url = SERVLET_GET_CANVAS_MATCHING_IMG;
+                } else {
+                    url = SERVLET_GET_CANVAS_MATCHING_COLOR;
+                }
             } else if (btn.equals("crawl")) {
                 url = SERVLET_CRAWL;
             } else if (btn.equals("updateLocation")) {
