@@ -170,7 +170,7 @@
         renderPage: function (categoryId, count) {
             var pageCount = Math.ceil(count / octopus.getPageSize());
 
-            var pageDiv = document.getElementById("div-page");
+            var pageDiv = document.getElementById("div-page-wrap");
             while (pageDiv.firstChild) {
                 pageDiv.removeChild(pageDiv.firstChild);
             }
@@ -180,7 +180,7 @@
                 (function (i) {
 
                     var pDiv = document.createElement("div");
-                    pDiv.setAttribute("class", "div-category");
+                    pDiv.setAttribute("class", "div-page");
 
                     var pRadio = document.createElement("input");
                     pRadio.setAttribute("type", "radio");
@@ -193,15 +193,19 @@
 
                     var pLabel = document.createElement("label");
                     pLabel.setAttribute("for", "p" + i);
+                    pLabel.setAttribute("class", "label-page");
+                    
+                    pLabel.innerHTML = i + 1;
 
-                    var pP = document.createElement("p");
-                    pP.innerHTML = "Page " + (i + 1);
+//                    var pP = document.createElement("p");
+//                    pP.innerHTML = "Page " + (i + 1);
+//                    pP.innerHTML = i + 1;
 
                     pLabel.addEventListener('click', function () {
                         homeView.renderCanvasResult(categoryId, i);
                     });
 
-                    pLabel.appendChild(pP);
+//                    pLabel.appendChild(pP);
                     pDiv.appendChild(pRadio);
                     pDiv.appendChild(pLabel);
                     pageDiv.appendChild(pDiv);

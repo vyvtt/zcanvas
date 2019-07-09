@@ -6,11 +6,18 @@
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/ImageHelper.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/document/home.xsl</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/css/admin.css</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/MainCrawler.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/css/home.css</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/home.js</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/StringHelper.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/home.jsp</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/ProcessServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/SoynPageCrawler.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/document/home-location.xsl</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/MopiPageCrawler.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/SoynMainCrawler.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/dao/CanvasDAO.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/dao/DetailDAO.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/home.js</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/ProcessServlet.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/utils.js</file>
         </group>
     </open-files>

@@ -73,7 +73,7 @@ public class MopiPageCrawler implements Serializable {
             beginSign = " class=\"products\"";
             endSign = "after-loop-wrapper";
 
-            System.out.println("Get all products from: " + pageUrl);
+            System.out.println("Get products from: " + pageUrl);
 
             htmlContent = "";
             htmlContent = XMLHelper.parseHTML(pageUrl, beginSign, endSign);
@@ -82,133 +82,133 @@ public class MopiPageCrawler implements Serializable {
         } // end get all products of category
 
 
-        System.out.println("--- Done get all products of category - Begin get detail of " + listCanvas.size());
+//        System.out.println("--- Done get all products of category - Begin get detail of " + listCanvas.size());
         // ---------------------------------
         // Read each product page to get detail
-        List<Integer> invalidProductPosition = new ArrayList<>();
-        for (int i = 0; i < listCanvas.size(); i++) {
-
-            List<Detail> listDetail = new ArrayList<>();
-            Canvas currentCanvas = listCanvas.get(i);
-            Map<String, String> sizeAndPrice = new HashMap<>();
-            Map<String, String> sizeAndString = new HashMap<>();
-
-            boolean isInsideOptionSize = false;
-            boolean isEnding = false;
-            boolean isValid = true;
-
-            url = currentCanvas.getUrl();
-            System.out.println((i + 1) + " - " + url);
-
-            htmlContent = "";
-            beginSign = "class=\"variations_form cart\"";
-            endSign = "class=\"woocommerce-tabs wc-tabs-wrapper\"";
-
-            htmlContent = XMLHelper.parseHTML(url, beginSign, endSign);
-            htmlContent = StringHelper.refineHtml(htmlContent);
-            XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
-
-            while (reader.hasNext()) {
-                XMLEvent event = reader.nextEvent();
-
-                if (event.isStartElement()) {
-                    StartElement element = event.asStartElement();
-                    String tagName = element.getName().getLocalPart().trim();
-
-                    if ("form".equals(tagName)) {
-                        Attribute attribute = element.getAttributeByName(new QName("data-product_variations"));
-                        if (attribute != null) {
-                            String rawJson = attribute.getValue();
-                            sizeAndPrice = getSizeAndPriceFromJSON(rawJson);
-
-                            if (sizeAndPrice == null) {
-                                isValid = false; // set listDetail = null về sau
-                            }
-
-                        }
-                    } else if ("select".equals(tagName) && isValid) {
-                        Attribute attribute = element.getAttributeByName(new QName("data-attribute_name"));
-                        if (attribute != null) {
-                            String attValue = attribute.getValue().trim();
-                            if ("attribute_pa_size".equals(attValue)) {
-                                isInsideOptionSize = true;
-                            } else if ("attribute_kch-thc".equals(attValue)) {
-                                isInsideOptionSize = true;
-                            } else if ("attribute_kich-thuoc".equals(attValue)) {
-                                isInsideOptionSize = true;
-                            }
-                        }
-                    } else if ("option".equals(tagName) && isInsideOptionSize && isValid) {
-                        Attribute attribute = element.getAttributeByName(new QName("value"));
-                        if (attribute != null) {
-                            String value = attribute.getValue().trim();
-                            if (!value.isEmpty()) {
-                                event = reader.nextEvent();
-                                if (event.isCharacters()) {
-                                    Characters characters = event.asCharacters();
-                                    sizeAndString.put(value, characters.getData().trim());
-                                }
-                            }
-                        }
-                    } else if ("div".equals(tagName)) {
-                        if (!isEnding) {
-                            Attribute attribute = element.getAttributeByName(new QName("class"));
-                            if (attribute != null) {
-                                if ("tags-link".equals(attribute.getValue())) {
-                                    isEnding = true;
-                                }
-                            }
-                        } else { // <div>Thiết kế bởi: Thúy Nguyễn</div>
-                            event = reader.nextEvent();
-                            if (event.isCharacters()) {
-                                Characters characters = event.asCharacters();
-                                String designer = characters.getData().trim();
-                                try {
-                                    currentCanvas.setDesigner(designer.substring(designer.indexOf(":") + 2));
-                                } catch (Exception e) {
-                                    // Exception trường hợp "Thúy Nguyễn" là link aka thẻ <a> nằm trong -> loại bỏ
-                                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, "Exception ---> Set DESIGNER of product to null and continue");
-                                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-                                    currentCanvas.setDesigner(null);
-                                }
-                                isEnding = false; // reset cờ
-                            }
-                        }
-                    }
-                } // end if event asStartElement
-                else if (event.isEndElement()) {
-                    EndElement element = event.asEndElement();
-                    String tagName = element.getName().getLocalPart().trim();
-
-                    if (isInsideOptionSize && tagName.equals("select")) {
-                        // tắt biến cờ cho tag <select> <option> về size
-                        isInsideOptionSize = false;
-                    }
-                }
-            } // end while reader
-
-            if (!isValid) { // parse sản phẩm bị lỗi
-                currentCanvas.setDetail(null);
-            } else {
-                try {
-//                    System.out.println(sizeAndPrice);
-//                    System.out.println(sizeAndString);
-                    for (Map.Entry<String, String> entry : sizeAndString.entrySet()) {
-                        // {4560=45x60cm, 6090=60x90cm, 3040=30x40cm}
-                        Detail detail = extractDetailFromString(entry.getValue());
-                        String price = sizeAndPrice.get(entry.getKey());
-                        detail.setPrice(StringHelper.convertStringToBigInteger(price));
-                        listDetail.add(detail);
-                    }
-                    currentCanvas.setDetail(listDetail);
-                } catch (Exception e) {
-                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, "Exception ---> Set DETAIL of product to null and continue");
-                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-                    currentCanvas.setDetail(null);
-                }
-
-            }
-        } // end for each product
+//        List<Integer> invalidProductPosition = new ArrayList<>();
+//        for (int i = 0; i < listCanvas.size(); i++) {
+//
+//            List<Detail> listDetail = new ArrayList<>();
+//            Canvas currentCanvas = listCanvas.get(i);
+//            Map<String, String> sizeAndPrice = new HashMap<>();
+//            Map<String, String> sizeAndString = new HashMap<>();
+//
+//            boolean isInsideOptionSize = false;
+//            boolean isEnding = false;
+//            boolean isValid = true;
+//
+//            url = currentCanvas.getUrl();
+//            System.out.println((i + 1) + " - " + url);
+//
+//            htmlContent = "";
+//            beginSign = "class=\"variations_form cart\"";
+//            endSign = "class=\"woocommerce-tabs wc-tabs-wrapper\"";
+//
+//            htmlContent = XMLHelper.parseHTML(url, beginSign, endSign);
+//            htmlContent = StringHelper.refineHtml(htmlContent);
+//            XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
+//
+//            while (reader.hasNext()) {
+//                XMLEvent event = reader.nextEvent();
+//
+//                if (event.isStartElement()) {
+//                    StartElement element = event.asStartElement();
+//                    String tagName = element.getName().getLocalPart().trim();
+//
+//                    if ("form".equals(tagName)) {
+//                        Attribute attribute = element.getAttributeByName(new QName("data-product_variations"));
+//                        if (attribute != null) {
+//                            String rawJson = attribute.getValue();
+//                            sizeAndPrice = getSizeAndPriceFromJSON(rawJson);
+//
+//                            if (sizeAndPrice == null) {
+//                                isValid = false; // set listDetail = null về sau
+//                            }
+//
+//                        }
+//                    } else if ("select".equals(tagName) && isValid) {
+//                        Attribute attribute = element.getAttributeByName(new QName("data-attribute_name"));
+//                        if (attribute != null) {
+//                            String attValue = attribute.getValue().trim();
+//                            if ("attribute_pa_size".equals(attValue)) {
+//                                isInsideOptionSize = true;
+//                            } else if ("attribute_kch-thc".equals(attValue)) {
+//                                isInsideOptionSize = true;
+//                            } else if ("attribute_kich-thuoc".equals(attValue)) {
+//                                isInsideOptionSize = true;
+//                            }
+//                        }
+//                    } else if ("option".equals(tagName) && isInsideOptionSize && isValid) {
+//                        Attribute attribute = element.getAttributeByName(new QName("value"));
+//                        if (attribute != null) {
+//                            String value = attribute.getValue().trim();
+//                            if (!value.isEmpty()) {
+//                                event = reader.nextEvent();
+//                                if (event.isCharacters()) {
+//                                    Characters characters = event.asCharacters();
+//                                    sizeAndString.put(value, characters.getData().trim());
+//                                }
+//                            }
+//                        }
+//                    } else if ("div".equals(tagName)) {
+//                        if (!isEnding) {
+//                            Attribute attribute = element.getAttributeByName(new QName("class"));
+//                            if (attribute != null) {
+//                                if ("tags-link".equals(attribute.getValue())) {
+//                                    isEnding = true;
+//                                }
+//                            }
+//                        } else { // <div>Thiết kế bởi: Thúy Nguyễn</div>
+//                            event = reader.nextEvent();
+//                            if (event.isCharacters()) {
+//                                Characters characters = event.asCharacters();
+//                                String designer = characters.getData().trim();
+//                                try {
+//                                    currentCanvas.setDesigner(designer.substring(designer.indexOf(":") + 2));
+//                                } catch (Exception e) {
+//                                    // Exception trường hợp "Thúy Nguyễn" là link aka thẻ <a> nằm trong -> loại bỏ
+//                                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, "Exception ---> Set DESIGNER of product to null and continue");
+//                                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+//                                    currentCanvas.setDesigner(null);
+//                                }
+//                                isEnding = false; // reset cờ
+//                            }
+//                        }
+//                    }
+//                } // end if event asStartElement
+//                else if (event.isEndElement()) {
+//                    EndElement element = event.asEndElement();
+//                    String tagName = element.getName().getLocalPart().trim();
+//
+//                    if (isInsideOptionSize && tagName.equals("select")) {
+//                        // tắt biến cờ cho tag <select> <option> về size
+//                        isInsideOptionSize = false;
+//                    }
+//                }
+//            } // end while reader
+//
+//            if (!isValid) { // parse sản phẩm bị lỗi
+//                currentCanvas.setDetail(null);
+//            } else {
+//                try {
+////                    System.out.println(sizeAndPrice);
+////                    System.out.println(sizeAndString);
+//                    for (Map.Entry<String, String> entry : sizeAndString.entrySet()) {
+//                        // {4560=45x60cm, 6090=60x90cm, 3040=30x40cm}
+//                        Detail detail = extractDetailFromString(entry.getValue());
+//                        String price = sizeAndPrice.get(entry.getKey());
+//                        detail.setPrice(StringHelper.convertStringToBigInteger(price));
+//                        listDetail.add(detail);
+//                    }
+//                    currentCanvas.setDetail(listDetail);
+//                } catch (Exception e) {
+//                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, "Exception ---> Set DETAIL of product to null and continue");
+//                    Logger.getLogger(MopiPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+//                    currentCanvas.setDetail(null);
+//                }
+//
+//            }
+//        } // end for each product
 
         category.setCanvas(listCanvas);
 

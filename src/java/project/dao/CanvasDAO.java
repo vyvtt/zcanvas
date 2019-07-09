@@ -44,6 +44,7 @@ public class CanvasDAO implements Serializable {
         CallableStatement statement = null;
         try {
             con = DBUtils.getConnection();
+            // store procudure: trả về id của canvas (id = select nếu canvas existed, insert new canvas nếu chưa existed)
             String sql = "{call InsertCanvas(?,?,?,?,?,?,?,?)}";
             statement = con.prepareCall(sql);
 

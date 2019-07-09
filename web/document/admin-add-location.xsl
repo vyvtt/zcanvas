@@ -31,11 +31,7 @@
             <xsl:for-each select="categories/category">
                 <span>
                     <label class="label-checkbox">
-                        <input type="checkbox" name="rbCategory">
-                            <xsl:attribute name="value">
-                                <xsl:value-of select="id"/>
-                            </xsl:attribute>
-                        </input>
+                        <input type="checkbox" name="rbCategory" value="{id}"/>
                         <div>
                             <xsl:value-of select="name"/>
                         </div>

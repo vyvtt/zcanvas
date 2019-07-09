@@ -47,9 +47,6 @@ public class MainCrawler {
 
             List<Canvas> listCanvas = category.getCanvas();
             for (Canvas canvas : listCanvas) {
-
-                
-
                 try {
                     BufferedImage image = ImageIO.read(new URL(canvas.getImage()));
                     canvas.setColorPalatte(ImageHelper.getColorPaletteFromImage(image, false));
@@ -59,15 +56,16 @@ public class MainCrawler {
                 }
                 
                 int canvasId = canvasDAO.insert(canvas);
+                System.out.println("DB: " + canvas.getName());
 
-                if (canvasDAO.isIsExisted()) {
-                    // Skip insert Detail
-                    System.out.println("DB ---> SKIP EXISTED: " + canvas.getName());
-                } else {
-                    // Insert Detail
-                    System.out.println("DB : " + canvas.getName());
-                    detailDAO.insert(canvas.getDetail(), canvasId);
-                }
+//                if (canvasDAO.isIsExisted()) {
+//                    // Skip insert Detail
+//                    System.out.println("DB ---> SKIP EXISTED: " + canvas.getName());
+//                } else {
+//                    // Insert Detail
+//                    System.out.println("DB : " + canvas.getName());
+//                    detailDAO.insert(canvas.getDetail(), canvasId);
+//                }
 
                 canvasDAO.insertCanvasCategory(categoryId, canvasId);
             }

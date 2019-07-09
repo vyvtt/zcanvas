@@ -30,7 +30,7 @@ public class CrawlHelper implements Serializable {
             try (BufferedReader reader = getBufferReaderFromURI(categoryURL)) {
                 String line = null;
                 while ((line = reader.readLine()) != null) {
-                    
+
                     if (line.contains(beginSign)) {
                         if (count == 0) {
                             isInside = true;
@@ -64,11 +64,24 @@ public class CrawlHelper implements Serializable {
         int end = countPage.indexOf("<");
         countPage = countPage.substring(0, end);
 
-        if (!countPage.equals("...")) {
+        try {
             int currentCount = Integer.parseInt(countPage);
             return Math.max(currentCount, previousCount);
+        } catch (NumberFormatException e) {
+            Logger.getLogger(CrawlHelper.class.getName()).log(Level.INFO, "Can not parse page number: {0}", e.getMessage());
+            return previousCount;
         }
 
-        return previousCount;
+//        if (!countPage.equals("...")) {
+//            try {
+//                int currentCount = Integer.parseInt(countPage);
+//                return Math.max(currentCount, previousCount);
+//            } catch (NumberFormatException e) {
+//                Logger.getLogger(CrawlHelper.class.getName()).log(Level.INFO, "Can not parse page number: {0}", e.getMessage());
+//                return previousCount;
+//            }
+//
+//        }
+//        return previousCount;
     }
 }

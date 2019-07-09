@@ -24,28 +24,13 @@
             <div class="content">
                 <form action="ProcessServlet" method="POST">
                 
-                    <input type="hidden" name="txtLocationId">
-                        <xsl:attribute name="value">
-                            <xsl:value-of select="id"/>
-                        </xsl:attribute>
-                    </input>
-                    
-                    <input type="hidden" name="txtOldLocationName">
-                        <xsl:attribute name="value">
-                            <xsl:value-of select="name"/>
-                        </xsl:attribute>
-                    </input>
+                    <input type="hidden" name="txtLocationId" value="{id}"/>
+                    <input type="hidden" name="txtOldLocationName" value="{name}"/>
                     
                         <h3>Phân loại </h3> 
-                    <input type="text" name="txtLocationName">
-                        <xsl:attribute name="value">
-                            <xsl:value-of select="name"/>
-                        </xsl:attribute>
-                    </input>
+                    <input type="text" name="txtLocationName" value="{name}"/>
                     
-                    
-                    <br/>
-                    <br/>
+                    <br/><br/>
 
                     <h3>Category </h3>
                     <xsl:for-each select="$categoriesXML/categories/category">
@@ -54,10 +39,7 @@
 
                         <span>
                             <label class="label-checkbox">
-                                <input type="checkbox" name="category">
-                                    <xsl:attribute name="value">
-                                        <xsl:value-of select="id"/>
-                                    </xsl:attribute>
+                                <input type="checkbox" name="category" value="{id}">
                                     <xsl:for-each select="$aaa/category">
                                         <xsl:if test="$currentId=id">
                                             <xsl:attribute name="checked">checked</xsl:attribute>

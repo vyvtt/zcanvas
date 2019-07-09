@@ -63,19 +63,21 @@ public class SoynPageCrawler implements Serializable {
         String keyOfLineContainPageCount = "page-link";
         pageCount = CrawlHelper.getPageCount(url, beginSign, endSign, keyOfLineContainPageCount);
 
-        System.out.println("In SoynPageCrawler " + categoryName + " - " + url + " - " + pageCount);
+        System.out.println("Crawl Category: " + categoryName + " - " + url + " - " + pageCount);
 
         // ---------------------------------
         // Crawl products of each page
         Categories category = new Categories();
         category.setName(categoryName);
         List<Canvas> listCanvas = new ArrayList<>();
-        
+
         for (int i = 0; i < pageCount; i++) {
-            
+
             String pageUrl = url + "?page=" + (i + 1);
             beginSign = "class=\"products-view products-view-grid\"";
             endSign = "class=\"sidebar left left-content col-lg-3 col-lg-pull-9\"";
+
+            System.out.println("Get products from: " + pageUrl);
 
             htmlContent = "";
             htmlContent = XMLHelper.parseHTML(pageUrl, beginSign, endSign);
@@ -84,10 +86,157 @@ public class SoynPageCrawler implements Serializable {
             listCanvas.addAll(crawlListCanvasEachPage(htmlContent));
         } // end for page
 
-        System.out.println("--- Done getEachPage - Begin get detail of " + listCanvas.size());
-
+//        System.out.println("--- Done getEachPage - Begin get detail of " + listCanvas.size());
         // ---------------------------------
-        // Read each product page to get detail
+        // Crawl each product to get detail
+//        for (int i = 0; i < listCanvas.size(); i++) {
+//            List<Detail> listDetail = new ArrayList<>();
+//            Canvas currentCanvas = listCanvas.get(i);
+//            String price = "";
+//
+//            url = currentCanvas.getUrl();
+//            System.out.println((i + 1) + " - " + url);
+//
+//            htmlContent = "";
+//            beginSign = "class=\"price-box\"";
+//            endSign = "class=\"form-group form-groupx form-detail-action \"";
+//
+//            htmlContent = XMLHelper.parseHTML(url, beginSign, endSign);
+//            htmlContent = StringHelper.refineHtml(htmlContent);
+//            XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
+//
+//            boolean isInsideOption = false;
+//            boolean isCollection = false;
+//
+//            if (currentCanvas.getName().contains("Bộ tranh")) {
+//                isCollection = true;
+//            }
+//
+//            while (reader.hasNext()) {
+//
+//                XMLEvent event = reader.nextEvent();
+//
+//                if (event.isStartElement()) {
+//                    StartElement element = event.asStartElement();
+//                    String tagName = element.getName().getLocalPart().trim();
+//
+//                    if ("span".equals(tagName)) {
+//                        Attribute attribute = element.getAttributeByName(new QName("class"));
+//                        if (attribute != null) {
+//                            if (attribute.getValue().equals("price product-price")) {
+//                                event = reader.nextEvent();
+//                                if (event.isCharacters()) {
+//                                    Characters characters = event.asCharacters();
+//                                    price = characters.getData().trim();
+//                                    price = price.substring(0, price.length() - 1);
+//                                    price = price.replace(".", "").replace(",", "");
+//
+//                                    if (isCollection) { // "Bộ tranh" => chỉ lấy price => break
+//                                        listDetail.add(new Detail(StringHelper.convertStringToBigInteger(price)));
+//                                        break;
+//                                    }
+//                                }
+//                            }
+//                        }
+//                    }
+//
+//                    if ("select".equals(tagName)) {
+//                        Attribute attribute = element.getAttributeByName(new QName("id"));
+//                        if (attribute != null) {
+//                            if (attribute.getValue().equals("product-selectors")) {
+//                                isInsideOption = true;
+//                            }
+//                        }
+//                    }
+//
+//                    if ("option".equals(tagName)) {
+//                        event = reader.nextEvent();
+//                        if (event.isCharacters()) {
+//                            Characters characters = event.asCharacters();
+//                            listDetail.add(extractDetailFromString(characters.getData().trim()));
+//                        }
+//                    }
+//                } // end startElement
+//
+//                if (event.isEndElement() && isInsideOption) {
+//                    EndElement element = event.asEndElement();
+//                    String tagName = element.getName().getLocalPart().trim();
+//                    if ("select".equals(tagName)) {
+//                        isInsideOption = false;
+//                        break;
+//                    }
+//                }
+//            } // end while reader
+//
+//            // update canvas field
+//            currentCanvas.setDetail(listDetail);
+//            String designer = getDesignerFromName(currentCanvas.getName());
+//            if (!designer.isEmpty()) {
+//                currentCanvas.setDesigner(designer);
+//            }
+//        } // end for each canvas
+        category.setCanvas(listCanvas);
+
+        return category;
+    }
+
+    private List<Canvas> crawlListCanvasEachPage(String htmlContent)
+            throws UnsupportedEncodingException, XMLStreamException {
+
+        XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
+        boolean isInside = false;
+        List<Canvas> listCanvas = new ArrayList<>();
+        Canvas canvas = null;
+
+        while (reader.hasNext()) {
+
+            XMLEvent event = reader.nextEvent();
+
+            if (event.isStartElement()) {
+                StartElement element = event.asStartElement();
+                String tagName = element.getName().getLocalPart().trim();
+
+                if ("div".equals(tagName)) {
+                    Attribute attribute = element.getAttributeByName(new QName("class"));
+                    if (attribute != null) {
+                        if (attribute.getValue().equals("product-thumbnail")) {
+                            // bắt đầu 1 product
+                            isInside = true;
+                            canvas = new Canvas();
+                        } else if (attribute.getValue().equals("text-xs-center")) {
+                            // kết thúc hết tất cả các product trong page này => thoát
+                            break;
+                        }
+                    }
+                } // end if div 
+
+                if ("a".equals(tagName) && isInside) {
+                    Attribute att = element.getAttributeByName(new QName("href"));
+                    if (att != null) {
+                        canvas.setUrl(Constant.HOST_SOYN + att.getValue());
+                    }
+                    att = element.getAttributeByName(new QName("title"));
+                    if (att != null) {
+                        canvas.setName(att.getValue());
+                    }
+                }
+
+                if ("img".equals(tagName) && isInside) {
+                    Attribute att = element.getAttributeByName(new QName("src"));
+                    if (att != null) {
+                        canvas.setImage("https:" + att.getValue());
+                    }
+                    isInside = false; // sau khi lấy img thì kết thúc product này, chuyển sang product mới
+                    listCanvas.add(canvas);
+                }
+            } // end if start
+        } // end while reader
+        reader.close();
+        return listCanvas;
+    }
+
+    private List<Canvas> crawlCanvasDetail(List<Canvas> listCanvas) 
+            throws UnsupportedEncodingException, XMLStreamException{
         for (int i = 0; i < listCanvas.size(); i++) {
             List<Detail> listDetail = new ArrayList<>();
             Canvas currentCanvas = listCanvas.get(i);
@@ -97,8 +246,8 @@ public class SoynPageCrawler implements Serializable {
             System.out.println((i + 1) + " - " + url);
 
             htmlContent = "";
-            beginSign = "class=\"price-box\"";
-            endSign = "class=\"form-group form-groupx form-detail-action \"";
+            String beginSign = "class=\"price-box\"";
+            String endSign = "class=\"form-group form-groupx form-detail-action \"";
 
             htmlContent = XMLHelper.parseHTML(url, beginSign, endSign);
             htmlContent = StringHelper.refineHtml(htmlContent);
@@ -174,146 +323,9 @@ public class SoynPageCrawler implements Serializable {
                 currentCanvas.setDesigner(designer);
             }
         } // end for each canvas
-
-        category.setCanvas(listCanvas);
-
-        return category;
-
-//        ArrayList<Categories> listCategorieses = new ArrayList();
-//        listCategorieses.add(category);
-//
-//        Painting painting = new Painting();
-//        painting.setCategories(listCategorieses);
-//       
-//
-//        XMLUtilities.saveToXML("test.xml", painting);
-//        XMLUtilities.validateXMLBeforeSaveToDatabase("test.xml", painting);
-//        
-//        System.out.println("Category: " + categoryName + " has " + listCanvas.size() + " canvas");
-//        System.out.println("--------------------------------------------------");
-    }
-
-    private String getDesignerFromName(String name) {
-        if (name.contains("-")) {
-            return name.substring(name.lastIndexOf("-") + 1).trim();
-        } else if (name.contains("/")) {
-            return name.substring(name.lastIndexOf("/") + 1).trim();
-        }
-        return "";
-    }
-
-    private List<Canvas> crawlListCanvasEachPage(String htmlContent)
-            throws UnsupportedEncodingException, XMLStreamException {
-//            try {
-//                BufferedWriter writer = new BufferedWriter(new FileWriter("forDebug.txt"));
-//                writer.append(htmlContent);
-//                writer.close();
-//            } catch (Exception e) {
-//                e.printStackTrace();
-//            }
-
-        XMLEventReader reader = XMLHelper.getXMLEventReaderFromString(htmlContent);
-        boolean isInside = false;
-        List<Canvas> listCanvas = new ArrayList<>();
-        Canvas canvas = null;
-
-        while (reader.hasNext()) {
-
-            XMLEvent event = reader.nextEvent();
-
-            if (event.isStartElement()) {
-                StartElement element = event.asStartElement();
-                String tagName = element.getName().getLocalPart().trim();
-
-                if ("div".equals(tagName)) {
-                    Attribute attribute = element.getAttributeByName(new QName("class"));
-                    if (attribute != null) {
-                        if (attribute.getValue().equals("product-thumbnail")) {
-                            // bắt đầu 1 product
-                            isInside = true;
-                            canvas = new Canvas();
-                        } else if (attribute.getValue().equals("text-xs-center")) {
-                            // kết thúc hết tất cả các product trong page này => thoát
-                            break;
-                        }
-                    }
-                } // end if div 
-
-                if ("a".equals(tagName) && isInside) {
-                    Attribute att = element.getAttributeByName(new QName("href"));
-                    if (att != null) {
-                        canvas.setUrl(Constant.HOST_SOYN + att.getValue());
-                    }
-                    att = element.getAttributeByName(new QName("title"));
-                    if (att != null) {
-                        canvas.setName(att.getValue());
-                    }
-                }
-
-                if ("img".equals(tagName) && isInside) {
-                    Attribute att = element.getAttributeByName(new QName("src"));
-                    if (att != null) {
-                        canvas.setImage("https:" + att.getValue());
-                    }
-                    isInside = false; // sau khi lấy img thì kết thúc product này, chuyển sang product mới
-                    listCanvas.add(canvas);
-                }
-            } // end if start
-        } // end while reader
-        reader.close();
+        
         return listCanvas;
     }
-
-//    private void getPageCount(String url) {
-//        try {
-//            String beginSign = "class=\"pagination clearfix \"";
-//            String endSign = "</ul>";
-//
-//            boolean isInside = false;
-//            int count = 0;
-//
-//            try (BufferedReader reader = getBufferReaderFromURI(url)) {
-//                String line = null;
-//                while ((line = reader.readLine()) != null) {
-//                    updatePageCount(line);
-//                    if (line.contains(beginSign)) {
-//                        if (count == 0) {
-//                            isInside = true;
-//                        }
-//                        count++;
-//                    }
-//                    if (line.contains(endSign)) {
-//                        if (isInside) {
-//                            break;
-//                        }
-//                    }
-//                    if (isInside) {
-//                        updatePageCount(line);
-//                    }
-//                } // end while
-//            }
-//        } catch (IOException e) {
-//            Logger.getLogger(SoynPageCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-//        }
-//    }
-
-//    private void updatePageCount(String line) {
-//        String key = "page-link";
-//
-//        if (line.contains(key)) {
-//            line = line.substring(line.indexOf(key));
-//
-//            int begin = line.indexOf(">") + 1;
-//            String countPage = line.substring(begin);
-//            int end = countPage.indexOf("<");
-//            countPage = countPage.substring(0, end);
-//
-//            if (!countPage.equals("...")) {
-//                int currentCount = Integer.parseInt(countPage);
-//                this.pageCount = Math.max(currentCount, pageCount);
-//            }
-//        }
-//    }
 
     private Detail extractDetailFromString(String s) {
         String size = s.substring(0, s.indexOf("-")).trim();
@@ -328,6 +340,15 @@ public class SoynPageCrawler implements Serializable {
                 unit,
                 StringHelper.convertStringToBigInteger(price)
         );
+    }
+
+    private String getDesignerFromName(String name) {
+        if (name.contains("-")) {
+            return name.substring(name.lastIndexOf("-") + 1).trim();
+        } else if (name.contains("/")) {
+            return name.substring(name.lastIndexOf("/") + 1).trim();
+        }
+        return "";
     }
 
 }
