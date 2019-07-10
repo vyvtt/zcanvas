@@ -1,4 +1,4 @@
-package project.crawler;
+package project.crawler.mopi;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;

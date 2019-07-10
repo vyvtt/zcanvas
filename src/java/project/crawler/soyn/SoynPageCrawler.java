@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project.crawler;
+package project.crawler.soyn;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -50,7 +50,7 @@ public class SoynPageCrawler implements Serializable {
     }
 
     public Categories crawlEachPage()
-            throws UnsupportedEncodingException, XMLStreamException, XMLStreamException {
+            throws UnsupportedEncodingException, XMLStreamException {
         if (categoryName == null) {
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, new Exception("NULL categoryName"));
             return null;
@@ -89,6 +89,10 @@ public class SoynPageCrawler implements Serializable {
 //        System.out.println("--- Done getEachPage - Begin get detail of " + listCanvas.size());
         // ---------------------------------
         // Crawl each product to get detail
+//        listCanvas = crawlCanvasDetail(listCanvas);
+        
+        
+        
 //        for (int i = 0; i < listCanvas.size(); i++) {
 //            List<Detail> listDetail = new ArrayList<>();
 //            Canvas currentCanvas = listCanvas.get(i);

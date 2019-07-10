@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import project.crawler.SoynPageCrawler;
+import project.crawler.soyn.SoynPageCrawler;
 import static project.utils.XMLHelper.getBufferReaderFromURI;
 
 /**

@@ -19,14 +19,17 @@ public class Constant {
     // XML output
     public static String OUTPUT_XML_SOYN = "/WEB-INF/document/output_soyn.xml";
     public static String OUTPUT_XML_MOPI = "/WEB-INF/document/output_mopi.xml";
+    public static String OUTPUT_XML_FRAMEC = "/WEB-INF/document/output_framec.xml";
     // Config file
     public static String XML_CONFIG_SOYN = "/WEB-INF/document/config-soyn.xml";
     public static String XML_CONFIG_MOPI = "/WEB-INF/document/config-mopi.xml";
+    public static String XML_CONFIG_FRAMEC = "/WEB-INF/document/config-framec.xml";
     public static String XML_CONFIG_IMAGE = "/WEB-INF/document/config-image.xml";
     
     // Config HOST constant
     public static String HOST_SOYN = "";
     public static String HOST_MOPI = "";
+    public static String HOST_FRAMEC = "";
     // Config IMAGE constant
     public static int IMG_DIMENTION_MAX;
     public static int IMG_BUCKET_PER_DIMENSION;

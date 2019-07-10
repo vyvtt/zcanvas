@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import project.crawler.MainCrawler;
-import project.crawler.SoynMainCrawler;
+import project.crawler.soyn.SoynMainCrawler;
 import project.utils.Constant;
 
 /**

@@ -5,15 +5,19 @@
  */
 package project.crawler;
 
+import project.crawler.mopi.MopiMainCrawler;
+import project.crawler.soyn.SoynMainCrawler;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.naming.NamingException;
+import project.crawler.framec.FramecMainCrawler;
 import project.dao.CanvasDAO;
 import project.dao.CategoryDAO;
 import project.dao.DetailDAO;
@@ -29,8 +33,14 @@ import project.utils.ImageHelper;
 public class MainCrawler {
     
     public static void crawl() {
+        long startTime = System.nanoTime();
+        
         SoynMainCrawler.crawl();
         MopiMainCrawler.crawl();
+        FramecMainCrawler.crawl();
+        
+        long endTime = System.nanoTime();
+        System.out.println("Time: " + TimeUnit.NANOSECONDS.toMinutes(endTime - startTime) + " minutes");
     }
     
     public static void saveToDB(List<Categories> categories)

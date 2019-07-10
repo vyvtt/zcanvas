@@ -24,6 +24,7 @@ import javax.xml.stream.events.Attribute;
 import javax.xml.stream.events.Characters;
 import javax.xml.stream.events.StartElement;
 import javax.xml.stream.events.XMLEvent;
+import project.crawler.framec.FramecMainCrawler;
 import project.jaxb.Canvas;
 import project.jaxb.Detail;
 import project.jaxb.Painting;
@@ -39,7 +40,6 @@ import project.utils.XMLHelper;
 public class Demo {
 
     public static void main(String[] args) {
-        
     }
 
     

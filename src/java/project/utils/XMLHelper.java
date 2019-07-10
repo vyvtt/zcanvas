@@ -48,8 +48,8 @@ public class XMLHelper implements Serializable {
 
     public static BufferedReader getBufferReaderFromURI(String uri)
             throws MalformedURLException, IOException {
-        URL url = new URL(uri);
         System.setProperty("https.protocols", "TLSv1,TLSv1.1,TLSv1.2");
+        URL url = new URL(uri);
         HttpURLConnection con = (HttpURLConnection)url.openConnection();
         con.setRequestProperty("User-Agent", Constant.USER_AGENT);
         con.connect();
@@ -92,7 +92,7 @@ public class XMLHelper implements Serializable {
 
             validator.validate(new SAXSource(inputFile));
 
-            System.out.println("Done validate -> save to DB here");
+            System.out.println("Done validate");
         } catch (IOException | JAXBException | SAXException e) {
             Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
             e.printStackTrace();

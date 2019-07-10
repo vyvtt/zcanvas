@@ -45,29 +45,76 @@ public class CategoriesHelper {
 //        giáo dục
 //        âm nhạc
 //    x    ẩm thực
+
+
+//Tranh Premium x
+//Typography    x
+//Saigon        x
+//Graphics
+//Landscape     x
+//Botanicals    x
+//Abstract      x
+//Animal        x
+//Lifestyle     x
+//Monochrome
         
         String name = rawName.toLowerCase();
         
-        if (name.contains("art quote") || name.contains("quotes") || name.contains("typography")) {
+        if (
+                name.contains("art quote") || 
+                name.contains("quotes") || 
+                name.contains("typography")) {
             return "Quotes, typography";
-        } else if (name.contains("food, drink, cooking, kitchen") || name.contains("ẩm thực")) {
+        } else if (
+                name.contains("food, drink, cooking, kitchen") || 
+                name.contains("ẩm thực")) {
             return "Ẩm thực";
-        } else if (name.contains("flower, tree, tropical") || name.contains("thiên nhiên")) {
+        } else if (
+                name.contains("flower, tree, tropical") || 
+                name.contains("botanicals") || 
+                name.contains("thiên nhiên")) {
             return "Thiên nhiên";
-        } else if (name.contains("animal") || name.contains("động vật")) {
+        } else if (
+                name.contains("animal") || 
+                name.contains("động vật")) {
             return "Động vật";
-        } else if (name.contains("landscape, nature, city") || name.contains("du lịch")) {
+        } else if (
+                name.contains("landscape, nature, city") || 
+                name.contains("saigon") || 
+                name.contains("landscape") || 
+                name.contains("du lịch")) {
             return ("Thành phố, landscape");
-        } else if (name.contains("abstract, geometric") || name.contains("hội họa") || name.contains("nghệ thuật")) {
+        } else if (
+                name.contains("abstract, geometric") || 
+                name.contains("abstract") ||
+                name.contains("hội họa") || 
+                name.contains("nghệ thuật")) {
             return "Trừu tượng, nghệ thuật, hội họa";
-        } else if (name.contains("spa") || name.contains("cửa hàng")) {
+        } else if (
+                name.contains("spa") || 
+                name.contains("cửa hàng")) {
             return "Tranh treo cửa hàng";
-        } else if (name.contains("mopi office")) {
+        } else if (
+                name.contains("mopi office")) {
             return "Tranh treo văn phòng";
-        } else if (name.contains("cao minh huy") || name.contains("mix and match") || name.contains("lê rin") || name.contains("đốm illustration")) {
+        } else if (
+                name.contains("cao minh huy") || 
+                name.contains("mix and match") || 
+                name.contains("lê rin") || 
+                name.contains("đốm illustration")) {
             return "BST " + rawName;
-        } else if (name.contains("fashion, life")) {
+        } else if (
+                name.contains("fashion, life") ||
+                name.contains("lifestyle")) {
             return "Cuộc sống";
+        } else if (
+                name.contains("monochrome")) {
+            return "Tranh đơn sắc";
+        } else if (
+                name.contains("digital art") ||
+                name.contains("lowpoly") ||
+                name.contains("graphics")) {
+            return "Tranh Digital | Graphics";
         } else {
             return rawName;
         }

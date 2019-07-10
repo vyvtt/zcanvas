@@ -29,6 +29,7 @@ public class ConfigHelper {
         // Get host from config file
         HOST_SOYN = getHostConfigFromFile(XML_CONFIG_SOYN);
         HOST_MOPI = getHostConfigFromFile(XML_CONFIG_MOPI);
+        HOST_FRAMEC = getHostConfigFromFile(XML_CONFIG_FRAMEC);
     }
     
     public static void configImage() {
@@ -42,9 +43,11 @@ public class ConfigHelper {
         
         OUTPUT_XML_SOYN = REAL_PATH + OUTPUT_XML_SOYN;
         OUTPUT_XML_MOPI = REAL_PATH + OUTPUT_XML_MOPI;
+        OUTPUT_XML_FRAMEC = REAL_PATH + OUTPUT_XML_FRAMEC;
         
         XML_CONFIG_SOYN = REAL_PATH + XML_CONFIG_SOYN;
         XML_CONFIG_MOPI = REAL_PATH + XML_CONFIG_MOPI;
+        XML_CONFIG_FRAMEC = REAL_PATH + XML_CONFIG_FRAMEC;
         XML_CONFIG_IMAGE = REAL_PATH + XML_CONFIG_IMAGE;
     }
 

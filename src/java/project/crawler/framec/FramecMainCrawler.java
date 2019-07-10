@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project.crawler;
+package project.crawler.framec;
 
 import java.io.IOException;
 import java.io.Serializable;
@@ -16,43 +16,40 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.naming.NamingException;
 import javax.xml.stream.XMLStreamException;
+import project.crawler.MainCrawler;
+import project.crawler.soyn.SoynCategoriesCrawler;
+import project.crawler.soyn.SoynMainCrawler;
+import project.crawler.soyn.SoynPageCrawler;
 import project.jaxb.Categories;
 import project.jaxb.Painting;
 import project.utils.Constant;
-import project.utils.StringHelper;
 import project.utils.XMLHelper;
 
 /**
  *
  * @author thuyv
  */
-public class SoynMainCrawler implements Serializable {
+public class FramecMainCrawler implements Serializable {
 
     public static void crawl() {
         try {
             // Crawl list categories
-            SoynCategoriesCrawler categoriesCrawler = new SoynCategoriesCrawler();
+            FramecCategoriesCrawler categoriesCrawler = new FramecCategoriesCrawler();
             Map<String, String> categories = categoriesCrawler.crawlCategories();
-            categories.remove("https://soyncanvas.vn/tranh-treo-tuong");
-
-            categories.entrySet().forEach((category) -> {
-                System.out.println(category.getKey() + " - " + category.getValue());
-            });
 
             Painting painting = new Painting();
 
             for (Map.Entry<String, String> category : categories.entrySet()) {
-
-                System.out.println(category.getKey() + " - " + category.getValue());
-                SoynPageCrawler crawler = new SoynPageCrawler(category.getKey(), category.getValue());
+                
+                FramecPageCrawler crawler = new FramecPageCrawler(category.getKey(), category.getValue());
 
                 List<Categories> c = new ArrayList<>();
                 Categories crawlCategory = crawler.crawlEachPage();
                 c.add(crawlCategory);
                 painting.setCategories(c);
-                
-                XMLHelper.saveToXML(Constant.OUTPUT_XML_SOYN, painting);
-                XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_SOYN, painting);
+
+                XMLHelper.saveToXML(Constant.OUTPUT_XML_FRAMEC, painting);
+                XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_FRAMEC, painting);
                 System.out.println("----------------");
 
                 try {
@@ -60,10 +57,9 @@ public class SoynMainCrawler implements Serializable {
                 } catch (IOException | SQLException | NamingException e) {
                     Logger.getLogger(SoynMainCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
                 }
-                
+
                 painting = new Painting();
             }
-
         } catch (UnsupportedEncodingException | XMLStreamException e) {
             Logger.getLogger(SoynMainCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }

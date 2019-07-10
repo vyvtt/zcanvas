@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project.crawler;
+package project.crawler.mopi;
 
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;

@@ -368,23 +368,33 @@ public class ImageHelper {
     }
 
     public static int[] rgb2lab(int R, int G, int B) {
-        //http://www.brucelindbloom.com
 
         float r, g, b, X, Y, Z, fx, fy, fz, xr, yr, zr;
         float Ls, as, bs;
+        
+        // Constant
         float eps = 216.f / 24389.f;
         float k = 24389.f / 27.f;
 
-        float Xr = 0.964221f;  // reference white D50
+        // White D50 (standard daylight) trong hệ XYZ 
+        // -> hệ số illuminant (chiếu sáng) cần thiết khi convert CIELab (Chromatic Adaptation)
+        // ref: http://www.brucelindbloom.com/index.html?Eqn_ChromAdapt.html
+        float Xr = 0.964221f;  
         float Yr = 1.0f;
         float Zr = 0.825211f;
 
-        // RGB to XYZ
-        r = R / 255.f; //R 0..1
-        g = G / 255.f; //G 0..1
-        b = B / 255.f; //B 0..1
+        // RGB to XYZ ---------------------------------------
+        // http://www.brucelindbloom.com/index.html?Eqn_RGB_to_XYZ.html
+        // 1. Inverse Companding
+        // 2. 
+        
+        // input RGB có range [0;255] --> convert thành range [0;1]
+        r = R / 255.f;
+        g = G / 255.f;
+        b = B / 255.f;
 
-        // assuming sRGB (D65)
+        // Giả định sử dụng hệ standard RGB aka sRGB (D65)
+        // Inverse sRGB Companding
         if (r <= 0.04045) {
             r = r / 12;
         } else {
@@ -402,7 +412,15 @@ public class ImageHelper {
         } else {
             b = (float) Math.pow((b + 0.055) / 1.055, 2.4);
         }
-
+        
+        /**
+         * Matrix: http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
+         * sRGB and D50 white
+         * 
+         * X         0.436052025     0.385081593     0.143087414     R
+         * Y    =    0.222491598     0.71688606      0.060621486     G
+         * Z         0.013929122     0.097097002     0.71418547      B
+         */
         X = 0.436052025f * r + 0.385081593f * g + 0.143087414f * b;
         Y = 0.222491598f * r + 0.71688606f * g + 0.060621486f * b;
         Z = 0.013929122f * r + 0.097097002f * g + 0.71418547f * b;
@@ -452,6 +470,7 @@ public class ImageHelper {
         Color color1 = new Color(a);
         Color color2 = new Color(b);
 
+        // Returns the color r,g,b component in the range 0-255 in the default sRGB
         r1 = color1.getRed();
         g1 = color1.getGreen();
         b1 = color1.getBlue();
@@ -461,7 +480,11 @@ public class ImageHelper {
 
         int[] lab1 = rgb2lab(r1, g1, b1);
         int[] lab2 = rgb2lab(r2, g2, b2);
-        return Math.sqrt(Math.pow(lab2[0] - lab1[0], 2) + Math.pow(lab2[1] - lab1[1], 2) + Math.pow(lab2[2] - lab1[2], 2));
+        
+        return Math.sqrt(
+                  Math.pow(lab2[0] - lab1[0], 2) 
+                + Math.pow(lab2[1] - lab1[1], 2) 
+                + Math.pow(lab2[2] - lab1[2], 2));
     }
 
     // inputPalatte, currentPalette
