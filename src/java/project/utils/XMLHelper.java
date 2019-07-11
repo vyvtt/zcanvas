@@ -91,8 +91,8 @@ public class XMLHelper implements Serializable {
             InputSource inputFile = new InputSource(new BufferedReader(new FileReader(xmlFilePath)));
 
             validator.validate(new SAXSource(inputFile));
-
             System.out.println("Done validate");
+            
         } catch (IOException | JAXBException | SAXException e) {
             Logger.getLogger(XMLHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
             e.printStackTrace();

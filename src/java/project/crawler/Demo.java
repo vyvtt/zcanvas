@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ThreadLocalRandom;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
@@ -40,6 +41,18 @@ import project.utils.XMLHelper;
 public class Demo {
 
     public static void main(String[] args) {
+        
+        int randomNum = ThreadLocalRandom.current().nextInt(1, 99 + 1);
+        System.out.println("random " + randomNum);
+
+        System.out.println(String.format("%04d", randomNum));
+        
+        
+        String url = "https://www.millionshade.com/color-palette-" + String.format("%04d", randomNum) + "/";
+        String htmlContent = XMLHelper.parseHTML(url, "class=\"site-content clr\"", "class=\"post-tags clr\"");
+        htmlContent = StringHelper.refineHtml(htmlContent);
+        
+        System.out.println(htmlContent);
     }
 
     

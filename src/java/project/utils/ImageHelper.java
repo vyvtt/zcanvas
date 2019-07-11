@@ -490,8 +490,12 @@ public class ImageHelper {
     // inputPalatte, currentPalette
     public static double comparePalette2Palette(List<String> palette1, List<String> palette2) {
 
+        int tolerance = Constant.IMG_DELTA_E_TOLERANCE;
+        
         if (palette2.size() <= 2) {
             return -1;
+        } else if (palette2.size() == 3) {
+            tolerance = 10;
         }
 
         int count = 0;
@@ -501,7 +505,7 @@ public class ImageHelper {
             for (int j = 0; j < palette2.size(); j++) {
                 double diff = getColorDifference(Integer.parseInt(palette1.get(i)), Integer.parseInt(palette2.get(j)));
                 totalDeltaE += diff;
-                if (diff <= Constant.IMG_DELTA_E_TOLERANCE) {
+                if (diff <= tolerance) {
                     j = palette2.size();
                     count++;
                 }

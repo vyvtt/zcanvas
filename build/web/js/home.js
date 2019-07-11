@@ -11,13 +11,71 @@
         xslLocation: null,
         xslHome: null,
 
-        pageSize: 9
+        pageSize: 9,
+
+        colorChooser: [
+            // red
+            ["#B71C1C",
+                "#E53935",
+                "#E57373",
+                "#FFCDD2"],
+            // purple
+            ["#4A148C",
+                "#8E24AA",
+                "#BA68C8",
+                "#E1BEE7"],
+            // deep blue
+            ["#1A237E",
+                "#3949AB",
+                "#5C6BC0",
+                "#C5CAE9"],
+            // blue
+            ["#0D47A1",
+                "#1E88E5",
+                "#64B5F6",
+                "#BBDEFB"],
+            // cynatic
+            ["#004D40",
+                "#00897B",
+                "#4DB6AC",
+                "#B2DFDB"],
+            // green
+            ["#1B5E20",
+                "#43A047",
+                "#81C784",
+                "#A5D6A7"],
+            // yellow green
+            ["#827717",
+                "#C0CA33",
+                "#DCE775",
+                "#F0F4C3"],
+            // yellow
+            ["#F57F17",
+                "#FDD835",
+                "#FFF176",
+                "#FFF9C4"],
+            // orange
+            ["#E65100",
+                "#FB8C00",
+                "#FFB74D",
+                "#FFE0B2"],
+            // brown
+            ["#3E2723",
+                "#6D4C41",
+                "#A1887F",
+                "#D7CCC8"],
+            // white
+            ["#212121",
+                "#757575",
+                "#E0E0E0",
+                "#FAFAFA"]
+        ]
     };
     var homeView = {
         init: function () {
             octopus.getLocations();
 
-            // VALIDATE -----------
+            // VALIDATE --------------------------------------------------------
             var form = document.getElementById('form');
             form.addEventListener('submit', function (evt) {
                 evt.preventDefault();
@@ -38,38 +96,87 @@
                 var data = new FormData(form);
                 octopus.submitForm(data);
             });
-            
-            // RADIO TYPE -----------
+
+            // RADIO TYPE ------------------------------------------------------
             var spanTypeImage = document.getElementById("span-type-image");
             var spanTypeColor = document.getElementById("span-type-color");
-            
+            var previewImage = document.getElementById('previewImage');
+            var previewColor = document.getElementById('previewColor');
+            var divClose = document.getElementById('closePreview');
+            // init
+            spanTypeImage.style.display = 'block';
+
+            // show input image + hide all preview/close button
             var lbTypeImage = document.getElementById("lbTypeImage");
             lbTypeImage.addEventListener('click', function () {
-                spanTypeImage.style.display = 'block';
-                spanTypeColor.style.display = 'none';
+
+                if (!document.getElementById('type1Image').checked) {
+                    spanTypeImage.style.display = 'block';
+                    spanTypeColor.style.display = 'none';
+
+                    divClose.style.display = 'none';
+                    previewImage.style.display = 'none';
+                    previewColor.style.display = 'none';
+
+                    var palette = document.getElementById('palette');
+                    palette.style.display = 'none';
+                }
             });
-            
+            // show input color + hide all preview/close button
             var lbTypeColor = document.getElementById("lbTypeColor");
             lbTypeColor.addEventListener('click', function () {
-                spanTypeImage.style.display = 'none';
-                spanTypeColor.style.display = 'block';
+                if (!document.getElementById('type1Color').checked) {
+                    spanTypeImage.style.display = 'none';
+                    spanTypeColor.style.display = 'block';
+
+                    divClose.style.display = 'none';
+                    previewImage.style.display = 'none';
+                    previewColor.style.display = 'none';
+
+                    var palette = document.getElementById('palette');
+                    palette.style.display = 'none';
+                }
             });
-            
+
+            // CLOSE -----------------------------------------------------------
+            divClose.addEventListener('click', function () {
+                spanTypeImage.style.display = 'block';
+                spanTypeColor.style.display = 'none';
+
+                divClose.style.display = 'none';
+                previewImage.style.display = 'none';
+                previewColor.style.display = 'none';
+
+                var palette = document.getElementById('palette');
+                palette.style.display = 'none';
+            });
+
+            // COLOR CHOOSER ---------------------------------------------------
+            homeModel.colorChooser.forEach(function (colors) {
+                var span = document.createElement("span");
+                span.setAttribute("class", "span-color-chooser");
+
+                colors.forEach(function (color) {
+                    var colorRadio = document.createElement("input");
+                    colorRadio.setAttribute("type", "radio");
+                    colorRadio.setAttribute("id", color);
+                    colorRadio.setAttribute("name", "mColor");
+                    colorRadio.setAttribute("value", color);
+                    var colorLabel = document.createElement("label");
+                    colorLabel.setAttribute("for", color);
+                    colorLabel.setAttribute("class", "label-color");
+                    colorLabel.setAttribute("style", "background-color:" + color + ";");
+                    span.appendChild(colorRadio);
+                    span.appendChild(colorLabel);
+
+                });
+                spanTypeColor.appendChild(span);
+            });
+
         },
         renderLocation: function () {
             if (document.implementation && document.implementation.createDocument)
             {
-//                var scripts = document.getElementsByTagName("script");
-//                var src = scripts[scripts.length - 1].src;
-//                console.log(src);
-//                
-//                xslUrl = "/ZCanvas/document/categories.xml";
-//                var category = loadXML(xslUrl);
-//                console.log('load test xml');
-//                console.log(category);
-//                var parser = new DOMParser();
-//                var xmlDoc = parser.parseFromString('<categories><category><id>1</id><name>BST Sài Gòn</name></category><category><id>2</id><name>Quotes, typography</name></category><category><id>3</id><name>Ẩm thực</name></category><category><id>4</id><name>BTS Cao Minh Huy</name></category><category><id>5</id><name>BTS Mix and Match</name></category><category><id>6</id><name>Cuộc sống</name></category><category><id>7</id><name>Thiên nhiên</name></category><category><id>8</id><name>BTS Lê Rin</name></category><category><id>9</id><name>Động vật</name></category><category><id>10</id><name>Thành phố, landscape</name></category><category><id>11</id><name>Trừu tượng, nghệ thuật, hội họa</name></category><category><id>12</id><name>BTS Đốm Illustration</name></category><category><id>13</id><name>Tranh treo cửa hàng</name></category><category><id>14</id><name>Xe Cộ</name></category><category><id>15</id><name>Tranh treo văn phòng</name></category><category><id>16</id><name>Văn Hóa</name></category><category><id>17</id><name>Digital Art</name></category><category><id>18</id><name>Phim Ảnh</name></category><category><id>19</id><name>Bản Đồ</name></category><category><id>20</id><name>Lowpoly</name></category><category><id>21</id><name>Giáo Dục</name></category><category><id>22</id><name>Âm Nhạc</name></category></categories>', "application/xml");
-
                 xsltProcessor = new XSLTProcessor();
                 xsltProcessor.importStylesheet(octopus.getXslLocation());
                 resultDocument = xsltProcessor.transformToFragment(octopus.getXmlLocation(), document);
@@ -186,7 +293,7 @@
                     pRadio.setAttribute("type", "radio");
                     pRadio.setAttribute("id", "p" + i);
                     pRadio.setAttribute("name", "rbPage");
-                    
+
                     if (i == 0) {
                         pRadio.setAttribute("checked", "checked");
                     }
@@ -194,7 +301,7 @@
                     var pLabel = document.createElement("label");
                     pLabel.setAttribute("for", "p" + i);
                     pLabel.setAttribute("class", "label-page");
-                    
+
                     pLabel.innerHTML = i + 1;
 
 //                    var pP = document.createElement("p");

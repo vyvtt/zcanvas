@@ -27,10 +27,9 @@
                     <img src="image/loading.gif"/>
                 </div>
 
-                <div class="div-left" id="div-form">
-                    <form method="POST" action="ProcessServlet" enctype="multipart/form-data" id="form" name="mForm">
+                <form method="POST" action="ProcessServlet" enctype="multipart/form-data" id="form" name="mForm">
 
-<!--                        <br>-->
+                    <div class="div-left" id="div-form">
                         <h3>Chọn loại tranh</h3>
                         <span class="span-error" id="errLocation"></span>
                         <div class="div-location-wrap" id="test"></div>
@@ -44,7 +43,7 @@
                         <span class="span-error" id="errImage"></span>
 
                         <div class="div-type">
-                            <input id="type1Image" type="radio" name="rbType" value="typeImage"/>
+                            <input id="type1Image" type="radio" name="rbType" value="typeImage" checked="checked"/>
                             <label id="lbTypeImage" for="type1Image" class="label-type">Upload hình ảnh</label>
 
                             <input id="type1Color" type="radio" name="rbType" value="type1Color"/>
@@ -53,33 +52,40 @@
 
                         <br/>
 
-                        <span id="span-type-image" style="display: none;">
-                            <input id="file" type="file" name="mFile" accept="image/*" onchange="loadPreviewImg(event)"/>
-                            <label for="file" class="input-file-label">Choose an image</label>
-                        </span>
-
-
-                        <span id="span-type-color" style="display: none;">
-                            <input id="color" type="color" name="mColor" onchange="loadPreviewColor(this)"/>
-                            <label for="color" class="input-file-label">Choose a color</label>
-                        </span>
-
                         <input id="btn-submit" type="submit"/>
                         <div>
                             <label for="btn-submit" class="input-submit-label">Start</label>
                         </div>
 
                         <input type="hidden" value="match" name="btAction"/>
+                    </div>
 
-                    </form>
-                </div>
+                    <div class="div-right">
 
-                <div class="div-right">
-                    <img id="previewImage" class="preview" src="image/placeholder.png"/>
-                    <span class="span-palette" id="palette"></span>
-                    <span id="previewColor" class="previewColor"/>
-                </div>
+                        <span id="span-type-image" style="display: none;">
+                            <input id="file" type="file" name="mFile" accept="image/*" onchange="loadPreviewImg(event)"/>
+                            <label for="file" class="input-file-label">Choose an image</label>
+                        </span>
 
+                        <span id="span-type-color" style="display: none;">                            
+                            <!--<input id="color" type="color" name="mColor" onchange="loadPreviewColor(this)"/>-->
+                            <!--<label for="color" class="input-file-label">Choose a color</label>-->
+                        </span>
+
+                        <div id="closePreview" class="div-close" style="display: none;">
+                            <img src="image/close.svg"/>
+                        </div>
+                        <br style="clear: both;">
+
+                        <span id="span-preview-image" style="display: none;">
+                            <img id="previewImage" class="preview" src="image/placeholder.png"/>
+                            <span class="span-palette" id="palette"></span>
+                        </span>
+                        
+                        <span id="previewColor" class="previewColor"/>
+                    </div>
+
+                </form>
                 <br style="clear: both;">
             </div>
 

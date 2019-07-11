@@ -98,6 +98,16 @@ function loadXML(filePath) {
 }
 
 function loadPreviewImg(event) {
+    var spanInput = document.getElementById('span-type-image');
+    spanInput.style.display = 'none';
+
+    var spanAll = document.getElementById('span-preview-image');
+    spanAll.style.display = 'block';
+
+    var divClose = document.getElementById('closePreview');
+    divClose.style.display = 'block';
+    console.log(divClose);
+
     var previewImage = document.getElementById('previewImage');
     previewImage.style.display = 'inline-block';
     previewImage.src = URL.createObjectURL(event.target.files[0]);
@@ -111,7 +121,7 @@ function loadPreviewImg(event) {
 
 function loadPreviewColor(element) {
     element.className = "change";
-    
+
     var previewColor = document.getElementById('previewColor');
     previewColor.style.display = 'inline-block';
     previewColor.style.background = element.value;
@@ -131,7 +141,8 @@ function colorOnChange(element) {
 function validateForm() {
     var mRadio = document.getElementsByName("rbLocation");
     var mFile = document.forms["mForm"]["mFile"].value;
-    var mColor = document.forms["mForm"]["mColor"];
+//    var mColor = document.forms["mForm"]["mColor"];
+    var mColor = document.getElementsByName("mColor");
     var errLocation = document.getElementById("errLocation");
     var errImage = document.getElementById("errImage");
 
@@ -171,11 +182,22 @@ function validateForm() {
         }
     } else {
         // validate color
-        var change = mColor.className;
-        console.log('class name: ' + change);
-        if (change == 'change') {
-            validImg = true;
-        } else {
+//        var change = mColor.className;
+//        console.log('class name: ' + change);
+//        if (change == 'change') {
+//            validImg = true;
+//        } else {
+//            errImage.innerHTML = 'Please choose a color!';
+//        }
+        // new color validator
+        while (!validImg && i < mColor.length) {
+            if (mColor[i].checked) {
+                validImg = true;
+                break;
+            }
+            i++;
+        }
+        if (!validImg) {
             errImage.innerHTML = 'Please choose a color!';
         }
     }
