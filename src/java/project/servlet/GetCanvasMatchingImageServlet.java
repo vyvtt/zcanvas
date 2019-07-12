@@ -92,8 +92,7 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
                     // count result by category
                     for (Integer keyId : canvas.getCanvasCategories()) {
                         mapCategoryCount.put(keyId, mapCategoryCount.get(keyId) + 1);
-                    }
-
+                    } 
                     result.add(canvas);
                 }
             }

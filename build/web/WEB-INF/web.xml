@@ -48,6 +48,10 @@
         <servlet-name>GetCanvasMatchingColorServlet</servlet-name>
         <servlet-class>project.servlet.GetCanvasMatchingColorServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>InitPalatteServlet</servlet-name>
+        <servlet-class>project.servlet.InitPalatteServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ProcessServlet</servlet-name>
         <url-pattern>/ProcessServlet</url-pattern>
@@ -83,6 +87,10 @@
     <servlet-mapping>
         <servlet-name>GetCanvasMatchingColorServlet</servlet-name>
         <url-pattern>/GetCanvasMatchingColorServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>InitPalatteServlet</servlet-name>
+        <url-pattern>/InitPalatteServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

@@ -207,7 +207,7 @@ public class ImageHelper {
                 && (checkRGBArray[2] > (baseB - tolerance) && checkRGBArray[2] < (baseB + tolerance));
     }
 
-    private static List<int[]> getPixelFromImage(BufferedImage image, boolean getBackground) {
+    public static List<int[]> getPixelFromImage(BufferedImage image, boolean getBackground) {
 
         if (image == null) {
             System.out.println("Null BufferedImage");
@@ -333,6 +333,7 @@ public class ImageHelper {
             paletteString.append(";");
 
         }
+        System.out.println("in: " + paletteString.toString());
         return paletteString.toString();
     }
 
@@ -492,9 +493,9 @@ public class ImageHelper {
 
         int tolerance = Constant.IMG_DELTA_E_TOLERANCE;
         
-        if (palette2.size() <= 2) {
+        if (palette2.size() <= 3) {
             return -1;
-        } else if (palette2.size() == 3) {
+        } else if (palette2.size() == 4) {
             tolerance = 10;
         }
 

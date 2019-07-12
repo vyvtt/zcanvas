@@ -7,22 +7,19 @@ package project.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
-import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import static project.utils.Constant.*;
+import javax.servlet.http.HttpSession;
+import project.miscellaneous.PalatteData;
 
 /**
  *
  * @author thuyv
  */
-@MultipartConfig
-public class ProcessServlet extends HttpServlet {
+public class InitPalatteServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,46 +33,18 @@ public class ProcessServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
+        try (PrintWriter out = response.getWriter()) {
 
-//        String url = JSP_HOME;
-        String url = "InitPalatteServlet";
-        String btn = request.getParameter("btAction");
-
-        try {
-            if (btn == null) {
-                // do nothing
-            } else if (btn.equals("match")) {
-                String type = request.getParameter("rbType");
-                
-                if (type.equals("typeImage")) {
-                    url = SERVLET_GET_CANVAS_MATCHING_IMG;
-                } else {
-                    url = SERVLET_GET_CANVAS_MATCHING_COLOR;
-                }
-            } else if (btn.equals("crawl")) {
-                url = SERVLET_CRAWL;
-            } else if (btn.equals("updateLocation")) {
-                url = SERVLET_UPDATE_LOCATION;
-            } else if (btn.equals("admin")) {
-                url = SERVLET_GET_LOCATION_CATEGORY;
-            } else if (btn.equals("initLocation")) {
-                url = SERVLET_HOME;
-            } else if (btn.equals("addLocation")) {
-                url = SERVLET_ADD_LOCATION;
-            } else if (btn.equals("deleteLocation")) {
-                url = SERVLET_DELETE_LOCATION;
+            if (PalatteData.isReady()) {
+                System.out.println("ready");
+//                HttpSession session = request.getSession();
+                request.setAttribute("DAILY_CANVAS", PalatteData.topCanvas);
+                request.setAttribute("DAILY_IMG", PalatteData.palatteImage);
+                request.setAttribute("DAILY_COLORS", PalatteData.palatteColor);
             }
 
-        } catch (Exception e) {
-            Logger.getLogger(ProcessServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-        } finally {
-
-            System.out.println("URL: " + url);
-            RequestDispatcher rd = request.getRequestDispatcher(url);
+            RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
             rd.forward(request, response);
-
-            out.close();
         }
     }
 

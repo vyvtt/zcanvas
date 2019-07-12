@@ -81,7 +81,7 @@
                             <img id="previewImage" class="preview" src="image/placeholder.png"/>
                             <span class="span-palette" id="palette"></span>
                         </span>
-                        
+
                         <span id="previewColor" class="previewColor"/>
                     </div>
 
@@ -102,6 +102,29 @@
             <div class="div-result-wrap">
                 <div id="result"></div>
             </div>
+
+            <hr/>
+
+            <c:set var="pImg" value="${requestScope.DAILY_IMG}"/>
+            <c:if test="${not empty pImg}">
+                <img src="${pImg}" height="200px" width="auto"/>
+            </c:if>
+
+            <c:set var="pColor" value="${requestScope.DAILY_COLORS}"/>
+            <c:if test="${not empty pColor}">
+                <c:forEach var="color" items="${pColor}">
+                    <div style="width: 50px; height: 50px; background-color: ${color}; display: inline-block"></div>
+                </c:forEach>
+            </c:if>    
+
+            <br style="clear: both;"/>
+
+            <c:set var="pCanvas" value="${requestScope.DAILY_CANVAS}"/>
+            <c:if test="${not empty pCanvas}">
+                <c:forEach var="canvas" items="${pCanvas}">
+                    <img src="${canvas.image}" height="200px" width="auto"/>
+                </c:forEach>
+            </c:if>   
         </div>
 
     </body>
