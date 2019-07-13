@@ -23,6 +23,7 @@ import java.util.logging.Logger;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
+import static project.miscellaneous.PalatteData.palatteImage;
 import project.utils.Constant;
 import project.utils.ImageHelper;
 
@@ -36,8 +37,19 @@ public class Demo {
     public static String palatteDes;
 
     public static void main(String[] args) {
+        
+        String s = "{\"id\":\"sAFsgeCmXEc\",\"created_at\":\"2016-04-22T18:55:14-04:00\",\"updated_at\":\"2019-07-08T19:10:29-04:00\",\"width\":2947,\"height\":2448,\"color\":\"#FDF9F7\",\"description\":null,\"alt_description\":\"round white table with black chairs\",\"urls\":{\"raw\":\"https://images.unsplash.com/photo-1461365570812-b7d5ebe71766?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjgxMDk1fQ\",\"full\":\"https://images.unsplash.com/photo-1461365570812-b7d5ebe71766?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjgxMDk1fQ\",\"regular\":\"https://images.unsplash.com/photo-1461365570812-b7d5ebe71766?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjgxMDk1fQ\",\"small\":\"https://images.unsplash.com/photo-1461365570812-b7d5ebe71766?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjgxMDk1fQ\",\"thumb\":\"https://images.unsplash.com/photo-1461365570812-b7d5ebe71766?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjgxMDk1fQ\"},\"links\":{\"self\":\"https://api.unsplash.com/photos/sAFsgeCmXEc\",\"html\":\"https://unsplash.com/photos/sAFsgeCmXEc\",\"download\":\"https://unsplash.com/photos/sAFsgeCmXEc/download\",\"download_location\":\"https://api.unsplash.com/photos/sAFsgeCmXEc/download\"},\"categories\":[],\"sponsored\":false,\"sponsored_by\":null,\"sponsored_impressions_id\":null,\"likes\":138,\"liked_by_user\":false,\"current_user_collections\":[],\"user\":{\"id\":\"Bep1M76PM2g\",\"updated_at\":\"2019-07-03T16:50:27-04:00\",\"username\":\"mattbaxter\",\"name\":\"Matt Baxter\",\"first_name\":\"Matt\",\"last_name\":\"Baxter\",\"twitter_username\":null,\"portfolio_url\":\"https://mbaxter.vsco.co\",\"bio\":\"Christ Follower | Husband | Father\",\"location\":\"Illinois\",\"links\":{\"self\":\"https://api.unsplash.com/users/mattbaxter\",\"html\":\"https://unsplash.com/@mattbaxter\",\"photos\":\"https://api.unsplash.com/users/mattbaxter/photos\",\"likes\":\"https://api.unsplash.com/users/mattbaxter/likes\",\"portfolio\":\"https://api.unsplash.com/users/mattbaxter/portfolio\",\"following\":\"https://api.unsplash.com/users/mattbaxter/following\",\"followers\":\"https://api.unsplash.com/users/mattbaxter/followers\"},\"profile_image\":{\"small\":\"https://images.unsplash.com/profile-1461366222921-dcd32a2e7284?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=32&w=32\",\"medium\":\"https://images.unsplash.com/profile-1461366222921-dcd32a2e7284?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=64&w=64\",\"large\":\"https://images.unsplash.com/profile-1461366222921-dcd32a2e7284?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&cs=tinysrgb&fit=crop&h=128&w=128\"},\"instagram_username\":null,\"total_collections\":5,\"total_likes\":10,\"total_photos\":14,\"accepted_tos\":false},\"exif\":{\"make\":\"Apple\",\"model\":\"iPhone\",\"exposure_time\":\"1/977\",\"aperture\":\"2.2\",\"focal_length\":\"4.2\",\"iso\":32},\"views\":1756895,\"downloads\":7553}";
+        
+        Pattern pattern = Pattern.compile("\"id\"\\s*:\\s*\"([^,]*)\",");
+        Matcher matcher = pattern.matcher(s);
+        
+        if (matcher.find()) {
+            System.out.println(matcher.group(1));            
+        } else {
+            System.out.println("not found!");
+        }
 
-        parseJSON("");
+//        parseJSON("");
 
 //        try {
 //            String urlStr = "https://api.unsplash.com/photos/random";

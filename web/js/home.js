@@ -7,9 +7,11 @@
 
         xmlLocation: null,
         xmlCanvas: null,
+        xmlSpotlight: null,
 
         xslLocation: null,
         xslHome: null,
+        xslSpotlight: null,
 
         pageSize: 9,
 
@@ -74,6 +76,7 @@
     var homeView = {
         init: function () {
             octopus.getLocations();
+            octopus.getSpotlight();
 
             // VALIDATE --------------------------------------------------------
             var form = document.getElementById('form');
@@ -187,6 +190,23 @@
                     myNode.removeChild(myNode.firstChild);
                 }
                 myNode.appendChild(resultDocument);
+            }
+        },
+        renderSpotlight: function () {
+            if (document.implementation && document.implementation.createDocument)
+            {
+                xsltProcessor = new XSLTProcessor();
+                xsltProcessor.importStylesheet(octopus.getXslSpotlight());
+                resultDocument = xsltProcessor.transformToFragment(octopus.getXmlSpotlight(), document);
+                console.log(resultDocument);
+
+                var myNode = document.getElementById("spotlight");
+                while (myNode.firstChild) {
+                    myNode.removeChild(myNode.firstChild);
+                }
+                myNode.appendChild(resultDocument);
+                console.log('done append child');
+                initSpotlight();
             }
         },
         renderPalatte: function () {
@@ -354,6 +374,9 @@
 
             xslUrl = "/ZCanvas/document/home.xsl";
             homeModel.xslHome = loadXML(xslUrl);
+            
+            xslUrl = "/ZCanvas/document/home-spotlight.xsl";
+            homeModel.xslSpotlight = loadXML(xslUrl);
         },
         getLocations: function () {
             var url = "ProcessServlet";
@@ -365,6 +388,20 @@
                 homeModel.xmlLocation = xmlDoc;
                 // render list location
                 homeView.renderLocation();
+            });
+        },
+        getSpotlight: function () {
+            var url = "ProcessServlet";
+            var param = {
+                btAction: 'spotlight'
+            };
+            sendGetRequest(url, param, function (response) {
+                var xmlDoc = response.responseXML;
+                homeModel.xmlSpotlight = xmlDoc;
+                // render spotlight
+                console.log('render spotlight');
+                console.log(xmlDoc);
+                homeView.renderSpotlight();
             });
         },
         submitForm: function (data) {
@@ -397,11 +434,17 @@
         getXslHome: function () {
             return homeModel.xslHome;
         },
+        getXslSpotlight: function () {
+            return homeModel.xslSpotlight;
+        },
         getXmlLocation: function () {
             return homeModel.xmlLocation;
         },
         getXmlCanvas: function () {
             return homeModel.xmlCanvas;
+        },
+        getXmlSpotlight: function () {
+            return homeModel.xmlSpotlight;
         },
         getListColors: function () {
             return homeModel.listInputColors;

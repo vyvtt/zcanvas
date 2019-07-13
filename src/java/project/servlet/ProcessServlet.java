@@ -38,8 +38,8 @@ public class ProcessServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
 
-//        String url = JSP_HOME;
-        String url = "InitPalatteServlet";
+        String url = JSP_HOME;
+//        String url = "InitPalatteServlet";
         String btn = request.getParameter("btAction");
 
         try {
@@ -65,6 +65,8 @@ public class ProcessServlet extends HttpServlet {
                 url = SERVLET_ADD_LOCATION;
             } else if (btn.equals("deleteLocation")) {
                 url = SERVLET_DELETE_LOCATION;
+            } else if (btn.equals("spotlight")) {
+                url = SERVLET_GET_SPOTLIGHT;
             }
 
         } catch (Exception e) {

@@ -22,7 +22,10 @@ public class Canvases {
     @XmlElement(name = "canvas")
     private List<Canvas> canvases = null;
 
+    public Canvases() {
+    }
 
+    
     public List<Canvas> getCanvases() {
         return canvases;
     }

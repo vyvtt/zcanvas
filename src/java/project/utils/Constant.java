@@ -50,6 +50,7 @@ public class Constant {
     public static final String SERVLET_UPDATE_LOCATION = "UpdateLocationServlet";
     public static final String SERVLET_ADD_LOCATION = "AddLocationServlet";
     public static final String SERVLET_DELETE_LOCATION = "DeleteLocationServlet";
+    public static final String SERVLET_GET_SPOTLIGHT = "InitPalatteServlet";
     // JSP
     public static final String JSP_HOME = "home.jsp";
     

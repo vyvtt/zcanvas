@@ -31,8 +31,6 @@ import javax.xml.stream.events.XMLEvent;
 import project.crawler.Demo;
 import project.dao.CanvasDAO;
 import project.jaxb.Canvas;
-import project.jaxb.Categories;
-import project.utils.Constant;
 import project.utils.ImageHelper;
 import project.utils.StringHelper;
 import project.utils.XMLHelper;
@@ -46,13 +44,21 @@ public class PalatteData {
     public static String palatteImage;
     public static List<String> palatteColor;
     public static List<Canvas> topCanvas;
+    
+    public static String imgName;
+    public static String imgAuth;
+    public static String imgLink;
 
     private static List<Canvas> listCanvas;
 
     public static void initListCanvas() {
         CanvasDAO canvasDAO = new CanvasDAO();
         listCanvas = canvasDAO.getAllCanvas();
+        
         topCanvas = new ArrayList<>();
+        imgName = null;
+        imgAuth = null;
+        imgLink = null;
     }
     
     public static void getRandomImgFromUnsplash() {
@@ -67,8 +73,6 @@ public class PalatteData {
             con.setRequestMethod("GET");
 
             int responseCode = con.getResponseCode();
-            System.out.println("Sending 'GET' request to URL : " + url);
-            System.out.println("Response Code : " + responseCode);
 
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(con.getInputStream()));
@@ -88,13 +92,34 @@ public class PalatteData {
     }
     
     private static void parseJSON(String json) {
-//        Pattern codePattern = Pattern.compile("\"description\"\\s*:\\s*\"([^,]*)\",");
-        Pattern messagePattern = Pattern.compile("\"regular\"\\s*:\\s*\"([^,]*)\",");
-//        Matcher code_matcher = codePattern.matcher(json);
-        Matcher message_matcher = messagePattern.matcher(json);
-
-        if (message_matcher.find()) {
-            palatteImage = message_matcher.group(1);
+        Pattern pattern = Pattern.compile("\"description\"\\s*:\\s*\"([^,]*)\",");
+        Matcher matcher = pattern.matcher(json);
+        if (matcher.find()) {
+            imgName = matcher.group(1).replace("\\u2026", "...");
+        } else {
+            imgName = null;
+        }
+        
+        pattern = Pattern.compile("\"html\"\\s*:\\s*\"([^,]*)\",");
+        matcher = pattern.matcher(json);
+        if (matcher.find()) {
+            imgLink = matcher.group(1);
+        } else {
+            imgLink = null;
+        }
+        
+        pattern = Pattern.compile("\"name\"\\s*:\\s*\"([^,]*)\",");
+        matcher = pattern.matcher(json);
+        if (matcher.find()) {
+            imgAuth = matcher.group(1);
+        } else {
+            imgAuth = null;
+        }
+        
+        pattern = Pattern.compile("\"regular\"\\s*:\\s*\"([^,]*)\",");
+        matcher = pattern.matcher(json);
+        if (matcher.find()) {
+            palatteImage = matcher.group(1);
             processImg();
         }
     }
@@ -103,9 +128,6 @@ public class PalatteData {
         try {
             BufferedImage image = ImageIO.read(new URL(palatteImage));
             String palatteColorsStr = ImageHelper.getColorPaletteFromImage(image, true);
-            
-            System.out.println("input palette: " + palatteColorsStr);
-            System.out.println("done get palatte");
             
             List<String> inputPalatte = Arrays.asList(palatteColorsStr.split("\\s*;\\s*"));
             
@@ -235,20 +257,14 @@ public class PalatteData {
             }
         }
 
-        System.out.println("done delta E -> sort");
         Collections.sort(result, (c1, c2) -> {
             return ((Comparable) c1.getDeltaE()).compareTo(c2.getDeltaE());
         });
-        System.out.println("done sort");
         List<Canvas> topResult = result.subList(0, Math.min(result.size(), 10));
 
-        System.out.println("palatte total: " + result.size());
-        System.out.println("palatte top: " + topResult.size());
-
         if (topResult.isEmpty()) {
-            System.out.println("enpty ---> find by each color");
+            System.out.println("EMPTY spotlight by palette ---> search by each color");
             for (String colorHex : palatteColor) {
-                System.out.println(colorHex);
                 int currentColor = ImageHelper.convertHex2Int(colorHex);
 
                 List<Canvas> tmpList = new ArrayList<>();
@@ -270,8 +286,6 @@ public class PalatteData {
                 
                 result.removeAll(tmpList);
                 result.addAll(tmpList);
-                
-                System.out.println("result after hex: " + result.size());
             }
 
             System.out.println("done delta E EACH -> sort");
@@ -286,16 +300,13 @@ public class PalatteData {
         
         System.out.println(palatteImage);
         for (Canvas canvas : topResult) {
-            System.out.println(canvas.getName());
-            System.out.println(canvas.getDeltaE());
-            System.out.println(canvas.getImage());
+            System.out.println(canvas.getDeltaE() + " - " + canvas.getImage());
         }
 
         topCanvas = new ArrayList<>(topResult);
     }
 
     public static boolean isReady() {
-        
         if (palatteImage == null || palatteColor == null || topCanvas == null) {
             System.out.println("something null");
             return false;
@@ -303,4 +314,5 @@ public class PalatteData {
         
         return (!palatteImage.isEmpty() && !palatteColor.isEmpty() && !topCanvas.isEmpty());
     }
+    
 }

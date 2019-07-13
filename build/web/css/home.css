@@ -35,7 +35,7 @@ form {
 }
 
 
-/*LOGO-------------------*/
+/*LOGO------------------------------------------------------------------------*/
 .logo {
     vertical-align: middle; 
     text-align: center;
@@ -46,40 +46,7 @@ form {
     height: 70px;
 }
 
-/*SPOTLIGHT ---------------------*/
-.div-spotlight {
-    background-color: #393e46;
-    padding: 20px 50px 20px 50px;
-    height: 460px;
-}
-
-.div-spotlight > p {
-    color: white;
-    margin-bottom: 20px;
-}
-
-.spotlight-img {
-    height: 400px;
-    width: auto;
-    display: inline-block;
-    max-width: 700px;
-    object-fit: cover;
-    /*float: left;*/
-}
-
-.spotlight-palatte-wrap {
-    display: inline-block;
-    /*float: left;*/
-    width: 60px;
-}
-
-.spotlight-palatte {
-    display: block;
-    width: 80px;
-    height: 80px;
-}
-
-/*FORM INPUT--------------*/
+/*FORM INPUT -----------------------------------------------------------------*/
 input[type="file"] {
     display: none;
 }
@@ -568,16 +535,82 @@ input[type=color] {
     transition: width 500ms, height 500ms;
 }
 
+/*SPOTLIGHT ------------------------------------------------------------------*/
+.div-spotlight {
+    background-color: #393e46;
+    padding: 20px 50px 20px 50px;
+    height: 460px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.div-spotlight > h3 {
+    color: white;
+    margin-bottom: 15px;
+}
+
+a:link, a:visited {
+    color: #79d1f7;
+}
+
+.div-spotlight > p {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.spotlight-img-wrap {
+    position: relative;
+    display: inline-block;
+}
+
+.spotlight-img-description {
+    position: absolute;
+    /*top: 0;*/
+    padding: 20px;
+    /*margin: 15px;*/
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #222428;
+    color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility .5s;
+}
+
+.spotlight-img-wrap:hover .spotlight-img-description {
+    visibility: visible;
+    opacity: .8;
+}
+
+.spotlight-img {
+    height: 400px;
+    width: auto;
+    display: inline-block;
+    max-width: 630px;
+    object-fit: cover;
+    /*float: left;*/
+}
+
+.spotlight-palatte-wrap {
+    display: inline-block;
+    margin-left: 3px;
+    width: 60px;
+}
+
+.spotlight-palatte {
+    display: block;
+    width: 80px;
+    height: 80px;
+}
+
 /*Slider ---------------------------------------------------------------------*/
 .slideshow-container {
     max-width: 500px;
     position: relative;
-    /*margin: auto;*/
     margin-left: 100px;
-    /*display: inline-block;*/
     float: right;
     margin-right: 50px;
-    /*flex:*/ 
 }
 
 .mySlides {
@@ -585,7 +618,6 @@ input[type=color] {
     height: 400px;
     width: auto;
     min-width: 400px;
-    /*border: solid 1px black;*/
     text-align: center;
 }
 
@@ -610,7 +642,6 @@ input[type=color] {
     width: 100%;
     text-align: center;
     background-color: #222428;
-    opacity: .7;
 }
 
 .prev,
@@ -619,11 +650,11 @@ input[type=color] {
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
-    padding: 16px;
+    margin-top: -30px;
+    /*padding: 16px;*/
     color: #222428;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 35px;
     transition: .2s ease;
     border-radius: 0 3px 3px 0
 }
@@ -640,21 +671,11 @@ input[type=color] {
 
 .prev:hover,
 .next:hover {
-    color: #f2f2f2;
-    background-color: rgba(0, 0, 0, 0.8)
+    /*color: #f2f2f2;*/
+    /*background-color: rgba(0, 0, 0, 0.8);*/
+    font-size: 40px;
+    color: white;
 }
-
-/*.text {
-    color: #f2f2f2;
-    font-size: 15px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background-color: #222428
-}*/
 
 .numbertext {
     color: #f2f2f2;
@@ -662,17 +683,6 @@ input[type=color] {
     padding: 8px 12px;
     position: absolute;
     top: 0
-}
-
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color .6s ease
 }
 
 .active,

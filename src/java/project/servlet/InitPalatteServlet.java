@@ -7,13 +7,17 @@ package project.servlet;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import javax.servlet.RequestDispatcher;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+import javax.xml.bind.JAXBException;
+import project.jaxb.Canvases;
+import project.jaxb.Spotlight;
 import project.miscellaneous.PalatteData;
+import project.utils.XMLHelper;
 
 /**
  *
@@ -36,15 +40,27 @@ public class InitPalatteServlet extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
 
             if (PalatteData.isReady()) {
-                System.out.println("ready");
-//                HttpSession session = request.getSession();
-                request.setAttribute("DAILY_CANVAS", PalatteData.topCanvas);
-                request.setAttribute("DAILY_IMG", PalatteData.palatteImage);
-                request.setAttribute("DAILY_COLORS", PalatteData.palatteColor);
+                Canvases c = new Canvases();
+                c.setCanvases(PalatteData.topCanvas);
+
+                Spotlight s = new Spotlight();
+                s.setCanvases(c);
+                s.setPaletteColor(PalatteData.palatteColor);
+                s.setPaletteImg(PalatteData.palatteImage);
+                
+                s.setImgName(PalatteData.imgName);
+                s.setImgAuth(PalatteData.imgAuth);
+                s.setImgLink(PalatteData.imgLink);
+
+                String spotlightStr = XMLHelper.parseToXMLString(s);
+                System.out.println(spotlightStr);
+
+                response.setContentType("text/xml; charset=UTF-8");
+                response.getWriter().write(spotlightStr);
             }
 
-            RequestDispatcher rd = request.getRequestDispatcher("home.jsp");
-            rd.forward(request, response);
+        } catch (IOException | JAXBException e) {
+            Logger.getLogger(InitPalatteServlet.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
     }
 
