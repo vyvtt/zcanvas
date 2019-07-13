@@ -46,7 +46,7 @@ public class MyContextServletListener implements ServletContextListener {
 //                PalatteData.updateNewPalatte();
                 PalatteData.getRandomImgFromUnsplash();
             }
-        }, 0, 1, TimeUnit.HOURS);
+        }, 0, 5, TimeUnit.MINUTES);
     }
     
 //    private void runBackgound() {

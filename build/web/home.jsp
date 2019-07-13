@@ -102,33 +102,60 @@
             <div class="div-result-wrap">
                 <div id="result"></div>
             </div>
+        </div>
 
-            <hr/>
+        <br/>
+
+        <div class="div-spotlight">
+
+            <p>Today's spotlight Palette</p>
 
             <c:set var="pImg" value="${requestScope.DAILY_IMG}"/>
             <c:if test="${not empty pImg}">
-                <img src="${pImg}" height="200px" width="auto"/>
+                <img class="spotlight-img" src="${pImg}" height="auto" width="auto"/>
             </c:if>
 
             <c:set var="pColor" value="${requestScope.DAILY_COLORS}"/>
             <c:if test="${not empty pColor}">
-                <c:forEach var="color" items="${pColor}">
-                    <div style="width: 50px; height: 50px; background-color: ${color}; display: inline-block"></div>
-                </c:forEach>
+                <div class="spotlight-palatte-wrap">
+                    <c:forEach var="color" items="${pColor}">
+                        <span class="spotlight-palatte" style="background-color: ${color};"></span>
+                    </c:forEach>
+                </div>
             </c:if>    
 
-            <br style="clear: both;"/>
+            <!--<br style="clear: both;"/>-->
 
-            <c:set var="pCanvas" value="${requestScope.DAILY_CANVAS}"/>
-            <c:if test="${not empty pCanvas}">
-                <c:forEach var="canvas" items="${pCanvas}">
-                    <img src="${canvas.image}" height="200px" width="auto"/>
-                </c:forEach>
-            </c:if>   
+            <div class="slideshow-container">
+
+                <c:set var="pCanvas" value="${requestScope.DAILY_CANVAS}"/>
+                <c:if test="${not empty pCanvas}">
+                    <c:forEach var="canvas" items="${pCanvas}">
+                        <div class="mySlides fade">
+                            <img  src='${canvas.image}'/>
+                            <div>${canvas.name}</div>
+                        </div>
+                    </c:forEach>
+                </c:if>  
+                
+                <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>
+                <a class="next" onclick='plusSlides(1)'>&#10095;</a>
+            </div>
+            <br/>
+
+<!--            <div style='text-align: center;'>
+                <span class="dot" onclick='currentSlide(1)'></span>
+                <span class="dot" onclick='currentSlide(2)'></span>
+                <span class="dot" onclick='currentSlide(3)'></span>
+                <span class="dot" onclick='currentSlide(4)'></span>
+            </div>-->
+
         </div>
 
-    </body>
+    </div>
 
-    <script type="text/javascript" src="js/utils.js"></script>
-    <script type="text/javascript" src="js/home.js"></script>
+</body>
+
+<script type="text/javascript" src="js/utils.js"></script>
+<script type="text/javascript" src="js/home.js"></script>
 </html>

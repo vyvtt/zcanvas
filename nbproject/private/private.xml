@@ -6,13 +6,12 @@
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/ImageHelper.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/Demo.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/HomeServlet.java</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/GetCanvasMatchingColorServlet.java</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/jaxb/Canvas.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/listener/MyContextServletListener.java</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/dao/CanvasDAO.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/MainCrawler.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/GetLocationServlet.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/InitPalatteServlet.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/home.jsp</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/GetCanvasMatchingImageServlet.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/ProcessServlet.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/miscellaneous/PalatteData.java</file>
         </group>

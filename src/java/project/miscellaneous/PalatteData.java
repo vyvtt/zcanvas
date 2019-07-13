@@ -59,6 +59,8 @@ public class PalatteData {
         try {
             String urlStr = "https://api.unsplash.com/photos/random";
             urlStr += "?client_id=b303f5c156451e2af3a7ba22ad662f8b8e90b276998a563e464b682cb4403e2b";
+            urlStr += "&collections=1137575,3485924,1862377";
+            urlStr += "&orientation=landscape";
             URL url = new URL(urlStr);
 
             HttpURLConnection con = (HttpURLConnection) url.openConnection();
@@ -86,16 +88,12 @@ public class PalatteData {
     }
     
     private static void parseJSON(String json) {
-        System.out.println("json: " + json);
-
 //        Pattern codePattern = Pattern.compile("\"description\"\\s*:\\s*\"([^,]*)\",");
-        Pattern messagePattern = Pattern.compile("\"small\"\\s*:\\s*\"([^,]*)\",");
-
+        Pattern messagePattern = Pattern.compile("\"regular\"\\s*:\\s*\"([^,]*)\",");
 //        Matcher code_matcher = codePattern.matcher(json);
         Matcher message_matcher = messagePattern.matcher(json);
 
         if (message_matcher.find()) {
-            System.out.println("match!");
             palatteImage = message_matcher.group(1);
             processImg();
         }
@@ -119,8 +117,6 @@ public class PalatteData {
             for (String string : palatteColor) {
                 System.out.println(string);
             }
-            
-            System.out.println("select canvas ---");
             updateCanvasMatchingPalatte();
             
             
@@ -212,7 +208,6 @@ public class PalatteData {
     }
 
     private static void updateCanvasMatchingPalatte() {
-        System.out.println("begin update canvas list");
 
         List<Canvas> result = new ArrayList<>();
 
@@ -229,7 +224,6 @@ public class PalatteData {
             double deltaE = ImageHelper.comparePalette2Palette(inputColor, currentPalette);
 
             if (deltaE != -1) {
-                System.out.println("Delta E != 1");
                 canvas.setDeltaE(deltaE);
                 List<String> currentCanvasColor = new ArrayList<>();
 
