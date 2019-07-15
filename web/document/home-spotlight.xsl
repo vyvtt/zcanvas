@@ -38,7 +38,7 @@
         
         <div class="slideshow-container">
             <xsl:for-each select="my:spotlight/my:canvases/my:canvas">
-                <div class="mySlides fade">
+                <div class="mySlides animate-fading">
                     <img src="{my:image}"/>
                     <div>
                         <xsl:value-of select="my:name"/>

@@ -31,6 +31,7 @@ import javax.xml.stream.events.XMLEvent;
 import project.crawler.Demo;
 import project.dao.CanvasDAO;
 import project.jaxb.Canvas;
+import project.utils.ColorHelper;
 import project.utils.ImageHelper;
 import project.utils.StringHelper;
 import project.utils.XMLHelper;
@@ -133,7 +134,7 @@ public class PalatteData {
             
             palatteColor = new ArrayList<>();
             for (String colorInt : inputPalatte) {
-                palatteColor.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
+                palatteColor.add(ColorHelper.convertInt2Hex(Integer.parseInt(colorInt)));
             }
 
             for (String string : palatteColor) {
@@ -235,7 +236,7 @@ public class PalatteData {
 
         List<String> inputColor = new ArrayList<>();
         for (String tmp : palatteColor) {
-            int intColor = ImageHelper.convertHex2Int(tmp);
+            int intColor = ColorHelper.convertHex2Int(tmp);
             inputColor.add(String.valueOf(intColor));
         }
 
@@ -250,7 +251,7 @@ public class PalatteData {
                 List<String> currentCanvasColor = new ArrayList<>();
 
                 for (String colorInt : currentPalette) {
-                    currentCanvasColor.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
+                    currentCanvasColor.add(ColorHelper.convertInt2Hex(Integer.parseInt(colorInt)));
                 }
                 canvas.setCanvasColors(currentCanvasColor);
                 result.add(canvas);
@@ -265,7 +266,7 @@ public class PalatteData {
         if (topResult.isEmpty()) {
             System.out.println("EMPTY spotlight by palette ---> search by each color");
             for (String colorHex : palatteColor) {
-                int currentColor = ImageHelper.convertHex2Int(colorHex);
+                int currentColor = ColorHelper.convertHex2Int(colorHex);
 
                 List<Canvas> tmpList = new ArrayList<>();
                 for (Canvas canvas : listCanvas) {
@@ -277,7 +278,7 @@ public class PalatteData {
                         List<String> currentCanvasColor = new ArrayList<>();
 
                         for (String colorInt : currentPalette) {
-                            currentCanvasColor.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
+                            currentCanvasColor.add(ColorHelper.convertInt2Hex(Integer.parseInt(colorInt)));
                         }
                         canvas.setCanvasColors(currentCanvasColor);
                         tmpList.add(canvas);

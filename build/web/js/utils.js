@@ -1,41 +1,48 @@
 var slideIndex = 1;
-var myTimer;
+var timerSpotlight;
+var timeRefresh;
+
+//function initResfreshSpotlight() {
+//    timeRefresh = setTimeout(function () {
+//        console.log('refresh spotlight');
+//        
+//    }, 1000 * 60 * 6);
+//};
 
 function initSpotlight() {
-    console.log('utils slier spotlight');
     showSlides(slideIndex);
-    myTimer = setInterval(function () {
+    timerSpotlight = setInterval(function () {
         plusSlides(1);
     }, 4000);
 };
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides(n) {
-    clearInterval(myTimer);
+    clearInterval(timerSpotlight);
     if (n < 0) {
         showSlides(slideIndex -= 1);
     } else {
         showSlides(slideIndex += 1);
     }
     if (n === -1) {
-        myTimer = setInterval(function () {
+        timerSpotlight = setInterval(function () {
             plusSlides(n + 2);
         }, 4000);
     } else {
-        myTimer = setInterval(function () {
+        timerSpotlight = setInterval(function () {
             plusSlides(n + 1);
         }, 4000);
     }
 }
 
 //Controls the current slide and resets interval if needed
-function currentSlide(n) {
-    clearInterval(myTimer);
-    myTimer = setInterval(function () {
-        plusSlides(n + 1);
-    }, 4000);
-    showSlides(slideIndex = n);
-}
+//function currentSlide(n) {
+//    clearInterval(myTimer);
+//    myTimer = setInterval(function () {
+//        plusSlides(n + 1);
+//    }, 4000);
+//    showSlides(slideIndex = n);
+//}
 
 function showSlides(n) {
     var i;
@@ -47,10 +54,42 @@ function showSlides(n) {
         slideIndex = slides.length;
     }
     for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
+        if (slides[i].style.display == 'block') {
+            slides[i].style.display = "none";
+        }
     }
     slides[slideIndex - 1].style.display = "block";
 }
+
+//function sleep(ms) {
+//  return new Promise(resolve => setTimeout(resolve, ms));
+//}
+
+//function fade(element) {
+//    var op = 1;  // initial opacity
+//    var timer = setInterval(function () {
+//        if (op <= 0.1){
+//            clearInterval(timer);
+//            element.style.display = 'none';
+//        }
+//        element.style.opacity = op;
+//        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+//        op -= op * 0.1;
+//    }, 50);
+//}
+//
+//function unfade(element) {
+//    var op = 0.1;  // initial opacity
+//    element.style.display = 'block';
+//    var timer = setInterval(function () {
+//        if (op >= 1){
+//            clearInterval(timer);
+//        }
+//        element.style.opacity = op;
+//        element.style.filter = 'alpha(opacity=' + op * 100 + ")";
+//        op += op * 0.1;
+//    }, 50);
+//}
 
 function getXMLHttpObject() {
     var xmlHttp = null;

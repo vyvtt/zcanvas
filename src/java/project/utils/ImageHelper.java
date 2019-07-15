@@ -267,9 +267,6 @@ public class ImageHelper {
     }
 
     // Split the RGB space into a 3x3x3 grid that produces 27 total histogram buckets
-//    private final static int DIMENTION_MAX = 256;
-//    private final static int BUCKET_PER_DIMENSION = 3;
-//    private final static int BUCKET_SIZE = DIMENTION_MAX / BUCKET_PER_DIMENSION;
     private static String getKeyForPixel(int[] rbg) {
         int redBucket = (int) Math.floor(rbg[0] / Constant.IMG_BUCKET_SIZE);
         int greenBucket = (int) Math.floor(rbg[1] / Constant.IMG_BUCKET_SIZE);
@@ -328,29 +325,15 @@ public class ImageHelper {
 //            Blue = Blue & 0x000000FF; //Mask out anything not blue.
             int color = 0xFF000000 | (averageColor[0] << 16) & 0x00FF0000 | (averageColor[1] << 8) & 0x0000FF00 | averageColor[2] & 0x000000FF; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
 
-//            paletteString.append(getColorString(averageColor));
             paletteString.append(String.valueOf(color));
             paletteString.append(";");
 
         }
-        System.out.println("in: " + paletteString.toString());
         return paletteString.toString();
     }
-
-    public static int convertHex2Int(String hex) {
-        Color color = Color.decode(hex);
-        int red = (color.getRed() << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
-        int green = (color.getGreen() << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
-        int blue = color.getBlue() & 0x000000FF; //Mask out anything not blue.
-        return 0xFF000000 | red | green | blue;
-    }
-
+    
     private static String getColorString(int[] rgb) {
         return String.format("#%02x%02x%02x", rgb[0], rgb[1], rgb[2]);
-    }
-
-    public static String convertColorInt2Hex(int color) {
-        return String.format("#%06X", (0xFFFFFF & color));
     }
 
     private static int[] calculateAverageColor(List<int[]> pixels) {
@@ -466,21 +449,24 @@ public class ImageHelper {
      * http://en.wikipedia.org/wiki/Color_difference#CIE76}
      */
     public static double getColorDifference(int a, int b) {
-        int r1, g1, b1, r2, g2, b2;
+//        int r1, g1, b1, r2, g2, b2;
 
         Color color1 = new Color(a);
         Color color2 = new Color(b);
 
         // Returns the color r,g,b component in the range 0-255 in the default sRGB
-        r1 = color1.getRed();
-        g1 = color1.getGreen();
-        b1 = color1.getBlue();
-        r2 = color2.getRed();
-        g2 = color2.getGreen();
-        b2 = color2.getBlue();
+//        r1 = color1.getRed();
+//        g1 = color1.getGreen();
+//        b1 = color1.getBlue();
+//        r2 = color2.getRed();
+//        g2 = color2.getGreen();
+//        b2 = color2.getBlue();
 
-        int[] lab1 = rgb2lab(r1, g1, b1);
-        int[] lab2 = rgb2lab(r2, g2, b2);
+//        int[] lab1 = rgb2lab(r1, g1, b1);
+//        int[] lab2 = rgb2lab(r2, g2, b2);
+        
+        int[] lab1 = ColorHelper.convertRGBtoLab(color1.getRed(), color1.getGreen(), color1.getBlue());
+        int[] lab2 = ColorHelper.convertRGBtoLab(color2.getRed(), color2.getGreen(), color2.getBlue());
         
         return Math.sqrt(
                   Math.pow(lab2[0] - lab1[0], 2) 

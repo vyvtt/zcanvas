@@ -24,6 +24,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.imageio.ImageIO;
 import static project.miscellaneous.PalatteData.palatteImage;
+import project.utils.ColorHelper;
 import project.utils.Constant;
 import project.utils.ImageHelper;
 
@@ -138,7 +139,7 @@ public class Demo {
             System.out.println("parse hex");
             List<String> colorHex = new ArrayList<>();
             for (String colorInt : inputPalatte) {
-                colorHex.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
+                colorHex.add(ColorHelper.convertInt2Hex(Integer.parseInt(colorInt)));
             }
 
             for (String string : colorHex) {

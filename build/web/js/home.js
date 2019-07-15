@@ -14,7 +14,7 @@
         xslSpotlight: null,
 
         pageSize: 9,
-
+        timeRefresh: null,
         colorChooser: [
             // red
             ["#B71C1C",
@@ -365,6 +365,14 @@
         init: function () {
             octopus.getXsl();
             homeView.init();
+            octopus.initResfreshSpotlight();
+        },
+        initResfreshSpotlight: function () {
+            console.log('init refresh');
+            homeModel.timeRefresh = setInterval(function () {
+                console.log('refresh spotlight');
+                octopus.getSpotlight();
+            }, 1000 * 60 * 6);
         },
         getXsl: function () {
             var xslUrl = null;
@@ -374,7 +382,7 @@
 
             xslUrl = "/ZCanvas/document/home.xsl";
             homeModel.xslHome = loadXML(xslUrl);
-            
+
             xslUrl = "/ZCanvas/document/home-spotlight.xsl";
             homeModel.xslSpotlight = loadXML(xslUrl);
         },

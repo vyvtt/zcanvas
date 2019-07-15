@@ -689,3 +689,11 @@ a:link, a:visited {
 .dot:hover {
     background-color: #717171
 }
+
+.animate-fading {
+    animation: fading 4.2s
+}
+@keyframes fading{
+    0%{opacity:1}
+    80%{opacity:1}
+    100%{opacity:0}}

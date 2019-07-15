@@ -25,6 +25,7 @@ import project.jaxb.Canvas;
 import project.jaxb.Canvases;
 import project.jaxb.Categories;
 import project.jaxb.Info;
+import project.utils.ColorHelper;
 import project.utils.ImageHelper;
 import project.utils.XMLHelper;
 
@@ -55,7 +56,7 @@ public class GetCanvasMatchingColorServlet extends HttpServlet {
 //            BufferedImage image = ImageIO.read(is);
 
             
-            int color = ImageHelper.convertHex2Int(hexColor);
+            int color = ColorHelper.convertHex2Int(hexColor);
             System.out.println("color int: " + color);
 
             // init
@@ -86,7 +87,7 @@ public class GetCanvasMatchingColorServlet extends HttpServlet {
                     List<String> currentCanvasColor = new ArrayList<>();
 
                     for (String colorInt : currentPalette) {
-                        currentCanvasColor.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
+                        currentCanvasColor.add(ColorHelper.convertInt2Hex(Integer.parseInt(colorInt)));
                     }
                     canvas.setCanvasColors(currentCanvasColor);
 
