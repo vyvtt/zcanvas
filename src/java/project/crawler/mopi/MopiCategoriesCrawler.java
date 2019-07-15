@@ -30,6 +30,8 @@ public class MopiCategoriesCrawler implements Serializable{
 
     public Map<String, String> crawlCategories()
             throws XMLStreamException, UnsupportedEncodingException {
+        
+        // lấy link của 1 category từ trang chủ
         String tmpUrl = "";
         Map<String, String> categories = new HashMap<>();
 
@@ -55,10 +57,11 @@ public class MopiCategoriesCrawler implements Serializable{
 
         reader.close();
 
+        // lấy các categories từ trang trên
         beginSign = "class=\"product-categories\"";
         endSign = "id=\"ts_product_filter_by_color-3\"";
         htmlContent = "";
-        htmlContent = XMLHelper.parseHTML(tmpUrl, beginSign, endSign);
+        htmlContent = XMLHelper.parseHTML(tmpUrl, Constant.MOPI_BEGIN_CATEGORY, Constant.MOPI_END_CATEGORY);
         htmlContent = StringHelper.refineHtml(htmlContent);
         
         reader = XMLHelper.getXMLEventReaderFromString(htmlContent);

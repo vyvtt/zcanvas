@@ -56,6 +56,8 @@ public class PalatteData {
         CanvasDAO canvasDAO = new CanvasDAO();
         listCanvas = canvasDAO.getAllCanvas();
         
+        System.out.println("Init list canvas size: " + listCanvas.size() );
+        
         topCanvas = new ArrayList<>();
         imgName = null;
         imgAuth = null;
@@ -140,8 +142,10 @@ public class PalatteData {
             for (String string : palatteColor) {
                 System.out.println(string);
             }
-            updateCanvasMatchingPalatte();
             
+            if (!listCanvas.isEmpty()) {
+                updateCanvasMatchingPalatte();
+            }
             
         } catch (IOException ex) {
             Logger.getLogger(Demo.class.getName()).log(Level.SEVERE, null, ex);
@@ -312,7 +316,6 @@ public class PalatteData {
             System.out.println("something null");
             return false;
         }
-        
         return (!palatteImage.isEmpty() && !palatteColor.isEmpty() && !topCanvas.isEmpty());
     }
     

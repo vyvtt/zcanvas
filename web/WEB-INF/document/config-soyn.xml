@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<host>
-    https://soyncanvas.vn
-</host>
+<config>
+    <host>https://soyncanvas.vn</host>
+    <begin-category>href="/tranh-treo-tuong"</begin-category>
+    <end-category>&lt;/ul&gt;</end-category>
+    <begin-count>class="pagination clearfix</begin-count>
+    <end-count>&lt;/ul&gt;</end-count>
+    <begin-page>class="products-view products-view-grid"</begin-page>
+    <end-page>class="sidebar left left-content col-lg-3 col-lg-pull-9"</end-page>
+</config>
+

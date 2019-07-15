@@ -13,7 +13,7 @@ public class Constant {
 
     public static final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.11 (KHTML, like Gecko) Chrome/23.0.1271.95 Safari/537.11";
     public static String REAL_PATH = "";
-    
+
     // Schema
     public static String SCHEMA_PAINTING = "/WEB-INF/document/painting.xsd";
     // XML output
@@ -25,7 +25,7 @@ public class Constant {
     public static String XML_CONFIG_MOPI = "/WEB-INF/document/config-mopi.xml";
     public static String XML_CONFIG_FRAMEC = "/WEB-INF/document/config-framec.xml";
     public static String XML_CONFIG_IMAGE = "/WEB-INF/document/config-image.xml";
-    
+
     // Config HOST constant
     public static String HOST_SOYN = "";
     public static String HOST_MOPI = "";
@@ -39,7 +39,7 @@ public class Constant {
     public static int IMG_DELTA_E_TOLERANCE;
     public static int IMG_DELTA_E_TOLERANCE_SINGLE;
     public static int IMG_BG_TOLERANCE;
-    
+
     // Servlet
     public static final String SERVLET_CRAWL = "CrawlServlet";
     public static final String SERVLET_HOME = "HomeServlet";
@@ -53,7 +53,20 @@ public class Constant {
     public static final String SERVLET_GET_SPOTLIGHT = "InitPalatteServlet";
     // JSP
     public static final String JSP_HOME = "home.jsp";
-    
-    
+
+    // Crawl flag
+    public static String SOYN_BEGIN_CATEGORY;
+    public static String SOYN_END_CATEGORY;
+    public static String SOYN_BEGIN_COUNT;
+    public static String SOYN_END_COUNT;
+    public static String SOYN_BEGIN_PAGE;
+    public static String SOYN_END_PAGE;
+
+    public static String MOPI_BEGIN_CATEGORY;
+    public static String MOPI_END_CATEGORY;
+    public static String MOPI_BEGIN_COUNT;
+    public static String MOPI_END_COUNT;
+    public static String MOPI_BEGIN_PAGE;
+    public static String MOPI_END_PAGE;
 
 }

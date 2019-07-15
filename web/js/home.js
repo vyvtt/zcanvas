@@ -8,70 +8,14 @@
         xmlLocation: null,
         xmlCanvas: null,
         xmlSpotlight: null,
+        xmlColors: null,
 
         xslLocation: null,
         xslHome: null,
         xslSpotlight: null,
 
         pageSize: 9,
-        timeRefresh: null,
-        colorChooser: [
-            // red
-            ["#B71C1C",
-                "#E53935",
-                "#E57373",
-                "#FFCDD2"],
-            // purple
-            ["#4A148C",
-                "#8E24AA",
-                "#BA68C8",
-                "#E1BEE7"],
-            // deep blue
-            ["#1A237E",
-                "#3949AB",
-                "#5C6BC0",
-                "#C5CAE9"],
-            // blue
-            ["#0D47A1",
-                "#1E88E5",
-                "#64B5F6",
-                "#BBDEFB"],
-            // cynatic
-            ["#004D40",
-                "#00897B",
-                "#4DB6AC",
-                "#B2DFDB"],
-            // green
-            ["#1B5E20",
-                "#43A047",
-                "#81C784",
-                "#A5D6A7"],
-            // yellow green
-            ["#827717",
-                "#C0CA33",
-                "#DCE775",
-                "#F0F4C3"],
-            // yellow
-            ["#F57F17",
-                "#FDD835",
-                "#FFF176",
-                "#FFF9C4"],
-            // orange
-            ["#E65100",
-                "#FB8C00",
-                "#FFB74D",
-                "#FFE0B2"],
-            // brown
-            ["#3E2723",
-                "#6D4C41",
-                "#A1887F",
-                "#D7CCC8"],
-            // white
-            ["#212121",
-                "#757575",
-                "#E0E0E0",
-                "#FAFAFA"]
-        ]
+        timeRefresh: null
     };
     var homeView = {
         init: function () {
@@ -155,27 +99,32 @@
             });
 
             // COLOR CHOOSER ---------------------------------------------------
-            homeModel.colorChooser.forEach(function (colors) {
+            var colors = octopus.getXmlColors();
+            var color = colors.getElementsByTagName('color');
+            var colorList = Array.prototype.slice.call(color);
+
+            colorList.forEach(function (color) {
                 var span = document.createElement("span");
                 span.setAttribute("class", "span-color-chooser");
+                
+                var code = color.getElementsByTagName('code');
+                var codeList = Array.prototype.slice.call(code);
 
-                colors.forEach(function (color) {
+                codeList.forEach(function (hex) {
                     var colorRadio = document.createElement("input");
                     colorRadio.setAttribute("type", "radio");
-                    colorRadio.setAttribute("id", color);
+                    colorRadio.setAttribute("id", hex.innerHTML);
                     colorRadio.setAttribute("name", "mColor");
-                    colorRadio.setAttribute("value", color);
+                    colorRadio.setAttribute("value", hex.innerHTML);
                     var colorLabel = document.createElement("label");
-                    colorLabel.setAttribute("for", color);
+                    colorLabel.setAttribute("for", hex.innerHTML);
                     colorLabel.setAttribute("class", "label-color");
-                    colorLabel.setAttribute("style", "background-color:" + color + ";");
+                    colorLabel.setAttribute("style", "background-color:" + hex.innerHTML + ";");
                     span.appendChild(colorRadio);
                     span.appendChild(colorLabel);
-
                 });
                 spanTypeColor.appendChild(span);
             });
-
         },
         renderLocation: function () {
             if (document.implementation && document.implementation.createDocument)
@@ -375,16 +324,19 @@
             }, 1000 * 60 * 6);
         },
         getXsl: function () {
-            var xslUrl = null;
+            var url = null;
 
-            xslUrl = "/ZCanvas/document/home-location.xsl";
-            homeModel.xslLocation = loadXML(xslUrl);
+            url = "/ZCanvas/document/home-location.xsl";
+            homeModel.xslLocation = loadXML(url);
 
-            xslUrl = "/ZCanvas/document/home.xsl";
-            homeModel.xslHome = loadXML(xslUrl);
+            url = "/ZCanvas/document/home.xsl";
+            homeModel.xslHome = loadXML(url);
 
-            xslUrl = "/ZCanvas/document/home-spotlight.xsl";
-            homeModel.xslSpotlight = loadXML(xslUrl);
+            url = "/ZCanvas/document/home-spotlight.xsl";
+            homeModel.xslSpotlight = loadXML(url);
+
+            url = "/ZCanvas/document/colors.xml";
+            homeModel.xmlColors = loadXML(url);
         },
         getLocations: function () {
             var url = "ProcessServlet";
@@ -450,6 +402,9 @@
         },
         getXmlCanvas: function () {
             return homeModel.xmlCanvas;
+        },
+        getXmlColors: function () {
+            return homeModel.xmlColors;
         },
         getXmlSpotlight: function () {
             return homeModel.xmlSpotlight;

@@ -5,8 +5,6 @@
  */
 package project.crawler.soyn;
 
-import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -28,7 +26,6 @@ import project.utils.Constant;
 import project.utils.CrawlHelper;
 import project.utils.StringHelper;
 import project.utils.XMLHelper;
-import static project.utils.XMLHelper.getBufferReaderFromURI;
 
 /**
  *
@@ -61,7 +58,7 @@ public class SoynPageCrawler implements Serializable {
         String beginSign = "class=\"pagination clearfix \"";
         String endSign = "</ul>";
         String keyOfLineContainPageCount = "page-link";
-        pageCount = CrawlHelper.getPageCount(url, beginSign, endSign, keyOfLineContainPageCount);
+        pageCount = CrawlHelper.getPageCount(url, Constant.SOYN_BEGIN_COUNT, Constant.SOYN_END_COUNT, keyOfLineContainPageCount);
 
         System.out.println("Crawl Category: " + categoryName + " - " + url + " - " + pageCount);
 
@@ -80,7 +77,7 @@ public class SoynPageCrawler implements Serializable {
             System.out.println("Get products from: " + pageUrl);
 
             htmlContent = "";
-            htmlContent = XMLHelper.parseHTML(pageUrl, beginSign, endSign);
+            htmlContent = XMLHelper.parseHTML(pageUrl, Constant.SOYN_BEGIN_PAGE, Constant.SOYN_END_PAGE);
             htmlContent = StringHelper.refineHtml(htmlContent);
 
             listCanvas.addAll(crawlListCanvasEachPage(htmlContent));

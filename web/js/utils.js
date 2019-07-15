@@ -14,7 +14,8 @@ function initSpotlight() {
     timerSpotlight = setInterval(function () {
         plusSlides(1);
     }, 4000);
-};
+}
+;
 
 // NEXT AND PREVIOUS CONTROL
 function plusSlides(n) {
@@ -299,3 +300,22 @@ function validateForm() {
 
     return false;
 }
+
+//function checkAll(ele) {
+//    var checkboxes = document.getElementsByName('category');
+//    var lbSelectAll = document.getElementById('lbSelectAll');
+//    console.log(lbSelectAll);
+//    if (ele.checked) {
+//        // check all
+//        for (var i = 0; i < checkboxes.length; i++) {
+//            checkboxes[i].checked = true;
+//        }
+//        lbSelectAll.innerHTML = 'Un-select All';
+//    } else {
+//        // uncheck all
+//        for (var i = 0; i < checkboxes.length; i++) {
+//            checkboxes[i].checked = false;
+//        }
+//        lbSelectAll.innerHTML = 'Select All';
+//    }
+//}

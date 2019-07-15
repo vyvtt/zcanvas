@@ -539,7 +539,7 @@ input[type=color] {
 .div-spotlight {
     background-color: #393e46;
     padding: 20px 50px 20px 50px;
-    height: 460px;
+    /*height: 460px;*/
     text-align: center;
     font-size: 14px;
 }

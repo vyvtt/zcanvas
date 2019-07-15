@@ -106,7 +106,7 @@
 
         <br/>
 
-        <div id="spotlight" class="div-spotlight"></div>
+        <div id="spotlight"></div>
 
     </div>
 

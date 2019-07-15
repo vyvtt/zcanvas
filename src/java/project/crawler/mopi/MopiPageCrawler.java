@@ -24,6 +24,7 @@ import javax.xml.stream.events.XMLEvent;
 import project.jaxb.Canvas;
 import project.jaxb.Categories;
 import project.jaxb.Detail;
+import project.utils.Constant;
 import project.utils.CrawlHelper;
 import project.utils.StringHelper;
 import project.utils.XMLHelper;
@@ -58,7 +59,7 @@ public class MopiPageCrawler implements Serializable {
         String beginSign = "class='page-numbers'"; // dấu nháy đơn
         String endSign = "</ul>";
         String keyOfLineContainPageCount = "<a class='page-numbers'";
-        pageCount = CrawlHelper.getPageCount(url, beginSign, endSign, keyOfLineContainPageCount);
+        pageCount = CrawlHelper.getPageCount(url, Constant.MOPI_BEGIN_COUNT, Constant.MOPI_END_COUNT, keyOfLineContainPageCount);
 
         System.out.println("In MopiPageCrawler " + categoryName + " - " + url + " - " + pageCount);
 
@@ -76,7 +77,7 @@ public class MopiPageCrawler implements Serializable {
             System.out.println("Get products from: " + pageUrl);
 
             htmlContent = "";
-            htmlContent = XMLHelper.parseHTML(pageUrl, beginSign, endSign);
+            htmlContent = XMLHelper.parseHTML(pageUrl, Constant.MOPI_BEGIN_PAGE, Constant.MOPI_END_PAGE);
             htmlContent = StringHelper.refineHtml(htmlContent);
             listCanvas.addAll(crawlListCanvasEachPage(htmlContent));
         } // end get all products of category

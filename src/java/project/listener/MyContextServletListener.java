@@ -33,6 +33,7 @@ public class MyContextServletListener implements ServletContextListener {
         // read config host
         ConfigHelper.configHost();
         ConfigHelper.configImage();
+        ConfigHelper.configCrawl();
         
         // init list all canvas
         PalatteData.initListCanvas();

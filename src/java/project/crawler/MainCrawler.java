@@ -31,18 +31,19 @@ import project.utils.ImageHelper;
  * @author thuyv
  */
 public class MainCrawler {
-    
+
     public static void crawl() {
         long startTime = System.nanoTime();
-        
+
         SoynMainCrawler.crawl();
         MopiMainCrawler.crawl();
         FramecMainCrawler.crawl();
-        
-        long endTime = System.nanoTime();
-        System.out.println("Time: " + TimeUnit.NANOSECONDS.toMinutes(endTime - startTime) + " minutes");
+
+        long endTime = System.nanoTime() - startTime;
+
+        System.out.println("Crawl time: " + TimeUnit.SECONDS.convert(endTime, TimeUnit.NANOSECONDS));
     }
-    
+
     public static void saveToDB(List<Categories> categories)
             throws IOException, NamingException, SQLException {
 
@@ -64,7 +65,7 @@ public class MainCrawler {
                     Logger.getLogger(MainCrawler.class.getName()).log(Level.SEVERE, e.getMessage(), e);
                     canvas.setColorPalatte("");
                 }
-                
+
                 int canvasId = canvasDAO.insert(canvas);
                 System.out.println("DB: " + canvas.getName());
 
@@ -76,7 +77,6 @@ public class MainCrawler {
 //                    System.out.println("DB : " + canvas.getName());
 //                    detailDAO.insert(canvas.getDetail(), canvasId);
 //                }
-
                 canvasDAO.insertCanvasCategory(categoryId, canvasId);
             }
         }

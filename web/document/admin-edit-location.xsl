@@ -13,6 +13,7 @@
         
         <link rel="stylesheet" href="../css/admin.css"/>
         <script type="text/javascript" src="../js/admin.js"></script>
+        <script type="text/javascript" src="../js/utils.js"></script>
 
         <xsl:for-each select="locations/location">           
             
@@ -27,10 +28,11 @@
                     <input type="hidden" name="txtLocationId" value="{id}"/>
                     <input type="hidden" name="txtOldLocationName" value="{name}"/>
                     
-                        <h3>Phân loại </h3> 
+                    <h3>Phân loại </h3> 
                     <input type="text" name="txtLocationName" value="{name}"/>
                     
-                    <br/><br/>
+                    <br/>
+                    <br/>
 
                     <h3>Category </h3>
                     <xsl:for-each select="$categoriesXML/categories/category">

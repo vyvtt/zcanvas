@@ -35,7 +35,11 @@ public class SoynCategoriesCrawler implements Serializable{
     public Map<String, String> crawlCategories()
             throws XMLStreamException, UnsupportedEncodingException {
 
-        String htmlContent = XMLHelper.parseHTML(Constant.HOST_SOYN, beginSign, endSign);
+        String htmlContent = XMLHelper.parseHTML(
+                Constant.HOST_SOYN, 
+                Constant.SOYN_BEGIN_CATEGORY, 
+                Constant.SOYN_END_CATEGORY);
+        
         htmlContent = StringHelper.refineHtml(htmlContent);
         Map<String, String> categories = new HashMap<>();
         

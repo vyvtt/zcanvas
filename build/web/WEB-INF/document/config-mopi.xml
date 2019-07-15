@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<host>
-    https://mopi.vn
-</host>
+<config>
+    <host>https://mopi.vn</host>
+    <begin-category>class="product-categories"</begin-category>
+    <end-category>id="ts_product_filter_by_color-3"</end-category>
+    <begin-count>class='page-numbers'</begin-count>
+    <end-count>&lt;/ul&gt;</end-count>
+    <begin-page>class="products"</begin-page>
+    <end-page>after-loop-wrapper</end-page>
+</config>
