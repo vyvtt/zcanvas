@@ -186,6 +186,7 @@ function loadXML(filePath) {
 }
 
 function loadPreviewImg(event) {
+    console.log('load preview');
     var spanInput = document.getElementById('span-type-image');
     spanInput.style.display = 'none';
 
@@ -197,6 +198,7 @@ function loadPreviewImg(event) {
     console.log(divClose);
 
     var previewImage = document.getElementById('previewImage');
+    console.log(previewImage);
     previewImage.style.display = 'inline-block';
     previewImage.src = URL.createObjectURL(event.target.files[0]);
 
@@ -270,16 +272,11 @@ function validateForm() {
         }
     } else {
         // validate color
-//        var change = mColor.className;
-//        console.log('class name: ' + change);
-//        if (change == 'change') {
-//            validImg = true;
-//        } else {
-//            errImage.innerHTML = 'Please choose a color!';
-//        }
-        // new color validator
+        var i = 0;
         while (!validImg && i < mColor.length) {
+            console.log(mColor[i]);
             if (mColor[i].checked) {
+                console.log('checked');
                 validImg = true;
                 break;
             }

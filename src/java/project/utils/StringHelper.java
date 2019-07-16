@@ -1,24 +1,9 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project.utils;
 
-import java.io.IOException;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.xpath.XPath;
-import javax.xml.xpath.XPathConstants;
-import javax.xml.xpath.XPathExpressionException;
-import javax.xml.xpath.XPathFactory;
-import org.w3c.dom.Document;
-import org.xml.sax.SAXException;
 import project.xmlchecker.XmlSyntaxChecker;
 
 /**
@@ -27,6 +12,11 @@ import project.xmlchecker.XmlSyntaxChecker;
  */
 public class StringHelper implements Serializable {
     
+    /**
+     * Un-escaped special character in a String before insert to DB
+     * @param input
+     * @return Normal readable String
+     */
     public static String unescapedSpecialCharacters(String input) {
         if (input != null) {
             return input
@@ -43,6 +33,11 @@ public class StringHelper implements Serializable {
         return null;
     }
 
+    /**
+     * Well-formed HTML tag
+     * @param src
+     * @return 
+     */
     public static String refineHtml(String src) {
         src = removeMiscellaneousTags(src);
 
@@ -51,6 +46,11 @@ public class StringHelper implements Serializable {
         return src;
     }
 
+    /**
+     * Remove unnecessary tag (script, comment, tab)
+     * @param src
+     * @return 
+     */
     public static String removeMiscellaneousTags(String src) {
         String result = src;
 
@@ -66,10 +66,15 @@ public class StringHelper implements Serializable {
         return result;
     }
 
+    /**
+     * Convert String to BigInteger
+     * @param s
+     * @return BigInter or ZERO if exception caught
+     */
     public static BigInteger convertStringToBigInteger(String s) {
         try {
             if (s == null) {
-                Logger.getLogger(StringHelper.class.getName()).log(Level.SEVERE, "null string to convert to BigInteger => set to BigInteger.ZERO");
+                Logger.getLogger(StringHelper.class.getName()).log(Level.INFO, "NULL string to convert to BigInteger => set to BigInteger.ZERO");
                 return BigInteger.ZERO;
             }
             return new BigInteger(s);
@@ -79,7 +84,11 @@ public class StringHelper implements Serializable {
         }
     }    
 
-    // kiểm tra trùng url => nếu đã có url trong db => sp đã tồn tại => return id
+    /**
+     * Hash product's URL for checking for duplicate later
+     * @param content Product's URL
+     * @return 
+     */
     public static int hashString(String content) {
         int mod = 1000000007;
         int base = 30757; // random prime number

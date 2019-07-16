@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project.crawler;
 
 import project.crawler.mopi.MopiMainCrawler;
@@ -67,7 +62,6 @@ public class MainCrawler {
                 }
 
                 int canvasId = canvasDAO.insert(canvas);
-                System.out.println("DB: " + canvas.getName());
 
 //                if (canvasDAO.isIsExisted()) {
 //                    // Skip insert Detail

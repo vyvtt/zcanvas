@@ -51,18 +51,11 @@ public class GetCanvasMatchingColorServlet extends HttpServlet {
         try {
             int locationId = Integer.parseInt(request.getParameter("rbLocation"));
             String hexColor = request.getParameter("mColor");
-//            Part filePart = request.getPart("mFile");
-//            InputStream is = filePart.getInputStream();
-//            BufferedImage image = ImageIO.read(is);
 
             
             int color = ColorHelper.convertHex2Int(hexColor);
-            System.out.println("color int: " + color);
 
             // init
-//            String colorPalette = ImageHelper.getColorPaletteFromImage(image, true);
-//            List<String> inputPalatte = Arrays.asList(colorPalette.split("\\s*;\\s*"));
-//            System.out.println("input palette: " + colorPalette);
             CanvasDAO canvasDAO = new CanvasDAO();
             LocationDAO locationDAO = new LocationDAO();
 
@@ -103,20 +96,12 @@ public class GetCanvasMatchingColorServlet extends HttpServlet {
             Collections.sort(result, (c1, c2) -> {
                 return ((Comparable) c1.getDeltaE()).compareTo(c2.getDeltaE());
             });
-            
-            System.out.println("total by color: " + result.size());
-            for (Canvas canvas : result) {
-                System.out.println(canvas.getDeltaE());
-            }
 
             for (Categories category : listCategory) {
                 category.setCount(mapCategoryCount.get(category.getId()));
             }
 
             List<String> colorHex = new ArrayList<>();
-//            for (String colorInt : inputPalatte) {
-//                colorHex.add(ImageHelper.convertColorInt2Hex(Integer.parseInt(colorInt)));
-//            }
 
             Canvases canvases = new Canvases();
             canvases.setCanvases(result);
@@ -127,8 +112,9 @@ public class GetCanvasMatchingColorServlet extends HttpServlet {
             info.setInputColors(colorHex);
             info.setCanvases(canvases);
 
-            String infoStr = XMLHelper.parseToXMLString(info);
+            String infoStr = XMLHelper.object2XMLString(info);
             System.out.println(infoStr);
+            infoStr = infoStr.replace("\\'", "'");
 
             response.setContentType("text/xml; charset=UTF-8");
             response.getWriter().write(infoStr);

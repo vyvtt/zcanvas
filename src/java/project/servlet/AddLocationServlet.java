@@ -55,8 +55,6 @@ public class AddLocationServlet extends HttpServlet {
             String fileExtension = fileName.substring(fileName.lastIndexOf(".") + 1);
 
             String filePath = Constant.REAL_PATH + "/image/" + fileName;
-            
-            System.out.println(filePath);
 
             File outputfile = new File(filePath);
             ImageIO.write(image, fileExtension, outputfile);

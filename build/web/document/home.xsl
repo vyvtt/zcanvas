@@ -42,12 +42,15 @@
             <xsl:if test="position() &lt;= $pageSize + ($currentPage * $pageSize)">
                 <span class="span-result">
                     <img src="{my:image}"/>
+                    
                     <span class="span-palette-small">
                         <xsl:for-each select="my:canvasColors">
                             <div style="background-color:{.};"/>
                         </xsl:for-each>
                     </span>
-                    <p><xsl:value-of select="my:name"/></p>
+                    <a href="{my:url}" target="_blank">
+                        <xsl:value-of select="my:name"/>
+                    </a>
                 </span>
             </xsl:if>
         </xsl:if>

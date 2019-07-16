@@ -47,12 +47,11 @@ public class InitPalatteServlet extends HttpServlet {
                 s.setCanvases(c);
                 s.setPaletteColor(PalatteData.palatteColor);
                 s.setPaletteImg(PalatteData.palatteImage);
-                
-                s.setImgName(PalatteData.imgName);
+
                 s.setImgAuth(PalatteData.imgAuth);
                 s.setImgLink(PalatteData.imgLink);
 
-                String spotlightStr = XMLHelper.parseToXMLString(s);
+                String spotlightStr = XMLHelper.object2XMLString(s);
                 System.out.println(spotlightStr);
 
                 response.setContentType("text/xml; charset=UTF-8");

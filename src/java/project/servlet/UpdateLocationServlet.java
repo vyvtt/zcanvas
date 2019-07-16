@@ -60,12 +60,6 @@ public class UpdateLocationServlet extends HttpServlet {
                 locationDAO.updateLocationName(locationId, locationName);
             }
 
-//            String xmlLocation = locationDAO.getAllLocationCategories();
-//            request.setAttribute("XML_LOCATION", xmlLocation);
-//            
-//            String url = "admin.jsp";
-//            RequestDispatcher rd = request.getRequestDispatcher(url);
-//            rd.forward(request, response);
             String url = Constant.SERVLET_GET_LOCATION_CATEGORY;
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <api>
+        https://api.unsplash.com/photos/random
+    </api>
+    <client_id>
+        b303f5c156451e2af3a7ba22ad662f8b8e90b276998a563e464b682cb4403e2b
+    </client_id>
+    <collections>
+        1137575,3485924,1862377,2429040
+    </collections>
+    <orientation>
+        landscape
+    </orientation>
+</config>

@@ -69,6 +69,11 @@ public class CanvasDAO implements Serializable {
             if (statement.getBoolean("isExisted")) {
                 this.isExisted = true;
             }
+            if (this.isExisted) {
+                System.out.println("DB SKIP: " + canvas.getName());
+            } else {
+                System.out.println("DB: " + canvas.getName());
+            }
             return statement.getInt("Id"); // store procedure OUTPUT value registe above
 
         } finally {
@@ -79,37 +84,6 @@ public class CanvasDAO implements Serializable {
                 con.close();
             }
         }
-
-//        Connection con = null;
-//        PreparedStatement stm = null;
-//
-//        try {
-//            con = DBUtils.getConnection();
-//            String sql = "INSERT INTO Canvas(name, url, hashURL, image, designer, color) "
-//                    + "VALUES (?,?,?,?,?,?)";
-//            
-//            con.setAutoCommit(false);
-//            stm = con.prepareStatement(sql);
-//            
-//            for (Canvas canvas : listCanvas) {
-//                stm.setString(1, canvas.getName());
-//                stm.setString(2, canvas.getUrl());
-//                stm.setInt(3, StringHelper.hashString(canvas.getUrl()));
-//                stm.setString(4, canvas.getImage());
-//                stm.setString(5, canvas.getDesigner());
-//                stm.setString(6, ImageHelper.getColorPaletteFromImage(canvas.getUrl()));
-//                stm.addBatch();
-//            }
-//            stm.executeBatch();
-//            con.commit();
-//        } finally {
-//            if (stm != null) {
-//                stm.close();
-//            }
-//            if (con != null) {
-//                con.close();
-//            }
-//        }
     }
 
     public void insertCanvasCategory(int categoryId, int canvasId) throws SQLException, NamingException {

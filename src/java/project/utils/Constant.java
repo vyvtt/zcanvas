@@ -25,11 +25,13 @@ public class Constant {
     public static String XML_CONFIG_MOPI = "/WEB-INF/document/config-mopi.xml";
     public static String XML_CONFIG_FRAMEC = "/WEB-INF/document/config-framec.xml";
     public static String XML_CONFIG_IMAGE = "/WEB-INF/document/config-image.xml";
+    public static String XML_CONFIG_API = "/WEB-INF/document/config-unsplash.xml";
 
     // Config HOST constant
     public static String HOST_SOYN = "";
     public static String HOST_MOPI = "";
     public static String HOST_FRAMEC = "";
+    public static String API = "";
     // Config IMAGE constant
     public static int IMG_DIMENTION_MAX;
     public static int IMG_BUCKET_PER_DIMENSION;

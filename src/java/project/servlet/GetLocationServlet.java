@@ -68,9 +68,6 @@ public class GetLocationServlet extends HttpServlet {
             System.out.println(xmlCategory);
             request.setAttribute("XML_CATEGORIES", xmlCategory);
 
-//            response.setContentType("text/xml; charset=UTF-8");
-//            response.getWriter().write(xmlLocation);
-
             RequestDispatcher rd = request.getRequestDispatcher("admin.jsp");
             rd.forward(request, response);
 

@@ -21,7 +21,6 @@ import project.crawler.MainCrawler;
 import project.jaxb.Categories;
 import project.jaxb.Painting;
 import project.utils.Constant;
-import project.utils.StringHelper;
 import project.utils.XMLHelper;
 
 /**
@@ -48,7 +47,7 @@ public class MopiMainCrawler implements Serializable{
                 c.add(crawlCategory);
                 painting.setCategories(c);
                 
-                XMLHelper.saveToXML(Constant.OUTPUT_XML_MOPI, painting);
+                XMLHelper.object2XMLFile(Constant.OUTPUT_XML_MOPI, painting);
                 XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_MOPI, painting);
                 System.out.println("----------------");
 

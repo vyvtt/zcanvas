@@ -48,7 +48,7 @@ public class FramecMainCrawler implements Serializable {
                 c.add(crawlCategory);
                 painting.setCategories(c);
 
-                XMLHelper.saveToXML(Constant.OUTPUT_XML_FRAMEC, painting);
+                XMLHelper.object2XMLFile(Constant.OUTPUT_XML_FRAMEC, painting);
                 XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_FRAMEC, painting);
                 System.out.println("----------------");
 

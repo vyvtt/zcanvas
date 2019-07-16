@@ -27,16 +27,14 @@
 
         },
         renderLocation: function () {
-            console.log('render');
+            console.log('render location');
             var scripts = document.getElementsByTagName("script");
             src = scripts[scripts.length - 1].src;
-            console.log(src);
             if (document.implementation && document.implementation.createDocument)
             {
                 xsltProcessor = new XSLTProcessor();
                 xsltProcessor.importStylesheet(octopus.getXslAdmin());
                 resultDocument = xsltProcessor.transformToFragment(octopus.getXmlAdmin(), document);
-                console.log(resultDocument);
 
                 var myNode = document.getElementById("admin");
                 while (myNode.firstChild) {
@@ -84,7 +82,6 @@
             adminView.renderEdit();
         },
         crawlData: function () {
-            console.log('crawl');
 
             var lbCrawl = document.getElementById("lbCrawl");
             var imgCrawl = document.getElementById("imgCrawl");
@@ -100,120 +97,31 @@
                 lbCrawl.style.display = 'block';
                 imgCrawl.style.display = 'none';
             });
-        },
-        submitForm: function (data) {
-
-            // Display the key/value pairs
-            for (var pair of data.entries()) {
-                console.log(pair[0] + ' = ' + pair[1]);
-            }
-
-            var url = "ProcessServlet";
-            sendMultiPartForm(url, data, function (response) {
-                var str = response.responseXML;
-
-                homeModel.totalResult = str.getElementsByTagName("total")[0].innerHTML;
-
-                homeModel.listInputColors = str.getElementsByTagName("inputColor");
-                homeView.renderPalatte();
-
-                homeModel.listCategories = str.getElementsByTagName("category");
-                homeView.renderCategories();
-
-                homeModel.xmlCanvas = str.getElementsByTagName('canvases')[0];
-                homeView.renderCanvasResult(0);
-            });
         }
+//        submitForm: function (data) {
+//
+//            // Display the key/value pairs
+//            console.log('Submit form with param:');
+//            for (var pair of data.entries()) {
+//                console.log(pair[0] + ' = ' + pair[1]);
+//            }
+//
+//            var url = "ProcessServlet";
+//            sendMultiPartForm(url, data, function (response) {
+//                var str = response.responseXML;
+//
+//                homeModel.totalResult = str.getElementsByTagName("total")[0].innerHTML;
+//
+//                homeModel.listInputColors = str.getElementsByTagName("inputColor");
+//                homeView.renderPalatte();
+//
+//                homeModel.listCategories = str.getElementsByTagName("category");
+//                homeView.renderCategories();
+//
+//                homeModel.xmlCanvas = str.getElementsByTagName('canvases')[0];
+//                homeView.renderCanvasResult(0);
+//            });
+//        }
     };
     octopus.init();
 }());
-
-//function tryAgain() {
-//    var xslUrl = null;
-//
-//    xslUrl = "/ZCanvas/document/categories.xml";
-//    var category = loadXML(xslUrl);
-//    console.log('category load xml: ' + category);
-//    console.log(category);
-//
-//    xslUrl = "/ZCanvas/document/admin-test.xsl";
-//    var xsl = loadXML(xslUrl);
-//
-//    if (document.implementation && document.implementation.createDocument)
-//    {
-//        console.log('in XSLTProcessor');
-//        xsltProcessor = new XSLTProcessor();
-//        xsltProcessor.importStylesheet(xslDoc);
-//        xsltProcessor.setParameter(null, "categoryInput", category);
-////        xsltProcessor.setParameter(null, "a", xmlCategories);
-//        resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
-//        console.log(resultDocument);
-//        document.getElementById("example").appendChild(resultDocument);
-//    }
-//}
-//
-//function displayResult(realPath, xmlString, xmlCategories) {
-//    console.log('real path ' + realPath);
-//
-//    var xslUrl = realPath + "/document/admin-test.xsl";
-////    var xmlUrl = realPath + "/admin.xsl";
-//
-//    console.log('xsl path: ' + xslUrl);
-//
-//    var xslDoc = loadXML(xslUrl);
-//    console.log('load file: ' + xslDoc);
-//
-//    console.log('xml string: ' + xmlString);
-//    var parser = new DOMParser();
-//    var xmlDoc = parser.parseFromString(xmlString, "application/xml");
-//
-//    if (document.implementation && document.implementation.createDocument)
-//    {
-//        console.log('in XSLTProcessor');
-//        xsltProcessor = new XSLTProcessor();
-//        xsltProcessor.importStylesheet(xslDoc);
-//        xsltProcessor.setParameter(null, "categoriesFile", "WEB-INF/document/categories.xml");
-//        xsltProcessor.setParameter(null, "a", xmlCategories);
-//        resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
-//        console.log(resultDocument);
-//        document.getElementById("example").appendChild(resultDocument);
-//    }
-//}
-//
-//function test(realPath) {
-//    alert('in test');
-//    console.log(realPath);
-//
-//    var xslUrl = realPath + "/admin.xsl";
-//    var xmlUrl = realPath + "/admin.xsl";
-//
-//    console.log(xslUrl);
-//
-//    //    alert('in');
-//
-//    console.log('xmlString: ' + xmlString);
-//    console.log('xslString: ' + xslString);
-//
-//    xsl = loadXMLDoc("../document/admin.xsl");
-//
-//    console.log('load file: ' + xsl);
-//
-//    var parser = new DOMParser();
-//    var xmlDoc = parser.parseFromString(xmlString, "application/xml");
-//    var xslDoc = parser.parseFromString(xslString, "application/xml");
-//
-//    console.log(xmlDoc);
-//    console.log(xslDoc);
-//
-//    if (document.implementation && document.implementation.createDocument)
-//    {
-//        console.log('in Chrome');
-//        xsltProcessor = new XSLTProcessor();
-//        xsltProcessor.importStylesheet(xslDoc);
-//        xsltProcessor.setParameter(null, "categoriesFile", "WEB-INF/document/categories.xml");
-//        resultDocument = xsltProcessor.transformToFragment(xmlDoc, document);
-//        console.log(resultDocument);
-//        document.getElementById("example").appendChild(resultDocument);
-//    }
-
-//}

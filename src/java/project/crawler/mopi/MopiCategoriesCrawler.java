@@ -58,8 +58,6 @@ public class MopiCategoriesCrawler implements Serializable{
         reader.close();
 
         // lấy các categories từ trang trên
-        beginSign = "class=\"product-categories\"";
-        endSign = "id=\"ts_product_filter_by_color-3\"";
         htmlContent = "";
         htmlContent = XMLHelper.parseHTML(tmpUrl, Constant.MOPI_BEGIN_CATEGORY, Constant.MOPI_END_CATEGORY);
         htmlContent = StringHelper.refineHtml(htmlContent);
@@ -109,6 +107,7 @@ public class MopiCategoriesCrawler implements Serializable{
         
         categories.remove("https://mopi.vn/bo-suu-tap/mopi-home-category/");
         categories.remove("https://mopi.vn/bo-suu-tap/mopi-life-category/");
+        
         return categories;
     }
 }

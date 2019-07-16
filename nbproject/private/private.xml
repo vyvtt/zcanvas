@@ -3,14 +3,28 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/ConfigHelper.java</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/soyn/SoynCategoriesCrawler.java</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/document/home-spotlight.xsl</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/WEB-INF/document/config-soyn.xml</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/Constant.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/ImageHelper.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/HomeServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/document/home.xsl</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/listener/MyContextServletListener.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/MainCrawler.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/css/admin.css</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/StringHelper.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/css/home.css</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/GetLocationServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/CrawlHelper.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/WEB-INF/document/config-unsplash.xml</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/admin.js</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/home.jsp</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/UpdateLocationServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/XMLHelper.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/document/home-spotlight.xsl</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/dao/CanvasDAO.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/utils/ColorHelper.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/home.js</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/InitPalatteServlet.java</file>
-            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/crawler/soyn/SoynPageCrawler.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/servlet/AddLocationServlet.java</file>
+            <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/admin.jsp</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/src/java/project/miscellaneous/PalatteData.java</file>
             <file>file:/D:/Study-Resource/Semester_8_Summer2019/PRX301_Web%20Development%20(XML)/Code/ZCanvas/web/js/utils.js</file>
         </group>

@@ -61,7 +61,6 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             // init
             String colorPalette = ImageHelper.getColorPaletteFromImage(image, true);
             List<String> inputPalatte = Arrays.asList(colorPalette.split("\\s*;\\s*"));
-            System.out.println("input palette: " + colorPalette);
             CanvasDAO canvasDAO = new CanvasDAO();
             LocationDAO locationDAO = new LocationDAO();
 
@@ -120,7 +119,7 @@ public class GetCanvasMatchingImageServlet extends HttpServlet {
             info.setInputColors(colorHex);
             info.setCanvases(canvases);
 
-            String infoStr = XMLHelper.parseToXMLString(info);
+            String infoStr = XMLHelper.object2XMLString(info);
             System.out.println(infoStr);
 
             response.setContentType("text/xml; charset=UTF-8");

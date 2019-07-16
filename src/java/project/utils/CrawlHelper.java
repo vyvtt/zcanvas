@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project.utils;
 
 import java.io.BufferedReader;
@@ -19,6 +14,14 @@ import static project.utils.XMLHelper.getBufferReaderFromURI;
  */
 public class CrawlHelper implements Serializable {
 
+    /**
+     * Get total product's page of a category
+     * @param categoryURL Category first page URL
+     * @param beginSign Where info about pagination begin
+     * @param endSign Where info about pagination end
+     * @param key Sign of which line contain page number
+     * @return Number of page count
+     */
     public static int getPageCount(String categoryURL, String beginSign, String endSign, String key) {
 
         int result = 1;
@@ -55,6 +58,13 @@ public class CrawlHelper implements Serializable {
         return result;
     }
 
+    /**
+     * Parse a single line of HTML to get page number and compare to previous count number
+     * @param line A Single line in HTML
+     * @param key Sign of which line contain page number
+     * @param previousCount Previous count number (for comparing)
+     * @return 
+     */
     private static int updatePageCount(String line, String key, int previousCount) {
 
         line = line.substring(line.indexOf(key));
@@ -63,25 +73,17 @@ public class CrawlHelper implements Serializable {
         String countPage = line.substring(begin);
         int end = countPage.indexOf("<");
         countPage = countPage.substring(0, end);
+        
+        countPage = countPage.toLowerCase();
+        countPage = countPage.replace("trang", "").replace("page", "");
+        countPage = countPage.trim();
 
         try {
             int currentCount = Integer.parseInt(countPage);
             return Math.max(currentCount, previousCount);
         } catch (NumberFormatException e) {
-            Logger.getLogger(CrawlHelper.class.getName()).log(Level.INFO, "Can not parse page number: {0}", e.getMessage());
+            Logger.getLogger(CrawlHelper.class.getName()).log(Level.INFO, "Can not parse page number: {0} -> skip this number", e.getMessage());
             return previousCount;
         }
-
-//        if (!countPage.equals("...")) {
-//            try {
-//                int currentCount = Integer.parseInt(countPage);
-//                return Math.max(currentCount, previousCount);
-//            } catch (NumberFormatException e) {
-//                Logger.getLogger(CrawlHelper.class.getName()).log(Level.INFO, "Can not parse page number: {0}", e.getMessage());
-//                return previousCount;
-//            }
-//
-//        }
-//        return previousCount;
     }
 }

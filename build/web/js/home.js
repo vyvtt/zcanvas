@@ -78,7 +78,7 @@
 
                     divClose.style.display = 'none';
                     previewImage.style.display = 'none';
-                    previewColor.style.display = 'none';
+                    previewColor.style.display = 'block';
 
                     var palette = document.getElementById('palette');
                     palette.style.display = 'none';
@@ -116,6 +116,11 @@
                     colorRadio.setAttribute("id", hex.innerHTML);
                     colorRadio.setAttribute("name", "mColor");
                     colorRadio.setAttribute("value", hex.innerHTML);
+                    colorRadio.addEventListener("click", function () {
+//                        var previewColorCur = document.getElementById("previewColor");
+//                        previewColorCur.style.display = 'block';
+                        previewColor.style.backgroundColor = hex.innerHTML;
+                    });
                     var colorLabel = document.createElement("label");
                     colorLabel.setAttribute("for", hex.innerHTML);
                     colorLabel.setAttribute("class", "label-color");

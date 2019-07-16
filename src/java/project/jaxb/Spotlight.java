@@ -24,9 +24,6 @@ public class Spotlight {
     @XmlElement(name = "paletteColor")
     private List<String> paletteColor = null;
     
-    @XmlElement(name = "imgName")
-    private String imgName = null;
-    
     @XmlElement(name = "imgAuth")
     private String imgAuth = null;
     
@@ -61,14 +58,6 @@ public class Spotlight {
 
     public void setCanvases(Canvases canvases) {
         this.canvases = canvases;
-    }
-
-    public String getImgName() {
-        return imgName;
-    }
-
-    public void setImgName(String imgName) {
-        this.imgName = imgName;
     }
 
     public String getImgAuth() {

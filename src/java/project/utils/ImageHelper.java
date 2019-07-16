@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project.utils;
 
 import java.awt.Color;
@@ -19,179 +14,7 @@ import java.util.Map;
  * @author thuyv
  */
 public class ImageHelper {
-
-//    public static void getDominantColor(String url) throws IOException {
-//        BufferedImage image = ImageIO.read(new URL(url));
-//
-//        int height = image.getHeight();
-//        int width = image.getWidth();
-//
-//        Map m = new HashMap();
-//        for (int i = 0; i < width; i++) {
-//            for (int j = 0; j < height; j++) {
-//                int rgb = image.getRGB(i, j);
-//                int[] rgbArr = getRGBArr(rgb);
-//                // Filter out grays....                
-//                if (!isGray(rgbArr)) {
-//                    Integer counter = (Integer) m.get(rgb);
-//                    if (counter == null) {
-//                        counter = 0;
-//                    }
-//                    counter++;
-//                    m.put(rgb, counter);
-//                }
-//            }
-//        }
-//        String colourHex = getMostCommonColour(m);
-//        System.out.println(colourHex);
-//    }
-//    public static String getMostCommonColour(Map map) {
-//        List<Map.Entry> list = new LinkedList(map.entrySet());
-//        Collections.sort(list, new Comparator() {
-//            public int compare(Object o1, Object o2) {
-//                return ((Comparable) ((Map.Entry) (o1)).getValue())
-//                        .compareTo(((Map.Entry) (o2)).getValue());
-//            }
-//        });
-//
-////        int i = 0;
-////        for (Map.Entry entry : list) {
-////            int tmpRGB = (Integer) entry.getKey();
-////            int[] rgb = getRGBArr((Integer) entry.getKey());
-////            System.out.println(i + ": #" + Integer.toHexString(rgb[0]) + Integer.toHexString(rgb[1]) + Integer.toHexString(rgb[2]));
-////            getHSBFromRGB(tmpRGB);
-////            i++;
-////        }
-//        List<String> commonColorList = new ArrayList<>();
-//
-//        int count = 1;
-//        int countPixel = 0;
-//        int totalR = 0, totalG = 0, totalB = 0;
-//        while (commonColorList.size() <= 3 && count < list.size()) {
-//            Map.Entry entry = (Map.Entry) list.get(list.size() - count);
-//            int rgb = (Integer) entry.getKey();
-//            int[] rgbArr = getRGBArr(rgb);
-//            totalR += rgbArr[0];
-//            totalG += rgbArr[1];
-//            totalB += rgbArr[2];
-//            countPixel++;
-//
-//            String hueDegree = getHSBFromRGB(rgb);
-//            if (!commonColorList.contains(hueDegree)) {
-//                commonColorList.add(hueDegree);
-//                System.out.println(hueDegree);
-//                System.out.println("average of " + countPixel + " - #"
-//                        + Integer.toHexString(totalR / countPixel)
-//                        + Integer.toHexString(totalG / countPixel)
-//                        + Integer.toHexString(totalB / countPixel));
-//                totalB = totalG = totalR = countPixel = 0;
-//            }
-//            count++;
-//        }
-//
-//        System.out.println("count: " + count);
-//
-////        int minCount = 100;
-////        if (list.size() < 100) {
-////            minCount = list.size();
-////        }
-////        
-////        int startColor;
-////        for (int j = 1; j < minCount; j++) {
-////            Map.Entry entry = (Map.Entry) list.get(list.size() - j);
-////            int rgb = (Integer) entry.getKey();
-////
-////            String hueDegree = getHSBFromRGB(rgb);
-////            if (!commonColorList.contains(hueDegree)) {
-////                commonColorList.add(hueDegree);
-////            }
-////        }
-//        System.out.println("///////////");
-//        for (String string : commonColorList) {
-//            System.out.println(string);
-//        }
-//
-////        Map.Entry me = (Map.Entry) list.get(list.size() - 1);
-////        int tmpRGB = (Integer) me.getKey();
-////        int[] rgb = getRGBArr((Integer) me.getKey());
-////        System.out.println("1: " + "#" + Integer.toHexString(rgb[0]) + Integer.toHexString(rgb[1]) + Integer.toHexString(rgb[2]));
-////
-////        
-////
-////        me = (Map.Entry) list.get(list.size() - 2);
-////        rgb = getRGBArr((Integer) me.getKey());
-////        System.out.println("2 " + "#" + Integer.toHexString(rgb[0]) + Integer.toHexString(rgb[1]) + Integer.toHexString(rgb[2]));
-////
-////        me = (Map.Entry) list.get(list.size() - 3);
-////        rgb = getRGBArr((Integer) me.getKey());
-////        System.out.println("3: " + "#" + Integer.toHexString(rgb[0]) + Integer.toHexString(rgb[1]) + Integer.toHexString(rgb[2]));
-////        return "#" + Integer.toHexString(rgb[0]) + Integer.toHexString(rgb[1]) + Integer.toHexString(rgb[2]);
-//        return "#";
-//    }
-//    public static boolean isGray(int[] rgbArr) {
-//        int rgDiff = rgbArr[0] - rgbArr[1];
-//        int rbDiff = rgbArr[0] - rgbArr[2];
-//        // Filter out black, white and grays...... (tolerance within 10 pixels)
-//        int tolerance = 10;
-//        if (rgDiff > tolerance || rgDiff < -tolerance) {
-//            if (rbDiff > tolerance || rbDiff < -tolerance) {
-//                return false;
-//            }
-//        }
-//        return true;
-//    }
-//    private static BufferedImage resize(final URL url, final Dimension size) throws IOException {
-//        final BufferedImage image = ImageIO.read(url);
-//        final BufferedImage resized = new BufferedImage(size.width, size.height, BufferedImage.TYPE_4BYTE_ABGR);
-//        final Graphics2D g = resized.createGraphics();
-//        g.drawImage(image, 0, 0, size.width, size.height, null);
-//        g.dispose();
-//        return resized;
-//    }
-//    private static float[] RGBToHSB(int rgb) {
-//        // hsb
-//        float hsb[] = new float[3];
-//        int r = (rgb >> 16) & 0xFF;
-//        int g = (rgb >> 8) & 0xFF;
-//        int b = (rgb) & 0xFF;
-//        Color.RGBtoHSB(r, g, b, hsb);
-//        return hsb;
-//    }
-//    private static String getHSBFromRGB(int rgb) {
-//        // hsb
-//        float hsb[] = new float[3];
-//        int r = (rgb >> 16) & 0xFF;
-//        int g = (rgb >> 8) & 0xFF;
-//        int b = (rgb) & 0xFF;
-//        Color.RGBtoHSB(r, g, b, hsb);
-//        //
-//        if (hsb[1] < 0.1 && hsb[2] > 0.9) {
-////            System.out.println("nearly while");
-//            return "white";
-//        } else if (hsb[2] < 0.1) {
-//            return "black";
-//        } else {
-//            float deg = hsb[0] * 360;
-////            System.out.println("degree: " + deg);
-//            if (deg >= 0 && deg < 30) {
-//                return "red";
-//            } else if (deg >= 30 && deg < 60) {
-//                return "orange";
-//            } else if (deg >= 60 && deg < 90) {
-//                return "yellow";
-//            } else if (deg >= 90 && deg < 150) {
-//                return "green";
-//            } else if (deg >= 150 && deg < 210) {
-//                return "cyan";
-//            } else if (deg >= 210 && deg < 270) {
-//                return "blue";
-//            } else if (deg >= 270 && deg < 330) {
-//                return "megatan";
-//            } else {
-//                return "red";
-//            }
-//        }
-//    }
+    
     public static int[] getRGBArr(int pixel) {
 //        int alpha = (pixel >> 24) & 0xff;
         int red = (pixel >> 16) & 0xff;
@@ -320,9 +143,6 @@ public class ImageHelper {
             bucket = listBucket.get(listBucket.size() - i);
             averageColor = calculateAverageColor(bucket.getValue());
 
-//            Red = (Red << 16) & 0x00FF0000; //Shift red 16-bits and mask out other stuff
-//            Green = (Green << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
-//            Blue = Blue & 0x000000FF; //Mask out anything not blue.
             int color = 0xFF000000 | (averageColor[0] << 16) & 0x00FF0000 | (averageColor[1] << 8) & 0x0000FF00 | averageColor[2] & 0x000000FF; //0xFF000000 for 100% Alpha. Bitwise OR everything together.
 
             paletteString.append(String.valueOf(color));
@@ -350,121 +170,20 @@ public class ImageHelper {
 
         return new int[]{totalRed / size, totalGreen / size, totalBlue / size};
     }
-
-    public static int[] rgb2lab(int R, int G, int B) {
-
-        float r, g, b, X, Y, Z, fx, fy, fz, xr, yr, zr;
-        float Ls, as, bs;
-        
-        // Constant
-        float eps = 216.f / 24389.f;
-        float k = 24389.f / 27.f;
-
-        // White D50 (standard daylight) trong hệ XYZ 
-        // -> hệ số illuminant (chiếu sáng) cần thiết khi convert CIELab (Chromatic Adaptation)
-        // ref: http://www.brucelindbloom.com/index.html?Eqn_ChromAdapt.html
-        float Xr = 0.964221f;  
-        float Yr = 1.0f;
-        float Zr = 0.825211f;
-
-        // RGB to XYZ ---------------------------------------
-        // http://www.brucelindbloom.com/index.html?Eqn_RGB_to_XYZ.html
-        // 1. Inverse Companding
-        // 2. 
-        
-        // input RGB có range [0;255] --> convert thành range [0;1]
-        r = R / 255.f;
-        g = G / 255.f;
-        b = B / 255.f;
-
-        // Giả định sử dụng hệ standard RGB aka sRGB (D65)
-        // Inverse sRGB Companding
-        if (r <= 0.04045) {
-            r = r / 12;
-        } else {
-            r = (float) Math.pow((r + 0.055) / 1.055, 2.4);
-        }
-
-        if (g <= 0.04045) {
-            g = g / 12;
-        } else {
-            g = (float) Math.pow((g + 0.055) / 1.055, 2.4);
-        }
-
-        if (b <= 0.04045) {
-            b = b / 12;
-        } else {
-            b = (float) Math.pow((b + 0.055) / 1.055, 2.4);
-        }
-        
-        /**
-         * Matrix: http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
-         * sRGB and D50 white
-         * 
-         * X         0.436052025     0.385081593     0.143087414     R
-         * Y    =    0.222491598     0.71688606      0.060621486     G
-         * Z         0.013929122     0.097097002     0.71418547      B
-         */
-        X = 0.436052025f * r + 0.385081593f * g + 0.143087414f * b;
-        Y = 0.222491598f * r + 0.71688606f * g + 0.060621486f * b;
-        Z = 0.013929122f * r + 0.097097002f * g + 0.71418547f * b;
-
-        // XYZ to Lab
-        xr = X / Xr;
-        yr = Y / Yr;
-        zr = Z / Zr;
-
-        if (xr > eps) {
-            fx = (float) Math.pow(xr, 1 / 3.);
-        } else {
-            fx = (float) ((k * xr + 16.) / 116.);
-        }
-
-        if (yr > eps) {
-            fy = (float) Math.pow(yr, 1 / 3.);
-        } else {
-            fy = (float) ((k * yr + 16.) / 116.);
-        }
-
-        if (zr > eps) {
-            fz = (float) Math.pow(zr, 1 / 3.);
-        } else {
-            fz = (float) ((k * zr + 16.) / 116);
-        }
-
-        Ls = (116 * fy) - 16;
-        as = 500 * (fx - fy);
-        bs = 200 * (fy - fz);
-
-        int[] lab = new int[3];
-        lab[0] = (int) (2.55 * Ls + .5);
-        lab[1] = (int) (as + .5);
-        lab[2] = (int) (bs + .5);
-        return lab;
-    }
-
+    
     /**
-     * Computes the difference between two RGB colors by converting them to the
-     * L*a*b scale and comparing them using the CIE76 algorithm {
-     * http://en.wikipedia.org/wiki/Color_difference#CIE76}
+     * Computes the difference between two RGB colors by converting them to 
+     * the L*a*b scale and comparing them using the CIE76 algorithm
+     * Ref: http://en.wikipedia.org/wiki/Color_difference#CIE76
+     * @param a Color 1, dạng int
+     * @param b Color 2, dạng int
+     * @return 
      */
     public static double getColorDifference(int a, int b) {
-//        int r1, g1, b1, r2, g2, b2;
-
         Color color1 = new Color(a);
         Color color2 = new Color(b);
 
-        // Returns the color r,g,b component in the range 0-255 in the default sRGB
-//        r1 = color1.getRed();
-//        g1 = color1.getGreen();
-//        b1 = color1.getBlue();
-//        r2 = color2.getRed();
-//        g2 = color2.getGreen();
-//        b2 = color2.getBlue();
-
-//        int[] lab1 = rgb2lab(r1, g1, b1);
-//        int[] lab2 = rgb2lab(r2, g2, b2);
-        
+        // getReb/Green/Blue() returns the color r,g,b component in the range 0-255 in the default sRGB
         int[] lab1 = ColorHelper.convertRGBtoLab(color1.getRed(), color1.getGreen(), color1.getBlue());
         int[] lab2 = ColorHelper.convertRGBtoLab(color2.getRed(), color2.getGreen(), color2.getBlue());
         
@@ -474,14 +193,22 @@ public class ImageHelper {
                 + Math.pow(lab2[2] - lab1[2], 2));
     }
 
-    // inputPalatte, currentPalette
+    /**
+     * Computes the difference between two palette
+     * @param palette1 Palette inputPalatte (input, thường là 5 color)
+     * @param palette2 Palette cần so sánh, currentPalette (số color tùy thuộc)
+     * @return tổng delta E cho những palette có độ phù hợp 4/5, hoặc -1 nếu ko phì hợp
+     */
     public static double comparePalette2Palette(List<String> palette1, List<String> palette2) {
 
         int tolerance = Constant.IMG_DELTA_E_TOLERANCE;
         
+        // Số màu: thường là 5
         if (palette2.size() <= 3) {
+            // Màu trong palette ít hơn 3 -> return để tránh các trường hợp màu đơn sắc với deltaE nhỏ
             return -1;
         } else if (palette2.size() == 4) {
+            // Màu trong palette ít = 4 -> hạ tolerance cho độ chính xác cao hơn (default trong config = 20)
             tolerance = 10;
         }
 
@@ -506,6 +233,12 @@ public class ImageHelper {
         return -1;
     }
 
+    /**
+     * Computes the difference between a single color and palette
+     * @param color
+     * @param palette2
+     * @return delta E nhỏ nhất giữa color và các màu trong palette input
+     */
     public static double compareColor2Palette(int color, List<String> palette2) {
 
         if (palette2.size() <= 2) {
@@ -520,13 +253,11 @@ public class ImageHelper {
             if (j == 0) {
                 smallestDeltaE = diff;
             }
-
             if (diff < smallestDeltaE) {
                 smallestDeltaE = diff;
             }
         }
         
-        System.out.println(smallestDeltaE);
         // lấy delta E nhỏ nhất của palette và nhỏ hơn config 
         if (smallestDeltaE <= Constant.IMG_DELTA_E_TOLERANCE_SINGLE) {
             return smallestDeltaE;

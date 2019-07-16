@@ -21,12 +21,10 @@
             <span class="spotlight-img-wrap">
                 <img class="spotlight-img" src="{my:spotlight/my:paletteImg}" height="auto" width="auto"/>
                 <p class="spotlight-img-description">
-                    <xsl:value-of select="my:spotlight/my:imgName"/>
-                    <br/>
-                    Image by <b>
-                        <xsl:value-of select="my:spotlight/my:imgAuth"/>
-                    </b> 
-                    at <a href="{my:spotlight/my:imgLink}">Unsplash</a> 
+                    <!--<xsl:value-of select="my:spotlight/my:imgName"/>-->
+                    <!--<br/>-->
+                    Image by <b><xsl:value-of select="my:spotlight/my:imgAuth"/></b> 
+                    at <a href="{my:spotlight/my:imgLink}" target="_blank">Unsplash</a> 
                     <br/>
                 </p>
             </span>
@@ -43,9 +41,7 @@
                 <xsl:for-each select="my:spotlight/my:canvases/my:canvas">
                     <div class="mySlides animate-fading">
                         <img src="{my:image}"/>
-                        <div>
-                            <xsl:value-of select="my:name"/>
-                        </div>
+                        <p><xsl:value-of select="my:name"/></p>
                     </div>
                 </xsl:for-each>  
                 <a class="prev" onclick='plusSlides(-1)'>&#10094;</a>

@@ -13,6 +13,7 @@ import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
 import project.miscellaneous.PalatteData;
 import project.utils.ConfigHelper;
+import project.utils.Constant;
 
 /**
  * Web application lifecycle listener.
@@ -34,6 +35,7 @@ public class MyContextServletListener implements ServletContextListener {
         ConfigHelper.configHost();
         ConfigHelper.configImage();
         ConfigHelper.configCrawl();
+        ConfigHelper.getUnsplashConfigFromFile(Constant.XML_CONFIG_API);
         
         // init list all canvas
         PalatteData.initListCanvas();
@@ -49,11 +51,6 @@ public class MyContextServletListener implements ServletContextListener {
             }
         }, 0, 5, TimeUnit.MINUTES);
     }
-    
-//    private void runBackgound() {
-//        System.out.println("run schedule ----------------------------");
-//        System.out.println(System.nanoTime());
-//    }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {

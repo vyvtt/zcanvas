@@ -52,7 +52,7 @@ public class SoynMainCrawler implements Serializable {
                 c.add(crawlCategory);
                 painting.setCategories(c);
                 
-                XMLHelper.saveToXML(Constant.OUTPUT_XML_SOYN, painting);
+                XMLHelper.object2XMLFile(Constant.OUTPUT_XML_SOYN, painting);
                 XMLHelper.validateXMLBeforeSaveToDatabase(Constant.OUTPUT_XML_SOYN, painting);
                 System.out.println("----------------");
 

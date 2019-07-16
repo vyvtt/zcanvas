@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project.servlet;
 
 import java.io.IOException;
@@ -39,7 +34,6 @@ public class ProcessServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         String url = JSP_HOME;
-//        String url = "InitPalatteServlet";
         String btn = request.getParameter("btAction");
 
         try {

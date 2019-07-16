@@ -19,7 +19,9 @@
     <body>
 
         <div class="logo" id="logo">
-            <img src="image/logo.png"/>
+            <a href="http://localhost:8084/ZCanvas/">
+                <img src="image/logo.png"/>
+            </a>
         </div>
 
         <br>

@@ -17,7 +17,9 @@
     <body>
 
         <div class="logo" id="logo">
-            <img src="image/logo.png"/>
+            <a href="http://localhost:8084/ZCanvas/">
+                <img src="image/logo.png"/>
+            </a>
         </div>
 
         <div class="content">
@@ -67,22 +69,20 @@
                             <label for="file" class="input-file-label">Choose an image</label>
                         </span>
 
-                        <span id="span-type-color" style="display: none;">                            
-                            <!--<input id="color" type="color" name="mColor" onchange="loadPreviewColor(this)"/>-->
-                            <!--<label for="color" class="input-file-label">Choose a color</label>-->
-                        </span>
+                        <span id="span-type-color" style="display: none;"></span>
+                        <div id="previewColor" class="span-preview-color"></div>
 
                         <div id="closePreview" class="div-close" style="display: none;">
                             <img src="image/close.svg"/>
                         </div>
-                        <br style="clear: both;">
+                        <br style="clear: both;"/>
 
                         <span id="span-preview-image" style="display: none;">
                             <img id="previewImage" class="preview" src="image/placeholder.png"/>
                             <span class="span-palette" id="palette"></span>
                         </span>
 
-                        <span id="previewColor" class="previewColor"/>
+                        <!--<span id="previewColor" class="previewColor"/>-->
                     </div>
 
                 </form>
@@ -92,9 +92,9 @@
             <br/>
 
             <div style="text-align: center">
-                <div id="div-category-wrap"></div>
+                <div id="div-category-wrap" class="m-left-right"></div>
                 <br style="clear: both;">
-                <div id="div-page-wrap"></div>
+                <div id="div-page-wrap" class="m-left-right"></div>
                 <br style="clear: both;">
             </div>
 

@@ -32,9 +32,9 @@ body {
     background-color: #393e46;
 }
 
-.logo > img {
+.logo > a > img {
     width: auto;
-    height: 100px;
+    height: 70px;
 }
 
 .div-location {

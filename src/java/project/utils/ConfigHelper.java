@@ -18,6 +18,8 @@ import javax.xml.xpath.XPathConstants;
 import javax.xml.xpath.XPathExpressionException;
 import javax.xml.xpath.XPathFactory;
 import org.w3c.dom.Document;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
 import static project.utils.Constant.*;
 
@@ -54,11 +56,6 @@ public class ConfigHelper {
         SOYN_BEGIN_PAGE = map.get(KEY_B_PAGE);
         SOYN_END_PAGE = map.get(KEY_E_PAGE);
 
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
-        }
-        System.out.println("-------------");
-
         map = getCrawlConfigFromFile(XML_CONFIG_MOPI);
         MOPI_BEGIN_CATEGORY = map.get(KEY_B_CATEGORY);
         MOPI_END_CATEGORY = map.get(KEY_E_CATEGORY);
@@ -66,10 +63,6 @@ public class ConfigHelper {
         MOPI_END_COUNT = map.get(KEY_E_CATEGORY);
         MOPI_BEGIN_PAGE = map.get(KEY_B_PAGE);
         MOPI_END_PAGE = map.get(KEY_E_PAGE);
-
-        for (Map.Entry<String, String> entry : map.entrySet()) {
-            System.out.println(entry.getKey() + " - " + entry.getValue());
-        }
     }
 
     public static void configRealPath(String realPath) {
@@ -85,6 +78,7 @@ public class ConfigHelper {
         XML_CONFIG_MOPI = REAL_PATH + XML_CONFIG_MOPI;
         XML_CONFIG_FRAMEC = REAL_PATH + XML_CONFIG_FRAMEC;
         XML_CONFIG_IMAGE = REAL_PATH + XML_CONFIG_IMAGE;
+        XML_CONFIG_API = REAL_PATH + XML_CONFIG_API;
     }
 
     private static String getHostConfigFromFile(String filePath) {
@@ -151,11 +145,6 @@ public class ConfigHelper {
             tmp = (String) xPath.evaluate(expression, document, XPathConstants.STRING);
             map.put(KEY_E_PAGE, tmp.trim());
 
-            for (Map.Entry<String, String> entry : map.entrySet()) {
-                System.out.println(entry.getKey() + " - " + entry.getValue());
-            }
-            System.out.println("-------------");
-
             return map;
 
         } catch (IOException | ParserConfigurationException | XPathExpressionException | SAXException e) {
@@ -201,5 +190,59 @@ public class ConfigHelper {
         } catch (IOException | ParserConfigurationException | XPathExpressionException | SAXException e) {
             Logger.getLogger(ConfigHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
+    }
+
+    public static void getUnsplashConfigFromFile(String filePath) {
+        try {
+            // parse file to DOM
+            DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = builderFactory.newDocumentBuilder();
+            Document document = builder.parse(filePath);
+            // get XPath
+            XPathFactory xPathFactory = XPathFactory.newInstance();
+            XPath xPath = xPathFactory.newXPath();
+
+            // get config
+            String expression = "/config/*";
+            NodeList elements = (NodeList) xPath.evaluate(expression, document, XPathConstants.NODESET);
+            
+            StringBuilder stringBuilder = new StringBuilder();
+            Node node = null;
+            String nodeName, nodeValue;
+
+            for (int j = 0; j < elements.getLength(); j++) {
+                node = elements.item(j);
+                nodeName = node.getNodeName();
+                nodeValue = node.getTextContent().trim();
+                
+                if (nodeName.equals("api")) {
+                    stringBuilder.append(nodeValue);
+                } else {
+                    if (nodeName.equals("client_id")) {
+                        stringBuilder.append("?");
+                    } else {
+                        stringBuilder.append("&");
+                    }
+                    stringBuilder.append(nodeName);
+                    stringBuilder.append("=");
+                    stringBuilder.append(nodeValue);
+                }
+                API = stringBuilder.toString();
+            }
+
+        } catch (IOException | ParserConfigurationException | XPathExpressionException | SAXException e) {
+            Logger.getLogger(ConfigHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
+        }
+
+//        try {
+//            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
+//            Document document = builder.parse(filePath);
+//            NodeList nl = document.getDocumentElement().getChildNodes();
+//
+//            for (int k = 0; k < nl.getLength(); k++) {
+//                printTags((Node) nl.item(k));
+//            }
+//        } catch (Exception e) {/*err handling*/
+//        }
     }
 }
