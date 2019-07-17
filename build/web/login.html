@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Login</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/pin.css"/>
+    </head>
+    <body style="height: 500px;">
+        <div class="center">
+            <form method="POST" action="ProcessServlet">
+                <input type="hidden" value="pin" name="btAction"/>
+                <input type="password" name="pin" placeholder="Enter PIN" class="input-pin"/>
+                <input id="btn-admin" type="submit"/>
+                <label for="btn-admin" class="input-submit-label-admin">LOGIN</label>
+            </form>
+        </div>
+
+    </body>
+</html>

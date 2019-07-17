@@ -5,11 +5,8 @@
  */
 package project.servlet;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.RequestDispatcher;
@@ -18,16 +15,23 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import project.dao.CategoryDAO;
-import project.dao.LocationDAO;
-import project.listener.MyContextServletListener;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.xpath.XPath;
+import javax.xml.xpath.XPathConstants;
+import javax.xml.xpath.XPathExpressionException;
+import javax.xml.xpath.XPathFactory;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
+import project.utils.ConfigHelper;
 import project.utils.Constant;
 
 /**
  *
  * @author thuyv
  */
-public class GetLocationServlet extends HttpServlet {
+public class LoginServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,55 +45,49 @@ public class GetLocationServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        String url = Constant.HTML_LOGIN;
+        
+        try (PrintWriter out = response.getWriter()) {
+            String input = request.getParameter("pin");
+            
+            if (input != null && !input.isEmpty()) {
+                boolean b = checkLogin(Constant.XML_CONFIG_PIN, input);
+                HttpSession session = request.getSession();
+                session.setAttribute("AUTH", b);
+                
+                if (b) {
+                    url = Constant.SERVLET_GET_LOCATION_CATEGORY;
+                }
+            }
+            response.sendRedirect(url);
+//            RequestDispatcher rd = request.getRequestDispatcher(url);
+//            rd.forward(request, response);
+        }
+    }
 
-        PrintWriter out = response.getWriter();
+    private boolean checkLogin(String filePath, String input) {
         try {
 
-            String url = Constant.JSP_ADMIN;
-            HttpSession session = request.getSession(false);
-            boolean auth = false;
-            if (session != null) {
-                try {
-                    auth = (boolean) session.getAttribute("AUTH");
-                } catch (Exception e) {
-                    auth = false;
-                }
-            }
-            if (auth) {
+            // parse file to DOM
+            DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
+            DocumentBuilder builder = builderFactory.newDocumentBuilder();
+            Document document = builder.parse(filePath);
 
-                // Prepare file categories.xml
-                CategoryDAO categoryDAO = new CategoryDAO();
-                String xmlCategory = categoryDAO.getAllCategoriesAsXML();
+            // get XPath
+            XPathFactory xPathFactory = XPathFactory.newInstance();
+            XPath xPath = xPathFactory.newXPath();
 
-                if (xmlCategory == null || xmlCategory.isEmpty()) {
-                    xmlCategory = "<categories></categories>";
-                }
+            // get config
+            String expression = "/config/pin";
+            String pin = (String) xPath.evaluate(expression, document, XPathConstants.STRING);
+            pin = pin.trim();
 
-                try (OutputStreamWriter writer
-                        = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/WEB-INF/document/categories.xml"), StandardCharsets.UTF_8)) {
-                    writer.write(xmlCategory);
-                } catch (IOException e) {
-                    Logger.getLogger(MyContextServletListener.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-                }
+            return pin.equals(input);
 
-                LocationDAO locationDAO = new LocationDAO();
-                String xmlLocation = locationDAO.getAllLocationCategories();
-
-                request.setAttribute("XML_LOCATION", xmlLocation);
-                request.setAttribute("XML_CATEGORIES", xmlCategory);
-                System.out.println(xmlLocation);
-                System.out.println(xmlCategory);
-
-            } else {
-                url = Constant.HTML_LOGIN;
-            }
-
-            RequestDispatcher rd = request.getRequestDispatcher(url);
-            rd.forward(request, response);
-
-        } finally {
-            out.close();
+        } catch (IOException | ParserConfigurationException | XPathExpressionException | SAXException e) {
+            Logger.getLogger(ConfigHelper.class.getName()).log(Level.SEVERE, e.getMessage(), e);
         }
+        return false;
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

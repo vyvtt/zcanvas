@@ -32,6 +32,9 @@
                 <li id="li-edit">Edit Location</li>
                 <li id="li-add">Add New Location</li>
                 <li id="li-crawl">Crawl Data</li>
+                <li style="float: right; background-color: #990000; color: white;">
+                    <a href="/ZCanvas/LogoutServlet">Logout</a>
+                </li>
             </ul>
 
             <div id="item-crawl" class="div-item">

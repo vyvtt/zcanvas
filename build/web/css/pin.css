@@ -1,0 +1,56 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jul 17, 2019, 10:31:03 AM
+    Author     : thuyv
+*/
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../font/OpenSans-Regular.ttf');
+}
+
+body {
+    height: 500px;
+    font-size: 14px;
+    font-family: 'OpenSans';
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+/*Label admin ----------------------------------------------------------------*/
+input[type="submit"] {
+    display: none;
+}
+
+.input-submit-label-admin {
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    color: white;
+}
+
+.input-submit-label-admin:hover {
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.input-pin {
+    padding: 10px;
+    width: 200px;
+    margin-bottom: 10px;
+}

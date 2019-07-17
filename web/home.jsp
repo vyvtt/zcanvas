@@ -56,7 +56,7 @@
 
                         <input id="btn-submit" type="submit"/>
                         <div>
-                            <label for="btn-submit" class="input-submit-label">Start</label>
+                            <label for="btn-submit" class="input-submit-label">Tìm kiếm</label>
                         </div>
 
                         <input type="hidden" value="match" name="btAction"/>
@@ -111,6 +111,13 @@
     </div>
 
 </body>
+<footer>
+    <form method="GET" action="ProcessServlet">
+        <input type="hidden" value="admin" name="btAction"/>
+        <input id="btn-admin" type="submit"/>
+        <label for="btn-admin" class="input-submit-label-admin">Admin</label>
+    </form>
+</footer>
 
 <script type="text/javascript" src="js/utils.js"></script>
 <script type="text/javascript" src="js/home.js"></script>

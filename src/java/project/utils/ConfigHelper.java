@@ -79,6 +79,7 @@ public class ConfigHelper {
         XML_CONFIG_FRAMEC = REAL_PATH + XML_CONFIG_FRAMEC;
         XML_CONFIG_IMAGE = REAL_PATH + XML_CONFIG_IMAGE;
         XML_CONFIG_API = REAL_PATH + XML_CONFIG_API;
+        XML_CONFIG_PIN = REAL_PATH + XML_CONFIG_PIN;
     }
 
     private static String getHostConfigFromFile(String filePath) {

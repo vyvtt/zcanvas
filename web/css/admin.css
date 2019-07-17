@@ -20,6 +20,15 @@ body {
     font-family: 'OpenSans';
 }
 
+.div-content > ul > li > a:link {
+    color: white;
+    text-decoration: none;
+}
+
+.div-content > ul > li > a:hover {
+    font-weight: bold;
+}
+
 .div-content {
     margin-top: 20px;
     margin-left: 150px;

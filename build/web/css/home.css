@@ -724,3 +724,20 @@ a:link, a:visited {
     border-radius: 5px;
     display: none;
 }
+
+/*Label admin ----------------------------------------------------------------*/
+.input-submit-label-admin {
+    background-color: black;
+    text-align: center;
+    cursor: pointer;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto;
+    color: white;
+}
+
+.input-submit-label-admin:hover {
+    cursor: pointer;
+    font-weight: bold;
+}

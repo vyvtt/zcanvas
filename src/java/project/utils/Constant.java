@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project.utils;
 
 /**
@@ -26,6 +21,7 @@ public class Constant {
     public static String XML_CONFIG_FRAMEC = "/WEB-INF/document/config-framec.xml";
     public static String XML_CONFIG_IMAGE = "/WEB-INF/document/config-image.xml";
     public static String XML_CONFIG_API = "/WEB-INF/document/config-unsplash.xml";
+    public static String XML_CONFIG_PIN = "/WEB-INF/document/pin.xml";
 
     // Config HOST constant
     public static String HOST_SOYN = "";
@@ -53,8 +49,12 @@ public class Constant {
     public static final String SERVLET_ADD_LOCATION = "AddLocationServlet";
     public static final String SERVLET_DELETE_LOCATION = "DeleteLocationServlet";
     public static final String SERVLET_GET_SPOTLIGHT = "InitPalatteServlet";
+    public static final String SERVLET_LOGIN = "LoginServlet";
+    public static final String SERVLET_LOGOUT = "LogoutServlet";
     // JSP
     public static final String JSP_HOME = "home.jsp";
+    public static final String JSP_ADMIN = "admin.jsp";
+    public static final String HTML_LOGIN = "login.html";
 
     // Crawl flag
     public static String SOYN_BEGIN_CATEGORY;

@@ -5,29 +5,20 @@
  */
 package project.servlet;
 
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
-import java.nio.charset.StandardCharsets;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import project.dao.CategoryDAO;
-import project.dao.LocationDAO;
-import project.listener.MyContextServletListener;
 import project.utils.Constant;
 
 /**
  *
  * @author thuyv
  */
-public class GetLocationServlet extends HttpServlet {
+public class LogoutServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -41,54 +32,11 @@ public class GetLocationServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-
-        PrintWriter out = response.getWriter();
-        try {
-
-            String url = Constant.JSP_ADMIN;
-            HttpSession session = request.getSession(false);
-            boolean auth = false;
-            if (session != null) {
-                try {
-                    auth = (boolean) session.getAttribute("AUTH");
-                } catch (Exception e) {
-                    auth = false;
-                }
-            }
-            if (auth) {
-
-                // Prepare file categories.xml
-                CategoryDAO categoryDAO = new CategoryDAO();
-                String xmlCategory = categoryDAO.getAllCategoriesAsXML();
-
-                if (xmlCategory == null || xmlCategory.isEmpty()) {
-                    xmlCategory = "<categories></categories>";
-                }
-
-                try (OutputStreamWriter writer
-                        = new OutputStreamWriter(new FileOutputStream(Constant.REAL_PATH + "/WEB-INF/document/categories.xml"), StandardCharsets.UTF_8)) {
-                    writer.write(xmlCategory);
-                } catch (IOException e) {
-                    Logger.getLogger(MyContextServletListener.class.getName()).log(Level.SEVERE, e.getMessage(), e);
-                }
-
-                LocationDAO locationDAO = new LocationDAO();
-                String xmlLocation = locationDAO.getAllLocationCategories();
-
-                request.setAttribute("XML_LOCATION", xmlLocation);
-                request.setAttribute("XML_CATEGORIES", xmlCategory);
-                System.out.println(xmlLocation);
-                System.out.println(xmlCategory);
-
-            } else {
-                url = Constant.HTML_LOGIN;
-            }
-
-            RequestDispatcher rd = request.getRequestDispatcher(url);
-            rd.forward(request, response);
-
-        } finally {
-            out.close();
+        try (PrintWriter out = response.getWriter()) {
+            HttpSession session = request.getSession();
+            session.invalidate();
+            
+            response.sendRedirect(Constant.HTML_LOGIN);
         }
     }
 

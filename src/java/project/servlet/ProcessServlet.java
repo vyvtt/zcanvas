@@ -10,6 +10,7 @@ import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import static project.utils.Constant.*;
 
 /**
@@ -35,13 +36,27 @@ public class ProcessServlet extends HttpServlet {
 
         String url = JSP_HOME;
         String btn = request.getParameter("btAction");
+        System.out.println(btn);
+
+        HttpSession session = request.getSession(false);
+        boolean auth = false;
+        if (session != null) {
+            try {
+                auth = (boolean) session.getAttribute("AUTH");
+            } catch (Exception e) {
+                auth = false;
+            }
+        }
 
         try {
             if (btn == null) {
                 // do nothing
+            } else if (btn.equals("admin")) {
+                url = SERVLET_GET_LOCATION_CATEGORY;
+            } else if (btn.equals("pin")) {
+                url = SERVLET_LOGIN;
             } else if (btn.equals("match")) {
                 String type = request.getParameter("rbType");
-                
                 if (type.equals("typeImage")) {
                     url = SERVLET_GET_CANVAS_MATCHING_IMG;
                 } else {
@@ -51,8 +66,6 @@ public class ProcessServlet extends HttpServlet {
                 url = SERVLET_CRAWL;
             } else if (btn.equals("updateLocation")) {
                 url = SERVLET_UPDATE_LOCATION;
-            } else if (btn.equals("admin")) {
-                url = SERVLET_GET_LOCATION_CATEGORY;
             } else if (btn.equals("initLocation")) {
                 url = SERVLET_HOME;
             } else if (btn.equals("addLocation")) {
