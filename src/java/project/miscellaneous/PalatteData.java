@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
@@ -98,6 +99,9 @@ public class PalatteData {
         matcher = pattern.matcher(json);
         if (matcher.find()) {
             imgAuth = matcher.group(1);
+            if (imgAuth.contains("\\u")) {
+                imgAuth = "Unknown Photograher";
+            }
         } else {
             imgAuth = null;
         }

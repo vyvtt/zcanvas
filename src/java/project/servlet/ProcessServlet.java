@@ -36,7 +36,6 @@ public class ProcessServlet extends HttpServlet {
 
         String url = JSP_HOME;
         String btn = request.getParameter("btAction");
-        System.out.println(btn);
 
         HttpSession session = request.getSession(false);
         boolean auth = false;

@@ -1,11 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package project.utils;
 
 import java.awt.Color;
+import java.util.List;
 
 /**
  *
@@ -16,13 +12,13 @@ public class ColorHelper {
     // White D50 (Standard daylight) trong hệ XYZ 
     // -> hệ số illuminant (chiếu sáng) cần thiết khi convert CIELab (Chromatic Adaptation)
     // ref: http://www.brucelindbloom.com/index.html?Eqn_ChromAdapt.html
-    private static float Xr = 0.964221f;
-    private static float Yr = 1.0f;
-    private static float Zr = 0.825211f;
+    private static final float Xr = 0.964221f;
+    private static final float Yr = 1.0f;
+    private static final float Zr = 0.825211f;
 
-    // Constant
-    private static float eps = 216.f / 24389.f;
-    private static float k = 24389.f / 27.f;
+    // Constant given by the CIE standards
+    private static final float eps = 216.f / 24389.f;
+    private static final float k = 24389.f / 27.f;
 
     /**
      * Convert RGB color space to XYZ color space. Assuming input color is sRGB.
@@ -70,8 +66,9 @@ public class ColorHelper {
          * D50/2° for standard illuminant. Matrix:
          * http://www.brucelindbloom.com/index.html?Eqn_RGB_XYZ_Matrix.html
          *
-         * X 0.436052025 0.385081593 0.143087414 R Y = 0.222491598 0.71688606
-         * 0.060621486 G Z 0.013929122 0.097097002 0.71418547 B
+         * X    0.436052025     0.385081593     0.143087414     R 
+         * Y =  0.222491598     0.71688606      0.060621486     G 
+         * Z    0.013929122     0.097097002     0.71418547      B
          */
         X = 0.436052025f * r + 0.385081593f * g + 0.143087414f * b;
         Y = 0.222491598f * r + 0.71688606f * g + 0.060621486f * b;
@@ -80,11 +77,17 @@ public class ColorHelper {
         return new float[]{X, Y, Z};
     }
 
+    /**
+     * http://www.brucelindbloom.com/index.html?Eqn_XYZ_to_Lab.html
+     * @param XYZ
+     * @return 
+     */
     private static int[] convertXYZtoLab(float[] XYZ) {
         float fx, fy, fz, xr, yr, zr;
         float Ls, as, bs;
         
         // XYZ to Lab
+        //Reference-X, Y and Z refer to specific illuminants and observers. (White D50 in this case)
         xr = XYZ[0] / Xr;
         yr = XYZ[1] / Yr;
         zr = XYZ[2] / Zr;
@@ -132,5 +135,42 @@ public class ColorHelper {
         int green = (color.getGreen() << 8) & 0x0000FF00; //Shift Green 8-bits and mask out other stuff
         int blue = color.getBlue() & 0x000000FF; //Mask out anything not blue.
         return 0xFF000000 | red | green | blue;
+    }
+    
+    /**
+     * Computes the difference between two RGB colors by converting them to 
+     * the L*a*b scale and comparing them using the CIE76 algorithm
+     * Ref: http://en.wikipedia.org/wiki/Color_difference#CIE76
+     * @param a Color 1, dạng int
+     * @param b Color 2, dạng int
+     * @return 
+     */
+    public static double getColorDifference(int a, int b) {
+        Color color1 = new Color(a);
+        Color color2 = new Color(b);
+
+        // getReb/Green/Blue() returns the color r,g,b component in the range 0-255 in the default sRGB
+        int[] lab1 = ColorHelper.convertRGBtoLab(color1.getRed(), color1.getGreen(), color1.getBlue());
+        int[] lab2 = ColorHelper.convertRGBtoLab(color2.getRed(), color2.getGreen(), color2.getBlue());
+        
+        return Math.sqrt(
+                  Math.pow(lab2[0] - lab1[0], 2) 
+                + Math.pow(lab2[1] - lab1[1], 2) 
+                + Math.pow(lab2[2] - lab1[2], 2));
+    }
+    
+    public static int[] calculateAverageColor(List<int[]> pixels) {
+        int size = pixels.size();
+        int totalRed = 0;
+        int totalGreen = 0;
+        int totalBlue = 0;
+
+        for (int[] pixel : pixels) {
+            totalRed += pixel[0];
+            totalGreen += pixel[1];
+            totalBlue += pixel[2];
+        }
+
+        return new int[]{totalRed / size, totalGreen / size, totalBlue / size};
     }
 }

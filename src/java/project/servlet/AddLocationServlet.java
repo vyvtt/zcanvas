@@ -50,31 +50,33 @@ public class AddLocationServlet extends HttpServlet {
             Part filePart = request.getPart("imgIcon");
             InputStream is = filePart.getInputStream();
             BufferedImage image = ImageIO.read(is);
-            
-            String fileName = filePart.getSubmittedFileName();
-            String fileExtension = fileName.substring(fileName.lastIndexOf(".") + 1);
 
-            String filePath = Constant.REAL_PATH + "/image/" + fileName;
+            if (image != null) {
+                String fileName = filePart.getSubmittedFileName();
+                String fileExtension = fileName.substring(fileName.lastIndexOf(".") + 1);
 
-            File outputfile = new File(filePath);
-            ImageIO.write(image, fileExtension, outputfile);
+                String filePath = Constant.REAL_PATH + "/image/" + fileName;
 
-            filePath = "D:\\Study-Resource\\Semester_8_Summer2019\\PRX301_Web Development (XML)\\Code\\ZCanvas\\web\\image\\" + fileName;
-            System.out.println(filePath);
-            outputfile = new File(filePath);
-            ImageIO.write(image, fileExtension, outputfile);
-            
-            String locationImage = "image/" + fileName;
-            // parse các id của categories mới
-            List<Integer> categoryIds = new ArrayList<>();
-            for (int i = 0; i < categories.length; i++) {
-                categoryIds.add(Integer.parseInt(categories[i]));
+                File outputfile = new File(filePath);
+                ImageIO.write(image, fileExtension, outputfile);
+
+                filePath = "D:\\Study-Resource\\Semester_8_Summer2019\\PRX301_Web Development (XML)\\Code\\ZCanvas\\web\\image\\" + fileName;
+                System.out.println(filePath);
+                outputfile = new File(filePath);
+                ImageIO.write(image, fileExtension, outputfile);
+
+                String locationImage = "image/" + fileName;
+                // parse các id của categories mới
+                List<Integer> categoryIds = new ArrayList<>();
+                for (int i = 0; i < categories.length; i++) {
+                    categoryIds.add(Integer.parseInt(categories[i]));
+                }
+
+                LocationDAO locationDAO = new LocationDAO();
+                int locationId = locationDAO.addNewLocation(locationName, locationImage);
+                locationDAO.addLocationCategory(locationId, categoryIds);
             }
-            
-            LocationDAO locationDAO = new LocationDAO();
-            int locationId = locationDAO.addNewLocation(locationName, locationImage);
-            locationDAO.addLocationCategory(locationId, categoryIds);
-            
+
             String url = Constant.SERVLET_GET_LOCATION_CATEGORY;
             RequestDispatcher rd = request.getRequestDispatcher(url);
             rd.forward(request, response);

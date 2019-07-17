@@ -36,7 +36,7 @@ public class MainCrawler {
 
         long endTime = System.nanoTime() - startTime;
 
-        System.out.println("Crawl time: " + TimeUnit.SECONDS.convert(endTime, TimeUnit.NANOSECONDS));
+        System.out.println("Crawl time: " + TimeUnit.SECONDS.convert(endTime, TimeUnit.NANOSECONDS) + " seconds");
     }
 
     public static void saveToDB(List<Categories> categories)
